@@ -13,6 +13,7 @@ public class problem12 extends GraphicsProgram {
 			
 			GLabel label = new GLabel ("a :" + a, 20, 20);
 			add(label);
+			a = 3;
 		}
 		
 	//	b = b + 1;
