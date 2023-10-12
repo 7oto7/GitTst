@@ -1,7 +1,5 @@
-
-import acm.graphics.GLabel;
 import acm.graphics.GRect;
-import acm.program.*;
+import acm.program.GraphicsProgram;
 
 public class problem11 extends GraphicsProgram {	
 	public void run() {
