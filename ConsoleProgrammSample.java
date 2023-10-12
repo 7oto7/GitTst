@@ -15,14 +15,15 @@ public class ConsoleProgrammSample extends ConsoleProgram {
 //		boolean isAlive = readBoolean("is alive?");
 //		println(isAlive);
 		
-		String NUM1 = readLine("enter string: ");
-		println(NUM1);
+		String num1 =  readLine("enter string: ");
+		println(num1);
 		
-		String NUM2 = readLine("enter string: ");
-		println(NUM2);
+		String num2 = readLine("enter string: ");
+		println(num2);
 		
-		println(NUM1 + NUM2);
-		
+		println(num1 + num2);
+		println(num1 + num2 + 7 + 3 );
+		println(num1 + num2 + (7 + 3));
 		
 	}
 }
