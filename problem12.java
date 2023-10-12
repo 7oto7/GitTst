@@ -15,7 +15,7 @@ public class problem12 extends GraphicsProgram {
 			add(label);
 		}
 		
-		b = b + 1;
+	//	b = b + 1;
 		
 	}
 }
