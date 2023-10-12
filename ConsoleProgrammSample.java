@@ -5,12 +5,12 @@
  * smallest and largest values in a list of integers.
  */
 
-import acm.program.*;
+import acm.program.ConsoleProgram;
 
 public class ConsoleProgrammSample extends ConsoleProgram {
-
 	public void run() {
-		println("Hello World!");
+		int kids = readInt();
+		
+		printIn("your kids number: " + kids);
 	}
-
 }
