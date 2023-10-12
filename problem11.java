@@ -1,5 +1,6 @@
 
 import acm.graphics.GLabel;
+import acm.graphics.GRect;
 import acm.program.*;
 
 public class problem11 extends GraphicsProgram {	
