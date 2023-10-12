@@ -11,12 +11,14 @@ public class problem11 extends GraphicsProgram {
 	public void run() {
 		
 		DrawHouse();
+		
 	}
+	
 	private void DrawHouse() {
 		drawWall();
-		drawRoof();
-		drawDoor();
-		drawWindows();
+	//	drawRoof();
+	//	drawDoor();
+	//	drawWindows();
 		
 	}
 	
