@@ -13,5 +13,4 @@ public class GraphicsProgramSample extends GraphicsProgram {
 	public void run() {
 		add(new GLabel("hello, world", 20, 20));
 	}
-
 }
