@@ -15,7 +15,9 @@ public class ConsoleProgrammSample extends ConsoleProgram {
 //		boolean isAlive = readBoolean("is alive?");
 //		println(isAlive);
 		
-		String num1 =  readLine("enter string: ");
+		
+		//number as a string
+/*		String num1 =  readLine("enter string: ");
 		println(num1);
 		
 		String num2 = readLine("enter string: ");
@@ -23,7 +25,14 @@ public class ConsoleProgrammSample extends ConsoleProgram {
 		
 		println(num1 + num2);
 		println(num1 + num2 + 7 + 3 );
-		println(num1 + num2 + (7 + 3));
+		println(num1 + num2 + (7 + 3));  */
+		
+//		average in ints
+		int firstNum = readInt("Enter first number: " );
+		int secondNum = readInt("Enter second number: " );
+		
+		int avg = (firstNum + secondNum) / 2;
+		println(avg);
 		
 	}
 }
