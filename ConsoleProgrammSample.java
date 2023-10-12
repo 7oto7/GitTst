@@ -9,8 +9,11 @@ import acm.program.ConsoleProgram;
 
 public class ConsoleProgrammSample extends ConsoleProgram {
 	public void run() {
-		int kids = readInt("enter number of your kids: ");
+//		int kids = readInt("enter number of your kids: ");
 		
-		println("your kids number: " + kids);			
+//		println("your kids number: " + kids);
+		
+		boolean isAlive = readBoolean("is alive?");
+		println(isAlive);
 	}
 }
