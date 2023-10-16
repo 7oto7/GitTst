@@ -7,8 +7,8 @@ import acm.program.GraphicsProgram;
 public class problem11 extends GraphicsProgram {	
 	private static final double HOUSE_WIDTH = 200;
 	private static final double HOUSE_HEIGHT = 200;
-	private static final double DOOR_WIDTH = 200;
-	private static final double DOOR_HEIGHT = 200;
+	private static final double DOOR_WIDTH = 60;
+	private static final double DOOR_HEIGHT = 100;
 	private static final double ROOF_HEIGHT = 100;
 	public void run() {
 		
@@ -19,11 +19,19 @@ public class problem11 extends GraphicsProgram {
 	private void DrawHouse() {
 		drawWall();
 		drawRoof();
-	//	drawDoor();
+		drawDoor();
 	//	drawWindows();
 		
 	}
 	
+	private void drawDoor() {
+		GRect door = new GRect(DOOR_WIDTH, DOOR_HEIGHT);
+		int x = (int) (getWidth() / 2 - DOOR_WIDTH / 2);
+		double y = getHeight() - DOOR_HEIGHT;
+		add(door, x, y);
+		
+	}
+
 	private void drawRoof() {
 		double x1 = getWidth() / 2 - HOUSE_WIDTH / 2;
 		double y1 = getHeight() - HOUSE_HEIGHT;
