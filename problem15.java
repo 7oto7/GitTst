@@ -6,8 +6,6 @@ public class problem15 extends ConsoleProgram {
 		int firstNum = readInt("First number is: ");
 		int secondNum = readInt("Second number is: ");
 		double average = (firstNum + secondNum) / 2;
-		println("Arithmetic average is: " + average);
-		
-		
+		println("Arithmetic average is: " + average);		
 	}
 }
