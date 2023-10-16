@@ -30,7 +30,7 @@ public class problem14 extends GraphicsProgram {
 
 	private void drawRightEye() {
 		GOval rightEye = new GOval(EYE_WIDTH, EYE_HEIGHT);
-		double x = getWidth() - EYE_WIDTH) / 2 - EYE_WIDTH;
+		double x = getWidth() - EYE_WIDTH / 2 - EYE_WIDTH;
 		double y = getHeight() / 2 - HEIGHT / 2 + EYE_HEIGHT * 2;
 		rightEye.setFilled(true);;
 		rightEye.setFillColor(Color.white);
