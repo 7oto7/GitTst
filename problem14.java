@@ -15,9 +15,16 @@ public class problem14 extends GraphicsProgram {
 	
 	public void run() {
 		drawFace();
-	//	drawLeftEye();
+		drawLeftEye();
 		//drawRightEye();
 		//drawMouth();
+	}
+
+	private void drawLeftEye() {
+		GOval leftEye = new GOval(EYE_WIDTH, EYE_HEIGHT);
+		double x = getWidth() / 2 - WIDTH / 2 + EYE_WIDTH / 2;
+		double y = getHeight() / 2 - HEIGHT / 2 + EYE_HEIGHT;
+		add(leftEye, x, y);
 	}
 
 	private void drawFace() {
@@ -26,7 +33,6 @@ public class problem14 extends GraphicsProgram {
 		double y = getHeight() / 2 - HEIGHT / 2;
 		face.setFilled(true);
 		face.setFillColor(Color.blue);
-		add(face, x, y);
-		
+		add(face, x, y);	
 	}
 }
