@@ -24,6 +24,7 @@ public class problem14 extends GraphicsProgram {
 		GRect face = new GRect(WIDTH, HEIGHT);
 		double x = getWidth() / 2 - WIDTH / 2;
 		double y = getHeight() - HEIGHT / 2;
+		add(face, x, y);
 		
 	}
 }
