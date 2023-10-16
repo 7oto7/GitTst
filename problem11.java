@@ -37,6 +37,8 @@ public class problem11 extends GraphicsProgram {
 			}
 			
 			GRect window = new GRect(WINDOW_WIDTH, WINDOW_HEIGHT);
+			window.setFilled(true);
+			window.setFillColor(Color.cyan);
 			add(window, x, y);
 		}
 		
@@ -77,7 +79,7 @@ public class problem11 extends GraphicsProgram {
 		int x = (int) (getWidth() / 2 - HOUSE_WIDTH / 2); //dakastva mrgvaldeba yoveltvis dabla, 3.1=3, 3.9=3;
 		double y = getHeight() - HOUSE_HEIGHT;
 		wall.setFilled(true);
-		wall.setColor(Color.red);
+		wall.setFillColor(Color.red);
 		add(wall, x, y);		
 	}
 }
