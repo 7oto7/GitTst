@@ -47,6 +47,7 @@ public class problem11 extends GraphicsProgram {
 		GRect door = new GRect(DOOR_WIDTH, DOOR_HEIGHT);
 		int x = (int) (getWidth() / 2 - DOOR_WIDTH / 2);
 		double y = getHeight() - DOOR_HEIGHT;
+		door.setFilled(true);
 		door.setFillColor(Color.black);
 		add(door, x, y);
 		
