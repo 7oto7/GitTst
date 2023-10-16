@@ -32,6 +32,14 @@ public class problem11 extends GraphicsProgram {
 		GLine leftRoof = new GLine(x1, y1, x2, y2);
 		add(leftRoof);
 		
+		x1 = x2;
+		y1 = y2;
+		x2 = x1 + HOUSE_WIDTH / 2;
+		y2 = y1 + ROOF_HEIGHT;
+		
+		GLine rightRoof = new GLine(x1, y1, x2, y2);
+		add(rightRoof);
+		
 	}
 
 	private void drawWall() {
