@@ -24,14 +24,14 @@ public class problem14 extends GraphicsProgram {
 		GRect mouth = new GRect(MOUTH_WIDTH, MOUTH_HEIGHT);
 		mouth.setFilled(true);
 		mouth.setFillColor(Color.white);
-		add(mouth, getWidth() / 2 - MOUTH_WIDTH / 2, getHeight() / 2 + HEIGHT / 2 - MOUTH_HEIGHT);
+		add(mouth, getWidth() / 2 - MOUTH_WIDTH / 2, getHeight() / 2  - MOUTH_HEIGHT);
 		
 	}
 
 	private void drawRightEye() {
 		GOval rightEye = new GOval(EYE_WIDTH, EYE_HEIGHT);
 		double x = getWidth() / 2 + WIDTH / 2 - EYE_WIDTH;
-		double y = getHeight() / 2 - HEIGHT / 2 + EYE_HEIGHT;
+		double y = getHeight() / 2 - HEIGHT / 2 + EYE_HEIGHT * 2;
 		rightEye.setFilled(true);;
 		rightEye.setFillColor(Color.white);
 		add(rightEye, x, y);
@@ -41,7 +41,7 @@ public class problem14 extends GraphicsProgram {
 	private void drawLeftEye() {
 		GOval leftEye = new GOval(EYE_WIDTH, EYE_HEIGHT);
 		double x = getWidth() / 2 - WIDTH / 2 ;
-		double y = getHeight() / 2 - HEIGHT / 2 + EYE_HEIGHT;
+		double y = getHeight() / 2 - HEIGHT / 2 + EYE_HEIGHT * 2;
 		leftEye.setFilled(true);;
 		leftEye.setFillColor(Color.white);
 		add(leftEye, x, y);
