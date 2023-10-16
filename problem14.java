@@ -24,7 +24,7 @@ public class problem14 extends GraphicsProgram {
 		GRect mouth = new GRect(MOUTH_WIDTH, MOUTH_HEIGHT);
 		mouth.setFilled(true);
 		mouth.setFillColor(Color.white);
-		add(mouth, getWidth() / 2 - MOUTH_WIDTH / 2, getHeight() / 2 + HEIGHT / 2);
+		add(mouth, getWidth() / 2 - MOUTH_WIDTH / 2, getHeight() / 2 + HEIGHT / 2 + MOUTH_HEIGHT);
 		
 	}
 
