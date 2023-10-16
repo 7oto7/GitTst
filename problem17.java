@@ -8,6 +8,5 @@ public class problem17 extends ConsoleProgram {
 		double fraction = number - integer;
 		println("integer is: " + integer);
 		println("fraction is: " + fraction);
-		
 	}
 }
