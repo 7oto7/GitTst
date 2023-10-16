@@ -49,6 +49,7 @@ public class problem11 extends GraphicsProgram {
 		double y = getHeight() - DOOR_HEIGHT;
 		door.setFilled(true);
 		door.setFillColor(Color.black);
+		door.setColor(Color.red);
 		add(door, x, y);
 		
 	}
