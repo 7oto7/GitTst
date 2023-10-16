@@ -23,7 +23,7 @@ public class problem14 extends GraphicsProgram {
 	private void drawFace() {
 		GRect face = new GRect(WIDTH, HEIGHT);
 		double x = getWidth() / 2 - WIDTH / 2;
-		double y = getHeight() / 2 - HEIGHT / 2;
+		double y = getHeight() - HEIGHT / 2;
 		
 	}
 }
