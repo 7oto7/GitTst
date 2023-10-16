@@ -24,6 +24,8 @@ public class problem14 extends GraphicsProgram {
 		GRect face = new GRect(WIDTH, HEIGHT);
 		double x = getWidth() / 2 - WIDTH / 2;
 		double y = getHeight() / 2 - HEIGHT / 2;
+		face.setFilled(true);
+		face.setFillColor(Color.blue);
 		add(face, x, y);
 		
 	}
