@@ -29,7 +29,7 @@ public class problem14 extends GraphicsProgram {
 	private void drawLeftEar() {
 		GRect ear = new GRect(EAR_WIDTH, EAR_HEIGHT);
 		ear.setFilled(true);
-		ear.setFillColor(Color.white);
+		ear.setFillColor(Color.black);
 		double x = getWidth() / 2 + WIDTH / 2;
 		double y = getHeight() / 2 - HEIGHT / 2 - EAR_HEIGHT / 2;
 		add(ear, x, y);
