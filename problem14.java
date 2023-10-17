@@ -32,7 +32,7 @@ public class problem14 extends GraphicsProgram {
 		ear.setFilled(true);
 		ear.setFillColor(Color.black);
 		double x = getWidth() / 2 - WIDTH / 2 - EAR_WIDTH;
-		double y = getHeight() / 2 - HEIGHT / 2 - 10;
+		double y = getHeight() / 2 - HEIGHT / 2 - 25;
 		add(ear, x, y);
 		
 	}
@@ -42,7 +42,7 @@ public class problem14 extends GraphicsProgram {
 		ear.setFilled(true);
 		ear.setFillColor(Color.black);
 		double x = getWidth() / 2 + WIDTH / 2;
-		double y = getHeight() / 2 - HEIGHT / 2 - 10;
+		double y = getHeight() / 2 - HEIGHT / 2 - 25;
 		add(ear, x, y);
 		
 	}
