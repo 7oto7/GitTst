@@ -3,9 +3,9 @@ import acm.program.ConsoleProgram;
 
 public class problem15 extends ConsoleProgram {
 	public void run() {
-		double firstNum = (int) (readInt("First number is: "));
-		double secondNum = (int) (readInt("Second number is: "));
-		double average = (firstNum + secondNum) / 2;
+		int firstNum = readInt("First number is: ");
+		int secondNum = readInt("Second number is: ");
+		double average = (double) ((firstNum + secondNum) / 2);
 		println("Arithmetic average is: " + average);		
 	}
 }
