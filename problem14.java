@@ -13,11 +13,27 @@ public class problem14 extends GraphicsProgram {
 	private static final int MOUTH_WIDTH = 100;
 	private static final int MOUTH_HEIGHT = 40;
 	
+	private static final int EAR_WIDTH = 40;
+	private static final int EAR_HEIGHT = 100;
+	
+	
+	
 	public void run() {
 		drawFace();
 		drawLeftEye();
 		drawRightEye();
 		drawMouth();
+		drawLeftEar();
+	}
+
+	private void drawLeftEar() {
+		GRect ear = new GRect(EAR_WIDTH, EAR_HEIGHT);
+		ear.setFilled(true);
+		ear.setFillColor(Color.white);
+		double x = getWidth() / 2 + WIDTH / 2;
+		double y = getHeight() / 2 - HEIGHT / 2 - EAR_HEIGHT / 2;
+		add(ear, x, y);
+		
 	}
 
 	private void drawMouth() {
