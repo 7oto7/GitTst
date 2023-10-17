@@ -13,7 +13,7 @@ public class problem14 extends GraphicsProgram {
 	private static final int MOUTH_WIDTH = 100;
 	private static final int MOUTH_HEIGHT = 40;
 	
-	private static final int EAR_WIDTH = 40;
+	private static final int EAR_WIDTH = 50;
 	private static final int EAR_HEIGHT = 100;
 	
 	
