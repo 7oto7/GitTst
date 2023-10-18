@@ -12,7 +12,7 @@ public class problem18 extends ConsoleProgram {
 			total = num + num;
 			num = readInt("number: ");
 		}
-		println(n);
+		println(total);
 
 		//1 dan n mde ricxvebs 1 aklia da unda gamovataninot
 		//jami davtvalot da mtlians gamovaklot
