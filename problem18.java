@@ -13,6 +13,6 @@ public class problem18 extends ConsoleProgram {
 			num = readInt("number: ");
 		}
 		int sum = ((2 + n) / 2) * (n + 1);
-		println(sum);
+		println(sum - total);
 	}
 }
