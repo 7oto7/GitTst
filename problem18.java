@@ -12,7 +12,7 @@ public class problem18 extends ConsoleProgram {
 			total += num;
 			num = readInt("number: ");
 		}
-		int sum = ((2 + n) / 2) * n
+		int sum = ((2 + n) / 2) * n;
 		println(sum);
 	}
 }
