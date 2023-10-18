@@ -9,7 +9,7 @@ public class problem18 extends ConsoleProgram {
 		int total = 0;
 		while(num != SENTINEL){
 			n++;
-			total = num + num;
+			total += num;
 			num = readInt("number: ");
 		}
 		println(total);
