@@ -12,10 +12,7 @@ public class problem18 extends ConsoleProgram {
 			total += num;
 			num = readInt("number: ");
 		}
-	//	println((((1 + n + 1) / 2) * n) - total);
-		println(total);
-		//1 dan n mde ricxvebs 1 aklia da unda gamovataninot
-		//jami davtvalot da mtlians gamovaklot
-		//n davitvalot while dan
+		int sum = ((2 + n) / 2) * n
+		println(sum);
 	}
 }
