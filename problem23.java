@@ -1,4 +1,3 @@
-
 import acm.program.ConsoleProgram;
 
 public class problem23 extends ConsoleProgram {
