@@ -11,3 +11,4 @@ public class problem20 extends ConsoleProgram {
 		println(total);
 	}
 }
+  
