@@ -1,4 +1,11 @@
+//მომხმარებელს შეყავს მთელი რიცხვი n, პროგრამამ უნდა დაბეჭდოს n ის გამყოფების
+//რაოდენობა
+import acm.program.ConsoleProgram;
 
-public class problem24 {
-
+public class problem24 extends ConsoleProgram {
+	public void run() {
+		int n = readInt("Enter number: ");
+		
+		
+	}
 }
