@@ -22,3 +22,4 @@ public class problem22 extends GraphicsProgram {
 		
 	}
 }
+// 23 dan 26is chatvlit
