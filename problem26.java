@@ -8,7 +8,7 @@ public class problem26 extends ConsoleProgram{
 		int secondNum = readInt("Second number: ");
 		int count = Math.min(firstNum, secondNum);
 		int maximum = 0;
-		for(int i = 1; i < count; i++){
+		for(int i = 1; i <= count; i++){
 			if(firstNum % i == 0 && secondNum % i == 0){
 				if(i > maximum){
 					maximum = i;
