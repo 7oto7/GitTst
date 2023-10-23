@@ -9,18 +9,14 @@ public class problem28 extends ConsoleProgram{
 		int n = 0;
 		while(true){
 			int positiveNumbers = readInt("Enter number: ");
-			if(positiveNumbers == 0){
+			 if(positiveNumbers == 0){
 				n--;
-				break;}
-			}
-			/* if(positiveNumbers % 2 == 0){
+			} else if(positiveNumbers % 2 == 0){
 				n++;
-			} else if(positiveNumbers == 0){
-				n = n - 1;
 			} else if(positiveNumbers == SENTINEL){
 				break;
 			}
-		} */
+		} 
 		println(n);
 	}
 }
