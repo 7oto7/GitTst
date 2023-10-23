@@ -7,7 +7,7 @@ public class problem24 extends ConsoleProgram {
 		int n = readInt("Enter number: ");
 		int count = 0;
 		for(int i = 0; i <= n; i++){
-			if(n % i == 0){
+			if(n / i == 0){
 				count = count + 1;
 			}
 		}
