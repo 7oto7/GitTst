@@ -11,6 +11,8 @@ public class problem28 extends ConsoleProgram{
 			int positiveNumbers = readInt("Enter number: ");
 			if(positiveNumbers % 2 == 0){
 				n++;
+			} else if(positiveNumbers == 0){
+				n--;
 			} else if(positiveNumbers == SENTINEL){
 				break;
 			}
