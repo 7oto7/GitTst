@@ -6,9 +6,9 @@ public class problem24 extends ConsoleProgram {
 	public void run() {
 		int n = readInt("Enter number: ");
 		int count = 0;
-		for(int i = 1; i <= n; i++){
+		for(int i = 0; i <= n; i++){
 			if(n % 2 == 0){
-				count++;
+				count += 1;
 			}
 		}
 		println(count);
