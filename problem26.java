@@ -25,6 +25,9 @@ public class problem26 extends ConsoleProgram{
 		} else if(b > a){
 			b %= a;
 		}
+		if(a == 0){
+		return b;}
+		return a;
 	}
 */
  
