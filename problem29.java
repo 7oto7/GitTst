@@ -14,7 +14,7 @@ public class problem29 extends ConsoleProgram {
 			fibonacci = b;
 		} else {
 			for(int i = 3; i <= n; i++){
-				fibonacci = 
+				
 			}
 		}
 	}

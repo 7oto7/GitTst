@@ -14,9 +14,7 @@ public class problem28 extends ConsoleProgram{
 				n++;
 			} else if(positiveNumbers % 2 == 0){
 				n++;
-			} else if(positiveNumbers == SENTINEL){
-				break;
-			}
+			} else if(positiveNumbers == SENTINEL)break;
 		} 
 		println(n);
 	}
