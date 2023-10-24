@@ -18,3 +18,13 @@ public class problem26 extends ConsoleProgram{
 		println(maximum);
 	}
 }
+
+/*while( a != 0 && b != 0){
+		if(a > b){
+			 a %= b;
+		} else if(b > a){
+			b %= a;
+		}
+	}
+*/
+ 
