@@ -6,7 +6,6 @@ public class problem29 extends ConsoleProgram {
 	public void run(){
 		int n = readInt("Enter number: ");
 		int fibonacci = calculateFibonacci(n);
-	//	calculateFibonacci(n);
 		println(fibonacci);
 	}
 
