@@ -4,6 +4,19 @@ import acm.program.ConsoleProgram;
 
 public class problem30 extends ConsoleProgram{
 	public void run(){
-		
+		int n = readInt("Enter number: ");
+		int reversedNumber = reverseNumber(n);
+		println(reversedNumber);
+	}
+
+	private int reverseNumber(int n) {
+		int reversedNumber = 0;
+		int a = 0;
+		while(n % 10 != 0){
+			a = n % 10;
+			n = n - a;
+			reversedNumber = reversedNumber * 10 + a;
+		}
+		return reversedNumber;
 	}
 }
