@@ -14,7 +14,7 @@ public class problem30 extends ConsoleProgram{
 		int a = 0;
 		while(n % 10 != 0){
 			a = n % 10;
-			n = n - a;
+			n = n / 10;
 			reversedNumber = reversedNumber * 10 + a;
 		}
 		return reversedNumber;
