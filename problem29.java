@@ -4,6 +4,10 @@ import acm.program.ConsoleProgram;
 
 public class problem29 extends ConsoleProgram {
 	public void run(){
+		calculateFibonacci();
+	}
+
+	private void calculateFibonacci() {	
 		int fibonacci = 0;
 		int a = 0;
 		int b = 1;
