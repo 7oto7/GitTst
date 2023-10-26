@@ -4,14 +4,16 @@ import acm.program.ConsoleProgram;
 
 public class problem29 extends ConsoleProgram {
 	public void run(){
-		calculateFibonacci();
+		int n = readInt("Enter number: ");
+		int fibonacci = 0;
+		calculateFibonacci(n);
+		println(fibonacci);
 	}
 
-	private void calculateFibonacci() {	
+	private int calculateFibonacci(int n) {	
 		int fibonacci = 0;
 		int a = 0;
 		int b = 1;
-		int n = readInt("Enter number: ");
 		if(n == 1){
 			fibonacci = 0;
 		} else if(n == 2 ){
@@ -27,6 +29,6 @@ public class problem29 extends ConsoleProgram {
 				}
 			}		
 		}
-		println(fibonacci);
+		return fibonacci;
 	}
 }
