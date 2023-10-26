@@ -5,8 +5,8 @@ import acm.program.ConsoleProgram;
 public class problem29 extends ConsoleProgram {
 	public void run(){
 		int n = readInt("Enter number: ");
-		int fibonacci = 0;
-		calculateFibonacci(n);
+		int fibonacci = calculateFibonacci(n);
+	//	calculateFibonacci(n);
 		println(fibonacci);
 	}
 
