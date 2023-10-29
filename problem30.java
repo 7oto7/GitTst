@@ -12,12 +12,14 @@ public class problem30 extends ConsoleProgram{
 	private int reverseNumber(int n) {
 		int reversedNumber = 0;
 		int a = 0;
-		while(/*n % 10 != 0*/true){
-			if(n != 0){
+		while(true){
+			if( n == 0){
+				break;
+			} else {
 				a = n % 10;
 				n = n / 10;
-				reversedNumber = reversedNumber * 10 + a;        
-			}
+				reversedNumber = reversedNumber * 10 + a;
+			}       
 		}
 		return reversedNumber;
 	}
