@@ -20,7 +20,7 @@ public class problem345 extends ConsoleProgram {
 		while (n != 0) {
 
 			int reminder = n % 10;
-			if (reminder != 4 || reminder != 7)
+			if (reminder != 4 && reminder != 7)
 				return false;
 			n /= 10;
 		}
