@@ -36,7 +36,7 @@ public class problem32 extends GraphicsProgram {
 		}
 	}
 
-	private void rectangle(int i, int j, String string) {
+	private void rectangle(double i, double j, String string) {
 		GRect rect = new GRect(RECT_WIDTH, RECT_HEIGHT);
 		add(rect, i, j);
 		GLabel glabel = new GLabel(string);
