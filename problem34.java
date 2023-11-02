@@ -9,7 +9,7 @@ import acm.util.RandomGenerator;
 
 public class problem34 extends GraphicsProgram{
 	private static final int MIN_RADIUS = 10;
-	private static final int MAX_RADIUS = 20;
+	private static final int MAX_RADIUS = 50;
 	private RandomGenerator rgen = RandomGenerator.getInstance();
 	public void run() {
 		for(int i = 0; i < 1000; i++){
