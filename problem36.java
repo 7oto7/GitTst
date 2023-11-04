@@ -34,33 +34,59 @@ public class problem36 extends ConsoleProgram{
 	}
 }   */
 
-import acm.program.ConsoleProgram;
+import acm.graphics.*;
+import acm.program.*;
+import java.awt.*;
 
-public class problem36 extends ConsoleProgram {
+public class problem36 extends GraphicsProgram {	
+
+	private static final int RECT_WIDTH = 150;
+	private static final int RECT_HEIGHT = 50; 
+	private static final int GAP_BETWEEN_RECTANGLES = 30;
+	
 	public void run() {
-		steps();
+		drawEntireGraphic();
 	}
 
-	private void steps() {
+	private void drawEntireGraphic() {
+		// TODO Auto-generated method stub
+		int x = getWidth() / 2 - RECT_WIDTH / 2 - GAP_BETWEEN_RECTANGLES - RECT_WIDTH;
+		int y = getHeight() / 2;
+		int lineFirstX = x + RECT_WIDTH / 2;
+		int lineFirstY = y;
+		int lineLastX = getWidth() / 2;
+		int lineLastY = y - RECT_HEIGHT;
 		int count = 0;
-		int k = 0;
-		int n = readInt("Enter a number: ");
-		while(n != 1){
-			if(n % 2 == 0){
-				k = n;
-				n = n / 2;
-				println(k + " is even so I take half: " + n);
-				count++;
+		String text = "GraphicsProgram";
+		
+		rectangle(getWidth() / 2 - RECT_WIDTH / 2, getHeight() / 2 - 2 * RECT_HEIGHT, "Program");
+		for(int i = 0; i < 3; i++){
+			rectangle(x, y, text);
+			GLine line = new GLine(lineFirstX, lineFirstY, lineLastX, lineLastY);
+			add(line);
+			count++;
+			if(count == 1){
+				text = "ConsoleProgram";
 			} else {
-				k = n;
-				n = 3 * n + 1;
-				println(k + " is odd, so I make 3n + 1: " + n);
-				count++;
+				text = "DialogProgram";
 			}
+			x = x + RECT_WIDTH + GAP_BETWEEN_RECTANGLES;
+			
+			lineFirstX = lineFirstX + RECT_WIDTH + GAP_BETWEEN_RECTANGLES;
+			
 		}
-		println("The process took " + count + " to reach 1");
 	}
-}
+
+	private void rectangle(int i, int j, String string) {
+		GRect rect = new GRect(RECT_WIDTH, RECT_HEIGHT);
+		add(rect, i, j);
+		GLabel glabel = new GLabel(string);
+		double x = i + (RECT_WIDTH - glabel.getWidth()) / 2;
+		double y = j + (RECT_HEIGHT  + glabel.getHeight()) / 2;
+		add(glabel, x, y);
+		
+	}
+}    
 
 
 
