@@ -1,6 +1,6 @@
 //თქვენი ამოცანაა გააკეთოთ მონეტის აგდების სიმულაციები და დათვალოთ საშუალოდ
 //რამდენჯერ უნდა ავაგდოთ მონეტა რათა 3-ჯერ ზედიზედ ამოვიდეს ბორჯღალო.
-import acm.program.ConsoleProgram;
+/* import acm.program.ConsoleProgram;
 import acm.util.RandomGenerator;
 
 public class problem36 extends ConsoleProgram{
@@ -32,4 +32,63 @@ public class problem36 extends ConsoleProgram{
 		}
 		return numFlips;
 	}
+}   */
+
+import acm.program.ConsoleProgram;
+
+public class problem36 extends ConsoleProgram {
+	public void run() {
+		steps();
+	}
+
+	private void steps() {
+		int count = 0;
+		int k = 0;
+		int n = readInt("Enter a number: ");
+		while(n != 1){
+			if(n % 2 == 0){
+				k = n;
+				n = n / 2;
+				println(k + " is even so I take half: " + n);
+				count++;
+			} else {
+				k = n;
+				n = 3 * n + 1;
+				println(k + " is odd, so I make 3n + 1: " + n);
+				count++;
+			}
+		}
+		println("The process took " + count + " to reach 1");
+	}
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
