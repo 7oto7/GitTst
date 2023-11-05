@@ -49,7 +49,6 @@ public class problem36 extends GraphicsProgram {
 	}
 
 	private void drawEntireGraphic() {
-		// TODO Auto-generated method stub
 		int x = getWidth() / 2 - RECT_WIDTH / 2 - GAP_BETWEEN_RECTANGLES - RECT_WIDTH;
 		int y = getHeight() / 2;
 		int lineFirstX = x + RECT_WIDTH / 2;
@@ -94,6 +93,36 @@ public class problem36 extends GraphicsProgram {
 
 
 
+public class Pyramid extends GraphicsProgram {
+
+/** Width of each brick in pixels */
+	private static final int BRICK_WIDTH = 30;
+
+/** Width of each brick in pixels */
+	private static final int BRICK_HEIGHT = 12;
+
+/** Number of bricks in the base of the pyramid */
+	private static final int BRICKS_IN_BASE = 14;
+	
+	public void run() {
+		drawPyramid();
+	}
+
+	private void drawPyramid() {
+		int k = 0;
+		int number = BRICKS_IN_BASE;
+		for(int i = 0; i < BRICKS_IN_BASE; i++){
+			for(int j = 0; j < number; j++){
+				int x = getWidth() / 2 - (BRICKS_IN_BASE / 2) * BRICK_WIDTH + j * BRICK_WIDTH + k * (BRICK_WIDTH / 2);
+				int y = getHeight() - BRICK_HEIGHT - i * BRICK_HEIGHT;
+				GRect rect = new GRect(BRICK_WIDTH, BRICK_HEIGHT);
+				add(rect, x, y);
+			}
+			number--;
+			k++;
+		}
+	}
+}
 
 
 
