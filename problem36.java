@@ -107,19 +107,22 @@ public class Pyramid extends GraphicsProgram {
 	public void run() {
 		drawPyramid();
 	}
-
+	
+	//this program draws pyramid
 	private void drawPyramid() {
-		int k = 0;
-		int number = BRICKS_IN_BASE;
-		for(int i = 0; i < BRICKS_IN_BASE; i++){
-			for(int j = 0; j < number; j++){
+		int k = 0; //k is used to increase x coordinate with half size of brick when we move up to next layer
+		int number = BRICKS_IN_BASE; //number is different in each layer,but it equals BRICKS_IN_BASE at first
+		for(int i = 0; i < BRICKS_IN_BASE; i++){ //repetition equals number of brciks in base
+			for(int j = 0; j < number; j++){ // this shows how many bricks should be in each layer
+				//first x coodinate.Then it increases depend on which layer we are on
 				int x = getWidth() / 2 - (BRICKS_IN_BASE / 2) * BRICK_WIDTH + j * BRICK_WIDTH + k * (BRICK_WIDTH / 2);
+				//first y coordinate.It only increases by one bricks height in each layer
 				int y = getHeight() - BRICK_HEIGHT - i * BRICK_HEIGHT;
 				GRect rect = new GRect(BRICK_WIDTH, BRICK_HEIGHT);
 				add(rect, x, y);
 			}
-			number--;
-			k++;
+			number--; //number reduses by one each time we move up to next layer
+			k++; //x coordinate increases by half of the bricks width each time we move up
 		}
 	}
 }
