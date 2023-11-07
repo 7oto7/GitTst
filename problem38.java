@@ -1,4 +1,7 @@
 
-public class problem38 {
 
+public class problem38 extends {
+	public void run() {
+		
+	}
 }
