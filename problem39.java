@@ -1,5 +1,7 @@
 //დაწერეთ პროგრამა სადაც იქნება კანვასზე ბურთის მოძრაობა მარცხენა კედლის შუა
 //წერტილიდან მარჯვენა კედლამდე.
+import java.awt.Color;
+
 import acm.graphics.GOval;
 import acm.program.GraphicsProgram;
 
@@ -15,6 +17,8 @@ public class problem39 extends GraphicsProgram {
 		GOval oval = new GOval(i * 2, j * 2);
 		int x = 0;
 		int y = getHeight() / 2 - j;
+		oval.setFilled(true);
+		oval.setFillColor(Color.RED);
 		add(oval, x, y);
 	}
 }
