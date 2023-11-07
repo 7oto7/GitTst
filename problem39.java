@@ -7,7 +7,7 @@ public class problem39 extends GraphicsProgram {
 	private static final int SPEED = 5;
 
 	public void run() {
-		makeCircle(50, 50);
+		makeCircle(20, 20);
 		
 	}
 
