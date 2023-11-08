@@ -13,8 +13,9 @@ public class tst extends ConsoleProgram{
 				if(betNumber == rouletteNumber){
 					println("you won");
 					break;
-				} else {
+				} else if(betNumber != rouletteNumber){
 					println("try again");
+					betNumber = readBet(); 
 				}
 			}
 			break;
