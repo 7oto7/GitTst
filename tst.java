@@ -28,9 +28,10 @@ public class tst extends ConsoleProgram {
 					betNumber = readBet();
 				}
 			}
-		}
+		
 		println("Roulette result is: " + rouletteNumber);
 		break;
+		}
 	}
 
 	private int spinRoulette() {
