@@ -18,12 +18,13 @@ public class tst extends ConsoleProgram{
 					betNumber = readBet(); 
 				}
 			}
+			println("Roulette result is: " + rouletteNumber);
 			break;
 		}
 	}
 	private int spinRoulette() {
 		int winningNum = rgen.nextInt(MIN_VALUE, MAX_VALUE);
-		println("Roulette result is: " + winningNum);
+		//println("Roulette result is: " + winningNum);
 		return winningNum;
 	}
 	private int readBet() {
