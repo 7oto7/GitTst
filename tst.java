@@ -17,6 +17,7 @@ public class tst extends ConsoleProgram{
 					println("try again");
 				}
 			}
+			break;
 		}
 	}
 	private int spinRoulette() {
