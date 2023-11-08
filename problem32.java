@@ -7,8 +7,10 @@ public class problem32 extends ConsoleProgram {
 
 	public void run() {
 		for (int i = 0; i < NUMBER; i++) {
-			if (isPrime(i)) {
-				println(i);
+			if(i % 2 == 1){
+				if (isPrime(i)) {
+					println(i);
+				}
 			}
 		}
 	}
