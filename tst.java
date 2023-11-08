@@ -18,6 +18,7 @@ public class tst extends ConsoleProgram{
 					betNumber = readBet(); 
 				}
 			}
+			println("You lose");
 			println("Roulette result is: " + rouletteNumber);
 			break;
 		}
