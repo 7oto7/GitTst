@@ -21,6 +21,7 @@ public class problem37 extends ConsoleProgram{
 	}
 	private int spinRoulette() {
 		int winningNum = rgen.nextInt(MIN_VALUE, MAX_VALUE);
+		println("Roulette result is: " + winningNum);
 		return winningNum;
 	}
 	private int readBet() {
