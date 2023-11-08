@@ -8,6 +8,7 @@ public class tst extends ConsoleProgram{
 	public void run() {
 		int betNumber = readBet();
 		int rouletteNumber = spinRoulette();
+		int n = 0;
 		while(true){
 			for(int i = 0; i < 4; i++){
 				if(betNumber == rouletteNumber){
@@ -16,14 +17,18 @@ public class tst extends ConsoleProgram{
 				} else if(betNumber != rouletteNumber){
 					if(betNumber < rouletteNumber){
 						println("try bigger number");
+						n++;
 					} else if(betNumber > rouletteNumber){
 						println("try less");
+						n++;
 					}
 
 					betNumber = readBet(); 
 				}
 			}
-			println("You lose");
+			if(n == 5){
+				println("You lose");
+			}
 			println("Roulette result is: " + rouletteNumber);
 			break;
 		}
