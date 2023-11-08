@@ -24,9 +24,9 @@ public class tst extends ConsoleProgram {
 					n++;
 					betNumber = readBet();
 				}
-				if (n == 3) {
-					println("You lose");
-				}
+			}
+			if (n == 3) {
+				println("You lose");
 			}
 			println("Roulette result is: " + rouletteNumber);
 			break;
