@@ -32,7 +32,7 @@ public class problem38 extends ConsoleProgram {
 				println("Your balance is " + money);
 			} else {
 				println("You won 200$");
-				money = money + 200;
+				money = money + 2000;
 				println("Your balance is " + money);
 			}
 		}
