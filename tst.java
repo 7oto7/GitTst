@@ -15,12 +15,11 @@ public class tst extends ConsoleProgram{
 					println("you won");
 					break;
 				} else if(betNumber != rouletteNumber){
+					n++;
 					if(betNumber < rouletteNumber){
 						println("try bigger number");
-						n++;
 					} else if(betNumber > rouletteNumber){
 						println("try less");
-						n++;
 					}
 
 					betNumber = readBet(); 
