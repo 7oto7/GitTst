@@ -17,15 +17,17 @@ public class tst extends ConsoleProgram {
 					break;
 				} else if (betNumber != rouletteNumber) {
 					if (betNumber < rouletteNumber) {
+						n++;
 						println("try bigger number");
 					} else if (betNumber > rouletteNumber) {
+						n++;
 						println("try less");
 					}
-					n++;
+					//n++;
 					betNumber = readBet();
 				}
 			}
-			if (n == 2) {
+			if (n == 3) {
 				println("You lose");
 			}
 			println("Roulette result is: " + rouletteNumber);
