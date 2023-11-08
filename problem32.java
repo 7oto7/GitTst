@@ -17,7 +17,7 @@ public class problem32 extends ConsoleProgram {
 		if (i == 1) {
 			return false;
 		}
-		for (int j = 0; j < Math.sqrt(i); j++) {
+		for (int j = 2; j < Math.sqrt(i); j++) {
 			if (i % j == 0) {
 				return false;
 			}
