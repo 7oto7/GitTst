@@ -34,7 +34,7 @@ public class problem38 extends ConsoleProgram{
 	}
 	private int readBet() {
 		while(true){
-			int bet = readInt("Enter number from " + MIN_NUMBER + " to " + MAX_NUMBER);
+			int bet = readInt("Enter number from :" + MIN_NUMBER + " to " + MAX_NUMBER + " :");
 			if(bet >= MIN_NUMBER && bet <= MAX_NUMBER){
 				return bet;
 			}
