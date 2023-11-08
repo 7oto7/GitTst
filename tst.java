@@ -3,7 +3,7 @@ import acm.util.RandomGenerator;
 
 public class tst extends ConsoleProgram {
 	private static final int MIN_VALUE = 0;
-	private static final int MAX_VALUE = 36;
+	private static final int MAX_VALUE = 14;
 	private RandomGenerator rgen = RandomGenerator.getInstance();
 
 	public void run() {
