@@ -11,17 +11,22 @@ import acm.util.RandomGenerator;
 //რომ გაერკვეს მოთამაშე, რა რიცხვი ამოვიდა, რამდენი წააგო, რამდენი მოიგო, რამდენი აქვს
 //ბალანსი.
 
-public class problem38 extends ConsoleProgram{
+public class problem38 extends ConsoleProgram {
 	private RandomGenerator rgen = RandomGenerator.getInstance();
 	private static final int MYBET = 100;
 	private static final int MIN_NUMBER = 0;
 	private static final int MAX_NUMBER = 36;
+
 	public void run() {
+		playUntilZero();
+	}
+
+	private void playUntilZero() {
 		int money = 1000;
-		while(money != 0){
+		while (money != 0) {
 			int betNumber = readBet();
 			int winningNumber = spinRoullete();
-			if(betNumber != winningNumber){
+			if (betNumber != winningNumber) {
 				println("You lose 100$");
 				money = money - MYBET;
 				println("Your balance is " + money);
@@ -32,17 +37,19 @@ public class problem38 extends ConsoleProgram{
 			}
 		}
 	}
+
 	private int readBet() {
-		while(true){
+		while (true) {
 			int bet = readInt("Enter number from " + MIN_NUMBER + " to " + MAX_NUMBER + " :");
-			if(bet >= MIN_NUMBER && bet <= MAX_NUMBER){
+			if (bet >= MIN_NUMBER && bet <= MAX_NUMBER) {
 				return bet;
 			}
 		}
 	}
+
 	private int spinRoullete() {
 		int winningNum = rgen.nextInt(MIN_NUMBER, MAX_NUMBER);
 		println("Roulette result is: " + winningNum);
 		return winningNum;
 	}
-}   
+}
