@@ -22,15 +22,14 @@ public class tst extends ConsoleProgram {
 						println("try less");
 					}
 					n++;
-					if (n == 3) {
-						println("You lose");
-					}
 					betNumber = readBet();
 				}
 			}
-		
-		println("Roulette result is: " + rouletteNumber);
-		break;
+			if (n == 3) {
+				println("You lose");
+			}
+			println("Roulette result is: " + rouletteNumber);
+			break;
 		}
 	}
 
