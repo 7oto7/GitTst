@@ -3,9 +3,11 @@
 import acm.program.ConsoleProgram;
 
 public class problem32 extends ConsoleProgram {
-	private static final int NUMBER = 1000;
+	private static final int NUMBER = 10000;
 
 	public void run() {
+		println("1");
+		println("2");
 		for (int i = 0; i < NUMBER; i++) {
 			if(i % 2 == 1){
 				if (isPrime(i)) {
@@ -16,9 +18,6 @@ public class problem32 extends ConsoleProgram {
 	}
 
 	private boolean isPrime(int i) {
-		if (i == 1) {
-			return false;
-		}
 		for (int j = 2; j < Math.sqrt(i); j++) {
 			if (i % j == 0) {
 				return false;
