@@ -3,7 +3,7 @@
 import acm.program.ConsoleProgram;
 
 public class problem32 extends ConsoleProgram {
-	private static final int NUMBER = 10000;
+	private static final int NUMBER = 100000;
 
 	public void run() {
 		println("1");
