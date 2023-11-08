@@ -25,7 +25,7 @@ public class problem37 extends ConsoleProgram{
 	}
 	private int readBet() {
 		while(true){
-			int winningNum = rgen.nextInt(MIN_VALUE, MAX_VALUE);
+			int winningNum = readInt("Enter number from " + MIN_VALUE + " to " + MAX_VALUE + ": ");
 			if(winningNum >= MIN_VALUE && winningNum <= MAX_VALUE){
 				return winningNum;
 			}
