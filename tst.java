@@ -9,12 +9,17 @@ public class tst extends ConsoleProgram{
 		int betNumber = readBet();
 		int rouletteNumber = spinRoulette();
 		while(true){
-			for(int i = 0; i < 5; i++){
+			for(int i = 0; i < 4; i++){
 				if(betNumber == rouletteNumber){
 					println("you won");
 					break;
 				} else if(betNumber != rouletteNumber){
-					println("try again");
+					if(betNumber < rouletteNumber){
+						println("try bigger number");
+					} else if(betNumber > rouletteNumber){
+						println("try less");
+					}
+
 					betNumber = readBet(); 
 				}
 			}
