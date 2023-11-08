@@ -8,12 +8,14 @@ public class tst extends ConsoleProgram{
 	public void run() {
 		int betNumber = readBet();
 		int rouletteNumber = spinRoulette();
-		for(int i = 0; i < 5; i++){
-			if(betNumber == rouletteNumber){
-				println("you won");
-				break;
-			} else {
-				println("try again");
+		while(true){
+			for(int i = 0; i < 5; i++){
+				if(betNumber == rouletteNumber){
+					println("you won");
+					break;
+				} else {
+					println("try again");
+				}
 			}
 		}
 	}
