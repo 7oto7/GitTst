@@ -16,8 +16,7 @@ public class problem33 extends GraphicsProgram {
 	}
 
 	private void addRandomCircle() {
-		// int radius = rgen.nextInt(MIN_RADIUS, getHeight() / 2);
-		int radius = getHeight();
+		int radius = rgen.nextInt(MIN_RADIUS, getHeight() / 2);
 		Color color = rgen.nextColor();
 		double x = rgen.nextDouble(0, getWidth() - 2 * radius);
 		double y = rgen.nextDouble(0, getHeight() - 2 * radius);
