@@ -26,7 +26,7 @@ public class tst extends ConsoleProgram {
 					n++;
 				}
 			}
-			if (n == 2) {
+			if (n == 3) {
 				println("You lose");
 			}
 			println("Roulette result is: " + rouletteNumber);
