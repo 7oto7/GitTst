@@ -14,7 +14,7 @@ public class tst extends GraphicsProgram{
 		add(rect, 100, 100);
 		
 		rect2 = new GRect(100, 100);
-		rect.setFilled(true);
+		rect2.setFilled(true);
 		add(rect2, 200, 200);
 		
 		addMouseListeners();
