@@ -11,7 +11,7 @@ public class tst extends ConsoleProgram {
 		int rouletteNumber = spinRoulette();
 		int n = 0;
 		while (true) {
-			for (int i = 0; i < 2; i++) {
+			for (int i = 0; i < 3; i++) {
 				int betNumber = readBet();
 				if (betNumber == rouletteNumber) {
 					println("you won");
