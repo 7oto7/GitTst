@@ -7,12 +7,11 @@ public class tst extends ConsoleProgram {
 	private RandomGenerator rgen = RandomGenerator.getInstance();
 
 	public void run() {
-	//	int betNumber = readBet();
+		int betNumber = readBet();
 		int rouletteNumber = spinRoulette();
 		int n = 0;
 		while (true) {
-			for (int i = 0; i < 3; i++) {
-				int betNumber = readBet();
+			for (int i = 0; i < 2; i++) {
 				if (betNumber == rouletteNumber) {
 					println("you won");
 					break;
@@ -22,11 +21,11 @@ public class tst extends ConsoleProgram {
 					} else if (betNumber > rouletteNumber) {
 						println("try less");
 					}
-//					int betNumber = readBet();
+					betNumber = readBet();
 					n++;
 				}
 			}
-			if (n == 3) {
+			if (n == 2) {
 				println("You lose");
 			}
 			println("Roulette result is: " + rouletteNumber);
