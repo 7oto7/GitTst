@@ -21,8 +21,8 @@ public class tst extends ConsoleProgram {
 					} else if (betNumber > rouletteNumber) {
 						println("try less");
 					}
-					n++;
 					betNumber = readBet();
+					n++;
 				}
 			}
 			if (n == 2) {
