@@ -7,7 +7,7 @@ public class bonus13_1 extends GraphicsProgram {
 		while(true){
 			//removeAll();
 			remove(line);
-			GLine line = new GLine(0, getHeight() / 2, getWidth(), getHeight() / 2);
+			line = new GLine(0, getHeight() / 2, getWidth(), getHeight() / 2);
 			add(line);
 			pause(20);
 		}
