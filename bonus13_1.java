@@ -4,8 +4,8 @@ import acm.program.GraphicsProgram;
 public class bonus13_1 extends GraphicsProgram{
 	public void run(){
 	//	version1();
-	//	version2();
-		version3();
+		version2();
+		//version3();
 	}
 
 	private void version3() {
@@ -14,7 +14,6 @@ public class bonus13_1 extends GraphicsProgram{
 		while(true){
 			line.setStartPoint(0, getHeight() / 2);
 			line.setEndPoint(getWidth(), getHeight() / 2);
-			
 		}
 		
 	}
@@ -26,7 +25,7 @@ public class bonus13_1 extends GraphicsProgram{
 			remove(line);
 			line = new GLine(0, getHeight() / 2, getWidth(), getHeight() / 2);
 			add(line);
-			pause(20);
+			//pause(20);
 		}
 		
 	}
