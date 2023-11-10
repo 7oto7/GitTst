@@ -25,7 +25,7 @@ public class bonus13_1 extends GraphicsProgram{
 			remove(line);
 			line = new GLine(0, getHeight() / 2, getWidth(), getHeight() / 2);
 			add(line);
-			//pause(20);
+			pause(20);
 		}
 		
 	}
