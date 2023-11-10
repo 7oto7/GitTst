@@ -15,16 +15,8 @@ public class problem39 extends GraphicsProgram {
 		GOval circle = makeCircle();
 		int vx = SPEED;
 		while (true) {
-			while(circle.getX() + 2 * RADIUS <= getWidth()){
-				circle.move(SPEED, 0);
-				pause(PAUSE_MS);
-			}
-			while(circle.getX() + 2 * RADIUS >= getWidth() || circle.getX() < 0){
-				vx = -vx;
-				circle.move(vx, 0);
-				pause(PAUSE_MS);
-			}
-		} 
+			if()
+		}
 	}
 
 	private GOval makeCircle() {
