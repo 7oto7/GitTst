@@ -16,7 +16,6 @@ public class problem39 extends GraphicsProgram {
 		int vx = SPEED;
 		while (true) {
 			while(circle.getX() + 2 * RADIUS <= getWidth()){
-				vx = SPEED;
 				circle.move(SPEED, 0);
 				pause(PAUSE_MS);
 			}
