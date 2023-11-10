@@ -4,8 +4,8 @@ import acm.program.GraphicsProgram;
 public class bonus13_1 extends GraphicsProgram{
 	public void run(){
 		version1();
-		version2();
-		version3();
+//		version2();
+	//	version3();
 	}
 
 	private void version1() {
