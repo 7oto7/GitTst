@@ -19,11 +19,11 @@ public class dvd extends GraphicsProgram {
 				lable.move(vx, vy);
 				pause(PAUSE_MS);
 			}
-			if (lable.getY() >= getHeight() || lable.getY() - lable.getHeight() <= 0) {
+			if (lable.getY() > getHeight() || lable.getY() - lable.getHeight() < 0) {
 				vy = -vy;
 				lable.move(vx, vy);
 			}
-			if (lable.getX()  >= getWidth() || lable.getX() <= 0) {
+			if (lable.getX()  > getWidth() || lable.getX() < 0) {
 				vx = -vx;
 				lable.move(vx, vy);
 				pause(PAUSE_MS);
