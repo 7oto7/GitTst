@@ -44,6 +44,9 @@ public class tst extends GraphicsProgram {
 	@override
 	public void keyTyped(KeyEvent e) {
 		// label.setLabel("key typed: " + )
+		if(gobj != null){
+			gobj.setColor(rgen.nextColor());
+		}
 
 	}
 }
