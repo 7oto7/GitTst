@@ -31,7 +31,8 @@ public class problem39 extends GraphicsProgram {
 			}
 		}
 	}
-
+	
+	
 	private GOval makeCircle() {
 		GOval oval = new GOval(RADIUS * 2, RADIUS * 2);
 		int x = getWidth() / 2 - RADIUS;
