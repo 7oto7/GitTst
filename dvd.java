@@ -19,7 +19,7 @@ public class dvd extends GraphicsProgram {
 		    pause(PAUSE_MS);
 
 		    // Check if the label is outside of the window bounds.
-		    if (label.getY() - label.getHeight() < 0 || label.getY()  >= getHeight()) {
+		    if (label.getY() < 0 || label.getY()  >= getHeight()) {
 		        vy = -vy;
 		    }
 		    if (label.getX() < 0 || label.getX() + label.getWidth() >= getWidth()) {
