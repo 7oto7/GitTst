@@ -19,7 +19,7 @@ public class problem39 extends GraphicsProgram {
 				circle.move(vx, 0);
 				pause(PAUSE_MS);
 			}
-			if(circle.getX() + 2 * RADIUS >= getWidth() || circle.getX() < 0){
+			if(circle.getX() + 2 * RADIUS >= getWidth() || circle.getX() <= 0){
 				vx = - vx;
 				circle.move(vx,0);
 				pause(PAUSE_MS);
