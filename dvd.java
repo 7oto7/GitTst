@@ -23,7 +23,7 @@ public class dvd extends GraphicsProgram {
 				vy = -vy;
 				lable.move(vx, vy);
 			}
-			if (lable.getX()  > getWidth() || lable.getX() < 0) {
+			if (lable.getX()  >= getWidth() || lable.getX() < 0) {
 				vx = -vx;
 				lable.move(vx, vy);
 				pause(PAUSE_MS);
