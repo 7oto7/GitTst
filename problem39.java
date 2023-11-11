@@ -16,13 +16,17 @@ public class problem39 extends GraphicsProgram {
 		int vx = SPEED;
 		int vy = SPEED;
 		while (true) {
-			if(circle.getX() + 2 * RADIUS <= getWidth()){
-				circle.move(vx, 0);
+			if (circle.getX() + 2 * RADIUS <= getWidth() && circle.getY() + 2 * RADIUS <= getHeight()) {
+				circle.move(vx, vy);
 				pause(PAUSE_MS);
 			}
-			if(circle.getX() + 2 * RADIUS > getWidth() || circle.getX() < 0){
-				vx = - vx;
-				circle.move(vx,0);
+			if (circle.getY() + 2 * RADIUS > getHeight() || circle.getY() < 0) {
+				vy = -vy;
+				circle.move(vx, vy);
+			}
+			if (circle.getX() + 2 * RADIUS > getWidth() || circle.getX() < 0) {
+				vx = -vx;
+				circle.move(vx, vy);
 				pause(PAUSE_MS);
 			}
 		}
