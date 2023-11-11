@@ -14,6 +14,7 @@ public class problem39 extends GraphicsProgram {
 	public void run() {
 		GOval circle = makeCircle();
 		int vx = SPEED;
+		int vy = SPEED;
 		while (true) {
 			if(circle.getX() + 2 * RADIUS <= getWidth()){
 				circle.move(vx, 0);
@@ -29,7 +30,7 @@ public class problem39 extends GraphicsProgram {
 
 	private GOval makeCircle() {
 		GOval oval = new GOval(RADIUS * 2, RADIUS * 2);
-		int x = 0;
+		int x = getWidth() / 2 - RADIUS;
 		int y = getHeight() / 2 - RADIUS;
 		oval.setFilled(true);
 		oval.setFillColor(Color.RED);
