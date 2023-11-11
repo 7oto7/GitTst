@@ -25,7 +25,8 @@ public class tst extends GraphicsProgram{
 	}
 	
 	@override
-	public void keyTyped(KeyEvent e){
-	//	label.setLabel("key typed: " + )
+	public void keTyped(KeyEvent e){
+		//label.setLabel("key typed: " + )
+		
 	}
 }
