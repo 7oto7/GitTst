@@ -7,7 +7,7 @@ import acm.graphics.GOval;
 import acm.program.GraphicsProgram;
 
 public class problem39 extends GraphicsProgram {
-	private static final int SPEED = 5;
+	private static final int SPEED = 10;
 	private static final int PAUSE_MS = 20;
 	private static final int RADIUS = 20;
 
