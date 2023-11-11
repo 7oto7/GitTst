@@ -15,15 +15,15 @@ public class dvd extends GraphicsProgram {
 		int vx = SPEED;
 		int vy = SPEED;
 		while (true) {
-			if (lable.getX() + 2 * RADIUS <= getWidth() && lable.getY() + 2 * RADIUS <= getHeight()) {
+			if (lable.getX() + 100 <= getWidth() && lable.getY() <= getHeight()) {
 				lable.move(vx, vy);
 				pause(PAUSE_MS);
 			}
-			if (lable.getY() + 2 * RADIUS > getHeight() || lable.getY() < 0) {
+			if (lable.getY() > getHeight() || lable.getY() < 0) {
 				vy = -vy;
 				lable.move(vx, vy);
 			}
-			if (lable.getX() + 2 * RADIUS > getWidth() || lable.getX() < 0) {
+			if (lable.getX() + 100 > getWidth() || lable.getX() < 0) {
 				vx = -vx;
 				lable.move(vx, vy);
 				pause(PAUSE_MS);
