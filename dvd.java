@@ -50,7 +50,7 @@ public class dvd extends GraphicsProgram {
 	
 
 	private GLabel myPanel() {
-		GLabel lbl = new GLabel("D V D", 100, 100);
+		GLabel lbl = new GLabel("D V D", 0, 0);
 		lbl.setFont("Helvetica-100");
 		add(lbl);
 	    return lbl;
