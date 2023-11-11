@@ -15,7 +15,7 @@ public class dvd extends GraphicsProgram {
 		int vx = SPEED;
 		int vy = SPEED;
 		while (true) {
-			if (lable.getX() + 100 <= getWidth() && lable.getY() <= getHeight()) {
+			if (lable.getX() <= getWidth() && lable.getY() <= getHeight()) {
 				lable.move(vx, vy);
 				pause(PAUSE_MS);
 			}
