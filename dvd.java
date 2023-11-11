@@ -15,17 +15,18 @@ public class dvd extends GraphicsProgram {
 		int vy = SPEED;
 		
 		while (true) {
-            label.move(vx, vy);
-            pause(PAUSE_MS);
+		    label.move(vx, vy);
+		    pause(PAUSE_MS);
 
-            if (label.getY() + label.getHeight() >= getHeight() || label.getY() <= 0) {
-                vy = -vy;
-            }
+		    // Check if the label is outside of the window bounds.
+		    if (label.getY() < 0 || label.getY() + label.getHeight() >= getHeight()) {
+		        vy = -vy;
+		    }
+		    if (label.getX() < 0 || label.getX() + label.getWidth() >= getWidth()) {
+		        vx = -vx;
+		    }
+		}
 
-            if (label.getX() + label.getWidth() >= getWidth() || label.getX() <= 0) {
-                vx = -vx;
-            }
-        }
     }
 		
 		
