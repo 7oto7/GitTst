@@ -46,7 +46,7 @@ public class dvd extends GraphicsProgram {
 				pause(PAUSE_MS);
 			}
 		} */
-	}
+	
 
 	private GLabel myPanel() {
 		GLabel lbl = new GLabel("D V D", 100, 100);
