@@ -7,7 +7,7 @@ import acm.program.GraphicsProgram;
 
 public class dvd extends GraphicsProgram {
 	private static final int SPEED = 1;
-	private static final int PAUSE_MS = 2;
+	private static final int PAUSE_MS = 20;
 
 	public void run() {
 		GLabel label = myPanel();
