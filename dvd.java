@@ -15,7 +15,7 @@ public class dvd extends GraphicsProgram {
 		int vx = SPEED;
 		int vy = SPEED;
 		while (true) {
-			if (lable.getX() + lable.getWidth() <= getWidth() && lable.getY() <= getHeight()) {
+			if (lable.getX() + lable.getWidth() <= getWidth()) {
 				lable.move(vx, vy);
 				pause(PAUSE_MS);
 			}
@@ -33,7 +33,7 @@ public class dvd extends GraphicsProgram {
 
 	private GLabel myPanel() {
 		GLabel lbl = new GLabel("D V D", 100, 100);
-		//lbl.setFont("Helvetica-24");
+		lbl.setFont("Helvetica-24");
 		add(lbl);
 	    return lbl;
 	}
