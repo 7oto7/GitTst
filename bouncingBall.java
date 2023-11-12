@@ -15,7 +15,7 @@ public class bouncingBall extends GraphicsProgram {
 	 */
 	private static final double GRAVITY = 3;
 	/** Animation delay or pause time between ball moves */
-	private static final int DELAY = 100;
+	private static final int DELAY = 200;
 	/** Initial X and Y location of ball */
 	private static final double X_START = DIAM_BALL / 2;
 	private static final double Y_START = 100;
