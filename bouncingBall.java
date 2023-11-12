@@ -60,7 +60,7 @@ public class bouncingBall extends GraphicsProgram {
 	 */
 	private void checkForCollision() {
 		// determine if ball has dropped below the floor
-		if (ball.getY() - DIAM_BALL > getHeight()){
+		if (ball.getY() + DIAM_BALL > getHeight()){
 			// change ball's Y velocity to now bounce upwards
 			yVel = -yVel * BOUNCE_REDUCE;
 			// assume bounce will move ball an amount above the
