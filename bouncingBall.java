@@ -67,7 +67,7 @@ public class bouncingBall extends GraphicsProgram {
 			// floor equal to the amount it would have dropped
 			// below the floor.
 			double diff = ball.getY() - (getHeight() - DIAM_BALL);
-			ball.move(0, -2 * diff);
+			ball.move(0, -1 * diff);
 		}
 	}
 }
