@@ -9,13 +9,13 @@ import acm.graphics.*;
 
 public class bouncingBall extends GraphicsProgram {
 	/** Size (diameter) of the ball */
-	private static final int DIAM_BALL = 30;
+	private static final int DIAM_BALL = 100;
 	/**
 	 * Amount Y velocity is increased each cycle as a result of gravity
 	 */
 	private static final double GRAVITY = 3;
 	/** Animation delay or pause time between ball moves */
-	private static final int DELAY = 20;
+	private static final int DELAY = 100;
 	/** Initial X and Y location of ball */
 	private static final double X_START = DIAM_BALL / 2;
 	private static final double Y_START = 100;
