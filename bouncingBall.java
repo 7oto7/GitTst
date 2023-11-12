@@ -50,7 +50,7 @@ public class bouncingBall extends GraphicsProgram {
 	/** Update and move ball */
 	private void moveBall() {
 		// increase yVelocity due to gravity on each cycle
-		yVel += GRAVITY;
+		//yVel += GRAVITY;
 		ball.move(xVel, yVel);
 	}
 
