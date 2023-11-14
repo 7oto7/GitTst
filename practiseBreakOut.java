@@ -215,8 +215,8 @@ public class practiseBreakOut extends GraphicsProgram {
 			for (int j = 0; j < n2; j++) {
 				GRect rect = new GRect(BRICK_WIDTH, BRICK_HEIGHT);
 				rect.setFilled(true);
-				int x = BRICK_SEP / 2 + j * (BRICK_WIDTH + BRICK_SEP);
-				int y = BRICK_Y_OFFSET + i * (BRICK_HEIGHT + BRICK_SEP);
+				double x = BRICK_SEP / 2 + j * (BRICK_WIDTH + BRICK_SEP);
+				double y = BRICK_Y_OFFSET + i * (BRICK_HEIGHT + BRICK_SEP);
 				if (i == 0 || i == 1) {
 					rect.setColor(Color.RED);
 				}
