@@ -119,9 +119,9 @@ public class practiseBreakOut extends GraphicsProgram {
 
 	private void moveBall() {
 		while (true) {
+			vy = 3;
 			if (ballIsStopped == true) {
 				vx = rgen.nextDouble(1.0, 3.0);
-				vy = 3;
 				if (rgen.nextBoolean(0.5)) {
 					vx = -vx;
 				}
