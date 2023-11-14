@@ -52,8 +52,8 @@ public class practiseBreakOut extends GraphicsProgram {
 
 	private GRect rect;
 	private GOval ball;
-	private double vx = 1;
-	private double vy;
+	private double vx;
+	private double vy = 3;;
 	private GObject collider;
 	private int count;
 	private int countHealth;
@@ -127,7 +127,7 @@ public class practiseBreakOut extends GraphicsProgram {
 				ballIsStopped = !ballIsStopped;
 			}
 			if(ballIsStopped == false){
-				vy = 3;
+				//vy = 3;
 				ball.move(vx, vy);
 				pause(20);
 				checkWalls();
