@@ -25,10 +25,10 @@ public class practiseBreakOut extends GraphicsProgram {
 	private static final int PADDLE_Y_OFFSET = 30;
 
 	/** Number of bricks per row */
-	private static final int NBRICKS_PER_ROW = 10;
+	private static final int NBRICKS_PER_ROW = 1;
 
 	/** Number of rows of bricks */
-	private static final int NBRICK_ROWS = 10;
+	private static final int NBRICK_ROWS = 1;
 
 	/** Separation between bricks */
 	private static final int BRICK_SEP = 4;
@@ -58,6 +58,7 @@ public class practiseBreakOut extends GraphicsProgram {
 	private int count;
 	private int countHealth;
 	private boolean ballIsStopped;
+	private boolean sheexo_padls = false;
 
 	/* Method: run() */
 	/** Runs the Breakout program. */
@@ -72,7 +73,6 @@ public class practiseBreakOut extends GraphicsProgram {
 
 	}
 	
-	boolean sheexo_padls = false;
 
 	private void removeBricks() {
 	
