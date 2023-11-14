@@ -193,7 +193,7 @@ public class practiseBreakOut extends GraphicsProgram {
 
 	public void mouseMoved(MouseEvent e) { ///// 299/////
 		if (e.getX() <= PADDLE_WIDTH / 2) {
-			rect.setLocation(0, getHeight() - PADDLE_Y_OFFSET);
+			rect.setLocation(0, getHeight() - PADDLE_Y_OFFSET - PADDLE_HEIGHT);
 		} else if (e.getX() >= getWidth() - PADDLE_WIDTH / 2) {
 			rect.setLocation(getWidth() - PADDLE_WIDTH, getHeight() - PADDLE_Y_OFFSET);
 		} else {
