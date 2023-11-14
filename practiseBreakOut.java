@@ -205,7 +205,7 @@ public class practiseBreakOut extends GraphicsProgram {
 		rect = new GRect(PADDLE_WIDTH, PADDLE_HEIGHT);
 		rect.setFilled(true);
 		int x = getWidth() / 2 - PADDLE_WIDTH / 2;
-		int y = getHeight() - PADDLE_Y_OFFSET;
+		int y = getHeight() - PADDLE_Y_OFFSET - PADDLE_HEIGHT;
 		add(rect, x, y);
 		return rect;
 	}
