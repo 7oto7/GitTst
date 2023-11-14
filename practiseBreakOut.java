@@ -80,12 +80,14 @@ public class practiseBreakOut extends GraphicsProgram {
 		if (collider != null) {
 //			if (collider == rect) {
 //			vy = -vy;
-//		} 
+//		}  
 			if(checkCollision(ball, rect) == true)
 			{
+				System.out.println("sheexo");
 				vy = -vy;				
 			}
 			else {
+				System.out.println("ar sheexo");
 				remove(collider);
 				count++;
 				vy = -vy;
