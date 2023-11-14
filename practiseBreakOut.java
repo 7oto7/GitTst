@@ -72,19 +72,19 @@ public class practiseBreakOut extends GraphicsProgram {
 
 	}
 	
-	//boolean sheexo_padls = false;
+	boolean sheexo_padls = false;
 
 	private void removeBricks() {
 	
 		if (collider != null) {
-			if (collider == rect /*&& sheexo_padls==false */) {
+			if (collider == rect && sheexo_padls==false ) {
 				if(vy > 0){
 					vy = -vy;
 				}
-				//sheexo_padls=true;
+				sheexo_padls=true;
 			}  
 			else if(collider != rect) {
-				//sheexo_padls=false;
+				sheexo_padls=false;
 				remove(collider);
 				count++;
 				vy = -vy;
@@ -98,18 +98,9 @@ public class practiseBreakOut extends GraphicsProgram {
 		if (getElementAt(ball.getX(), ball.getY()) != null) {// upper left corner
 			collider = getElementAt(ball.getX(), ball.getY());
 		} else if (getElementAt(ball.getX() + 2 * BALL_RADIUS, ball.getY()) != null) {// upper right corner
-			collider = getElementAt(ball.getX() + 2 * BALL_RADIUS, ball.getY());
-			if(collider == rect){
-				vx = -4;
-			}
-			
+			collider = getElementAt(ball.getX() + 2 * BALL_RADIUS, ball.getY());		
 		} else if (getElementAt(ball.getX(), ball.getY() + 2 * BALL_RADIUS) != null) {// bottom left corner
-			
 			collider = getElementAt(ball.getX(), ball.getY() + 2 * BALL_RADIUS);
-			if(collider == rect){
-				vx = 4;
-			}
-			System.out.print("shevida");
 		} else if (getElementAt(ball.getX() + 2 * BALL_RADIUS, ball.getY() + 2 * BALL_RADIUS) != null) {// bottom right corner
 			collider = getElementAt(ball.getX() + 2 * BALL_RADIUS, ball.getY() + 2 * BALL_RADIUS);
 		} else if (getElementAt(ball.getX() + BALL_RADIUS, ball.getY()) != null) {// upper middle
@@ -187,7 +178,7 @@ public class practiseBreakOut extends GraphicsProgram {
 			vx = 0;
 			vy = 0;
 			ballIsStopped = true;
-
+			sheexo_padls = false;
 		}
 
 	}
