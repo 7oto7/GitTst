@@ -99,9 +99,16 @@ public class practiseBreakOut extends GraphicsProgram {
 			collider = getElementAt(ball.getX(), ball.getY());
 		} else if (getElementAt(ball.getX() + 2 * BALL_RADIUS, ball.getY()) != null) {// upper right corner
 			collider = getElementAt(ball.getX() + 2 * BALL_RADIUS, ball.getY());
+			if(collider == rect){
+				vx = -11;
+			}
+			
 		} else if (getElementAt(ball.getX(), ball.getY() + 2 * BALL_RADIUS) != null) {// bottom left corner
 			
 			collider = getElementAt(ball.getX(), ball.getY() + 2 * BALL_RADIUS);
+			if(collider == rect){
+				vx = 10;
+			}
 			System.out.print("shevida");
 		} else if (getElementAt(ball.getX() + 2 * BALL_RADIUS, ball.getY() + 2 * BALL_RADIUS) != null) {// bottom right corner
 			collider = getElementAt(ball.getX() + 2 * BALL_RADIUS, ball.getY() + 2 * BALL_RADIUS);
@@ -109,20 +116,10 @@ public class practiseBreakOut extends GraphicsProgram {
 			collider = getElementAt(ball.getX() + BALL_RADIUS, ball.getY() - 1);
 		} else if (getElementAt(ball.getX() + 2 * BALL_RADIUS, ball.getY() + BALL_RADIUS) != null) {// right middle
 			collider = getElementAt(ball.getX() + 2 * BALL_RADIUS + 1, ball.getY() + BALL_RADIUS);
-			if(collider == rect){
-				vx = -11;
-			}
 		} else if (getElementAt(ball.getX() + BALL_RADIUS, ball.getY() + 2 * BALL_RADIUS) != null) {// down middle
 			collider = getElementAt(ball.getX() + BALL_RADIUS, ball.getY() + 2 * BALL_RADIUS + 1);
 		} else if (getElementAt(ball.getX() - 1, ball.getY() + BALL_RADIUS) != null ) {// left middle
-			
 			collider = getElementAt(ball.getX() - 1, ball.getY() + BALL_RADIUS);
-			
-			if(collider == rect){
-				vx = 10;
-				
-
-			}
 		} 
 //		else if (getElementAt(rect.getX(), rect.getY()) != null){
 //			collider = getElementAt(rect.getX(), rect.getY());
