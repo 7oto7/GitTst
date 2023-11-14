@@ -72,20 +72,17 @@ public class practiseBreakOut extends GraphicsProgram {
 
 	}
 	
-	boolean sheexo_padls = false;
+	//boolean sheexo_padls = false;
 
 	private void removeBricks() {
 	
-		
-		
-		
 		if (collider != null) {
-			if (collider == rect && sheexo_padls==false) {
+			if (collider == rect /*&& sheexo_padls==false */) {
 				vy = -vy;
-				sheexo_padls=true;
+				//sheexo_padls=true;
 			}  
 			else if(collider != rect) {
-				sheexo_padls=false;
+				//sheexo_padls=false;
 				remove(collider);
 				count++;
 				vy = -vy;
@@ -108,11 +105,18 @@ public class practiseBreakOut extends GraphicsProgram {
 			collider = getElementAt(ball.getX() + BALL_RADIUS, ball.getY() - 1);
 		} else if (getElementAt(ball.getX() + 2 * BALL_RADIUS, ball.getY() + BALL_RADIUS) != null) {// right middle
 			collider = getElementAt(ball.getX() + 2 * BALL_RADIUS + 1, ball.getY() + BALL_RADIUS);
+			if(collider == rect){
+				vx = -4;
+			}
 		} else if (getElementAt(ball.getX() + BALL_RADIUS, ball.getY() + 2 * BALL_RADIUS) != null) {// down middle
 			collider = getElementAt(ball.getX() + BALL_RADIUS, ball.getY() + 2 * BALL_RADIUS + 1);
-		} else if (getElementAt(ball.getX(), ball.getY() + BALL_RADIUS) != null) {// left middle
+		} else if (getElementAt(ball.getX(), ball.getY() + BALL_RADIUS) != null ) {// left middle
+			
 			collider = getElementAt(ball.getX() - 1, ball.getY() + BALL_RADIUS);
-		}
+			if(collider == rect){
+				vx = 4;
+			}
+		} 
 //		else if (getElementAt(rect.getX(), rect.getY()) != null){
 //			collider = getElementAt(rect.getX(), rect.getY());
 //		} else if (getElementAt(rect.getX() + PADDLE_WIDTH, rect.getY()) != null){
