@@ -133,7 +133,7 @@ public class practiseBreakOut extends GraphicsProgram {
 				getCollidingObject();
 				removeBricks();
 			}
-					if (count == 1) {
+					if (count == 100) {
 				removeAll();
 				GLabel text = new GLabel("YOU WON");
 				setBackground(Color.GREEN);
