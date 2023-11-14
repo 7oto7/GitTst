@@ -120,6 +120,7 @@ public class practiseBreakOut extends GraphicsProgram {
 	private void moveBall() {
 		while (true) {
 			if (ballIsStopped == true) {
+				waitForClick();
 				vx = rgen.nextDouble(1.0, 3.0);
 				if (rgen.nextBoolean(0.5)) {
 					vx = -vx;
@@ -127,15 +128,15 @@ public class practiseBreakOut extends GraphicsProgram {
 				vy = 3;
 				ballIsStopped = !ballIsStopped;
 			}
-			if(ballIsStopped == false){
-				//vy = 3;
+			if (ballIsStopped == false) {
+				// vy = 3;
 				ball.move(vx, vy);
 				pause(20);
 				checkWalls();
 				getCollidingObject();
 				removeBricks();
 			}
-					if (count == 100) {
+			if (count == 100) {
 				removeAll();
 				GLabel text = new GLabel("YOU WON");
 				setBackground(Color.GREEN);
@@ -144,10 +145,6 @@ public class practiseBreakOut extends GraphicsProgram {
 				double y = getHeight() / 2 + text.getHeight() / 2;
 				add(text, x, y);
 			}
-
-
-			
-			
 			if (countHealth == NTURNS) {
 				removeAll();
 				GLabel text = new GLabel("YOU LOST");
@@ -157,7 +154,7 @@ public class practiseBreakOut extends GraphicsProgram {
 				double y = getHeight() / 2 + text.getHeight() / 2;
 				add(text, x, y);
 			}
-	
+
 		}
 
 	}
@@ -175,10 +172,10 @@ public class practiseBreakOut extends GraphicsProgram {
 			remove(ball);
 			countHealth++;
 			add(ball, getWidth() / 2 - BALL_RADIUS, getHeight() / 2 - BALL_RADIUS);
-			
-			ballIsStopped = true;
-			 vx = 0;
+			vx = 0;
 			vy = 0;
+			// ballIsStopped = true;
+
 		}
 
 	}
@@ -189,10 +186,6 @@ public class practiseBreakOut extends GraphicsProgram {
 		int x = getWidth() / 2 - BALL_RADIUS;
 		int y = getHeight() / 2 - BALL_RADIUS;
 		add(ball, x, y);
-	}
-
-	public void mouseClicked(MouseEvent k) {
-		ballIsStopped = true;
 	}
 
 	public void mouseMoved(MouseEvent e) { ///// 299/////
@@ -242,4 +235,3 @@ public class practiseBreakOut extends GraphicsProgram {
 	}
 
 }
-
