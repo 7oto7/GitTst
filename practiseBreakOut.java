@@ -78,14 +78,9 @@ public class practiseBreakOut extends GraphicsProgram {
 		
 		
 		if (collider != null) {
-//			if (collider == rect) {
-//			vy = -vy;
-//		}  
-			if(checkCollision(ball, rect) == false)
-			{
-				System.out.println("sheexo");
-				vy = -vy;				
-			}
+			if (collider == rect) {
+			vy = -vy;
+		}  
 			else {
 				System.out.println("ar sheexo");
 				remove(collider);
@@ -95,44 +90,6 @@ public class practiseBreakOut extends GraphicsProgram {
 		}
 	}
 
-	public boolean checkCollision(GOval one, GRect two) {
-	    // Get center point of the circle first
-	    double centerX = one.getX() + BALL_RADIUS;
-	    double centerY = one.getY() + BALL_RADIUS;
-
-	    // Calculate AABB info (center, half-extents)
-	    double aabbHalfExtentsX = PADDLE_WIDTH / 2.0f;
-	    double aabbHalfExtentsY = PADDLE_HEIGHT / 2.0f;
-	    double aabbCenterX = two.getX() + aabbHalfExtentsX;
-	    double aabbCenterY = two.getY() + aabbHalfExtentsY;
-
-	    // Get difference vector between both centers
-	    double differenceX = centerX - aabbCenterX;
-	    double differenceY = centerY - aabbCenterY;
-
-	    // Clamp the difference vector
-	    double clampedX = Math.max(-aabbHalfExtentsX, Math.min(differenceX, aabbHalfExtentsX));
-	    double clampedY = Math.max(-aabbHalfExtentsY, Math.min(differenceY, aabbHalfExtentsY));
-
-	    // Add clamped value to AABB center, and we get the value of the box closest to the circle
-	    double closestX = aabbCenterX + clampedX;
-	    double closestY = aabbCenterY + clampedY;
-
-	    // Retrieve vector between center circle and closest point AABB and check if length <= radius
-	    double distanceX = closestX - centerX;
-	    double distanceY = closestY - centerY;
-
-	    return Math.sqrt(distanceX * distanceX + distanceY * distanceY) < BALL_RADIUS;
-	}
-	
-	
-	
-	
-	
-	
-	
-	
-	
 	
 	private GObject getCollidingObject() {
 
