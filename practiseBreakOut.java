@@ -88,29 +88,19 @@ public class practiseBreakOut extends GraphicsProgram {
 		if (getElementAt(ball.getX(), ball.getY()) != null) {// upper left
 																// corner
 			collider = getElementAt(ball.getX(), ball.getY());
-		} else if (getElementAt(ball.getX() + 2 * BALL_RADIUS, ball.getY()) != null) {// upper
-																						// right
-																						// corner
+		} else if (getElementAt(ball.getX() + 2 * BALL_RADIUS, ball.getY()) != null) {// upper right corner
 			collider = getElementAt(ball.getX() + 2 * BALL_RADIUS, ball.getY());
-		} else if (getElementAt(ball.getX(), ball.getY() + 2 * BALL_RADIUS) != null) {// bottom
-																						// left
-																						// corner
+		} else if (getElementAt(ball.getX(), ball.getY() + 2 * BALL_RADIUS) != null) {// bottom left corner
 			collider = getElementAt(ball.getX(), ball.getY() + 2 * BALL_RADIUS);
-		} else if (getElementAt(ball.getX() + 2 * BALL_RADIUS, ball.getY() + 2 * BALL_RADIUS) != null) {// bottom
-																										// right
-																										// corner
+		} else if (getElementAt(ball.getX() + 2 * BALL_RADIUS, ball.getY() + 2 * BALL_RADIUS) != null) {// bottom right corner
 			collider = getElementAt(ball.getX() + 2 * BALL_RADIUS, ball.getY() + 2 * BALL_RADIUS);
-		} else if (getElementAt(ball.getX() + BALL_RADIUS, ball.getY()) != null) {// upper
-																					// middle
+		} else if (getElementAt(ball.getX() + BALL_RADIUS, ball.getY()) != null) {// upper middle
 			collider = getElementAt(ball.getX() + BALL_RADIUS, ball.getY() - 1);
-		} else if (getElementAt(ball.getX() + 2 * BALL_RADIUS, ball.getY() + BALL_RADIUS) != null) {// right
-																									// middle
+		} else if (getElementAt(ball.getX() + 2 * BALL_RADIUS, ball.getY() + BALL_RADIUS) != null) {// right middle
 			collider = getElementAt(ball.getX() + 2 * BALL_RADIUS + 1, ball.getY() + BALL_RADIUS);
-		} else if (getElementAt(ball.getX() + BALL_RADIUS, ball.getY() + 2 * BALL_RADIUS) != null) {// down
-																									// middle
+		} else if (getElementAt(ball.getX() + BALL_RADIUS, ball.getY() + 2 * BALL_RADIUS) != null) {// down middle
 			collider = getElementAt(ball.getX() + BALL_RADIUS, ball.getY() + 2 * BALL_RADIUS + 1);
-		} else if (getElementAt(ball.getX(), ball.getY() + BALL_RADIUS) != null) {// left
-																					// middle
+		} else if (getElementAt(ball.getX(), ball.getY() + BALL_RADIUS) != null) {// left middle
 			collider = getElementAt(ball.getX() - 1, ball.getY() + BALL_RADIUS);
 		}
 		return collider;
