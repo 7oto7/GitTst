@@ -119,14 +119,14 @@ public class practiseBreakOut extends GraphicsProgram {
 
 	private void moveBall() {
 		while (true) {
-			if (ballIsStopped == true) {
+			if (ballIsStopped = true) {
 				vx = rgen.nextDouble(1.0, 3.0);
 				if (rgen.nextBoolean(0.5)) {
 					vx = -vx;
 				}
 				ballIsStopped = !ballIsStopped;
 			}
-			if(ballIsStopped == false){
+			if(ballIsStopped = false){
 				ball.move(vx, vy);
 				pause(20);
 				checkWalls();
@@ -188,7 +188,7 @@ public class practiseBreakOut extends GraphicsProgram {
 	}
 
 	public void mouseClicked(MouseEvent k) {
-		//ballIsStopped = true;
+		ballIsStopped = true;
 	}
 
 	public void mouseMoved(MouseEvent e) { ///// 299/////
