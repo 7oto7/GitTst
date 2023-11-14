@@ -116,7 +116,9 @@ public class practiseBreakOut extends GraphicsProgram {
 			
 			collider = getElementAt(ball.getX() - 1, ball.getY() + BALL_RADIUS);
 			if(collider == rect){
+				System.out.print("shevida");
 				vx = 10;
+				
 			}
 		} 
 //		else if (getElementAt(rect.getX(), rect.getY()) != null){
