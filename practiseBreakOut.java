@@ -100,14 +100,14 @@ public class practiseBreakOut extends GraphicsProgram {
 		} else if (getElementAt(ball.getX() + 2 * BALL_RADIUS, ball.getY()) != null) {// upper right corner
 			collider = getElementAt(ball.getX() + 2 * BALL_RADIUS, ball.getY());
 			if(collider == rect){
-				vx = -11;
+				vx = -4;
 			}
 			
 		} else if (getElementAt(ball.getX(), ball.getY() + 2 * BALL_RADIUS) != null) {// bottom left corner
 			
 			collider = getElementAt(ball.getX(), ball.getY() + 2 * BALL_RADIUS);
 			if(collider == rect){
-				vx = 10;
+				vx = 4;
 			}
 			System.out.print("shevida");
 		} else if (getElementAt(ball.getX() + 2 * BALL_RADIUS, ball.getY() + 2 * BALL_RADIUS) != null) {// bottom right corner
