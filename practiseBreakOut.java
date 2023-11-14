@@ -108,7 +108,7 @@ public class practiseBreakOut extends GraphicsProgram {
 		} else if (getElementAt(ball.getX() + 2 * BALL_RADIUS, ball.getY() + BALL_RADIUS) != null) {// right middle
 			collider = getElementAt(ball.getX() + 2 * BALL_RADIUS + 1, ball.getY() + BALL_RADIUS);
 			if(collider == rect){
-				vx = -4;
+				vx = -6;
 			}
 		} else if (getElementAt(ball.getX() + BALL_RADIUS, ball.getY() + 2 * BALL_RADIUS) != null) {// down middle
 			collider = getElementAt(ball.getX() + BALL_RADIUS, ball.getY() + 2 * BALL_RADIUS + 1);
@@ -116,7 +116,7 @@ public class practiseBreakOut extends GraphicsProgram {
 			
 			collider = getElementAt(ball.getX() - 1, ball.getY() + BALL_RADIUS);
 			if(collider == rect){
-				vx = 4;
+				vx = 6;
 			}
 		} 
 //		else if (getElementAt(rect.getX(), rect.getY()) != null){
