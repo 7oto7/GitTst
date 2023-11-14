@@ -173,7 +173,8 @@ public class practiseBreakOut extends GraphicsProgram {
 			remove(ball);
 			countHealth++;
 			add(ball, getWidth() / 2 - BALL_RADIUS, getHeight() / 2 - BALL_RADIUS);
-			stop();
+			vx = 0;
+			vy = 0;
 		}
 
 	}
