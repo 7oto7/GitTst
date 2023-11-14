@@ -188,7 +188,7 @@ public class practiseBreakOut extends GraphicsProgram {
 	}
 
 	public void mouseClicked(MouseEvent k) {
-		ballIsStopped = true;
+		//ballIsStopped = true;
 	}
 
 	public void mouseMoved(MouseEvent e) { ///// 299/////
