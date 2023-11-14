@@ -71,6 +71,8 @@ public class practiseBreakOut extends GraphicsProgram {
 		moveBall();
 
 	}
+	
+	boolean sheexo_padls = false;
 
 	private void removeBricks() {
 	
@@ -78,11 +80,12 @@ public class practiseBreakOut extends GraphicsProgram {
 		
 		
 		if (collider != null) {
-			if (collider == rect) {
-			vy = -vy;
-		}  
+			if (collider == rect && sheexo_padls==false) {
+				vy = -vy;
+				sheexo_padls=true;
+			}  
 			else {
-				System.out.println("ar sheexo");
+				sheexo_padls=false;
 				remove(collider);
 				count++;
 				vy = -vy;
