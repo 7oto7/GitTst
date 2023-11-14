@@ -65,8 +65,8 @@ public class practiseBreakOut extends GraphicsProgram {
 		makeBricks(NBRICKS_PER_ROW, NBRICK_ROWS, BRICK_SEP);
 		makePaddle();
 		makeBall();
-		checkWalls();
-
+		//checkWalls();
+		
 		waitForClick();
 		addMouseListeners();
 		moveBall();
