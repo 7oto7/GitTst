@@ -74,7 +74,7 @@ public class practiseBreakOut extends GraphicsProgram {
 
 	private void removeBricks() {
 		if (collider != null) {
-			if (collider == rect && ball.getY() + 2 * BALL_RADIUS == rect.getY()) {
+			if (collider == rect || ball.getY() + BALL_RADIUS == rect.getX() + PADDLE_WIDTH || ball.getX() + 2 * BALL_RADIUS == rect.getY()) {
 				vy = -vy;
 			} else {
 				remove(collider);
