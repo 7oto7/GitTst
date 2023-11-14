@@ -78,13 +78,13 @@ public class practiseBreakOut extends GraphicsProgram {
 		
 		
 		if (collider != null) {
-			if(checkCollision(ball, rect))
+//			if (collider == rect) {
+//			vy = -vy;
+//		} 
+			if(checkCollision(ball, rect) == true)
 			{
 				vy = -vy;				
 			}
-//			if (collider == rect) {
-//				vy = -vy;
-//			} 
 			else {
 				remove(collider);
 				count++;
