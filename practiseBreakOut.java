@@ -78,7 +78,9 @@ public class practiseBreakOut extends GraphicsProgram {
 	
 		if (collider != null) {
 			if (collider == rect /*&& sheexo_padls==false */) {
-				vy = -vy;
+				if(vy > 0){
+					vy = -vy;
+				}
 				//sheexo_padls=true;
 			}  
 			else if(collider != rect) {
