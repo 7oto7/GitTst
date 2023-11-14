@@ -85,8 +85,7 @@ public class practiseBreakOut extends GraphicsProgram {
 	}
 
 	private GObject getCollidingObject() {
-		if (getElementAt(ball.getX(), ball.getY()) != null) {// upper left
-																// corner
+		if (getElementAt(ball.getX(), ball.getY()) != null) {// upper left corner
 			collider = getElementAt(ball.getX(), ball.getY());
 		} else if (getElementAt(ball.getX() + 2 * BALL_RADIUS, ball.getY()) != null) {// upper right corner
 			collider = getElementAt(ball.getX() + 2 * BALL_RADIUS, ball.getY());
@@ -102,6 +101,10 @@ public class practiseBreakOut extends GraphicsProgram {
 			collider = getElementAt(ball.getX() + BALL_RADIUS, ball.getY() + 2 * BALL_RADIUS + 1);
 		} else if (getElementAt(ball.getX(), ball.getY() + BALL_RADIUS) != null) {// left middle
 			collider = getElementAt(ball.getX() - 1, ball.getY() + BALL_RADIUS);
+		} else if (getElementAt(rect.getX(), rect.getY()) != null){
+			collider = getElementAt(rect.getX(), rect.getY());
+		} else if (getElementAt(rect.getX() + PADDLE_WIDTH, rect.getY()) != null){
+			collider = getElementAt(rect.getX() + PADDLE_WIDTH, rect.getY());
 		}
 		return collider;
 	}
