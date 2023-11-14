@@ -52,7 +52,7 @@ public class practiseBreakOut extends GraphicsProgram {
 
 	private GRect rect;
 	private GOval ball;
-	private double vx;
+	private double vx = 1;
 	private double vy = 3;;
 	private GObject collider;
 	private int count;
@@ -124,6 +124,7 @@ public class practiseBreakOut extends GraphicsProgram {
 				if (rgen.nextBoolean(0.5)) {
 					vx = -vx;
 				}
+				vy = 3;
 				ballIsStopped = !ballIsStopped;
 			}
 			if(ballIsStopped == false){
