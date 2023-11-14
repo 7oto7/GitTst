@@ -136,6 +136,7 @@ public class practiseBreakOut extends GraphicsProgram {
 					if (count == 1) {
 				removeAll();
 				GLabel text = new GLabel("YOU WON");
+				setBackground(Color.GREEN);
 				text.setFont("Helvetica-50");
 				double x = getWidth() / 2 - (text.getWidth() - text.getDescent()) / 2;
 				double y = getHeight() / 2 + text.getHeight() / 2;
@@ -148,6 +149,7 @@ public class practiseBreakOut extends GraphicsProgram {
 			if (countHealth == NTURNS) {
 				removeAll();
 				GLabel text = new GLabel("YOU LOST");
+				setBackground(Color.RED);
 				text.setFont("Helvetica-50");
 				double x = getWidth() / 2 - (text.getWidth() - text.getDescent()) / 2;
 				double y = getHeight() / 2 + text.getHeight() / 2;
