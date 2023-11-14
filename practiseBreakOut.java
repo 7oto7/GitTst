@@ -133,19 +133,7 @@ public class practiseBreakOut extends GraphicsProgram {
 				getCollidingObject();
 				removeBricks();
 			}
-			
-
-			
-			
-			if (countHealth == NTURNS) {
-				removeAll();
-				GLabel text = new GLabel("YOU LOSE");
-				text.setFont("Helvetica-50");
-				double x = getWidth() / 2 - (text.getWidth() - text.getDescent()) / 2;
-				double y = getHeight() / 2 + text.getHeight() / 2;
-				add(text, x, y);
-			}
-			if (count == 100) {
+					if (count == 1) {
 				removeAll();
 				GLabel text = new GLabel("YOU WON");
 				text.setFont("Helvetica-50");
@@ -154,6 +142,18 @@ public class practiseBreakOut extends GraphicsProgram {
 				add(text, x, y);
 			}
 
+
+			
+			
+			if (countHealth == NTURNS) {
+				removeAll();
+				GLabel text = new GLabel("YOU LOST");
+				text.setFont("Helvetica-50");
+				double x = getWidth() / 2 - (text.getWidth() - text.getDescent()) / 2;
+				double y = getHeight() / 2 + text.getHeight() / 2;
+				add(text, x, y);
+			}
+	
 		}
 
 	}
