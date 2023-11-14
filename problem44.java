@@ -12,11 +12,10 @@ public class problem44 extends GraphicsProgram{
 	private int y;
 	private static final int V_Y = 5;
 	public void run(){
-		addMouseListeners();
 		circle = new GOval(RADIUS, RADIUS);
 		circle.setFilled(true);
-		add(circle, x, y);
-		
+		addMouseListeners();
+
 		moveBall();
 		
 	}
@@ -28,7 +27,9 @@ public class problem44 extends GraphicsProgram{
 	}
 	public void mouseClicked(MouseEvent e){
 		x = e.getX() - RADIUS;
-		y = e.getY() - RADIUS;
+		y = e.getY() - RADIUS;		
+		add(circle, x, y);
+
 	}
 	
 }
