@@ -101,7 +101,7 @@ public class breakouttst extends GraphicsProgram {
 		GLabel text = new GLabel(string);
 			setBackground(Color.RED);
 			text.setFont("Helvetica-50");
-			double x = getWidth() / 2 - (text.getWidth() - text.getDescent()) / 2;
+			double x = getWidth() / 2 - (text.getWidth()/* - text.getDescent() */) / 2;
 			double y = getHeight() / 2 + text.getHeight() / 2;
 			add(text, x, y);
 	}
