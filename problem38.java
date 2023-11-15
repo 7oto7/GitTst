@@ -27,7 +27,7 @@ public class problem38 extends ConsoleProgram {
 			int betNumber = readBet();
 			int winningNumber = spinRoullete();
 			if (betNumber != winningNumber) {
-				println("You lose 100$");
+				println("You lost 100$");
 				money = money - MYBET;
 				println("Your balance is " + money);
 			} else {
