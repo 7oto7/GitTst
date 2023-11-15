@@ -102,7 +102,7 @@ public class breakouttst extends GraphicsProgram {
 			setBackground(Color.RED);
 			text.setFont("Helvetica-50");
 			double x = getWidth() / 2 - text.getWidth() / 2;
-			double y = getHeight() / 2 + (text.getHeight() -  - text.getAscent()) / 2;
+			double y = getHeight() / 2 + (text.getHeight() + text.getAscent()) / 2;
 			add(text, x, y);
 	}
 
