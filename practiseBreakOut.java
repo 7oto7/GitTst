@@ -62,39 +62,20 @@ public class practiseBreakOut extends GraphicsProgram {
 	/* Method: run() */
 	/** Runs the Breakout program. */
 	public void run() {
-		
+
 		buildSetup();
-		while(true){
 		playGame();
-		}
-		
 
 	}
-	
-
-	private void playGame() {
-		waitForClick();
-		addMouseListeners();
-		moveBall();
-	}
-
-
-	private void buildSetup() {
-		makeBricks(NBRICK_ROWS, NBRICKS_PER_ROW, BRICK_SEP);
-		makePaddle();
-		makeBall();
-	}
-
 
 	private void removeBricks() {
-	
+
 		if (collider != null) {
 			if (collider == rect) {
-				if(vy > 0){
+				if (vy > 0) {
 					vy = -vy;
 				}
-			}  
-			else if(collider != rect) {
+			} else if (collider != rect) {
 				remove(collider);
 				count++;
 				vy = -vy;
@@ -102,26 +83,36 @@ public class practiseBreakOut extends GraphicsProgram {
 		}
 	}
 
-	
 	private GObject getCollidingObject() {
 
-		if (getElementAt(ball.getX(), ball.getY()) != null) {// upper left corner
+		if (getElementAt(ball.getX(), ball.getY()) != null) {// upper left
+																// corner
 			collider = getElementAt(ball.getX(), ball.getY());
-		} else if (getElementAt(ball.getX() + 2 * BALL_RADIUS, ball.getY()) != null) {// upper right corner
-			collider = getElementAt(ball.getX() + 2 * BALL_RADIUS, ball.getY());		
-		} else if (getElementAt(ball.getX(), ball.getY() + 2 * BALL_RADIUS) != null) {// bottom left corner
+		} else if (getElementAt(ball.getX() + 2 * BALL_RADIUS, ball.getY()) != null) {// upper
+																						// right
+																						// corner
+			collider = getElementAt(ball.getX() + 2 * BALL_RADIUS, ball.getY());
+		} else if (getElementAt(ball.getX(), ball.getY() + 2 * BALL_RADIUS) != null) {// bottom
+																						// left
+																						// corner
 			collider = getElementAt(ball.getX(), ball.getY() + 2 * BALL_RADIUS);
-		} else if (getElementAt(ball.getX() + 2 * BALL_RADIUS, ball.getY() + 2 * BALL_RADIUS) != null) {// bottom right corner
+		} else if (getElementAt(ball.getX() + 2 * BALL_RADIUS, ball.getY() + 2 * BALL_RADIUS) != null) {// bottom
+																										// right
+																										// corner
 			collider = getElementAt(ball.getX() + 2 * BALL_RADIUS, ball.getY() + 2 * BALL_RADIUS);
-		} else if (getElementAt(ball.getX() + BALL_RADIUS, ball.getY()) != null) {// upper middle
+		} else if (getElementAt(ball.getX() + BALL_RADIUS, ball.getY()) != null) {// upper
+																					// middle
 			collider = getElementAt(ball.getX() + BALL_RADIUS, ball.getY() - 1);
-		} else if (getElementAt(ball.getX() + 2 * BALL_RADIUS, ball.getY() + BALL_RADIUS) != null) {// right middle
+		} else if (getElementAt(ball.getX() + 2 * BALL_RADIUS, ball.getY() + BALL_RADIUS) != null) {// right
+																									// middle
 			collider = getElementAt(ball.getX() + 2 * BALL_RADIUS + 1, ball.getY() + BALL_RADIUS);
-		} else if (getElementAt(ball.getX() + BALL_RADIUS, ball.getY() + 2 * BALL_RADIUS) != null) {// down middle
+		} else if (getElementAt(ball.getX() + BALL_RADIUS, ball.getY() + 2 * BALL_RADIUS) != null) {// down
+																									// middle
 			collider = getElementAt(ball.getX() + BALL_RADIUS, ball.getY() + 2 * BALL_RADIUS + 1);
-		} else if (getElementAt(ball.getX() - 1, ball.getY() + BALL_RADIUS) != null ) {// left middle
+		} else if (getElementAt(ball.getX() - 1, ball.getY() + BALL_RADIUS) != null) {// left
+																						// middle
 			collider = getElementAt(ball.getX() - 1, ball.getY() + BALL_RADIUS);
-		} 
+		}
 
 		return collider;
 	}
@@ -150,17 +141,16 @@ public class practiseBreakOut extends GraphicsProgram {
 	}
 
 	private void loseCount() {
-			if (countHealth == NTURNS) {
-				removeAll();
-				GLabel text = new GLabel("YOU LOST");
-				setBackground(Color.RED);
-				text.setFont("Helvetica-50");
-				double x = getWidth() / 2 - (text.getWidth() - text.getDescent()) / 2;
-				double y = getHeight() / 2 + text.getHeight() / 2;
-				add(text, x, y);
-			}
+		if (countHealth == NTURNS) {
+			removeAll();
+			GLabel text = new GLabel("YOU LOST");
+			setBackground(Color.RED);
+			text.setFont("Helvetica-50");
+			double x = getWidth() / 2 - (text.getWidth() - text.getDescent()) / 2;
+			double y = getHeight() / 2 + text.getHeight() / 2;
+			add(text, x, y);
+		}
 	}
-
 
 	private void winCount() {
 		if (count == NBRICKS_PER_ROW * NBRICK_ROWS) {
@@ -172,9 +162,8 @@ public class practiseBreakOut extends GraphicsProgram {
 			double y = getHeight() / 2 + text.getHeight() / 2;
 			add(text, x, y);
 		}
-		
-	}
 
+	}
 
 	private void checkWalls() {
 		if (ball.getX() + 2 * BALL_RADIUS >= getWidth() || ball.getX() < 0) {
@@ -192,7 +181,7 @@ public class practiseBreakOut extends GraphicsProgram {
 			vx = 0;
 			vy = 0;
 			ballIsStopped = true;
-		
+
 		}
 
 	}
@@ -229,7 +218,8 @@ public class practiseBreakOut extends GraphicsProgram {
 			for (int j = 0; j < n2; j++) {
 				GRect rect = new GRect(BRICK_WIDTH, BRICK_HEIGHT);
 				rect.setFilled(true);
-				double x = (getWidth() - BRICK_WIDTH * NBRICKS_PER_ROW - ((NBRICKS_PER_ROW - 1)* BRICK_SEP)) / 2 + j * (BRICK_WIDTH + BRICK_SEP);
+				double x = (getWidth() - BRICK_WIDTH * NBRICKS_PER_ROW - ((NBRICKS_PER_ROW - 1) * BRICK_SEP)) / 2
+						+ j * (BRICK_WIDTH + BRICK_SEP);
 				double y = BRICK_Y_OFFSET + i * (BRICK_HEIGHT + BRICK_SEP);
 				if (i == 0 || i == 1) {
 					rect.setColor(Color.RED);
@@ -251,4 +241,15 @@ public class practiseBreakOut extends GraphicsProgram {
 		}
 	}
 
+	private void playGame() {
+		waitForClick();
+		addMouseListeners();
+		moveBall();
+	}
+
+	private void buildSetup() {
+		makeBricks(NBRICK_ROWS, NBRICKS_PER_ROW, BRICK_SEP);
+		makePaddle();
+		makeBall();
+	}
 }
