@@ -86,20 +86,20 @@ public class breakouttst extends GraphicsProgram {
 	private void loseCount() {
 		if (countHealth == NTURNS) {
 			removeAll();
-			printText("YOU LOST");
+			printText("YOU LOST", Color.RED);
 		}
 	}
 
 	private void winCount() {
 		if (count == NBRICKS_PER_ROW * NBRICK_ROWS) {
 			removeAll();
-			printText("YOU WON");
+			printText("YOU WON", Color.GREEN);
 		}
 	}
 
-	private void printText(String string) {
+	private void printText(String string, Color color) {
 		GLabel text = new GLabel(string);
-			setBackground(Color.RED);
+			setBackground(color);
 			text.setFont("Helvetica-50");
 			double x = getWidth() / 2 - text.getWidth() / 2;
 			double y = getHeight() / 2 + (50 - text.getHeight()) / 2 + text.getHeight() / 2;
