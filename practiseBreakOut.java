@@ -62,16 +62,29 @@ public class practiseBreakOut extends GraphicsProgram {
 	/* Method: run() */
 	/** Runs the Breakout program. */
 	public void run() {
-		makeBricks(NBRICK_ROWS, NBRICKS_PER_ROW, BRICK_SEP);
-		makePaddle();
-		makeBall();
 		
-		waitForClick();
-		addMouseListeners();
-		moveBall();
+		buildSetup();
+		while(true){
+		playGame();
+		}
+		
 
 	}
 	
+
+	private void playGame() {
+		waitForClick();
+		addMouseListeners();
+		moveBall();
+	}
+
+
+	private void buildSetup() {
+		makeBricks(NBRICK_ROWS, NBRICKS_PER_ROW, BRICK_SEP);
+		makePaddle();
+		makeBall();
+	}
+
 
 	private void removeBricks() {
 	
