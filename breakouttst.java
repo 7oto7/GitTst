@@ -86,25 +86,24 @@ public class breakouttst extends GraphicsProgram {
 	private void loseCount() {
 		if (countHealth == NTURNS) {
 			removeAll();
-			GLabel text = new GLabel("YOU LOST");
-			setBackground(Color.RED);
-			text.setFont("Helvetica-50");
-			double x = getWidth() / 2 - (text.getWidth() - text.getDescent()) / 2;
-			double y = getHeight() / 2 + text.getHeight() / 2;
-			add(text, x, y);
+			printText("YOU LOST");
 		}
 	}
 
 	private void winCount() {
 		if (count == NBRICKS_PER_ROW * NBRICK_ROWS) {
 			removeAll();
-			GLabel text = new GLabel("YOU WON");
-			setBackground(Color.GREEN);
+			printText("YOU WON");
+		}
+	}
+
+	private void printText(String string) {
+		GLabel text = new GLabel(string);
+			setBackground(Color.RED);
 			text.setFont("Helvetica-50");
 			double x = getWidth() / 2 - (text.getWidth() - text.getDescent()) / 2;
 			double y = getHeight() / 2 + text.getHeight() / 2;
 			add(text, x, y);
-		}
 	}
 
 	private void startMoving() {
@@ -161,7 +160,7 @@ public class breakouttst extends GraphicsProgram {
 			collider = getElementAt(ball.getX() - 1, ball.getY() + BALL_RADIUS);
 		}
 
-		//return collider;
+		// return collider;
 	}
 
 	private void checkWalls() {
