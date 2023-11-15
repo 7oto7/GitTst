@@ -58,7 +58,6 @@ public class practiseBreakOut extends GraphicsProgram {
 	private int count;
 	private int countHealth;
 	private boolean ballIsStopped;
-	private boolean sheexo_padls = false;
 
 	/* Method: run() */
 	/** Runs the Breakout program. */
@@ -77,14 +76,12 @@ public class practiseBreakOut extends GraphicsProgram {
 	private void removeBricks() {
 	
 		if (collider != null) {
-			if (collider == rect && sheexo_padls==false ) {
+			if (collider == rect) {
 				if(vy > 0){
 					vy = -vy;
 				}
-				sheexo_padls=true;
 			}  
 			else if(collider != rect) {
-				sheexo_padls=false;
 				remove(collider);
 				count++;
 				vy = -vy;
@@ -178,7 +175,7 @@ public class practiseBreakOut extends GraphicsProgram {
 			vx = 0;
 			vy = 0;
 			ballIsStopped = true;
-			sheexo_padls = false;
+		
 		}
 
 	}
@@ -195,9 +192,9 @@ public class practiseBreakOut extends GraphicsProgram {
 		if (e.getX() <= PADDLE_WIDTH / 2) {
 			rect.setLocation(0, getHeight() - PADDLE_Y_OFFSET - PADDLE_HEIGHT);
 		} else if (e.getX() >= getWidth() - PADDLE_WIDTH / 2) {
-			rect.setLocation(getWidth() - PADDLE_WIDTH, getHeight() - PADDLE_Y_OFFSET);
+			rect.setLocation(getWidth() - PADDLE_WIDTH, getHeight() - PADDLE_Y_OFFSET - PADDLE_HEIGHT);
 		} else {
-			rect.setLocation(e.getX() - PADDLE_WIDTH / 2, getHeight() - PADDLE_Y_OFFSET);
+			rect.setLocation(e.getX() - PADDLE_WIDTH / 2, getHeight() - PADDLE_Y_OFFSET - PADDLE_HEIGHT);
 		}
 	}
 
