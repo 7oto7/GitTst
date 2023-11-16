@@ -15,5 +15,6 @@ public class stringSample extends ConsoleProgram{
 		
 		str1 = str1.substring(0, str1.length() - 1) + "i";
 		println(str1);
+		//////substringi igebs mititebuli indeqsebidan texts//////////////
 	}
 }
