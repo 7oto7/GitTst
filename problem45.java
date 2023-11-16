@@ -17,6 +17,5 @@ public class problem45 extends ConsoleProgram {
 			}
 		}
 		println(count);
-
 	}
 }
