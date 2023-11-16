@@ -12,5 +12,8 @@ public class stringSample extends ConsoleProgram{
 		println("1, 4 " + (str1 == str4) +  " " + str1.equals(str4));
 		//////////////////////////// == ar shevadarot stringebi////////////////////////
 		//1 da 2 misamartshia shenaxuli. 3 iqmneba axal misamartze.////////////////
+		
+		str1 = str1.substring(0, str1.length() - 1) + "i";
+		println(str1);
 	}
 }
