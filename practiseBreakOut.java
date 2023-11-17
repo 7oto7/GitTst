@@ -69,37 +69,44 @@ public class practiseBreakOut extends GraphicsProgram {
 	}
 
 	private void removeBricks() {
-		
-		if(ball.getY() < collider.getY() + BRICK_HEIGHT){
-			vx = -vx;
-		}else if (collider != null) {
-			if (collider == rect) {
-				if (vy > 0) {
-					vy = -vy;
-				}
+
+		if (collider != null) {
+			if (collider != rect && ball.getY() < collider.getY() + BRICK_HEIGHT) {
+				vx = -vx;
+				count++;
 			} else if (collider != rect) {
 				remove(collider);
 				count++;
 				vy = -vy;
 			}
-		}
-		
+			if (collider == rect && ball.getY() - 2 * BALL_RADIUS <= rect.getY() ) {
+				if (vy > 0) {
+					vy = -vy;
+				}
+			} else if(collider == rect && ball.getY() - 2 * BALL_RADIUS > rect.getY()){
+				if(vy > 0){
+					vy = -vy;
+					vx = -vx;
+				}
+			}
 
-		
+		}
+
 	}
 
 	private GObject getCollidingObject() {
-		
-		for(int i = 0; i < 360; i+=1)
-		{
-			if(getElementAt(ball.getX() + BALL_RADIUS + BALL_RADIUS*Math.sin(Math.toRadians(i)), ball.getY() + BALL_RADIUS - BALL_RADIUS*Math.cos(Math.toRadians(i)))!=null)
-			{
-				collider = getElementAt(ball.getX() + BALL_RADIUS + BALL_RADIUS*Math.sin(Math.toRadians(i)), ball.getY() + BALL_RADIUS - BALL_RADIUS*Math.cos(Math.toRadians(i)) - 1);
+
+		for (int i = 0; i < 360; i += 1) {
+			if (getElementAt(ball.getX() + BALL_RADIUS + BALL_RADIUS * Math.sin(Math.toRadians(i)),
+					ball.getY() + BALL_RADIUS - BALL_RADIUS * Math.cos(Math.toRadians(i))) != null) {
+				collider = getElementAt(ball.getX() + BALL_RADIUS + BALL_RADIUS * Math.sin(Math.toRadians(i)),
+						ball.getY() + BALL_RADIUS - BALL_RADIUS * Math.cos(Math.toRadians(i)) - 1);
 			}
-			
-			else if(getElementAt(ball.getX() + BALL_RADIUS + BALL_RADIUS*Math.sin(Math.toRadians(i)), ball.getY() + BALL_RADIUS + BALL_RADIUS*Math.cos(Math.toRadians(i)))!=null)
-			{
-				collider = getElementAt(ball.getX() + BALL_RADIUS + BALL_RADIUS*Math.sin(Math.toRadians(i)), ball.getY() + BALL_RADIUS + BALL_RADIUS*Math.cos(Math.toRadians(i)) + 1);
+
+			else if (getElementAt(ball.getX() + BALL_RADIUS + BALL_RADIUS * Math.sin(Math.toRadians(i)),
+					ball.getY() + BALL_RADIUS + BALL_RADIUS * Math.cos(Math.toRadians(i))) != null) {
+				collider = getElementAt(ball.getX() + BALL_RADIUS + BALL_RADIUS * Math.sin(Math.toRadians(i)),
+						ball.getY() + BALL_RADIUS + BALL_RADIUS * Math.cos(Math.toRadians(i)) + 1);
 			}
 		}
 
