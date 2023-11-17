@@ -5,25 +5,14 @@ import acm.program.ConsoleProgram;
 
 public class problem46 extends ConsoleProgram{
 	public void run(){
-		int countOne = 0;
-		char maxChar = 0;
+
 		String text = readLine("Enter text: ");
-		
-		for(int i = 0; i < text.length(); i++){
-			int check = checkSymbol(text, text.charAt(i));
-			if(check > maxChar){
-				maxChar = text.charAt(i);	
-			}
-		}
-		
+		println("Frequent symbol is: " + frequentSymbol(text));
 	}
-	public int checkSymbol(String text, char symbol){
-		int count = 0;
-		for (int i = 0; i < text.length(); i++) {
-			if (text.charAt(i) == symbol) {
-				count++;
-			}
-		}
-		return count;
+
+	private char frequentSymbol(String text) {
+		int maxChar = 0;
+		char frequentChar = 0;
+		return frequentChar;
 	}
 }
