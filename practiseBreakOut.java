@@ -69,8 +69,10 @@ public class practiseBreakOut extends GraphicsProgram {
 	}
 
 	private void removeBricks() {
-
-		if (collider != null) {
+		
+		if(ball.getY() < collider.getY() + BRICK_HEIGHT){
+			vx = -vx;
+		}else if (collider != null) {
 			if (collider == rect) {
 				if (vy > 0) {
 					vy = -vy;
@@ -81,6 +83,9 @@ public class practiseBreakOut extends GraphicsProgram {
 				vy = -vy;
 			}
 		}
+		
+
+		
 	}
 
 	private GObject getCollidingObject() {
@@ -114,7 +119,7 @@ public class practiseBreakOut extends GraphicsProgram {
 			}
 			if (ballIsStopped == false) {
 				ball.move(vx, vy);
-				pause(5);
+				pause(10);
 				checkWalls();
 				getCollidingObject();
 				removeBricks();
