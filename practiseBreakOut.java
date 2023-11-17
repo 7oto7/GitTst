@@ -85,7 +85,7 @@ public class practiseBreakOut extends GraphicsProgram {
 
 	private GObject getCollidingObject() {
 		
-		for(int i = 0; i < 360; i+=10)
+		for(int i = 0; i < 360; i+=3)
 		{
 			if(getElementAt(ball.getX() + BALL_RADIUS + BALL_RADIUS*Math.sin(Math.toRadians(i)), ball.getY() + BALL_RADIUS - BALL_RADIUS*Math.cos(Math.toRadians(i)))!=null)
 			{
