@@ -8,7 +8,6 @@ import java.awt.*;
 import java.awt.event.*;
 
 public class practiseBreakOut extends GraphicsProgram {
-	AudioClip bounceClip = MediaTools.loadAudioClip("bounce.au");
 
 	/** Width and height of application window in pixels */
 	public static final int APPLICATION_WIDTH = 400;
@@ -48,6 +47,7 @@ public class practiseBreakOut extends GraphicsProgram {
 
 	/** Number of turns */
 	private static final int NTURNS = 3;
+	AudioClip bounceClip;
 
 	private RandomGenerator rgen = RandomGenerator.getInstance();
 
@@ -63,7 +63,7 @@ public class practiseBreakOut extends GraphicsProgram {
 	/* Method: run() */
 	/** Runs the Breakout program. */
 	public void run() {
-
+		bounceClip = MediaTools.loadAudioClip("bounce.au");
 		buildSetup();
 		playGame();
 
