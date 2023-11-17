@@ -69,20 +69,19 @@ public class practiseBreakOut extends GraphicsProgram {
 	}
 
 	private void removeBricks() {
-
-		if(firstUpperSide() != null){
+		if(firstUpperSide() != null && firstUpperSide() != rect){
 			remove(collider);
 			vy = -vy;
 		}
-		if(secondRightSide() != null){
+		if(secondRightSide() != null && secondRightSide() != rect){
 			remove(collider);
 			vx = -vx;
 		}
-		if(thirdDownSide() != null){
+		if(thirdDownSide() != null && thirdDownSide() != rect){
 			remove(collider);
 			vy = -vy;
 		}
-		if(fourthLeftSide() != null){
+		if(fourthLeftSide() != null && fourthLeftSide() != rect){
 			remove(collider);
 			vx = -vx;
 		}
