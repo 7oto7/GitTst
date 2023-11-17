@@ -8,6 +8,7 @@ import java.awt.*;
 import java.awt.event.*;
 
 public class practiseBreakOut extends GraphicsProgram {
+	AudioClip bounceClip = MediaTools.loadAudioClip("bounce.au");
 
 	/** Width and height of application window in pixels */
 	public static final int APPLICATION_WIDTH = 400;
@@ -73,32 +74,37 @@ public class practiseBreakOut extends GraphicsProgram {
 			remove(collider);
 		//	System.out.print("works");
 			vy = -vy;
-			ball.move(vx, vy);
+			bounceClip.play();
 		} else
 		if (secondRightSide() != null && secondRightSide() != rect) {
 			remove(collider);
 			vx = -vx;
+			bounceClip.play();
 		} else if (secondRightSide() == rect) {
 			if (vy > 0) {
 				//System.out.println("blead");
 			//	vx = -vx;
 				vy = -vy;
+				bounceClip.play();
 			}
 		} else 
 		if (thirdDownSide() != null && thirdDownSide() != rect) {
 			remove(collider);
-			vx = -vx;
 			vy = -vy;
+			bounceClip.play();
 		} else if (thirdDownSide() == rect) {
 			vy = -vy;
+			bounceClip.play();
 		} else
 		if (fourthLeftSide() != null && fourthLeftSide() != rect) {
 			remove(collider);
 			vx = -vx;
+			bounceClip.play();
 		} else if (fourthLeftSide() == rect) {
 			if (vy > 0) {
 				//vx = -vx;
 				vy = -vy;
+				bounceClip.play();
 			}
 
 		}
