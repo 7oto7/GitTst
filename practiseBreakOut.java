@@ -81,12 +81,13 @@ public class practiseBreakOut extends GraphicsProgram {
 		} else if (secondRightSide() == rect) {
 			if (vy > 0) {
 				//System.out.println("blead");
-				vx = -vx;
+			//	vx = -vx;
 				vy = -vy;
 			}
 		} else 
 		if (thirdDownSide() != null && thirdDownSide() != rect) {
 			remove(collider);
+			vx = -vx;
 			vy = -vy;
 		} else if (thirdDownSide() == rect) {
 			vy = -vy;
