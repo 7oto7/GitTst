@@ -12,7 +12,25 @@ public class problem46 extends ConsoleProgram{
 
 	private char frequentSymbol(String text) {
 		int maxChar = 0;
-		char frequentChar = 3;
+		char frequentChar = 0;
+		
+		for(int i = 0; i < text.length(); i++){
+			int count = countSymbol(text, text.charAt(i));
+			if(count > frequentChar){
+				maxChar = count;
+				frequentChar = text.charAt(i);
+			}
+		}
 		return frequentChar;
+	}
+
+	private int countSymbol(String text, char symbol) {
+		int symbolCount = 0;
+		for (int i = 0; i < text.length(); i++) {
+			if (text.charAt(i) == symbol) {
+				symbolCount++;
+			}
+		}
+		return symbolCount;
 	}
 }
