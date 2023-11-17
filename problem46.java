@@ -12,7 +12,7 @@ public class problem46 extends ConsoleProgram{
 
 	private char frequentSymbol(String text) {
 		int maxChar = 0;
-		char frequentChar = 1;
+		char frequentChar = 3;
 		return frequentChar;
 	}
 }
