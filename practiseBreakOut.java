@@ -2,6 +2,7 @@
 import acm.graphics.*;
 import acm.program.*;
 import acm.util.*;
+import javafx.scene.layout.BackgroundImage;
 
 import java.applet.*;
 import java.awt.*;
@@ -63,7 +64,9 @@ public class practiseBreakOut extends GraphicsProgram {
 	/* Method: run() */
 	/** Runs the Breakout program. */
 	public void run() {
-		
+		GImage img = new GImage("C:/Users/User/Pictures/adventure-game-screen-retro-computer-games-level-pixel-art-video-game-scene-8-bit_841203-462.avif");
+		img.setSize(APPLICATION_WIDTH,APPLICATION_HEIGHT );
+		add(img);
 		buildSetup();
 		playGame();
 
