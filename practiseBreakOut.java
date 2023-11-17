@@ -81,7 +81,7 @@ public class practiseBreakOut extends GraphicsProgram {
 		} else if (secondRightSide() == rect) {
 			if (vy > 0) {
 				//System.out.println("blead");
-			//	vx = -vx;
+				vx = -vx;
 				vy = -vy;
 			}
 		} else 
