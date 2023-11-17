@@ -87,7 +87,7 @@ public class practiseBreakOut extends GraphicsProgram {
 		
 		for(int i = 0; i < 360; i+=10)
 		{
-			if(getElementAt(ball.getX() + BALL_RADIUS + BALL_RADIUS*Math.cos(Math.toRadians(i)), ball.getY() + BALL_RADIUS - BALL_RADIUS*Math.sin(Math.toRadians(i)))!=null)
+			if(getElementAt(ball.getX() + BALL_RADIUS + BALL_RADIUS*Math.cos(Math.toRadians(i)), ball.getY() + BALL_RADIUS + BALL_RADIUS*Math.sin(Math.toRadians(i)))!=null)
 			{
 				collider = getElementAt(ball.getX() + BALL_RADIUS + BALL_RADIUS*Math.cos(Math.toRadians(i)) + 1, ball.getY() + BALL_RADIUS + BALL_RADIUS*Math.sin(Math.toRadians(i)) + 1);
 			}
