@@ -76,14 +76,22 @@ public class practiseBreakOut extends GraphicsProgram {
 		if(secondRightSide() != null && secondRightSide() != rect){
 			remove(collider);
 			vx = -vx;
+		} else if(secondRightSide() == rect){
+			vx = -vx;
+			vy = -vy;
 		}
 		if(thirdDownSide() != null && thirdDownSide() != rect){
 			remove(collider);
+			vy = -vy;
+		} else if(thirdDownSide() == rect){
 			vy = -vy;
 		}
 		if(fourthLeftSide() != null && fourthLeftSide() != rect){
 			remove(collider);
 			vx = -vx;
+		} else if(fourthLeftSide() == rect){
+			vx = -vx;
+			vy = -vy;
 		}
 		
 		
