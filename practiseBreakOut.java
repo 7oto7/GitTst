@@ -81,7 +81,7 @@ public class practiseBreakOut extends GraphicsProgram {
 		} else if (secondRightSide() == rect) {
 			if (vy > 0) {
 				System.out.println("blead");
-				vx = -vx;
+			//	vx = -vx;
 				vy = -vy;
 			}
 		} else 
@@ -96,7 +96,7 @@ public class practiseBreakOut extends GraphicsProgram {
 			vx = -vx;
 		} else if (fourthLeftSide() == rect) {
 			if (vy > 0) {
-				vx = -vx;
+				//vx = -vx;
 				vy = -vy;
 			}
 
@@ -131,7 +131,7 @@ public class practiseBreakOut extends GraphicsProgram {
 
 	}
 	private GObject fourthLeftSide() {
-		for (int i = 226; i <= 315; i+=5) {
+		for (int i = 226; i <= 315; i++) {
 			if (getElementAt(ball.getX() + BALL_RADIUS + BALL_RADIUS * Math.sin(Math.toRadians(i)) - 1,
 					ball.getY() + BALL_RADIUS - BALL_RADIUS * Math.cos(Math.toRadians(i))) != null) {
 				collider = getElementAt(ball.getX() + BALL_RADIUS + BALL_RADIUS * Math.sin(Math.toRadians(i)) - 1,
@@ -153,7 +153,7 @@ public class practiseBreakOut extends GraphicsProgram {
 	}
 
 	private GObject secondRightSide() {
-		for (int i = 46; i <= 135; i+=10) {
+		for (int i = 46; i <= 135; i++) {
 			if (getElementAt(ball.getX() + BALL_RADIUS + BALL_RADIUS * Math.sin(Math.toRadians(i)) + 1,
 					ball.getY() + BALL_RADIUS - BALL_RADIUS * Math.cos(Math.toRadians(i))) != null) {
 				collider = getElementAt(ball.getX() + BALL_RADIUS + BALL_RADIUS * Math.sin(Math.toRadians(i)) + 1,
