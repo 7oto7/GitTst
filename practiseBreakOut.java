@@ -74,7 +74,7 @@ public class practiseBreakOut extends GraphicsProgram {
 			System.out.print("works");
 			vy = -vy;
 			ball.move(vx, vy);
-		}
+		} else
 		if (secondRightSide() != null && secondRightSide() != rect) {
 			remove(collider);
 			vx = -vx;
@@ -83,13 +83,13 @@ public class practiseBreakOut extends GraphicsProgram {
 				vx = -vx;
 				vy = -vy;
 			}
-		}
+		} else 
 		if (thirdDownSide() != null && thirdDownSide() != rect) {
 			remove(collider);
 			vy = -vy;
 		} else if (thirdDownSide() == rect) {
 			vy = -vy;
-		}
+		} else
 		if (fourthLeftSide() != null && fourthLeftSide() != rect) {
 			remove(collider);
 			vx = -vx;
