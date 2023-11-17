@@ -85,7 +85,7 @@ public class practiseBreakOut extends GraphicsProgram {
 				if (vy > 0) {
 					vy = -vy;
 				}
-			} else if(collider == rect && ball.getY() - 2 * BALL_RADIUS > rect.getY()){
+			} else if(collider == rect && ball.getY() + 2 * BALL_RADIUS > rect.getY()){
 				if(vy > 0){
 					vy = -vy;
 					vx = -vx;
