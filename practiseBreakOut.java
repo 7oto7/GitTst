@@ -70,8 +70,9 @@ public class practiseBreakOut extends GraphicsProgram {
 
 	private void removeBricks() {
 		if (firstUpperSide() != null && firstUpperSide() != rect) {
-			remove(collider);
+			
 			vy = -vy;
+			remove(collider);
 		}
 		if (secondRightSide() != null && secondRightSide() != rect) {
 			remove(collider);
