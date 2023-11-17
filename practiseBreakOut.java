@@ -71,6 +71,7 @@ public class practiseBreakOut extends GraphicsProgram {
 	private void removeBricks() {
 		if (firstUpperSide() != null && firstUpperSide() != rect) {
 			remove(collider);
+			System.out.print("works");
 			vy = -vy;
 			ball.move(vx, vy);
 		}
