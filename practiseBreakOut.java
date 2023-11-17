@@ -207,7 +207,7 @@ public class practiseBreakOut extends GraphicsProgram {
 				if (rgen.nextBoolean(0.5)) {
 					vx = -vx;
 				}
-				vy = 3;
+				//vy = 3;
 				ballIsStopped = !ballIsStopped;
 			}
 			if (ballIsStopped == false) {
