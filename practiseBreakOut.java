@@ -47,6 +47,7 @@ public class practiseBreakOut extends GraphicsProgram {
 
 	/** Number of turns */
 	private static final int NTURNS = 3;
+	AudioClip bounceClip = MediaTools.loadAudioClip("bounce.au");
 
 	private RandomGenerator rgen = RandomGenerator.getInstance();
 
