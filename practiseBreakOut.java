@@ -69,68 +69,74 @@ public class practiseBreakOut extends GraphicsProgram {
 	}
 
 	private void removeBricks() {
-		if(firstUpperSide() != null && firstUpperSide() != rect){
+		if (firstUpperSide() != null && firstUpperSide() != rect) {
 			remove(collider);
 			vy = -vy;
 		}
-		if(secondRightSide() != null && secondRightSide() != rect){
+		if (secondRightSide() != null && secondRightSide() != rect) {
 			remove(collider);
 			vx = -vx;
-		} else if(secondRightSide() == rect){
-			vx = -vx;
-			vy = -vy;
+		} else if (secondRightSide() == rect) {
+			if (vy > 0) {
+				vx = -vx;
+				vy = -vy;
+			}
 		}
-		if(thirdDownSide() != null && thirdDownSide() != rect){
+		if (thirdDownSide() != null && thirdDownSide() != rect) {
 			remove(collider);
 			vy = -vy;
-		} else if(thirdDownSide() == rect){
+		} else if (thirdDownSide() == rect) {
 			vy = -vy;
 		}
-		if(fourthLeftSide() != null && fourthLeftSide() != rect){
+		if (fourthLeftSide() != null && fourthLeftSide() != rect) {
 			remove(collider);
 			vx = -vx;
-		} else if(fourthLeftSide() == rect){
-			vx = -vx;
-			vy = -vy;
+		} else if (fourthLeftSide() == rect) {
+			if (vy > 0) {
+				vx = -vx;
+				vy = -vy;
+			}
+
 		}
-		
-		
-		
-		
-//		if (collider != null) {
-//			if (collider != rect && ball.getY()  <= collider.getY() + BRICK_HEIGHT  && ball.getY() >= collider.getY()) {
-//				remove(collider);
-//				vx = -vx;
-//				vy = -vy;
-//				count++;
-//			} else if (collider != rect) {
-//				remove(collider);
-//				count++;
-//				vy = -vy;
-//			}
-//			if (collider == rect && ball.getY() - 2 * BALL_RADIUS <= rect.getY() ) {
-//				if (vy > 0) {
-//					vy = -vy;
-//				}
-//			} else if(collider == rect && ball.getY() + 2 * BALL_RADIUS > rect.getY()){
-//				if(vy > 0){
-//					vy = -vy;
-//					vx = -vx;
-//				}
-//			}
-//
-//		}
+
+		// if (collider != null) {
+		// if (collider != rect && ball.getY() <= collider.getY() + BRICK_HEIGHT
+		// && ball.getY() >= collider.getY()) {
+		// remove(collider);
+		// vx = -vx;
+		// vy = -vy;
+		// count++;
+		// } else if (collider != rect) {
+		// remove(collider);
+		// count++;
+		// vy = -vy;
+		// }
+		// if (collider == rect && ball.getY() - 2 * BALL_RADIUS <= rect.getY()
+		// ) {
+		// if (vy > 0) {
+		// vy = -vy;
+		// }
+		// } else if(collider == rect && ball.getY() + 2 * BALL_RADIUS >
+		// rect.getY()){
+		// if(vy > 0){
+		// vy = -vy;
+		// vx = -vx;
+		// }
+		// }
+		//
+		// }
 
 	}
 
-	private void checkAllSides(){
+	private void checkAllSides() {
 		firstUpperSide();
 		secondRightSide();
 		thirdDownSide();
 		fourthLeftSide();
 	}
+
 	private GObject fourthLeftSide() {
-		for(int i = 226; i <= 315; i++){
+		for (int i = 226; i <= 315; i++) {
 			if (getElementAt(ball.getX() + BALL_RADIUS + BALL_RADIUS * Math.sin(Math.toRadians(i)) - 1,
 					ball.getY() + BALL_RADIUS - BALL_RADIUS * Math.cos(Math.toRadians(i))) != null) {
 				collider = getElementAt(ball.getX() + BALL_RADIUS + BALL_RADIUS * Math.sin(Math.toRadians(i)) - 1,
@@ -141,7 +147,7 @@ public class practiseBreakOut extends GraphicsProgram {
 	}
 
 	private GObject thirdDownSide() {
-		for(int i = 136; i <= 225; i++){
+		for (int i = 136; i <= 225; i++) {
 			if (getElementAt(ball.getX() + BALL_RADIUS + BALL_RADIUS * Math.sin(Math.toRadians(i)),
 					ball.getY() + BALL_RADIUS - BALL_RADIUS * Math.cos(Math.toRadians(i)) + 1) != null) {
 				collider = getElementAt(ball.getX() + BALL_RADIUS + BALL_RADIUS * Math.sin(Math.toRadians(i)),
@@ -152,7 +158,7 @@ public class practiseBreakOut extends GraphicsProgram {
 	}
 
 	private GObject secondRightSide() {
-		for(int i = 46; i <= 135; i++){
+		for (int i = 46; i <= 135; i++) {
 			if (getElementAt(ball.getX() + BALL_RADIUS + BALL_RADIUS * Math.sin(Math.toRadians(i)) + 1,
 					ball.getY() + BALL_RADIUS - BALL_RADIUS * Math.cos(Math.toRadians(i))) != null) {
 				collider = getElementAt(ball.getX() + BALL_RADIUS + BALL_RADIUS * Math.sin(Math.toRadians(i)) + 1,
@@ -163,10 +169,10 @@ public class practiseBreakOut extends GraphicsProgram {
 	}
 
 	private GObject firstUpperSide() {
-		for(int i = -45; i <= 45; i++){
+		for (int i = -45; i <= 45; i++) {
 			if (getElementAt(ball.getX() + BALL_RADIUS + BALL_RADIUS * Math.sin(Math.toRadians(i)),
 					ball.getY() + BALL_RADIUS - BALL_RADIUS * Math.cos(Math.toRadians(i)) - 1) != null) {
-				collider =  getElementAt(ball.getX() + BALL_RADIUS + BALL_RADIUS * Math.sin(Math.toRadians(i)),
+				collider = getElementAt(ball.getX() + BALL_RADIUS + BALL_RADIUS * Math.sin(Math.toRadians(i)),
 						ball.getY() + BALL_RADIUS - BALL_RADIUS * Math.cos(Math.toRadians(i)) - 1);
 			}
 		}
