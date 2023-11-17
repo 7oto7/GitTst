@@ -77,37 +77,37 @@ public class practiseBreakOut extends GraphicsProgram {
 			remove(collider);
 		//	System.out.print("works");
 			vy = -vy;
-			bounceClip.play();
+		//	bounceClip.play();
 		} else
 		if (secondRightSide() != null && secondRightSide() != rect) {
 			remove(collider);
 			vx = -vx;
-			bounceClip.play();
+		//	bounceClip.play();
 		} else if (secondRightSide() == rect) {
 			if (vy > 0) {
 				//System.out.println("blead");
 			//	vx = -vx;
 				vy = -vy;
-				bounceClip.play();
+			//	bounceClip.play();
 			}
 		} else 
 		if (thirdDownSide() != null && thirdDownSide() != rect) {
 			remove(collider);
 			vy = -vy;
-			bounceClip.play();
+			//bounceClip.play();
 		} else if (thirdDownSide() == rect) {
 			vy = -vy;
-			bounceClip.play();
+			//bounceClip.play();
 		} else
 		if (fourthLeftSide() != null && fourthLeftSide() != rect) {
 			remove(collider);
 			vx = -vx;
-			bounceClip.play();
+			//bounceClip.play();
 		} else if (fourthLeftSide() == rect) {
 			if (vy > 0) {
 				//vx = -vx;
 				vy = -vy;
-				bounceClip.play();
+			//	bounceClip.play();
 			}
 
 		}
