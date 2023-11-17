@@ -87,14 +87,15 @@ public class practiseBreakOut extends GraphicsProgram {
 		
 		for(int i = 0; i < 360; i+=1)
 		{
-			if(getElementAt(ball.getX() + BALL_RADIUS + BALL_RADIUS*Math.sin(Math.toRadians(i)), ball.getY() + BALL_RADIUS + BALL_RADIUS*Math.cos(Math.toRadians(i)))!=null)
+			if(getElementAt(ball.getX() + BALL_RADIUS + BALL_RADIUS*Math.sin(Math.toRadians(i)), ball.getY() + BALL_RADIUS - BALL_RADIUS*Math.cos(Math.toRadians(i)))!=null)
 			{
-				collider = getElementAt(ball.getX() + BALL_RADIUS + BALL_RADIUS*Math.sin(Math.toRadians(i)) + 1, ball.getY() + BALL_RADIUS + BALL_RADIUS*Math.cos(Math.toRadians(i)) + 1);
+				collider = getElementAt(ball.getX() + BALL_RADIUS + BALL_RADIUS*Math.sin(Math.toRadians(i)), ball.getY() + BALL_RADIUS - BALL_RADIUS*Math.cos(Math.toRadians(i)) - 1);
 			}
-			else if(getElementAt(ball.getX() + BALL_RADIUS + BALL_RADIUS*Math.sin(Math.toRadians(i)), ball.getY() - BALL_RADIUS - BALL_RADIUS*Math.cos(Math.toRadians(i)))!=null)
-			{
-				collider = getElementAt(ball.getX() + BALL_RADIUS + BALL_RADIUS*Math.sin(Math.toRadians(i)) + 1, ball.getY() - BALL_RADIUS - BALL_RADIUS*Math.cos(Math.toRadians(i)) + 1);
-			}
+			
+//			else if(getElementAt(ball.getX() + BALL_RADIUS + BALL_RADIUS*Math.sin(Math.toRadians(i)), ball.getY() - BALL_RADIUS - BALL_RADIUS*Math.cos(Math.toRadians(i)))!=null)
+//			{
+//				collider = getElementAt(ball.getX() + BALL_RADIUS + BALL_RADIUS*Math.sin(Math.toRadians(i)) + 1, ball.getY() - BALL_RADIUS - BALL_RADIUS*Math.cos(Math.toRadians(i)) + 1);
+//			}
 		}
 //
 //		if (getElementAt(ball.getX(), ball.getY()) != null) {// upper left
