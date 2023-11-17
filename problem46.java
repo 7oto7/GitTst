@@ -12,7 +12,7 @@ public class problem46 extends ConsoleProgram{
 		for(int i = 0; i < text.length(); i++){
 			int check = checkSymbol(text, text.charAt(i));
 			if(check > maxChar){
-				maxChar = text.charAt(i);
+				maxChar = text.charAt(i);	
 			}
 		}
 		
