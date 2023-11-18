@@ -28,7 +28,7 @@ public class breakouttst extends GraphicsProgram {
 	private static final int NBRICKS_PER_ROW = 10;
 
 	/** Number of rows of bricks */
-	private static final int NBRICK_ROWS = 13;
+	private static final int NBRICK_ROWS = 10;
 
 	/** Separation between bricks */
 	private static final int BRICK_SEP = 4;
@@ -215,7 +215,7 @@ public class breakouttst extends GraphicsProgram {
 	private void generateRandomSpeed() {
 		if (ballIsStopped == true) {
 			waitForClick();
-			vx = rgen.nextDouble(1.0, 3.0);
+			vx = rgen.nextDouble(1.0, 15.0);
 			if (rgen.nextBoolean(0.5)) {
 				vx = -vx;
 			}
