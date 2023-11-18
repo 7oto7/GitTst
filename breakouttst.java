@@ -28,7 +28,7 @@ public class breakouttst extends GraphicsProgram {
 	private static final int NBRICKS_PER_ROW = 10;
 
 	/** Number of rows of bricks */
-	private static final int NBRICK_ROWS = 11;
+	private static final int NBRICK_ROWS = 13;
 
 	/** Separation between bricks */
 	private static final int BRICK_SEP = 4;
