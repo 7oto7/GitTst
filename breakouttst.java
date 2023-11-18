@@ -122,7 +122,7 @@ public class breakouttst extends GraphicsProgram {
 				if (vy > 0) {
 					vy = -vy;
 				}
-			} else if (collider != rect) {
+			} else if (getObjectToChangeYSpeed() != null && collider != rect) {
 				remove(collider);
 				count++;
 				System.out.println("br");
