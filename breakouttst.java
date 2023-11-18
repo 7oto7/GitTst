@@ -129,12 +129,6 @@ public class breakouttst extends GraphicsProgram {
 				if (vy > 0) {
 					vy = -vy;
 				}
-			} else if (collider != rect && (collider == getElementAt(ball.getX() + BALL_RADIUS, ball.getY() - 1))
-					|| collider == getElementAt(ball.getX() + BALL_RADIUS, ball.getY() + 2 * BALL_RADIUS + 1)) {
-				remove(collider);
-				count++;
-				System.out.println("br");
-				vy = -vy;
 			} else if (collider != rect
 					&& (collider == getElementAt(ball.getX() + 2 * BALL_RADIUS + 1, ball.getY() + BALL_RADIUS)
 							|| collider == getElementAt(ball.getX() - 1, ball.getY() + BALL_RADIUS))) {
@@ -143,6 +137,12 @@ public class breakouttst extends GraphicsProgram {
 				System.out.println("dzlivs");
 				vx = -vx;
 			}
+			else  {
+				remove(collider);
+				count++;
+				System.out.println("br");
+				vy = -vy;
+			} 
 		}
 	}
 
