@@ -109,7 +109,7 @@ public class breakouttst extends GraphicsProgram {
 	private void startMoving() {
 		// if (ballIsStopped == false) {
 		ball.move(vx, vy);
-		pause(200);
+		pause(15);
 		checkWalls();
 		getCollidingObject();
 		removeBricks();
