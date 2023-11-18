@@ -198,6 +198,8 @@ public class breakouttst extends GraphicsProgram {
 		} else if (getElementAt(ball.getX() - 1, ball.getY() + BALL_RADIUS) != null) {// left
 			// middle
 			collider = getElementAt(ball.getX() - 1, ball.getY() + BALL_RADIUS);
+		} else {
+			collider = null;
 		}
 		
 		
