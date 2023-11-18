@@ -73,7 +73,7 @@ public class practiseBreakOut extends GraphicsProgram {
 	private void removeBricks() {
 		if (firstUpperSide() != null && firstUpperSide() != rect) {
 			remove(collider);
-		//	System.out.print("works");
+			System.out.print("works");
 			vy = -vy;
 		//	bounceClip.play();
 		} else
@@ -201,6 +201,7 @@ public class practiseBreakOut extends GraphicsProgram {
 				ballIsStopped = !ballIsStopped;
 			}
 			if (ballIsStopped == false) {
+				System.out.println("blead");
 				ball.move(vx, vy);
 				pause(7);
 				checkWalls();
