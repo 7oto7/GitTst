@@ -233,19 +233,19 @@ public class breakouttst extends GraphicsProgram {
 				double x = (getWidth() - BRICK_WIDTH * NBRICKS_PER_ROW - ((NBRICKS_PER_ROW - 1) * BRICK_SEP)) / 2
 						+ j * (BRICK_WIDTH + BRICK_SEP);
 				double y = BRICK_Y_OFFSET + i * (BRICK_HEIGHT + BRICK_SEP);
-				if (i == 0 || i == 1) {
+				if (i % 10 == 0 || i % 10== 1) {
 					rect.setColor(Color.RED);
 				}
-				if (i == 2 || i == 3) {
+				if (i % 10 == 2 || i % 5 == 3) {
 					rect.setColor(Color.ORANGE);
 				}
-				if (i == 4 || i == 5) {
+				if (i % 10 == 4 || i % 10 == 5) {
 					rect.setColor(Color.YELLOW);
 				}
-				if (i == 6 || i == 7) {
+				if (i % 10 == 6 || i % 10 == 7) {
 					rect.setColor(Color.GREEN);
 				}
-				if (i == 8 || i == 9) {
+				if (i % 10 == 8 || i % 10== 9) {
 					rect.setColor(Color.CYAN);
 				}
 				add(rect, x, y);
