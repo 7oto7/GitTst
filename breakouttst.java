@@ -78,17 +78,17 @@ public class breakouttst extends GraphicsProgram {
 		while (true) {
 			generateRandomSpeed();
 			startMoving();
-			if(winCount()){
+			if (winCount()) {
 				removeAll();
-			printText("YOU WON", Color.GREEN);
-			break;
+				printText("YOU WON", Color.GREEN);
+				break;
 			}
-			if(loseCount()){
+			if (loseCount()) {
 				removeAll();
-			printText("YOU LOST", Color.RED);
-			break;
+				printText("YOU LOST", Color.RED);
+				break;
 			}
-			
+
 		}
 	}
 
@@ -136,13 +136,12 @@ public class breakouttst extends GraphicsProgram {
 				count++;
 				System.out.println("dzlivs");
 				vx = -vx;
-			}
-			else  {
+			} else {
 				remove(collider);
 				count++;
 				System.out.println("br");
 				vy = -vy;
-			} 
+			}
 		}
 	}
 
@@ -161,7 +160,17 @@ public class breakouttst extends GraphicsProgram {
 			// middle
 			System.out.println("left");
 			collider = getElementAt(ball.getX() - 1, ball.getY() + BALL_RADIUS);
-		} else {
+		} else if (getElementAt(ball.getX(), ball.getY()) != null) {// upper
+																	// left
+			// corner
+			collider = getElementAt(ball.getX(), ball.getY());
+		} else if (getElementAt(ball.getX() + 2 * BALL_RADIUS, ball.getY()) != null) {// upper
+			// right
+			// corner
+			collider = getElementAt(ball.getX() + 2 * BALL_RADIUS, ball.getY());
+		}
+
+		else {
 			collider = null;
 		}
 
@@ -173,15 +182,7 @@ public class breakouttst extends GraphicsProgram {
 	// }
 
 	// private GObject getObjectToChangeYSpeed() {
-	// if (getElementAt(ball.getX(), ball.getY()) != null) {// upper left
-	// // corner
-	// collider = getElementAt(ball.getX(), ball.getY());
-	// } else if (getElementAt(ball.getX() + 2 * BALL_RADIUS, ball.getY())
-	// != null) {// upper
-	// // right
-	// // corner
-	// collider = getElementAt(ball.getX() + 2 * BALL_RADIUS, ball.getY());
-	// } else if (getElementAt(ball.getX(), ball.getY() + 2 * BALL_RADIUS)
+	// else if (getElementAt(ball.getX(), ball.getY() + 2 * BALL_RADIUS)
 	// != null) {// bottom
 	// // left
 	// // corner
