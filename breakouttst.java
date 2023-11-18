@@ -125,6 +125,7 @@ public class breakouttst extends GraphicsProgram {
 			} else if (collider != rect) {
 				remove(collider);
 				count++;
+				system.out.println("br");
 				vy = -vy;
 			}
 		} 
