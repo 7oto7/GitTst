@@ -99,11 +99,11 @@ public class breakouttst extends GraphicsProgram {
 
 	private void printText(String string, Color color) {
 		GLabel text = new GLabel(string);
-			setBackground(color);
-			text.setFont("Helvetica-50");
-			double x = getWidth() / 2 - text.getWidth() / 2;
-			double y = getHeight() / 2 + (50 - text.getHeight()) / 2 + text.getHeight() / 2;
-			add(text, x, y);
+		setBackground(color);
+		text.setFont("Helvetica-50");
+		double x = getWidth() / 2 - text.getWidth() / 2;
+		double y = getHeight() / 2 + (50 - text.getHeight()) / 2 + text.getHeight() / 2;
+		add(text, x, y);
 	}
 
 	private void startMoving() {
@@ -117,7 +117,7 @@ public class breakouttst extends GraphicsProgram {
 	}
 
 	private void removeBricks() {
-		if (collider != null) {
+		if (getObjectToChangeYSpeed() != null) {
 			if (collider == rect) {
 				if (vy > 0) {
 					vy = -vy;
@@ -127,10 +127,39 @@ public class breakouttst extends GraphicsProgram {
 				count++;
 				vy = -vy;
 			}
+		} else if(getObjectToChangeXSpeed() != null){
+			if (collider == rect) {
+				if (vy > 0) {
+					vy = -vy;
+					vx = -vx;
+				}
+			} else if (collider != rect) {
+				remove(collider);
+				count++;
+				vx = -vx;
+			}
 		}
 	}
 
 	private void getCollidingObject() {
+		
+		getObjectToChangeYSpeed();
+		getObjectToChangeXSpeed();
+
+	}
+
+	private GObject getObjectToChangeXSpeed() {
+		if (getElementAt(ball.getX() + 2 * BALL_RADIUS, ball.getY() + BALL_RADIUS) != null) {// right
+			// middle
+			collider = getElementAt(ball.getX() + 2 * BALL_RADIUS + 1, ball.getY() + BALL_RADIUS);
+		} else if (getElementAt(ball.getX() - 1, ball.getY() + BALL_RADIUS) != null) {// left
+			// middle
+			collider = getElementAt(ball.getX() - 1, ball.getY() + BALL_RADIUS);
+		}
+		return collider;
+	}
+
+	private GObject getObjectToChangeYSpeed() {
 		if (getElementAt(ball.getX(), ball.getY()) != null) {// upper left
 			// corner
 			collider = getElementAt(ball.getX(), ball.getY());
@@ -149,18 +178,11 @@ public class breakouttst extends GraphicsProgram {
 		} else if (getElementAt(ball.getX() + BALL_RADIUS, ball.getY()) != null) {// upper
 			// middle
 			collider = getElementAt(ball.getX() + BALL_RADIUS, ball.getY() - 1);
-		} else if (getElementAt(ball.getX() + 2 * BALL_RADIUS, ball.getY() + BALL_RADIUS) != null) {// right
-			// middle
-			collider = getElementAt(ball.getX() + 2 * BALL_RADIUS + 1, ball.getY() + BALL_RADIUS);
 		} else if (getElementAt(ball.getX() + BALL_RADIUS, ball.getY() + 2 * BALL_RADIUS) != null) {// down
 			// middle
 			collider = getElementAt(ball.getX() + BALL_RADIUS, ball.getY() + 2 * BALL_RADIUS + 1);
-		} else if (getElementAt(ball.getX() - 1, ball.getY() + BALL_RADIUS) != null) {// left
-			// middle
-			collider = getElementAt(ball.getX() - 1, ball.getY() + BALL_RADIUS);
 		}
-
-		// return collider;
+		return collider;
 	}
 
 	private void checkWalls() {
@@ -233,7 +255,7 @@ public class breakouttst extends GraphicsProgram {
 				double x = (getWidth() - BRICK_WIDTH * NBRICKS_PER_ROW - ((NBRICKS_PER_ROW - 1) * BRICK_SEP)) / 2
 						+ j * (BRICK_WIDTH + BRICK_SEP);
 				double y = BRICK_Y_OFFSET + i * (BRICK_HEIGHT + BRICK_SEP);
-				if (i % 10 == 0 || i % 10== 1) {
+				if (i % 10 == 0 || i % 10 == 1) {
 					rect.setColor(Color.RED);
 				}
 				if (i % 10 == 2 || i % 5 == 3) {
@@ -245,7 +267,7 @@ public class breakouttst extends GraphicsProgram {
 				if (i % 10 == 6 || i % 10 == 7) {
 					rect.setColor(Color.GREEN);
 				}
-				if (i % 10 == 8 || i % 10== 9) {
+				if (i % 10 == 8 || i % 10 == 9) {
 					rect.setColor(Color.CYAN);
 				}
 				add(rect, x, y);
