@@ -209,7 +209,8 @@ public class breakouttst extends GraphicsProgram {
 			add(ball, getWidth() / 2 - BALL_RADIUS, getHeight() / 2 - BALL_RADIUS);
 			vx = 0;
 			vy = 0;
-			ballIsStopped = true;
+			pause(1000);
+			//ballIsStopped = true;
 		}
 	}
 
