@@ -125,7 +125,7 @@ public class breakouttst extends GraphicsProgram {
 			} else if (collider != rect) {
 				remove(collider);
 				count++;
-				system.out.println("br");
+				System.out.println("br");
 				vy = -vy;
 			}
 		} 
@@ -194,7 +194,6 @@ public class breakouttst extends GraphicsProgram {
 			collider = getElementAt(ball.getX() + BALL_RADIUS, ball.getY() + 2 * BALL_RADIUS + 1);
 		} else if (getElementAt(ball.getX() + 2 * BALL_RADIUS + 1, ball.getY() + BALL_RADIUS) != null) {// right
 			// middle
-			System.out.println("blead");
 			collider = getElementAt(ball.getX() + 2 * BALL_RADIUS + 1, ball.getY() + BALL_RADIUS);
 		} else if (getElementAt(ball.getX() - 1, ball.getY() + BALL_RADIUS) != null) {// left
 			// middle
