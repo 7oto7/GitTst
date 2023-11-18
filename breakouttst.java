@@ -216,7 +216,7 @@ public class breakouttst extends GraphicsProgram {
 		if (ballIsStopped == true) {
 			waitForClick();
 			System.out.print("blaed");
-			vx = rgen.nextDouble(1.0, 15.0);
+			vx = rgen.nextDouble(1.0, 3.0);
 			if (rgen.nextBoolean(0.5)) {
 				vx = -vx;
 			}
