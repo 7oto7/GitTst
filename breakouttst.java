@@ -128,12 +128,22 @@ public class breakouttst extends GraphicsProgram {
 				vy = -vy;
 			}
 		} else if(getObjectToChangeXSpeed() != null){
-			if (collider == rect) {
+			if (collider == rect && collider == getElementAt(ball.getX() + 2 * BALL_RADIUS + 1, ball.getY() + BALL_RADIUS)) {
 				if (vy > 0) {
 					vy = -vy;
-					vx = -vx;
+					if(vx > 0){
+						vx = -vx;
+					}
 				}
-			} else if (collider != rect) {
+			}else if(collider == rect && collider == getElementAt(ball.getX() - 1, ball.getY() + BALL_RADIUS)){
+				if (vy > 0) {
+					vy = -vy;
+					if(vx < 0){
+						vx = -vx;
+					}
+				}
+			} 
+			else if (collider != rect) {
 				remove(collider);
 				count++;
 				vx = -vx;
