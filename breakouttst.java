@@ -53,7 +53,7 @@ public class breakouttst extends GraphicsProgram {
 	private GRect rect;
 	private GOval ball;
 	private double vx = 1;
-	private double vy = 3;;
+	private double vy = 1;;
 	private GObject collider;
 	private int count;
 	private int countHealth;
@@ -117,7 +117,7 @@ public class breakouttst extends GraphicsProgram {
 
 	private void startMoving() {
 		ball.move(vx, vy);
-		pause(20);
+		pause(10);
 		checkWalls();
 		getCollidingObject();
 		removeBricks();
