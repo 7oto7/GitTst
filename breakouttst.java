@@ -81,10 +81,12 @@ public class breakouttst extends GraphicsProgram {
 			if(winCount()){
 				removeAll();
 			printText("YOU WON", Color.GREEN);
+			break;
 			}
 			if(loseCount()){
 				removeAll();
 			printText("YOU LOST", Color.RED);
+			break;
 			}
 			
 		}
