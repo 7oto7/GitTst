@@ -184,14 +184,14 @@ public class breakouttst extends GraphicsProgram {
 		// collider = getElementAt(ball.getX() + 2 * BALL_RADIUS, ball.getY() +
 		// 2 * BALL_RADIUS);
 		// }
-		if (getElementAt(ball.getX() + BALL_RADIUS, ball.getY()) != null) {// upper
+		if (getElementAt(ball.getX() + BALL_RADIUS, ball.getY() - 1) != null) {// upper
 			// middle
 			collider = getElementAt(ball.getX() + BALL_RADIUS, ball.getY() - 1);
-		} else if (getElementAt(ball.getX() + BALL_RADIUS, ball.getY() + 2 * BALL_RADIUS) != null) {// down
+		} else if (getElementAt(ball.getX() + BALL_RADIUS, ball.getY() + 2 * BALL_RADIUS + 1) != null) {// down
 			// middle
 			System.out.println("fuck");
 			collider = getElementAt(ball.getX() + BALL_RADIUS, ball.getY() + 2 * BALL_RADIUS + 1);
-		} else if (getElementAt(ball.getX() + 2 * BALL_RADIUS, ball.getY() + BALL_RADIUS) != null) {// right
+		} else if (getElementAt(ball.getX() + 2 * BALL_RADIUS + 1, ball.getY() + BALL_RADIUS) != null) {// right
 			// middle
 			System.out.println("blead");
 			collider = getElementAt(ball.getX() + 2 * BALL_RADIUS + 1, ball.getY() + BALL_RADIUS);
