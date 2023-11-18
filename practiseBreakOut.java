@@ -204,7 +204,7 @@ public class practiseBreakOut extends GraphicsProgram {
 				ball.move(vx, vy);
 				pause(7);
 				checkWalls();
-				getCollidingObject();
+				//getCollidingObject();
 				removeBricks();
 			}
 			winCount();
