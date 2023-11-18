@@ -182,23 +182,11 @@ public class practiseBreakOut extends GraphicsProgram {
 		return collider;
 	}
 
-	private GObject getCollidingObject() {
-
-		for (int i = 0; i < 360; i += 1) {
-			if (getElementAt(ball.getX() + BALL_RADIUS + BALL_RADIUS * Math.sin(Math.toRadians(i)),
-					ball.getY() + BALL_RADIUS - BALL_RADIUS * Math.cos(Math.toRadians(i))) != null) {
-				collider = getElementAt(ball.getX() + BALL_RADIUS + BALL_RADIUS * Math.sin(Math.toRadians(i)),
-						ball.getY() + BALL_RADIUS - BALL_RADIUS * Math.cos(Math.toRadians(i)) - 1);
-			}
-
-			else if (getElementAt(ball.getX() + BALL_RADIUS + BALL_RADIUS * Math.sin(Math.toRadians(i)),
-					ball.getY() + BALL_RADIUS + BALL_RADIUS * Math.cos(Math.toRadians(i))) != null) {
-				collider = getElementAt(ball.getX() + BALL_RADIUS + BALL_RADIUS * Math.sin(Math.toRadians(i)),
-						ball.getY() + BALL_RADIUS + BALL_RADIUS * Math.cos(Math.toRadians(i)) + 1);
-			}
-		}
-
-		return collider;
+	private void getCollidingObject() {
+		firstUpperSide();
+		secondRightSide();
+		thirdDownSide();
+		fourthLeftSide();
 	}
 
 	private void moveBall() {
