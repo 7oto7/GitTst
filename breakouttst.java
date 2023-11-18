@@ -78,23 +78,30 @@ public class breakouttst extends GraphicsProgram {
 		while (true) {
 			generateRandomSpeed();
 			startMoving();
-			winCount();
-			loseCount();
-		}
-	}
-
-	private void loseCount() {
-		if (countHealth == NTURNS) {
-			removeAll();
-			printText("YOU LOST", Color.RED);
-		}
-	}
-
-	private void winCount() {
-		if (count == NBRICKS_PER_ROW * NBRICK_ROWS) {
-			removeAll();
+			if(winCount()){
+				removeAll();
 			printText("YOU WON", Color.GREEN);
+			}
+			if(loseCount()){
+				removeAll();
+			printText("YOU LOST", Color.RED);
+			}
+			
 		}
+	}
+
+	private boolean loseCount() {
+		if (countHealth == NTURNS) {
+			return true;
+		}
+		return false;
+	}
+
+	private boolean winCount() {
+		if (count == NBRICKS_PER_ROW * NBRICK_ROWS) {
+			return true;
+		}
+		return false;
 	}
 
 	private void printText(String string, Color color) {
