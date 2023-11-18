@@ -182,12 +182,12 @@ public class practiseBreakOut extends GraphicsProgram {
 		return collider;
 	}
 
-//	private void getCollidingObject() {
-//		firstUpperSide();
-//		secondRightSide();
-//		thirdDownSide();
-//		fourthLeftSide();
-//	}
+	private void getCollidingObject() {
+		firstUpperSide();
+		secondRightSide();
+		thirdDownSide();
+		fourthLeftSide();
+	}
 
 	private void moveBall() {
 		while (true) {
@@ -204,7 +204,7 @@ public class practiseBreakOut extends GraphicsProgram {
 				ball.move(vx, vy);
 				pause(7);
 				checkWalls();
-				//getCollidingObject();
+				getCollidingObject();
 				removeBricks();
 			}
 			winCount();
