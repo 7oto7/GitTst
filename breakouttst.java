@@ -210,7 +210,7 @@ public class breakouttst extends GraphicsProgram {
 			vx = 0;
 			vy = 0;
 			pause(1000);
-			//ballIsStopped = true;
+			ballIsStopped = true;
 		}
 	}
 
