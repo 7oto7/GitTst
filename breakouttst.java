@@ -53,7 +53,7 @@ public class breakouttst extends GraphicsProgram {
 	private GRect rect;
 	private GOval ball;
 	private double vx = 1;
-	private double vy = 3;;
+	private double vy = 10;;
 	private GObject collider;
 	private int count;
 	private int countHealth;
