@@ -57,7 +57,7 @@ public class breakouttst extends GraphicsProgram {
 	private GObject collider;
 	private int count;
 	private int countHealth;
-	private boolean ballIsStopped;
+	private boolean ballIsPaused;
 
 	/* Method: run() */
 	/** Runs the Breakout program. */
@@ -210,19 +210,19 @@ public class breakouttst extends GraphicsProgram {
 			vx = 0;
 			vy = 0;
 			pause(1000);
-			ballIsStopped = true;
+			ballIsPaused = true;
 		}
 	}
 
 	private void generateRandomSpeed() {
-		if (ballIsStopped == true) {
+		if (ballIsPaused == true) {
 		//	waitForClick();
 			vx = rgen.nextDouble(1.0, 3.0);
 			if (rgen.nextBoolean(0.5)) {
 				vx = -vx;
 			}
 			vy = 3;
-			ballIsStopped = !ballIsStopped;
+			ballIsPaused = !ballIsPaused;
 		}
 	}
 
