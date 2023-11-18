@@ -117,7 +117,7 @@ public class breakouttst extends GraphicsProgram {
 
 	private void startMoving() {
 		ball.move(vx, vy);
-		pause(5);
+		pause(50);
 		checkWalls();
 		getCollidingObject();
 		removeBricks();
@@ -147,7 +147,7 @@ public class breakouttst extends GraphicsProgram {
 	}
 
 	private GObject getCollidingObject() {
-		if (getElementAt(ball.getX() + BALL_RADIUS, ball.getY() - 1) != null) {// upper
+		if (getElementAt(ball.getX() + BALL_RADIUS, ball.getY() - 1 - vy) != null) {// upper
 			// middle
 			collider = getElementAt(ball.getX() + BALL_RADIUS, ball.getY() - 1);
 		} else if (getElementAt(ball.getX() + BALL_RADIUS, ball.getY() + 2 * BALL_RADIUS + 1) != null) {// down
@@ -221,7 +221,7 @@ public class breakouttst extends GraphicsProgram {
 			if (rgen.nextBoolean(0.5)) {
 				vx = -vx;
 			}
-			vy = 10;
+			vy = 3;
 			ballIsPaused = !ballIsPaused;
 		}
 	}
