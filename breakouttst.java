@@ -215,7 +215,7 @@ public class breakouttst extends GraphicsProgram {
 	}
 
 	private void generateRandomSpeed() {
-	//	if (ballIsStopped == true) {
+		if (ballIsStopped == true) {
 		//	waitForClick();
 			vx = rgen.nextDouble(1.0, 3.0);
 			if (rgen.nextBoolean(0.5)) {
@@ -223,7 +223,7 @@ public class breakouttst extends GraphicsProgram {
 			}
 			vy = 3;
 			ballIsStopped = !ballIsStopped;
-	//	}
+		}
 	}
 
 	private void buildSetup() {
