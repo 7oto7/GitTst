@@ -117,74 +117,53 @@ public class breakouttst extends GraphicsProgram {
 	}
 
 	private void removeBricks() {
-		if (getObjectToChangeYSpeed() != null) {
+		if (getCollidingObject() != null) {
 			if (collider == rect) {
 				if (vy > 0) {
 					vy = -vy;
 				}
-			} else if (collider != rect) {
+			} else if (collider != rect && (collider == getElementAt(ball.getX() + BALL_RADIUS, ball.getY() - 1))
+					|| collider == getElementAt(ball.getX() + BALL_RADIUS, ball.getY() + 2 * BALL_RADIUS + 1)) {
 				remove(collider);
 				count++;
 				System.out.println("br");
 				vy = -vy;
+			} else if (collider != rect
+					&& (collider == getElementAt(ball.getX() + 2 * BALL_RADIUS + 1, ball.getY() + BALL_RADIUS)
+							|| collider == getElementAt(ball.getX() - 1, ball.getY() + BALL_RADIUS))) {
+				remove(collider);
+				count++;
+				System.out.println("dzlivs");
+				vx = -vx;
 			}
-		} 
-//		else if (getObjectToChangeXSpeed() != null) {
-//			if (collider == rect
-//					&& collider == getElementAt(ball.getX() + 2 * BALL_RADIUS + 1, ball.getY() + BALL_RADIUS)) {
-//				if (vy > 0) {
-//					vy = -vy;
-//					if (vx > 0) {
-//						vx = -vx;
-//					}
-//				}
-//			} else if (collider == rect && collider == getElementAt(ball.getX() - 1, ball.getY() + BALL_RADIUS)) {
-//				if (vy > 0) {
-//					vy = -vy;
-//					if (vx < 0) {
-//						vx = -vx;
-//					}
-//				}
-//			} else if (collider != rect) {
-//				remove(collider);
-//				count++;
-//				vx = -vx;
-//			}
-//		}
-	}
-
-	private void getCollidingObject() {
-
-		getObjectToChangeYSpeed();
-	//	getObjectToChangeXSpeed();
-
-	}
-
-//	private GObject getObjectToChangeXSpeed() {
-//
-//	}
-
-	private GObject getObjectToChangeYSpeed() {
-		// if (getElementAt(ball.getX(), ball.getY()) != null) {// upper left
-		// // corner
-		// collider = getElementAt(ball.getX(), ball.getY());
-		// } else if (getElementAt(ball.getX() + 2 * BALL_RADIUS, ball.getY())
-		// != null) {// upper
-		// // right
-		// // corner
-		// collider = getElementAt(ball.getX() + 2 * BALL_RADIUS, ball.getY());
-		// } else if (getElementAt(ball.getX(), ball.getY() + 2 * BALL_RADIUS)
-		// != null) {// bottom
-		// // left
-		// // corner
-		// collider = getElementAt(ball.getX(), ball.getY() + 2 * BALL_RADIUS);
-		// } else if (getElementAt(ball.getX() + 2 * BALL_RADIUS, ball.getY() +
-		// 2 * BALL_RADIUS) != null) {// bottom
-		// // right
-		// // corner
-		// collider = getElementAt(ball.getX() + 2 * BALL_RADIUS, ball.getY() +
-		// 2 * BALL_RADIUS);
+		}
+		// else if (getObjectToChangeXSpeed() != null) {
+		// if (collider == rect
+		// && collider == getElementAt(ball.getX() + 2 * BALL_RADIUS + 1,
+		// ball.getY() + BALL_RADIUS)) {
+		// if (vy > 0) {
+		// vy = -vy;
+		// if (vx > 0) {
+		// vx = -vx;
 		// }
+		// }
+		// } else if (collider == rect && collider == getElementAt(ball.getX() -
+		// 1, ball.getY() + BALL_RADIUS)) {
+		// if (vy > 0) {
+		// vy = -vy;
+		// if (vx < 0) {
+		// vx = -vx;
+		// }
+		// }
+		// } else if (collider != rect) {
+		// remove(collider);
+		// count++;
+		// vx = -vx;
+		// }
+		// }
+	}
+
+	private GObject getCollidingObject() {
 		if (getElementAt(ball.getX() + BALL_RADIUS, ball.getY() - 1) != null) {// upper
 			// middle
 			collider = getElementAt(ball.getX() + BALL_RADIUS, ball.getY() - 1);
@@ -201,13 +180,41 @@ public class breakouttst extends GraphicsProgram {
 		} else {
 			collider = null;
 		}
-		
-		
-		
 
-		
 		return collider;
+
+		// getObjectToChangeYSpeed();
+		// getObjectToChangeXSpeed();
+
 	}
+
+	// private GObject getObjectToChangeXSpeed() {
+	//
+	// }
+
+	// private GObject getObjectToChangeYSpeed() {
+	// if (getElementAt(ball.getX(), ball.getY()) != null) {// upper left
+	// // corner
+	// collider = getElementAt(ball.getX(), ball.getY());
+	// } else if (getElementAt(ball.getX() + 2 * BALL_RADIUS, ball.getY())
+	// != null) {// upper
+	// // right
+	// // corner
+	// collider = getElementAt(ball.getX() + 2 * BALL_RADIUS, ball.getY());
+	// } else if (getElementAt(ball.getX(), ball.getY() + 2 * BALL_RADIUS)
+	// != null) {// bottom
+	// // left
+	// // corner
+	// collider = getElementAt(ball.getX(), ball.getY() + 2 * BALL_RADIUS);
+	// } else if (getElementAt(ball.getX() + 2 * BALL_RADIUS, ball.getY() +
+	// 2 * BALL_RADIUS) != null) {// bottom
+	// // right
+	// // corner
+	// collider = getElementAt(ball.getX() + 2 * BALL_RADIUS, ball.getY() +
+	// 2 * BALL_RADIUS);
+	// }
+
+	// }
 
 	private void checkWalls() {
 		if (ball.getX() + 2 * BALL_RADIUS >= getWidth() || ball.getX() < 0) {
