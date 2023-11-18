@@ -136,7 +136,7 @@ public class breakouttst extends GraphicsProgram {
 				count++;
 				System.out.println("dzlivs");
 				vx = -vx;
-				ball.move(vx, vy);
+				ball.move(2 * vx, vy);
 			} else {
 				remove(collider);
 				count++;
