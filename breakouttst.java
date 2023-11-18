@@ -154,20 +154,20 @@ public class breakouttst extends GraphicsProgram {
 	private void getCollidingObject() {
 
 		getObjectToChangeYSpeed();
-		//getObjectToChangeXSpeed();
+		getObjectToChangeXSpeed();
 
 	}
 
-//	private GObject getObjectToChangeXSpeed() {
-//		if (getElementAt(ball.getX() + 2 * BALL_RADIUS, ball.getY() + BALL_RADIUS) != null) {// right
-//			// middle
-//			collider = getElementAt(ball.getX() + 2 * BALL_RADIUS + 1, ball.getY() + BALL_RADIUS);
-//		} else if (getElementAt(ball.getX() - 1, ball.getY() + BALL_RADIUS) != null) {// left
-//			// middle
-//			collider = getElementAt(ball.getX() - 1, ball.getY() + BALL_RADIUS);
-//		}
-//		return collider;
-//	}
+	private GObject getObjectToChangeXSpeed() {
+		if (getElementAt(ball.getX() + 2 * BALL_RADIUS, ball.getY() + BALL_RADIUS) != null) {// right
+			// middle
+			collider = getElementAt(ball.getX() + 2 * BALL_RADIUS + 1, ball.getY() + BALL_RADIUS);
+		} else if (getElementAt(ball.getX() - 1, ball.getY() + BALL_RADIUS) != null) {// left
+			// middle
+			collider = getElementAt(ball.getX() - 1, ball.getY() + BALL_RADIUS);
+		}
+		return collider;
+	}
 
 	private GObject getObjectToChangeYSpeed() {
 		if (getElementAt(ball.getX(), ball.getY()) != null) {// upper left
