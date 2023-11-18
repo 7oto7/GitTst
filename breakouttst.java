@@ -197,6 +197,7 @@ public class breakouttst extends GraphicsProgram {
 			collider = getElementAt(ball.getX() + BALL_RADIUS, ball.getY() - 1);
 		} else if (getElementAt(ball.getX() + BALL_RADIUS, ball.getY() + 2 * BALL_RADIUS) != null) {// down
 			// middle
+			System.out.println("fuck");
 			collider = getElementAt(ball.getX() + BALL_RADIUS, ball.getY() + 2 * BALL_RADIUS + 1);
 		}
 		return collider;
