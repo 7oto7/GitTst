@@ -147,7 +147,7 @@ public class breakouttst extends GraphicsProgram {
 	}
 
 	private GObject getCollidingObject() {
-		if (getElementAt(ball.getX() + BALL_RADIUS, ball.getY() - 1 + vy) != null) {// upper
+		if (getElementAt(ball.getX() + BALL_RADIUS, ball.getY()  + vy) != null) {// upper
 			// middle
 			collider = getElementAt(ball.getX() + BALL_RADIUS, ball.getY() - 1);
 		} else if (getElementAt(ball.getX() + BALL_RADIUS, ball.getY() + 2 * BALL_RADIUS + 1) != null) {// down
