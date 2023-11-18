@@ -225,7 +225,7 @@ public class breakouttst extends GraphicsProgram {
 			if (rgen.nextBoolean(0.5)) {
 				vx = -vx;
 			}
-			//vy = ;
+			vy = 1;
 			ballIsPaused = !ballIsPaused;
 		}
 	}
