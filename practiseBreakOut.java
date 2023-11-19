@@ -431,11 +431,11 @@ public class practiseBreakOut extends GraphicsProgram {
 		makeBall();
 		label = new GLabel("Current score: " + yourScore);
 		label.setFont("Helvetica-15");
-		add(label, 0, 20);
+		add(label, 20, 20);
 
 		highest = new GLabel("Highest score: " + highestScore);
 		highest.setFont("Helvetica-15");
-		add(highest, getWidth() / 2 - highest.getWidth() / 2, 20);
+		add(highest, getWidth() / 2 - highest.getWidth() / 2 + 20, 20);
 
 		lives = new GLabel("Lives left: " + health);
 		lives.setFont("Helvetica-15");
