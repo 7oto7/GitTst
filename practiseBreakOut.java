@@ -435,7 +435,7 @@ public class practiseBreakOut extends GraphicsProgram {
 
 		highest = new GLabel("Highest score: " + highestScore);
 		highest.setFont("Helvetica-15");
-		add(highest, getWidth() / 2 - highest.getWidth() / 2 + 20, 20);
+		add(highest, getWidth() / 2 - highest.getWidth() / 2, 20);
 
 		lives = new GLabel("Lives left: " + health);
 		lives.setFont("Helvetica-15");
