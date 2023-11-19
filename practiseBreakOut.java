@@ -432,7 +432,7 @@ public class practiseBreakOut extends GraphicsProgram {
 
 		makeBricks(NBRICK_ROWS, NBRICKS_PER_ROW, BRICK_SEP);
 		makePaddle();
-		makeBall();
+		//makeBall();
 		label = new GLabel("Current score: " + yourScore);
 		label.setFont("Helvetica-15");
 		add(label, 15, 20);
