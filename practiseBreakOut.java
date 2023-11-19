@@ -80,10 +80,12 @@ public class practiseBreakOut extends GraphicsProgram {
 	}
 
 	private void removeBricks() {
-		if (getCollidingObject() != null && getCollidingObject() != label) {
+		if(getCollidingObject() != label){
+			if (getCollidingObject() != null) {
 
 			ifColliderIsPaddle();
 			ifColliderIsBrick();
+			}
 		}
 	}
 
