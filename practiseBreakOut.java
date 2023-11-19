@@ -66,8 +66,7 @@ public class practiseBreakOut extends GraphicsProgram {
 	private int highestScore = 0;
 	private GLabel label;
 	private GLabel highest;
-	private int allTimeHighestScore = 0;
-
+	private GLabel lives;
 	/* Method: run() */
 	/** Runs the Breakout program. */
 	public void run() {
@@ -426,5 +425,9 @@ public class practiseBreakOut extends GraphicsProgram {
 		highest = new GLabel("Highest score: " + highestScore);
 		highest.setFont("Helvetica-15");
 		add(highest, getWidth() / 2 - highest.getWidth() / 2, 20);
+		
+		lives = new GLabel("Lives left: " + NTURNS);
+		lives.setFont("Helvetica-15");
+		add(lives, getWidth() - (highest.getWidth() + highest.getX()), 20);
 	}
 }
