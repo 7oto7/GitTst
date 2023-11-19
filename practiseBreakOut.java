@@ -76,17 +76,17 @@ public class practiseBreakOut extends GraphicsProgram {
 	}
 
 	private void removeBricks() {
-		if (firstUpperSide() != null && firstUpperSide() != ball && firstUpperSide() != rect) {
+		if (collider != null && firstUpperSide() != rect) {
 			remove(collider);
 			System.out.print("works");
 			vy = -vy;
 		//	bounceClip.play();
 		} else
-		if (secondRightSide() != null && secondRightSide() != rect) {
+		if (collider != null && collider != rect) {
 			remove(collider);
 			vx = -vx;
 		//	bounceClip.play();
-		} else if (secondRightSide() == rect) {
+		} else if (collider == rect) {
 			if (vy > 0) {
 				//System.out.println("blead");
 			//	vx = -vx;
@@ -94,19 +94,19 @@ public class practiseBreakOut extends GraphicsProgram {
 			//	bounceClip.play();
 			}
 		} else 
-		if (thirdDownSide() != null && thirdDownSide() != rect) {
+		if (collider != null && collider != rect) {
 			remove(collider);
 			vy = -vy;
 			//bounceClip.play();
-		} else if (thirdDownSide() == rect) {
+		} else if (collider == rect) {
 			vy = -vy;
 			//bounceClip.play();
 		} else
-		if (fourthLeftSide() != null && fourthLeftSide() != rect) {
+		if (collider != null && collider != rect) {
 			remove(collider);
 			vx = -vx;
 			//bounceClip.play();
-		} else if (fourthLeftSide() == rect) {
+		} else if (collider == rect) {
 			if (vy > 0) {
 				//vx = -vx;
 				vy = -vy;
