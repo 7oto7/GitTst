@@ -62,6 +62,8 @@ public class practiseBreakOut extends GraphicsProgram {
 	private boolean ballIsStopped;
 	private boolean playAgain;
 	private int justCount = 1;
+	private int yourScore = 0;
+	private int highestScore = 0;
 
 	/* Method: run() */
 	/** Runs the Breakout program. */
@@ -260,8 +262,6 @@ public class practiseBreakOut extends GraphicsProgram {
 				makeLabel("YOU LOST", Color.RED);
 				break;
 			}
-			GLabel ln = new GLabel("brot");
-			add(ln, 200, 400);
 			
 		}
 	}
@@ -391,5 +391,8 @@ public class practiseBreakOut extends GraphicsProgram {
 		makeBricks(NBRICK_ROWS, NBRICKS_PER_ROW, BRICK_SEP);
 		makePaddle();
 		makeBall();
+		makeScoreBoard("")
+		GLabel ln = new GLabel("brot");
+		add(ln, 200, 400);
 	}
 }
