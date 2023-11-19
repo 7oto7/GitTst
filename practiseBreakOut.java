@@ -432,7 +432,7 @@ public class practiseBreakOut extends GraphicsProgram {
 
 		makeBricks(NBRICK_ROWS, NBRICKS_PER_ROW, BRICK_SEP);
 		makePaddle();
-		//makeBall();
+		makeBall();
 		label = new GLabel("Current score: " + yourScore);
 		label.setFont("Helvetica-15");
 		add(label, 15, 20);
@@ -447,12 +447,11 @@ public class practiseBreakOut extends GraphicsProgram {
 	}
 
 	private void setBackgroundImage(String string) {
-		GCompound background = new GCompound();
+
 		GImage image = new GImage(string);
 		image.setSize(APPLICATION_WIDTH, APPLICATION_HEIGHT);
-		background.add(image, 0, 0);
-		makeBall();
-		background.add(ball, APPLICATION_WIDTH / 2 - BALL_RADIUS, APPLICATION_HEIGHT / 2 - BALL_RADIUS);
-		add(background);
+		add(image, 0, 0);
+
+
 	}
 }
