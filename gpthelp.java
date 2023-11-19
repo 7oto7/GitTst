@@ -44,7 +44,7 @@ public class gpthelp extends JFrame {
 
     public static void main(String[] args) {
         SwingUtilities.invokeLater(() -> {
-            CircleVisualization example = new CircleVisualization();
+            gpthelp example = new gpthelp();
             example.setVisible(true);
         });
     }
