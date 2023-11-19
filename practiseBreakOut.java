@@ -68,6 +68,7 @@ public class practiseBreakOut extends GraphicsProgram {
 	private GLabel highest;
 	private GLabel lives;
 	private int health = NTURNS;
+	private GImage image;
 
 	/* Method: run() */
 	/** Runs the Breakout program. */
@@ -426,6 +427,8 @@ public class practiseBreakOut extends GraphicsProgram {
 	}
 
 	private void buildSetup() {
+		setBackgroundImage("C:\\Users\\User\\Pictures\\EsLqjamXMAEwmsw.png");
+		
 		makeBricks(NBRICK_ROWS, NBRICKS_PER_ROW, BRICK_SEP);
 		makePaddle();
 		makeBall();
@@ -439,6 +442,12 @@ public class practiseBreakOut extends GraphicsProgram {
 
 		lives = new GLabel("Lives left: " + health);
 		lives.setFont("Helvetica-15");
-		add(lives, highest.getWidth() + highest.getX() + (highest.getX() - label.getX() - label.getWidth()), 20);
+		add(lives, highest.getWidth() + highest.getX() + (highest.getX() - label.getX() - label.getWidth()), 20);		
+	}
+
+	private void setBackgroundImage(String string) {
+		image = new GImage(string);
+		image.setSize(APPLICATION_WIDTH, APPLICATION_HEIGHT);
+		add(image, 0, 0);
 	}
 }
