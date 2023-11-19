@@ -331,7 +331,16 @@ public class practiseBreakOut extends GraphicsProgram {
 		addMouseListeners();
 		moveBall();
 		waitForClick();
+		everythingAgain();
+		
+		
+	}
+
+	private void everythingAgain() {
 		playAgain = !playAgain;
+		count = 0;
+		countHealth = 0;
+		
 	}
 
 	private void buildSetup() {
