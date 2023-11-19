@@ -244,6 +244,7 @@ public class practiseBreakOut extends GraphicsProgram {
 	}
 
 	private GObject getCollidingObject() {
+		
 		if (firstUpperSide() != null) {
 			collider = firstUpperSide();
 		} else if (secondRightSide() != null) {
@@ -429,7 +430,7 @@ public class practiseBreakOut extends GraphicsProgram {
 		setBackgroundImage("C:\\Users\\User\\Pictures\\EsLqjamXMAEwmsw.png");
 		makeBricks(NBRICK_ROWS, NBRICKS_PER_ROW, BRICK_SEP);
 		makePaddle();
-		//makeBall();
+		makeBall();
 		label = new GLabel("Current score: " + yourScore);
 		label.setFont("Helvetica-15");
 		add(label, 15, 20);
@@ -448,7 +449,5 @@ public class practiseBreakOut extends GraphicsProgram {
 		GImage image = new GImage(string);
 		image.setSize(APPLICATION_WIDTH, APPLICATION_HEIGHT);
 		add(image, 0, 0);
-		makeBall();
-        add(ball, APPLICATION_WIDTH / 2 - BALL_RADIUS, APPLICATION_HEIGHT / 2 - BALL_RADIUS);
 	}
 }
