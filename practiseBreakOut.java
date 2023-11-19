@@ -68,17 +68,18 @@ public class practiseBreakOut extends GraphicsProgram {
 	private GLabel highest;
 	private GLabel lives;
 	private int health = NTURNS;
+	private int speed = 8;
 	//private GImage image;
 
 	/* Method: run() */
 	/** Runs the Breakout program. */
-	private GCanvas gameCanvas;
-	public void init(){
-		gameCanvas = new GCanvas();
-		GImage background = new GImage("C:\\Users\\User\\Pictures\\EsLqjamXMAEwmsw.png");
-		background.setSize(APPLICATION_WIDTH, APPLICATION_HEIGHT);
-		gameCanvas.add(background, 0, 0);
-	}
+//	private GCanvas gameCanvas;
+//	public void init(){
+//		gameCanvas = new GCanvas();
+//		GImage background = new GImage("C:\\Users\\User\\Pictures\\EsLqjamXMAEwmsw.png");
+//		background.setSize(APPLICATION_WIDTH, APPLICATION_HEIGHT);
+//		gameCanvas.add(background, 0, 0);
+//	}
 	public void run() {
 
 		while (playAgain = true) {
@@ -279,7 +280,7 @@ public class practiseBreakOut extends GraphicsProgram {
 			}
 			if (ballIsStopped == false) {
 				ball.move(vx, vy);
-				pause(5);
+				pause(speed);
 				checkWalls();
 				getCollidingObject();
 				removeBricks();
@@ -434,7 +435,6 @@ public class practiseBreakOut extends GraphicsProgram {
 	}
 
 	private void buildSetup() {
-//		setBackgroundImage("C:\\Users\\User\\Pictures\\EsLqjamXMAEwmsw.png");
 		makeBricks(NBRICK_ROWS, NBRICKS_PER_ROW, BRICK_SEP);
 		makePaddle();
 		makeBall();
@@ -450,11 +450,4 @@ public class practiseBreakOut extends GraphicsProgram {
 		lives.setFont("Helvetica-15");
 		add(lives, highest.getWidth() + highest.getX() + (highest.getX() - label.getX() - label.getWidth()), 20);
 	}
-
-//	private void setBackgroundImage(String string) {
-//
-//		GImage image = new GImage(string);
-//		image.setSize(APPLICATION_WIDTH, APPLICATION_HEIGHT);
-//		add(image, 0, 0);
-//	}
 }
