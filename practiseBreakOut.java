@@ -60,14 +60,16 @@ public class practiseBreakOut extends GraphicsProgram {
 	private int count;
 	private int countHealth;
 	private boolean ballIsStopped;
+	private boolean playAgain;
 
 	/* Method: run() */
 	/** Runs the Breakout program. */
 	public void run() {
-		
-		buildSetup();
-		playGame();
-
+		while(playAgain){
+			removeAll();
+			buildSetup();
+			playGame();
+		}
 	}
 
 	private void removeBricks() {
