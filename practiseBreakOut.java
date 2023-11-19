@@ -99,7 +99,7 @@ public class practiseBreakOut extends GraphicsProgram {
 						vx = -vx;
 					}
 					vy = -vy;
-					ball.setLocation(ball.getX(), rect.getY() - (2 * BALL_RADIUS - (PADDLE_HEIGHT - (rect.getY() - ball.getY()))));
+					ball.move(0, rect.getY() - (2 * BALL_RADIUS - (PADDLE_HEIGHT - (rect.getY() - ball.getY()))));
 				}
 				
 			} 
