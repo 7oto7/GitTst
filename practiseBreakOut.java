@@ -91,6 +91,7 @@ public class practiseBreakOut extends GraphicsProgram {
 						vx = -vx;
 					}
 					vy = -vy;
+					ball.setLocation(ball.getX(), rect.getY() - (2 * BALL_RADIUS - (rect.getY() - ball.getY())));
 				}
 			} else if(collider == fourthLeftSide()){
 				if (vy > 0) {
@@ -98,6 +99,7 @@ public class practiseBreakOut extends GraphicsProgram {
 						vx = -vx;
 					}
 					vy = -vy;
+					ball.setLocation(ball.getX(), rect.getY() - (2 * BALL_RADIUS - (rect.getY() - ball.getY())));
 				}
 				
 			} 
@@ -115,7 +117,6 @@ public class practiseBreakOut extends GraphicsProgram {
 						|| collider == fourthLeftSide())) {
 			remove(collider);
 			count++;
-			System.out.println("dzlivs");
 			vx = -vx;
 		} else if (collider != rect) {// up and down sides
 			remove(collider); 
@@ -243,7 +244,6 @@ public class practiseBreakOut extends GraphicsProgram {
 				ballIsStopped = !ballIsStopped;
 			}
 			if (ballIsStopped == false) {
-				// System.out.println("blead");
 				ball.move(vx, vy);
 				pause(10);
 				checkWalls();
@@ -317,7 +317,7 @@ public class practiseBreakOut extends GraphicsProgram {
 		add(ball, x, y);
 	}
 
-	public void mouseMoved(MouseEvent e) { ///// 299/////
+	public void mouseMoved(MouseEvent e) {
 		if (e.getX() <= PADDLE_WIDTH / 2) {
 			rect.setLocation(0, getHeight() - PADDLE_Y_OFFSET - PADDLE_HEIGHT);
 		} else if (e.getX() >= getWidth() - PADDLE_WIDTH / 2) {
