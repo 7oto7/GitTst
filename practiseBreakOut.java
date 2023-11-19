@@ -120,7 +120,10 @@ public class practiseBreakOut extends GraphicsProgram {
 				&& (collider == secondRightSide()
 						|| collider == fourthLeftSide())) {
 			remove(collider);
-			yourScore++;
+			if(collider.getColor() == Color.CYAN){
+				yourScore = yourScore + 2;
+			}
+			
 			count++;
 			vx = -vx;
 		} else if (collider != rect) {// up and down sides
