@@ -66,6 +66,7 @@ public class practiseBreakOut extends GraphicsProgram {
 	/** Runs the Breakout program. */
 	public void run() {
 		while(playAgain){
+			playAgain = !playAgain;
 			removeAll();
 			buildSetup();
 			playGame();
