@@ -80,7 +80,7 @@ public class practiseBreakOut extends GraphicsProgram {
 	}
 
 	private void removeBricks() {
-		if (getCollidingObject() != null) {
+		if (getCollidingObject() != null && getCollidingObject() != label) {
 
 			ifColliderIsPaddle();
 			ifColliderIsBrick();
@@ -272,7 +272,8 @@ public class practiseBreakOut extends GraphicsProgram {
 	private void sountScore() {
 		remove(label);
 		label = new GLabel("Current score: " + yourScore);
-		add(label, 0, 20);
+		label.setFont("Helvetica-20");
+		add(label, 150, 200);
 	}
 
 	private void makeLabel(String string, Color green) {
