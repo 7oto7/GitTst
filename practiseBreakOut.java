@@ -72,6 +72,12 @@ public class practiseBreakOut extends GraphicsProgram {
 
 	/* Method: run() */
 	/** Runs the Breakout program. */
+	private GCanvas gameCanvas;
+	public void init(){
+		gameCanvas = new GCanvas();
+		GImage background = new GImage("C:\\Users\\User\\Pictures\\EsLqjamXMAEwmsw.png");
+		gameCanvas.add(background, 0, 0);
+	}
 	public void run() {
 
 		while (playAgain = true) {
@@ -427,7 +433,7 @@ public class practiseBreakOut extends GraphicsProgram {
 	}
 
 	private void buildSetup() {
-		setBackgroundImage("C:\\Users\\User\\Pictures\\EsLqjamXMAEwmsw.png");
+//		setBackgroundImage("C:\\Users\\User\\Pictures\\EsLqjamXMAEwmsw.png");
 		makeBricks(NBRICK_ROWS, NBRICKS_PER_ROW, BRICK_SEP);
 		makePaddle();
 		makeBall();
@@ -444,10 +450,10 @@ public class practiseBreakOut extends GraphicsProgram {
 		add(lives, highest.getWidth() + highest.getX() + (highest.getX() - label.getX() - label.getWidth()), 20);
 	}
 
-	private void setBackgroundImage(String string) {
-
-		GImage image = new GImage(string);
-		image.setSize(APPLICATION_WIDTH, APPLICATION_HEIGHT);
-		add(image, 0, 0);
-	}
+//	private void setBackgroundImage(String string) {
+//
+//		GImage image = new GImage(string);
+//		image.setSize(APPLICATION_WIDTH, APPLICATION_HEIGHT);
+//		add(image, 0, 0);
+//	}
 }
