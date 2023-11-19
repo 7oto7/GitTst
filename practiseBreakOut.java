@@ -275,7 +275,7 @@ public class practiseBreakOut extends GraphicsProgram {
 		remove(label);
 		label = new GLabel("Current score: " + yourScore);
 		label.setFont("Helvetica-20");
-		add(label, 150, 250);
+		add(label, 0, 20);
 	}
 
 	private void makeLabel(String string, Color green) {
