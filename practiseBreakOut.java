@@ -327,7 +327,7 @@ public class practiseBreakOut extends GraphicsProgram {
 	}
 
 	private void playGame() {
-		waitForClick();
+	//	waitForClick();
 		addMouseListeners();
 		moveBall();
 		waitForClick();
