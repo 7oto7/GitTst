@@ -68,12 +68,9 @@ public class practiseBreakOut extends GraphicsProgram {
 	public void run() {
 		
 		while (playAgain = true) {
-			GLabel ln = new GLabel("brot");
-			add(ln, 200, 400);
 			playAgain = !playAgain;
 			removeAll();
 			setBackground(Color.WHITE);
-			
 			buildSetup();
 			playGame();
 		}
@@ -377,6 +374,8 @@ public class practiseBreakOut extends GraphicsProgram {
 		}
 		addMouseListeners();
 		moveBall();
+		GLabel ln = new GLabel("brot");
+		add(ln, 200, 400);
 		waitForClick();
 		everythingAgain();
 
