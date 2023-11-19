@@ -26,10 +26,10 @@ public class practiseBreakOut extends GraphicsProgram {
 	private static final int PADDLE_Y_OFFSET = 30;
 
 	/** Number of bricks per row */
-	private static final int NBRICKS_PER_ROW = 4;
+	private static final int NBRICKS_PER_ROW = 10;
 
 	/** Number of rows of bricks */
-	private static final int NBRICK_ROWS = 4;
+	private static final int NBRICK_ROWS = 10;
 
 	/** Separation between bricks */
 	private static final int BRICK_SEP = 4;
@@ -65,6 +65,7 @@ public class practiseBreakOut extends GraphicsProgram {
 	private int yourScore = 0;
 	private int highestScore = 0;
 	private GLabel label;
+	private GLabel highest;
 
 	/* Method: run() */
 	/** Runs the Breakout program. */
@@ -415,5 +416,9 @@ public class practiseBreakOut extends GraphicsProgram {
 		label = new GLabel("Current score: " + yourScore);
 		label.setFont("Helvetica-20");
 		add(label, 0, 20);
+		
+		label = new GLabel("Highest score: " + yourScore);
+		label.setFont("Helvetica-20");
+		add(label, 0, 40);
 	}
 }
