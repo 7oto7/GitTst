@@ -68,7 +68,7 @@ public class practiseBreakOut extends GraphicsProgram {
 	private GLabel highest;
 	private GLabel lives;
 	private int health = NTURNS;
-	private GImage image;
+	//private GImage image;
 
 	/* Method: run() */
 	/** Runs the Breakout program. */
@@ -84,7 +84,7 @@ public class practiseBreakOut extends GraphicsProgram {
 	}
 
 	private void removeBricks() {
-		if (getCollidingObject() != image) {
+		//if (getCollidingObject() != image) {
 			if (getCollidingObject() != lives) {
 				if (getCollidingObject() != highest) {
 					if (getCollidingObject() != label) {
@@ -96,7 +96,7 @@ public class practiseBreakOut extends GraphicsProgram {
 					}
 				}
 			}
-		}
+	//	}
 	}
 
 	private void ifColliderIsPaddle() {
@@ -447,8 +447,10 @@ public class practiseBreakOut extends GraphicsProgram {
 	}
 
 	private void setBackgroundImage(String string) {
-		image = new GImage(string);
+		GCompound background = new GCompound();
+		GImage image = new GImage(string);
 		image.setSize(APPLICATION_WIDTH, APPLICATION_HEIGHT);
-		add(image, 0, 0);
+		background.add(image, 0, 0);
+		makeBall();
 	}
 }
