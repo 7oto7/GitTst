@@ -82,11 +82,13 @@ public class practiseBreakOut extends GraphicsProgram {
 	}
 
 	private void removeBricks() {
-		if (getCollidingObject() != label) {
-			if (getCollidingObject() != null) {
+		if(getCollidingObject() != highest){
+			if (getCollidingObject() != label) {
+				if (getCollidingObject() != null) {
 
-				ifColliderIsPaddle();
-				ifColliderIsBrick();
+					ifColliderIsPaddle();
+					ifColliderIsBrick();
+				}
 			}
 		}
 	}
@@ -423,6 +425,6 @@ public class practiseBreakOut extends GraphicsProgram {
 		
 		highest = new GLabel("Highest score: " + highestScore);
 		highest.setFont("Helvetica-15");
-		add(highest, 0, 40);
+		add(highest, getWidth() / 2 - highest.getWidth() / 2, 20);
 	}
 }
