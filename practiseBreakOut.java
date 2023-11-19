@@ -91,8 +91,7 @@ public class practiseBreakOut extends GraphicsProgram {
 						vx = -vx;
 					}
 					vy = -vy;
-					ball.move(5 * vx, 5 * vy);
-					//ball.setLocation(ball.getX(), rect.getY() - (2 * BALL_RADIUS - (rect.getY() - ball.getY())));
+					ball.setLocation(ball.getX(), rect.getY() - (2 * BALL_RADIUS - (rect.getY() - ball.getY())));
 				}
 			} else if(collider == fourthLeftSide()){
 				if (vy > 0) {
@@ -100,8 +99,7 @@ public class practiseBreakOut extends GraphicsProgram {
 						vx = -vx;
 					}
 					vy = -vy;
-					ball.move(5 * vx, 5 * vy);
-					//ball.setLocation(ball.getX(), rect.getY() - (2 * BALL_RADIUS - (rect.getY() - ball.getY())));
+					ball.setLocation(ball.getX(), rect.getY() - (2 * BALL_RADIUS - (rect.getY() - ball.getY())));
 				}
 				
 			} 
