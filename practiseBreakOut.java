@@ -68,6 +68,7 @@ public class practiseBreakOut extends GraphicsProgram {
 		while(playAgain){
 			playAgain = !playAgain;
 			removeAll();
+			setBackground(Color.WHITE);
 			buildSetup();
 			playGame();
 		}
