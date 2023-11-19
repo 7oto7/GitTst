@@ -215,6 +215,8 @@ public class practiseBreakOut extends GraphicsProgram {
 			collider = thirdDownSide();
 		} else if (fourthLeftSide() != null) {
 			collider = fourthLeftSide();
+		} else {
+			collider = null;
 		}
 		return collider;
 	}
