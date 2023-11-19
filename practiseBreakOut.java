@@ -428,6 +428,6 @@ public class practiseBreakOut extends GraphicsProgram {
 		
 		lives = new GLabel("Lives left: " + NTURNS);
 		lives.setFont("Helvetica-15");
-		add(lives, getWidth() - (highest.getWidth() + highest.getX()), 20);
+		add(lives, highest.getWidth() + highest.getX() + (highest.getX() - label.getX() - label.getWidth()), 20);
 	}
 }
