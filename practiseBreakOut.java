@@ -64,6 +64,7 @@ public class practiseBreakOut extends GraphicsProgram {
 	private int justCount = 1;
 	private int yourScore = 0;
 	private int highestScore = 0;
+	private GLabel label;
 
 	/* Method: run() */
 	/** Runs the Breakout program. */
@@ -117,10 +118,12 @@ public class practiseBreakOut extends GraphicsProgram {
 				&& (collider == secondRightSide()
 						|| collider == fourthLeftSide())) {
 			remove(collider);
+			yourScore++;
 			count++;
 			vx = -vx;
 		} else if (collider != rect) {// up and down sides
 			remove(collider); 
+			yourScore++;
 			count++;
 			vy = -vy;
 		}
@@ -250,7 +253,7 @@ public class practiseBreakOut extends GraphicsProgram {
 				checkWalls();
 				getCollidingObject();
 				removeBricks();
-				countScore();
+				sountScore();
 			}
 			if (winCount()) {
 				removeAll();
@@ -266,8 +269,10 @@ public class practiseBreakOut extends GraphicsProgram {
 		}
 	}
 
-	private void countScore() {
-		
+	private void sountScore() {
+		remove(label);
+		label = new GLabel("Current score: " + yourScore);
+		add(label, 0, 20);
 	}
 
 	private void makeLabel(String string, Color green) {
@@ -384,6 +389,7 @@ public class practiseBreakOut extends GraphicsProgram {
 		playAgain = !playAgain;
 		count = 0;
 		countHealth = 0;
+		yourScore = 0;
 		justCount++;
 	}
 
@@ -391,9 +397,8 @@ public class practiseBreakOut extends GraphicsProgram {
 		makeBricks(NBRICK_ROWS, NBRICKS_PER_ROW, BRICK_SEP);
 		makePaddle();
 		makeBall();
-		//makeScoreBoard("");
-		GLabel ln = new GLabel("brot: " + yourScore);
-		ln.setFont("Helvetica-20");
-		add(ln, 0, 20);
+		label = new GLabel("Current score: " + yourScore);
+		label.setFont("Helvetica-20");
+		add(label, 0, 20);
 	}
 }
