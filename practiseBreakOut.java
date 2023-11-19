@@ -117,8 +117,9 @@ public class practiseBreakOut extends GraphicsProgram {
 	}
 	private GObject fourthLeftSide() {
 		for (int i = 226; i <= 315; i+=10) {
-			if (getElementAt(ball.getX() + BALL_RADIUS + BALL_RADIUS * Math.sin(Math.toRadians(i)) - 1,
-					ball.getY() + BALL_RADIUS - BALL_RADIUS * Math.cos(Math.toRadians(i))) != null) {
+			if (getElementAt(ball.getX() + BALL_RADIUS + BALL_RADIUS * Math.sin(Math.toRadians(i)),
+					ball.getY() + BALL_RADIUS - BALL_RADIUS * Math.cos(Math.toRadians(i))) != null && getElementAt(ball.getX() + BALL_RADIUS + BALL_RADIUS * Math.sin(Math.toRadians(i)),
+							ball.getY() + BALL_RADIUS - BALL_RADIUS * Math.cos(Math.toRadians(i))) != ball) {
 				collider = getElementAt(ball.getX() + BALL_RADIUS + BALL_RADIUS * Math.sin(Math.toRadians(i)) - 1,
 						ball.getY() + BALL_RADIUS - BALL_RADIUS * Math.cos(Math.toRadians(i)));
 			}
@@ -151,7 +152,8 @@ public class practiseBreakOut extends GraphicsProgram {
 	private GObject firstUpperSide() {
 		for (int i = -45; i <= 45; i+=10) {
 			if (getElementAt(ball.getX() + BALL_RADIUS + BALL_RADIUS * Math.sin(Math.toRadians(i)),
-					ball.getY() + BALL_RADIUS - BALL_RADIUS * Math.cos(Math.toRadians(i)) - 1) != null) {
+					ball.getY() + BALL_RADIUS - BALL_RADIUS * Math.cos(Math.toRadians(i))) != null && getElementAt(ball.getX() + BALL_RADIUS + BALL_RADIUS * Math.sin(Math.toRadians(i)),
+							ball.getY() + BALL_RADIUS - BALL_RADIUS * Math.cos(Math.toRadians(i)))!= ball) {
 				collider = getElementAt(ball.getX() + BALL_RADIUS + BALL_RADIUS * Math.sin(Math.toRadians(i)),
 						ball.getY() + BALL_RADIUS - BALL_RADIUS * Math.cos(Math.toRadians(i)) - 1);
 			}
