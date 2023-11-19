@@ -134,19 +134,14 @@ public class practiseBreakOut extends GraphicsProgram {
 	private void countDifScore() {
 		if (collider.getColor() == Color.CYAN) {
 			yourScore = yourScore + 1;
-			highestScore = highestScore + 1;
 		} else if(collider.getColor() == Color.GREEN){
 			yourScore = yourScore + 2;
-			highestScore = highestScore + 2;
 		} else if (collider.getColor() == Color.YELLOW){
 			yourScore = yourScore + 3;
-			highestScore = highestScore + 3;
 		} else if(collider.getColor() == Color.ORANGE){
 			yourScore = yourScore + 4;
-			highestScore = highestScore + 4;
 		} else if(collider.getColor() == Color.RED){
 			yourScore = yourScore + 5;
-			highestScore = highestScore + 5;
 		}
 	}
 
@@ -411,9 +406,11 @@ public class practiseBreakOut extends GraphicsProgram {
 		playAgain = !playAgain;
 		count = 0;
 		countHealth = 0;
+		if(yourScore > highestScore){
+			highestScore = yourScore;
+		}
 		yourScore = 0;
 		justCount++;
-		//allTimeHighestScore = highestScore;
 	}
 
 	private void buildSetup() {
