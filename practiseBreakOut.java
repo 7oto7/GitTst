@@ -61,6 +61,7 @@ public class practiseBreakOut extends GraphicsProgram {
 	private int countHealth;
 	private boolean ballIsStopped;
 	private boolean playAgain ;
+	private int justCount = 1;
 
 	/* Method: run() */
 	/** Runs the Breakout program. */
@@ -327,7 +328,9 @@ public class practiseBreakOut extends GraphicsProgram {
 	}
 
 	private void playGame() {
-	//	waitForClick();
+		if(justCount == 1){
+			waitForClick();
+		}
 		addMouseListeners();
 		moveBall();
 		waitForClick();
@@ -340,7 +343,7 @@ public class practiseBreakOut extends GraphicsProgram {
 		playAgain = !playAgain;
 		count = 0;
 		countHealth = 0;
-
+		justCount++;
 	}
 
 	private void buildSetup() {
