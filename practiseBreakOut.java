@@ -69,7 +69,7 @@ public class practiseBreakOut extends GraphicsProgram {
 	/* Method: run() */
 	/** Runs the Breakout program. */
 	public void run() {
-		
+
 		while (playAgain = true) {
 			playAgain = !playAgain;
 			removeAll();
@@ -80,34 +80,33 @@ public class practiseBreakOut extends GraphicsProgram {
 	}
 
 	private void removeBricks() {
-		if(getCollidingObject() != label){
+		if (getCollidingObject() != label) {
 			if (getCollidingObject() != null) {
 
-			ifColliderIsPaddle();
-			ifColliderIsBrick();
+				ifColliderIsPaddle();
+				ifColliderIsBrick();
 			}
 		}
 	}
 
 	private void ifColliderIsPaddle() {
-		if (collider == rect) { //left and right sides
+		if (collider == rect) { // left and right sides
 			if (collider == secondRightSide()) {
 				if (vy > 0) {
-					if(vx > 0){
+					if (vx > 0) {
 						vx = -vx;
 					}
 					vy = -vy;
 				}
-			} else if(collider == fourthLeftSide()){
+			} else if (collider == fourthLeftSide()) {
 				if (vy > 0) {
-					if(vx < 0){
+					if (vx < 0) {
 						vx = -vx;
 					}
 					vy = -vy;
 				}
-				
-			} 
-			else {  //up and down sides
+
+			} else { // up and down sides
 				if (vy > 0) {
 					vy = -vy;
 				}
@@ -116,21 +115,31 @@ public class practiseBreakOut extends GraphicsProgram {
 	}
 
 	private void ifColliderIsBrick() {
-		if (collider != rect    // left and right sides
-				&& (collider == secondRightSide()
-						|| collider == fourthLeftSide())) {
+		if (collider != rect // left and right sides
+				&& (collider == secondRightSide() || collider == fourthLeftSide())) {
 			remove(collider);
-			if(collider.getColor() == Color.CYAN){
-				yourScore = yourScore + 2;
-			}
-			
+			countDifScore();
 			count++;
 			vx = -vx;
 		} else if (collider != rect) {// up and down sides
-			remove(collider); 
-			yourScore++;
+			remove(collider);
+			countDifScore();
 			count++;
 			vy = -vy;
+		}
+	}
+
+	private void countDifScore() {
+		if (collider.getColor() == Color.CYAN) {
+			yourScore = yourScore + 1;
+		} else if(collider.getColor() == Color.GREEN){
+			yourScore = yourScore + 2;
+		} else if (collider.getColor() == Color.YELLOW){
+			yourScore = yourScore + 3;
+		} else if(collider.getColor() == Color.ORANGE){
+			yourScore = yourScore + 4;
+		} else if(collider.getColor() == Color.RED){
+			yourScore = yourScore + 5;
 		}
 	}
 
@@ -270,7 +279,7 @@ public class practiseBreakOut extends GraphicsProgram {
 				makeLabel("YOU LOST", Color.RED);
 				break;
 			}
-			
+
 		}
 	}
 
