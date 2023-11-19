@@ -55,7 +55,7 @@ public class practiseBreakOut extends GraphicsProgram {
 	private GRect rect;
 	private GOval ball;
 	private double vx = 1;
-	private double vy = 3;;
+	private double vy = 8;;
 	private GObject collider;
 	private int count;
 	private int countHealth;
@@ -91,7 +91,6 @@ public class practiseBreakOut extends GraphicsProgram {
 						vx = -vx;
 					}
 					vy = -vy;
-					ball.setLocation(ball.getX(), rect.getY() - (2 * BALL_RADIUS - (PADDLE_HEIGHT - (rect.getY() - ball.getY()))));
 				}
 			} else if(collider == fourthLeftSide()){
 				if (vy > 0) {
@@ -99,7 +98,6 @@ public class practiseBreakOut extends GraphicsProgram {
 						vx = -vx;
 					}
 					vy = -vy;
-					ball.move(0,-( rect.getY() - (2 * BALL_RADIUS - (PADDLE_HEIGHT - (rect.getY() - ball.getY())))));
 				}
 				
 			} 
