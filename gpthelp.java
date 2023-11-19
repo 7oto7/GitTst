@@ -7,7 +7,7 @@ public class gpthelp extends JFrame {
 
     private static final int WIDTH = 500;
     private static final int HEIGHT = 500;
-    private static final int BALL_RADIUS = 10;
+    private static final int BALL_RADIUS = 100;
 
     public gpthelp() {
         setTitle("Circle Visualization");
