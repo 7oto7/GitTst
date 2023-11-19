@@ -260,8 +260,9 @@ public class practiseBreakOut extends GraphicsProgram {
 				makeLabel("YOU LOST", Color.RED);
 				break;
 			}
-
-			;
+			GLabel ln = new GLabel("brot");
+			add(ln, 200, 400);
+			
 		}
 	}
 
@@ -374,8 +375,6 @@ public class practiseBreakOut extends GraphicsProgram {
 		}
 		addMouseListeners();
 		moveBall();
-		GLabel ln = new GLabel("brot");
-		add(ln, 200, 400);
 		waitForClick();
 		everythingAgain();
 
