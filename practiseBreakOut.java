@@ -76,6 +76,7 @@ public class practiseBreakOut extends GraphicsProgram {
 	public void init(){
 		gameCanvas = new GCanvas();
 		GImage background = new GImage("C:\\Users\\User\\Pictures\\EsLqjamXMAEwmsw.png");
+		background.setSize(APPLICATION_WIDTH, APPLICATION_HEIGHT);
 		gameCanvas.add(background, 0, 0);
 	}
 	public void run() {
