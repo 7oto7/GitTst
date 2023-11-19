@@ -72,7 +72,7 @@ public class practiseBreakOut extends GraphicsProgram {
 			removeAll();
 			setBackground(Color.WHITE);
 			GLabel ln = new GLabel("brot");
-		add(ln, 200, 300);
+		add(ln, 200, 400);
 			buildSetup();
 			playGame();
 		}
