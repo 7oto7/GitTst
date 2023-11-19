@@ -210,34 +210,42 @@ public class practiseBreakOut extends GraphicsProgram {
 				getCollidingObject();
 				removeBricks();
 			}
-			winCount();
-			loseCount();
+			if(winCount()){
+				removeAll();
+				makeLabel("YOU WON", Color.GREEN);
+				break;
+			}
+			if(loseCount()){
+				removeAll();
+				makeLabel("YOU LOST", Color.RED);
+				break;
+			}
+			
+			;
 		}
 	}
 
-	private void loseCount() {
+	private void makeLabel(String string, Color green) {
+			GLabel text = new GLabel(string);
+			setBackground(green);
+			text.setFont("Helvetica-50");
+			double x = getWidth() / 2 - (text.getWidth() - text.getDescent()) / 2;
+			double y = getHeight() / 2 + text.getHeight() / 2;
+			add(text, x, y);
+	}
+
+	private Boolean loseCount() {
 		if (countHealth == NTURNS) {
-			removeAll();
-			GLabel text = new GLabel("YOU LOST");
-			setBackground(Color.RED);
-			text.setFont("Helvetica-50");
-			double x = getWidth() / 2 - (text.getWidth() - text.getDescent()) / 2;
-			double y = getHeight() / 2 + text.getHeight() / 2;
-			add(text, x, y);
+			return true;
 		}
+		return false;
 	}
 
-	private void winCount() {
+	private Boolean winCount() {
 		if (count == NBRICKS_PER_ROW * NBRICK_ROWS) {
-			removeAll();
-			GLabel text = new GLabel("YOU WON");
-			setBackground(Color.GREEN);
-			text.setFont("Helvetica-50");
-			double x = getWidth() / 2 - (text.getWidth() - text.getDescent()) / 2;
-			double y = getHeight() / 2 + text.getHeight() / 2;
-			add(text, x, y);
+			return true;
 		}
-
+			return false;
 	}
 
 	private void checkWalls() {
