@@ -66,6 +66,8 @@ public class practiseBreakOut extends GraphicsProgram {
 	/* Method: run() */
 	/** Runs the Breakout program. */
 	public void run() {
+		GLabel ln = new GLabel("brot", 150, 150);
+		add(ln);
 		while (playAgain = true) {
 			playAgain = !playAgain;
 			removeAll();
@@ -238,7 +240,7 @@ public class practiseBreakOut extends GraphicsProgram {
 				if (rgen.nextBoolean(0.5)) {
 					vx = -vx;
 				}
-				vy = 5;
+				vy = 3;
 				ballIsStopped = !ballIsStopped;
 			}
 			if (ballIsStopped == false) {
@@ -247,6 +249,7 @@ public class practiseBreakOut extends GraphicsProgram {
 				checkWalls();
 				getCollidingObject();
 				removeBricks();
+				countScore();
 			}
 			if (winCount()) {
 				removeAll();
@@ -261,6 +264,10 @@ public class practiseBreakOut extends GraphicsProgram {
 
 			;
 		}
+	}
+
+	private void countScore() {
+		
 	}
 
 	private void makeLabel(String string, Color green) {
