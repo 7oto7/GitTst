@@ -424,7 +424,7 @@ public class practiseBreakOut extends GraphicsProgram {
 		label.setFont("Helvetica-15");
 		add(label, 0, 20);
 		
-		highest = new GLabel("Highest score: " + highest);
+		highest = new GLabel("Highest score: " + highestScore);
 		highest.setFont("Helvetica-15");
 		add(highest, 0, 40);
 	}
