@@ -393,6 +393,7 @@ public class practiseBreakOut extends GraphicsProgram {
 		makeBall();
 		//makeScoreBoard("");
 		GLabel ln = new GLabel("brot");
-		add(ln, 200, 400);
+		ln.setFont("Helvetica - 20");
+		add(ln, 20, 20);
 	}
 }
