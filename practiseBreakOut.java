@@ -205,7 +205,7 @@ public class practiseBreakOut extends GraphicsProgram {
 			if (ballIsStopped == false) {
 				//System.out.println("blead");
 				ball.move(vx, vy);
-				pause(200);
+				pause(10);
 				checkWalls();
 				getCollidingObject();
 				removeBricks();
