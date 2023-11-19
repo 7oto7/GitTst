@@ -452,6 +452,7 @@ public class practiseBreakOut extends GraphicsProgram {
 		image.setSize(APPLICATION_WIDTH, APPLICATION_HEIGHT);
 		background.add(image, 0, 0);
 		makeBall();
+		background.add(ball, APPLICATION_WIDTH / 2 - BALL_RADIUS, APPLICATION_HEIGHT / 2 - BALL_RADIUS);
 		add(background);
 	}
 }
