@@ -273,7 +273,7 @@ public class practiseBreakOut extends GraphicsProgram {
 				checkWalls();
 				getCollidingObject();
 				removeBricks();
-				sountScore();
+				countScore();
 			}
 			if (winCount()) {
 				removeAll();
@@ -289,7 +289,7 @@ public class practiseBreakOut extends GraphicsProgram {
 		}
 	}
 
-	private void sountScore() {
+	private void countScore() {
 		remove(label);
 		label = new GLabel("Current score: " + yourScore);
 		label.setFont("Helvetica-15");
