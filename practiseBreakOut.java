@@ -414,11 +414,11 @@ public class practiseBreakOut extends GraphicsProgram {
 		makePaddle();
 		makeBall();
 		label = new GLabel("Current score: " + yourScore);
-		label.setFont("Helvetica-20");
+		label.setFont("Helvetica-15");
 		add(label, 0, 20);
 		
 		label = new GLabel("Highest score: " + yourScore);
-		label.setFont("Helvetica-20");
+		label.setFont("Helvetica-15");
 		add(label, 0, 40);
 	}
 }
