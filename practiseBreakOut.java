@@ -391,7 +391,7 @@ public class practiseBreakOut extends GraphicsProgram {
 		makeBricks(NBRICK_ROWS, NBRICKS_PER_ROW, BRICK_SEP);
 		makePaddle();
 		makeBall();
-		makeScoreBoard("")
+		//makeScoreBoard("");
 		GLabel ln = new GLabel("brot");
 		add(ln, 200, 400);
 	}
