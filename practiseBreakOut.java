@@ -1,4 +1,3 @@
-
 import acm.graphics.*;
 import acm.program.*;
 import acm.util.*;
@@ -15,11 +14,12 @@ public class practiseBreakOut extends GraphicsProgram {
 	public static final int APPLICATION_HEIGHT = 600;
 
 	/** Dimensions of game board (usually the same) */
-	private static final int WIDTH = APPLICATION_WIDTH;
+	private static final int WIDTH = APPLICATION_WIDTH;                
 	private static final int HEIGHT = APPLICATION_HEIGHT;
 
 	/** Dimensions of the paddle */
-	private static final int PADDLE_WIDTH = 60;
+//	private static final int PADDLE_WIDTH = 60;
+	private int PADDLE_WIDTH = 60;
 	private static final int PADDLE_HEIGHT = 10;
 
 	/** Offset of the paddle up from the bottom */
@@ -69,17 +69,12 @@ public class practiseBreakOut extends GraphicsProgram {
 	private GLabel lives;
 	private int health = NTURNS;
 	private int speed = 8;
-	//private GImage image;
+	private int speedCount = 0;
+	private int mouseX;
+//	AudioClip bounceClip = MediaTools.loadAudioClip("bounce.au");
 
 	/* Method: run() */
 	/** Runs the Breakout program. */
-//	private GCanvas gameCanvas;
-//	public void init(){
-//		gameCanvas = new GCanvas();
-//		GImage background = new GImage("C:\\Users\\User\\Pictures\\EsLqjamXMAEwmsw.png");
-//		background.setSize(APPLICATION_WIDTH, APPLICATION_HEIGHT);
-//		gameCanvas.add(background, 0, 0);
-//	}
 	public void run() {
 
 		while (playAgain = true) {
@@ -107,6 +102,7 @@ public class practiseBreakOut extends GraphicsProgram {
 
 	private void ifColliderIsPaddle() {
 		if (collider == rect) { // left and right sides
+			//bounceClip.play();
 			if (collider == secondRightSide()) {
 				if (vy > 0) {
 					if (vx > 0) {
@@ -134,14 +130,60 @@ public class practiseBreakOut extends GraphicsProgram {
 		if (collider != rect // left and right sides
 				&& (collider == secondRightSide() || collider == fourthLeftSide())) {
 			remove(collider);
+			//bounceClip.play();
 			countDifScore();
+			randomThingHappens();
 			count++;
+			speedCount++;
+			if(speedCount % 7 == 0){
+				speed = speed - 1;
+			}
 			vx = -vx;
 		} else if (collider != rect) {// up and down sides
 			remove(collider);
+	//		bounceClip.play();
 			countDifScore();
+			randomThingHappens();
 			count++;
+			speedCount++;
+			if(speedCount % 7 == 0){
+				speed = speed - 1;
+			}
 			vy = -vy;
+		}
+	}
+
+	private void randomThingHappens() {
+		if(collider.getColor() == Color.WHITE){
+			int randomNumber = rgen.nextInt(1, 6);
+			if(randomNumber == 1){
+				remove(rect);
+				PADDLE_WIDTH = PADDLE_WIDTH - 20;
+				makePaddle(PADDLE_WIDTH, PADDLE_HEIGHT, mouseX - PADDLE_WIDTH / 2);
+				
+				
+			} else if(randomNumber == 2){
+				remove(rect);
+				PADDLE_WIDTH = PADDLE_WIDTH + 20;
+				makePaddle(PADDLE_WIDTH, PADDLE_HEIGHT, mouseX  - PADDLE_WIDTH / 2);
+
+				
+			} else if(randomNumber == 3){
+				health++;
+				remove(lives);
+				lives = new GLabel("Lives left: " + health);
+				lives.setFont("Helvetica-15");
+				lives.setColor(Color.WHITE);
+				add(lives, highest.getWidth() + highest.getX() + (highest.getX() - label.getX() - label.getWidth()), 20);
+			} else if(randomNumber == 4){
+				
+
+				
+			} else if(randomNumber == 5){
+				
+
+				
+			}
 		}
 	}
 
@@ -288,12 +330,27 @@ public class practiseBreakOut extends GraphicsProgram {
 			}
 			if (winCount()) {
 				removeAll();
-				makeLabel("YOU WON", Color.GREEN);
+
+				vx = 0;
+				vy = 0;
+				ballIsStopped = true;
+
+				GImage winner = new GImage("C:\\Users\\User\\Pictures\\pngtree-game-over-with-yellow-trophy-pixel-style-vector-png-image_2914623.jpg");
+				winner.setSize(APPLICATION_WIDTH, APPLICATION_HEIGHT);
+				add(winner);
+				GLabel click = new GLabel("Click anywhere to start again");
+				click.setFont("Helvetica-20");
+				add(click, 80, 420);
 				break;
 			}
 			if (loseCount()) {
 				removeAll();
-				makeLabel("YOU LOST", Color.RED);
+				GImage winner = new GImage("C:\\Users\\User\\Pictures\\pngtree-game-over-sign-lose-creative-pixel-8-bit-style-png-image_2914643.jpg");
+				winner.setSize(APPLICATION_WIDTH, APPLICATION_HEIGHT);
+				add(winner);
+				GLabel click = new GLabel("Click anywhere to start again");
+				click.setFont("Helvetica-20");
+				add(click, 80, 420);
 				break;
 			}
 
@@ -304,16 +361,8 @@ public class practiseBreakOut extends GraphicsProgram {
 		remove(label);
 		label = new GLabel("Current score: " + yourScore);
 		label.setFont("Helvetica-15");
+		label.setColor(Color.WHITE);
 		add(label, 15, 20);
-	}
-
-	private void makeLabel(String string, Color green) {
-		GLabel text = new GLabel(string);
-		setBackground(green);
-		text.setFont("Helvetica-50");
-		double x = getWidth() / 2 - (text.getWidth() - text.getDescent()) / 2;
-		double y = getHeight() / 2 + text.getHeight() / 2;
-		add(text, x, y);
 	}
 
 	private Boolean loseCount() {
@@ -347,10 +396,13 @@ public class practiseBreakOut extends GraphicsProgram {
 			vy = 0;
 			ballIsStopped = true;
 			health = health - 1;
+			speedCount = 0;
+			speed = 8;
 
 			remove(lives);
 			lives = new GLabel("Lives left: " + health);
 			lives.setFont("Helvetica-15");
+			lives.setColor(Color.WHITE);
 			add(lives, highest.getWidth() + highest.getX() + (highest.getX() - label.getX() - label.getWidth()), 20);
 		}
 
@@ -359,12 +411,14 @@ public class practiseBreakOut extends GraphicsProgram {
 	private void makeBall() {
 		ball = new GOval(2 * BALL_RADIUS, 2 * BALL_RADIUS);
 		ball.setFilled(true);
+		ball.setColor(Color.WHITE);
 		int x = getWidth() / 2 - BALL_RADIUS;
 		int y = getHeight() / 2 - BALL_RADIUS;
 		add(ball, x, y);
 	}
 
 	public void mouseMoved(MouseEvent e) {
+		mouseX = e.getX();
 		if (e.getX() <= PADDLE_WIDTH / 2) {
 			rect.setLocation(0, getHeight() - PADDLE_Y_OFFSET - PADDLE_HEIGHT);
 		} else if (e.getX() >= getWidth() - PADDLE_WIDTH / 2) {
@@ -374,12 +428,12 @@ public class practiseBreakOut extends GraphicsProgram {
 		}
 	}
 
-	private GRect makePaddle() {
-		rect = new GRect(PADDLE_WIDTH, PADDLE_HEIGHT);
+	private GRect makePaddle(int x1, int y2, int i) {
+		rect = new GRect(x1, y2);
 		rect.setFilled(true);
-		int x = getWidth() / 2 - PADDLE_WIDTH / 2;
+		rect.setColor(Color.WHITE);
 		int y = getHeight() - PADDLE_Y_OFFSET - PADDLE_HEIGHT;
-		add(rect, x, y);
+		add(rect, i, y);
 		return rect;
 	}
 
@@ -393,18 +447,38 @@ public class practiseBreakOut extends GraphicsProgram {
 				double y = BRICK_Y_OFFSET + i * (BRICK_HEIGHT + BRICK_SEP);
 				if (i == 0 || i == 1) {
 					rect.setColor(Color.RED);
+					boolean helper = rgen.nextBoolean(0.03);
+					if(helper){
+						rect.setColor(Color.WHITE);
+					}
 				}
 				if (i == 2 || i == 3) {
 					rect.setColor(Color.ORANGE);
+					boolean helper = rgen.nextBoolean(0.03);
+					if(helper){
+						rect.setColor(Color.WHITE);
+					}
 				}
 				if (i == 4 || i == 5) {
 					rect.setColor(Color.YELLOW);
+					boolean helper = rgen.nextBoolean(0.03);
+					if(helper){
+						rect.setColor(Color.WHITE);
+					}
 				}
 				if (i == 6 || i == 7) {
 					rect.setColor(Color.GREEN);
+					boolean helper = rgen.nextBoolean(0.03);
+					if(helper){
+						rect.setColor(Color.WHITE);
+					}
 				}
 				if (i == 8 || i == 9) {
 					rect.setColor(Color.CYAN);
+					boolean helper = rgen.nextBoolean(0.5);
+					if(helper){
+						rect.setColor(Color.WHITE);
+					}
 				}
 				add(rect, x, y);
 			}
@@ -423,8 +497,9 @@ public class practiseBreakOut extends GraphicsProgram {
 	}
 
 	private void everythingAgain() {
+		
 		playAgain = !playAgain;
-		count = 0;
+		
 		countHealth = 0;
 		if (yourScore > highestScore) {
 			highestScore = yourScore;
@@ -432,22 +507,37 @@ public class practiseBreakOut extends GraphicsProgram {
 		yourScore = 0;
 		justCount++;
 		health = NTURNS;
+		if(count == NBRICKS_PER_ROW * NBRICK_ROWS){
+			highestScore = 0;
+		}
+		count = 0;
+		PADDLE_WIDTH = 60;
 	}
 
 	private void buildSetup() {
+//		GImage background = new GImage("C:\\Users\\User\\Pictures\\EsLqjamXMAEwmsw.png");
+//		background.setSize(APPLICATION_WIDTH, APPLICATION_HEIGHT);
+//		background.sendBackward();
+//		add(background);
+		Color uniqueColor = new Color(64, 224, 208);
+		setBackground(uniqueColor);
 		makeBricks(NBRICK_ROWS, NBRICKS_PER_ROW, BRICK_SEP);
-		makePaddle();
+		makePaddle(PADDLE_WIDTH, PADDLE_HEIGHT, getWidth() / 2 - PADDLE_WIDTH / 2);
 		makeBall();
 		label = new GLabel("Current score: " + yourScore);
 		label.setFont("Helvetica-15");
+		label.setColor(Color.WHITE);
 		add(label, 15, 20);
 
 		highest = new GLabel("Highest score: " + highestScore);
 		highest.setFont("Helvetica-15");
+		highest.setColor(Color.WHITE);
 		add(highest, getWidth() / 2 - highest.getWidth() / 2 + 15, 20);
 
 		lives = new GLabel("Lives left: " + health);
 		lives.setFont("Helvetica-15");
+		lives.setColor(Color.WHITE);
 		add(lives, highest.getWidth() + highest.getX() + (highest.getX() - label.getX() - label.getWidth()), 20);
 	}
 }
+
