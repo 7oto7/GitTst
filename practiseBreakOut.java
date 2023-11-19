@@ -340,7 +340,6 @@ public class practiseBreakOut extends GraphicsProgram {
 		playAgain = !playAgain;
 		count = 0;
 		countHealth = 0;
-		ballIsStopped = false;
 
 	}
 
