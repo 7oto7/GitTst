@@ -84,7 +84,7 @@ public class practiseBreakOut extends GraphicsProgram {
 	}
 
 	private void removeBricks() {
-		if (getCollidingObject() != image) {
+		if (getCollidingObject() == image) {
 			if (getCollidingObject() != lives) {
 				if (getCollidingObject() != highest) {
 					if (getCollidingObject() != label) {
