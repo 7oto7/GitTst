@@ -84,18 +84,19 @@ public class practiseBreakOut extends GraphicsProgram {
 	}
 
 	private void removeBricks() {
-		if (getCollidingObject() != lives) {
-			if (getCollidingObject() != highest) {
-				if (getCollidingObject() != label) {
-					if (getCollidingObject() != null) {
+		if (getCollidingObject() != image) {
+			if (getCollidingObject() != lives) {
+				if (getCollidingObject() != highest) {
+					if (getCollidingObject() != label) {
+						if (getCollidingObject() != null) {
 
-						ifColliderIsPaddle();
-						ifColliderIsBrick();
+							ifColliderIsPaddle();
+							ifColliderIsBrick();
+						}
 					}
 				}
 			}
 		}
-
 	}
 
 	private void ifColliderIsPaddle() {
@@ -339,7 +340,7 @@ public class practiseBreakOut extends GraphicsProgram {
 			vy = 0;
 			ballIsStopped = true;
 			health = health - 1;
-			
+
 			remove(lives);
 			lives = new GLabel("Lives left: " + health);
 			lives.setFont("Helvetica-15");
@@ -428,7 +429,7 @@ public class practiseBreakOut extends GraphicsProgram {
 
 	private void buildSetup() {
 		setBackgroundImage("C:\\Users\\User\\Pictures\\EsLqjamXMAEwmsw.png");
-		
+
 		makeBricks(NBRICK_ROWS, NBRICKS_PER_ROW, BRICK_SEP);
 		makePaddle();
 		makeBall();
@@ -442,7 +443,7 @@ public class practiseBreakOut extends GraphicsProgram {
 
 		lives = new GLabel("Lives left: " + health);
 		lives.setFont("Helvetica-15");
-		add(lives, highest.getWidth() + highest.getX() + (highest.getX() - label.getX() - label.getWidth()), 20);		
+		add(lives, highest.getWidth() + highest.getX() + (highest.getX() - label.getX() - label.getWidth()), 20);
 	}
 
 	private void setBackgroundImage(String string) {
