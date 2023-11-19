@@ -114,34 +114,6 @@ public class practiseBreakOut extends GraphicsProgram {
 			}
 
 		}
-
-		// if (collider != null) {
-		// if (collider != rect && ball.getY() <= collider.getY() + BRICK_HEIGHT
-		// && ball.getY() >= collider.getY()) {
-		// remove(collider);
-		// vx = -vx;
-		// vy = -vy;
-		// count++;
-		// } else if (collider != rect) {
-		// remove(collider);
-		// count++;
-		// vy = -vy;
-		// }
-		// if (collider == rect && ball.getY() - 2 * BALL_RADIUS <= rect.getY()
-		// ) {
-		// if (vy > 0) {
-		// vy = -vy;
-		// }
-		// } else if(collider == rect && ball.getY() + 2 * BALL_RADIUS >
-		// rect.getY()){
-		// if(vy > 0){
-		// vy = -vy;
-		// vx = -vx;
-		// }
-		// }
-		//
-		// }
-
 	}
 	private GObject fourthLeftSide() {
 		for (int i = 226; i <= 315; i+=5) {
