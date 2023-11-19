@@ -66,12 +66,13 @@ public class practiseBreakOut extends GraphicsProgram {
 	/* Method: run() */
 	/** Runs the Breakout program. */
 	public void run() {
-		GLabel ln = new GLabel("brot");
-		add(ln, 200, 200);
+		
 		while (playAgain = true) {
 			playAgain = !playAgain;
 			removeAll();
 			setBackground(Color.WHITE);
+			GLabel ln = new GLabel("brot");
+		add(ln, 200, 200);
 			buildSetup();
 			playGame();
 		}
