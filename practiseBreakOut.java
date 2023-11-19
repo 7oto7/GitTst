@@ -67,6 +67,8 @@ public class practiseBreakOut extends GraphicsProgram {
 	private GLabel label;
 	private GLabel highest;
 	private GLabel lives;
+	private int health = NTURNS;
+
 	/* Method: run() */
 	/** Runs the Breakout program. */
 	public void run() {
@@ -81,15 +83,18 @@ public class practiseBreakOut extends GraphicsProgram {
 	}
 
 	private void removeBricks() {
-		if(getCollidingObject() != highest){
-			if (getCollidingObject() != label) {
-				if (getCollidingObject() != null) {
+		if (getCollidingObject() != lives) {
+			if (getCollidingObject() != highest) {
+				if (getCollidingObject() != label) {
+					if (getCollidingObject() != null) {
 
-					ifColliderIsPaddle();
-					ifColliderIsBrick();
+						ifColliderIsPaddle();
+						ifColliderIsBrick();
+					}
 				}
 			}
 		}
+
 	}
 
 	private void ifColliderIsPaddle() {
@@ -135,13 +140,13 @@ public class practiseBreakOut extends GraphicsProgram {
 	private void countDifScore() {
 		if (collider.getColor() == Color.CYAN) {
 			yourScore = yourScore + 1;
-		} else if(collider.getColor() == Color.GREEN){
+		} else if (collider.getColor() == Color.GREEN) {
 			yourScore = yourScore + 2;
-		} else if (collider.getColor() == Color.YELLOW){
+		} else if (collider.getColor() == Color.YELLOW) {
 			yourScore = yourScore + 3;
-		} else if(collider.getColor() == Color.ORANGE){
+		} else if (collider.getColor() == Color.ORANGE) {
 			yourScore = yourScore + 4;
-		} else if(collider.getColor() == Color.RED){
+		} else if (collider.getColor() == Color.RED) {
 			yourScore = yourScore + 5;
 		}
 	}
@@ -332,7 +337,12 @@ public class practiseBreakOut extends GraphicsProgram {
 			vx = 0;
 			vy = 0;
 			ballIsStopped = true;
-
+			health = health - 1;
+			
+			remove(lives);
+			lives = new GLabel("Lives left: " + health);
+			lives.setFont("Helvetica-15");
+			add(lives, highest.getWidth() + highest.getX() + (highest.getX() - label.getX() - label.getWidth()), 20);
 		}
 
 	}
@@ -407,11 +417,12 @@ public class practiseBreakOut extends GraphicsProgram {
 		playAgain = !playAgain;
 		count = 0;
 		countHealth = 0;
-		if(yourScore > highestScore){
+		if (yourScore > highestScore) {
 			highestScore = yourScore;
 		}
 		yourScore = 0;
 		justCount++;
+		health = NTURNS;
 	}
 
 	private void buildSetup() {
@@ -421,12 +432,12 @@ public class practiseBreakOut extends GraphicsProgram {
 		label = new GLabel("Current score: " + yourScore);
 		label.setFont("Helvetica-15");
 		add(label, 0, 20);
-		
+
 		highest = new GLabel("Highest score: " + highestScore);
 		highest.setFont("Helvetica-15");
 		add(highest, getWidth() / 2 - highest.getWidth() / 2, 20);
-		
-		lives = new GLabel("Lives left: " + NTURNS);
+
+		lives = new GLabel("Lives left: " + health);
 		lives.setFont("Helvetica-15");
 		add(lives, highest.getWidth() + highest.getX() + (highest.getX() - label.getX() - label.getWidth()), 20);
 	}
