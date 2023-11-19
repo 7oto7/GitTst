@@ -172,8 +172,10 @@ public class practiseBreakOut extends GraphicsProgram {
 		return null;
 	}
 
-	private void getCollidingObject() {
-		firstUpperSide();
+	private GObject getCollidingObject() {
+		if(firstUpperSide() != null){
+			
+		}
 		secondRightSide();
 		thirdDownSide();
 		fourthLeftSide();
