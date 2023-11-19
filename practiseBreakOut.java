@@ -81,47 +81,6 @@ public class practiseBreakOut extends GraphicsProgram {
 			ifColliderIsPaddle();
 			ifColliderIsBrick();
 		}
-
-		// if (collider != null) {
-		//
-		// if (collider != null && collider != rect) {
-		// remove(collider);
-		// System.out.print("works");
-		// vy = -vy;
-		// // bounceClip.play();
-		// } else if (collider != null && collider != rect) {
-		// remove(collider);
-		// vx = -vx;
-		// // bounceClip.play();
-		// } else if (collider == rect) {
-		// if (vy > 0) {
-		// // System.out.println("blead");
-		// // vx = -vx;
-		// vy = -vy;
-		// // bounceClip.play();
-		// }
-		// } else if (collider != null && collider != rect) {
-		// remove(collider);
-		// vy = -vy;
-		// // bounceClip.play();
-		// } else if (collider == rect) {
-		// vy = -vy;
-		// // bounceClip.play();
-		// } else if (collider != null && collider != rect) {
-		// remove(collider);
-		// vx = -vx;
-		// // bounceClip.play();
-		// } else if (collider == rect) {
-		// if (vy > 0) {
-		// // vx = -vx;
-		// vy = -vy;
-		// // bounceClip.play();
-		// }
-		//
-		// }
-		//
-		// }
-
 	}
 
 	private void ifColliderIsPaddle() {
