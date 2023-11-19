@@ -65,7 +65,7 @@ public class practiseBreakOut extends GraphicsProgram {
 	/* Method: run() */
 	/** Runs the Breakout program. */
 	public void run() {
-		while(playAgain == true){
+		while(playAgain = true){
 			playAgain = !playAgain;
 			removeAll();
 			setBackground(Color.WHITE);
