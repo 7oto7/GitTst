@@ -48,7 +48,7 @@ public class practiseBreakOut extends GraphicsProgram {
 
 	/** Number of turns */
 	private static final int NTURNS = 3;
-	//AudioClip bounceClip = MediaTools.loadAudioClip("bounce.au");
+	// AudioClip bounceClip = MediaTools.loadAudioClip("bounce.au");
 
 	private RandomGenerator rgen = RandomGenerator.getInstance();
 
@@ -60,13 +60,13 @@ public class practiseBreakOut extends GraphicsProgram {
 	private int count;
 	private int countHealth;
 	private boolean ballIsStopped;
-	private boolean playAgain ;
+	private boolean playAgain;
 	private int justCount = 1;
 
 	/* Method: run() */
 	/** Runs the Breakout program. */
 	public void run() {
-		while(playAgain = true){
+		while (playAgain = true) {
 			playAgain = !playAgain;
 			removeAll();
 			setBackground(Color.WHITE);
@@ -76,54 +76,53 @@ public class practiseBreakOut extends GraphicsProgram {
 	}
 
 	private void removeBricks() {
-		if(collider != null){
-			
+		if (collider != null) {
+
 			if (collider != null && collider != rect) {
-			remove(collider);
-			System.out.print("works");
-			vy = -vy;
-		//	bounceClip.play();
-		} else
-		if (collider != null && collider != rect) {
-			remove(collider);
-			vx = -vx;
-		//	bounceClip.play();
-		} else if (collider == rect) {
-			if (vy > 0) {
-				//System.out.println("blead");
-			//	vx = -vx;
+				remove(collider);
+				System.out.print("works");
 				vy = -vy;
-			//	bounceClip.play();
-			}
-		} else 
-		if (collider != null && collider != rect) {
-			remove(collider);
-			vy = -vy;
-			//bounceClip.play();
-		} else if (collider == rect) {
-			vy = -vy;
-			//bounceClip.play();
-		} else
-		if (collider != null && collider != rect) {
-			remove(collider);
-			vx = -vx;
-			//bounceClip.play();
-		} else if (collider == rect) {
-			if (vy > 0) {
-				//vx = -vx;
+				// bounceClip.play();
+			} else if (collider != null && collider != rect) {
+				remove(collider);
+				vx = -vx;
+				// bounceClip.play();
+			} else if (collider == rect) {
+				if (vy > 0) {
+					// System.out.println("blead");
+					// vx = -vx;
+					vy = -vy;
+					// bounceClip.play();
+				}
+			} else if (collider != null && collider != rect) {
+				remove(collider);
 				vy = -vy;
-			//	bounceClip.play();
+				// bounceClip.play();
+			} else if (collider == rect) {
+				vy = -vy;
+				// bounceClip.play();
+			} else if (collider != null && collider != rect) {
+				remove(collider);
+				vx = -vx;
+				// bounceClip.play();
+			} else if (collider == rect) {
+				if (vy > 0) {
+					// vx = -vx;
+					vy = -vy;
+					// bounceClip.play();
+				}
+
 			}
 
 		}
-			
-		}
-		
+
 	}
+
 	private GObject fourthLeftSide() {
-		for (int i = 226; i <= 315; i+=10) {
+		for (int i = 226; i <= 315; i += 10) {
 			if (getElementAt(ball.getX() + BALL_RADIUS + BALL_RADIUS * Math.sin(Math.toRadians(i)),
-					ball.getY() + BALL_RADIUS - BALL_RADIUS * Math.cos(Math.toRadians(i))) != null && getElementAt(ball.getX() + BALL_RADIUS + BALL_RADIUS * Math.sin(Math.toRadians(i)),
+					ball.getY() + BALL_RADIUS - BALL_RADIUS * Math.cos(Math.toRadians(i))) != null
+					&& getElementAt(ball.getX() + BALL_RADIUS + BALL_RADIUS * Math.sin(Math.toRadians(i)),
 							ball.getY() + BALL_RADIUS - BALL_RADIUS * Math.cos(Math.toRadians(i))) != ball) {
 				collider = getElementAt(ball.getX() + BALL_RADIUS + BALL_RADIUS * Math.sin(Math.toRadians(i)) - 1,
 						ball.getY() + BALL_RADIUS - BALL_RADIUS * Math.cos(Math.toRadians(i)));
@@ -134,7 +133,7 @@ public class practiseBreakOut extends GraphicsProgram {
 	}
 
 	private GObject thirdDownSide() {
-		for (int i = 136; i <= 225; i+=10) {
+		for (int i = 136; i <= 225; i += 10) {
 			if (getElementAt(ball.getX() + BALL_RADIUS + BALL_RADIUS * Math.sin(Math.toRadians(i)),
 					ball.getY() + BALL_RADIUS - BALL_RADIUS * Math.cos(Math.toRadians(i)) + 1) != null) {
 				collider = getElementAt(ball.getX() + BALL_RADIUS + BALL_RADIUS * Math.sin(Math.toRadians(i)),
@@ -146,7 +145,7 @@ public class practiseBreakOut extends GraphicsProgram {
 	}
 
 	private GObject secondRightSide() {
-		for (int i = 46; i <= 135; i+=10) {
+		for (int i = 46; i <= 135; i += 10) {
 			if (getElementAt(ball.getX() + BALL_RADIUS + BALL_RADIUS * Math.sin(Math.toRadians(i)) + 1,
 					ball.getY() + BALL_RADIUS - BALL_RADIUS * Math.cos(Math.toRadians(i))) != null) {
 				collider = getElementAt(ball.getX() + BALL_RADIUS + BALL_RADIUS * Math.sin(Math.toRadians(i)) + 1,
@@ -158,10 +157,11 @@ public class practiseBreakOut extends GraphicsProgram {
 	}
 
 	private GObject firstUpperSide() {
-		for (int i = -45; i <= 45; i+=10) {
+		for (int i = -45; i <= 45; i += 10) {
 			if (getElementAt(ball.getX() + BALL_RADIUS + BALL_RADIUS * Math.sin(Math.toRadians(i)),
-					ball.getY() + BALL_RADIUS - BALL_RADIUS * Math.cos(Math.toRadians(i))) != null && getElementAt(ball.getX() + BALL_RADIUS + BALL_RADIUS * Math.sin(Math.toRadians(i)),
-							ball.getY() + BALL_RADIUS - BALL_RADIUS * Math.cos(Math.toRadians(i)))!= ball) {
+					ball.getY() + BALL_RADIUS - BALL_RADIUS * Math.cos(Math.toRadians(i))) != null
+					&& getElementAt(ball.getX() + BALL_RADIUS + BALL_RADIUS * Math.sin(Math.toRadians(i)),
+							ball.getY() + BALL_RADIUS - BALL_RADIUS * Math.cos(Math.toRadians(i))) != ball) {
 				collider = getElementAt(ball.getX() + BALL_RADIUS + BALL_RADIUS * Math.sin(Math.toRadians(i)),
 						ball.getY() + BALL_RADIUS - BALL_RADIUS * Math.cos(Math.toRadians(i)) - 1);
 				return collider;
@@ -189,35 +189,35 @@ public class practiseBreakOut extends GraphicsProgram {
 				ballIsStopped = !ballIsStopped;
 			}
 			if (ballIsStopped == false) {
-				//System.out.println("blead");
+				// System.out.println("blead");
 				ball.move(vx, vy);
 				pause(10);
 				checkWalls();
 				getCollidingObject();
 				removeBricks();
 			}
-			if(winCount()){
+			if (winCount()) {
 				removeAll();
 				makeLabel("YOU WON", Color.GREEN);
 				break;
 			}
-			if(loseCount()){
+			if (loseCount()) {
 				removeAll();
 				makeLabel("YOU LOST", Color.RED);
 				break;
 			}
-			
+
 			;
 		}
 	}
 
 	private void makeLabel(String string, Color green) {
-			GLabel text = new GLabel(string);
-			setBackground(green);
-			text.setFont("Helvetica-50");
-			double x = getWidth() / 2 - (text.getWidth() - text.getDescent()) / 2;
-			double y = getHeight() / 2 + text.getHeight() / 2;
-			add(text, x, y);
+		GLabel text = new GLabel(string);
+		setBackground(green);
+		text.setFont("Helvetica-50");
+		double x = getWidth() / 2 - (text.getWidth() - text.getDescent()) / 2;
+		double y = getHeight() / 2 + text.getHeight() / 2;
+		add(text, x, y);
 	}
 
 	private Boolean loseCount() {
@@ -231,7 +231,7 @@ public class practiseBreakOut extends GraphicsProgram {
 		if (count == NBRICKS_PER_ROW * NBRICK_ROWS) {
 			return true;
 		}
-			return false;
+		return false;
 	}
 
 	private void checkWalls() {
@@ -311,15 +311,14 @@ public class practiseBreakOut extends GraphicsProgram {
 	}
 
 	private void playGame() {
-		if(justCount == 1){
+		if (justCount == 1) {
 			waitForClick();
 		}
 		addMouseListeners();
 		moveBall();
 		waitForClick();
 		everythingAgain();
-		
-		
+
 	}
 
 	private void everythingAgain() {
