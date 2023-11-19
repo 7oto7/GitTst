@@ -84,7 +84,6 @@ public class practiseBreakOut extends GraphicsProgram {
 	}
 
 	private void removeBricks() {
-		//if (getCollidingObject() != image) {
 			if (getCollidingObject() != lives) {
 				if (getCollidingObject() != highest) {
 					if (getCollidingObject() != label) {
@@ -96,7 +95,6 @@ public class practiseBreakOut extends GraphicsProgram {
 					}
 				}
 			}
-	//	}
 	}
 
 	private void ifColliderIsPaddle() {
@@ -452,6 +450,7 @@ public class practiseBreakOut extends GraphicsProgram {
 		image.setSize(APPLICATION_WIDTH, APPLICATION_HEIGHT);
 		add(image, 0, 0);
 
-
+		makeBall();
+        add(ball, APPLICATION_WIDTH / 2 - BALL_RADIUS, APPLICATION_HEIGHT / 2 - BALL_RADIUS);
 	}
 }
