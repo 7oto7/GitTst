@@ -449,7 +449,7 @@ public class practiseBreakOut extends GraphicsProgram {
 		GImage image = new GImage(string);
 		image.setSize(APPLICATION_WIDTH, APPLICATION_HEIGHT);
 		add(image, 0, 0);
-
+		setBackgroundImage(string);
 		makeBall();
         add(ball, APPLICATION_WIDTH / 2 - BALL_RADIUS, APPLICATION_HEIGHT / 2 - BALL_RADIUS);
 	}
