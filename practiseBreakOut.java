@@ -85,13 +85,23 @@ public class practiseBreakOut extends GraphicsProgram {
 
 	private void ifColliderIsPaddle() {
 		if (collider == rect) { //left and right sides
-			if (collider == secondRightSide()
-					|| collider == fourthLeftSide()) {
+			if (collider == secondRightSide()) {
 				if (vy > 0) {
-					vx = -vx;
+					if(vx > 0){
+						vx = -vx;
+					}
 					vy = -vy;
 				}
-			} else {  //up and down sides
+			} else if(collider == fourthLeftSide()){
+				if (vy > 0) {
+					if(vx < 0){
+						vx = -vx;
+					}
+					vy = -vy;
+				}
+				
+			} 
+			else {  //up and down sides
 				if (vy > 0) {
 					vy = -vy;
 				}
