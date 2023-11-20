@@ -16,7 +16,7 @@ public class problem46 extends ConsoleProgram{
 		
 		for(int i = 0; i < text.length(); i++){
 			int count = countSymbol(text, text.charAt(i));
-			if(count > frequentChar){
+			if(count > maxChar){
 				maxChar = count;
 				frequentChar = text.charAt(i);
 			}
