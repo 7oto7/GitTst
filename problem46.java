@@ -8,7 +8,7 @@ public class problem46 extends ConsoleProgram{
 
 		String text = readLine("Enter text: ");
 		//println("Frequent symbol is: " + frequentSymbol(text));
-		char frequentChar = 2560;
+		char frequentChar = 25609;
 		println(frequentChar);/////gamoitans cxrilis 256-e simbolos////////////
 	}
 
