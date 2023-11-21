@@ -9,7 +9,7 @@ public class tokenizer extends ConsoleProgram{
 		
 		while(tokenizer.hasMoreTokens()){
 			String currToken = tokenizer.nextToken();
-			println(currToken);
+			print(currToken);
 		}
 	}
 }
