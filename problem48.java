@@ -14,6 +14,8 @@ public class problem48 extends ConsoleProgram{
 			println(text.charAt(i) + ": " + count);
 		}
 	}
+	
+	
 	private int countSymbol(String text, char symbol) {
 		int symbolCount = 0;
 		for (int i = 0; i < text.length(); i++) {
