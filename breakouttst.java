@@ -66,7 +66,7 @@ public class breakouttst extends GraphicsProgram {
 	private int count; //count for winning
 	private int countHealth; //count for losing
 	private boolean ballIsPaused; //tells if ball starts from center or not
-
+	private GImage background;
 	/* Method: run() */
 	/** Runs the Breakout program. */
 	public void run() {
@@ -78,6 +78,10 @@ public class breakouttst extends GraphicsProgram {
 
 	// builds everything we need to play the game
 	private void buildSetup() {
+		background = new GImage("C:\\Users\\User\\Pictures\\EsLqjamXMAEwmsw.png");
+		background.setSize(APPLICATION_WIDTH, APPLICATION_HEIGHT);
+		background.sendBackward();
+		add(background);
 		makeBricks(NBRICK_ROWS, NBRICKS_PER_ROW, BRICK_SEP);// makes bricks
 		makePaddle();// makes puddle
 		makeBall();// makes ball
@@ -205,19 +209,19 @@ public class breakouttst extends GraphicsProgram {
 	//and return object which is hit
 	//if there is nothing on the indicated coordinate, function will return null
 	private GObject getCollidingObject() {
-		if (getElementAt(ball.getX() + BALL_RADIUS, ball.getY() - 1) != null) {// upper middle point
+		if (getElementAt(ball.getX() + BALL_RADIUS, ball.getY() - 1) != null && getElementAt(ball.getX() + BALL_RADIUS, ball.getY() - 1) != background) {// upper middle point
 			
 			collider = getElementAt(ball.getX() + BALL_RADIUS, ball.getY() - 1);
 			
-		} else if (getElementAt(ball.getX() + BALL_RADIUS, ball.getY() + 2 * BALL_RADIUS + 1) != null) {// down middle pont
+		} else if (getElementAt(ball.getX() + BALL_RADIUS, ball.getY() + 2 * BALL_RADIUS + 1) != null && getElementAt(ball.getX() + BALL_RADIUS, ball.getY() + 2 * BALL_RADIUS + 1) != background) {// down middle pont
 			
 			collider = getElementAt(ball.getX() + BALL_RADIUS, ball.getY() + 2 * BALL_RADIUS + 1);
 			
-		} else if (getElementAt(ball.getX() + 2 * BALL_RADIUS + 1, ball.getY() + BALL_RADIUS) != null) {// right middle point
+		} else if (getElementAt(ball.getX() + 2 * BALL_RADIUS + 1, ball.getY() + BALL_RADIUS) != null && getElementAt(ball.getX() + 2 * BALL_RADIUS + 1, ball.getY() + BALL_RADIUS) != background) {// right middle point
 			
 			collider = getElementAt(ball.getX() + 2 * BALL_RADIUS + 1, ball.getY() + BALL_RADIUS);
 			
-		} else if (getElementAt(ball.getX() - 1, ball.getY() + BALL_RADIUS) != null) {// left middle point
+		} else if (getElementAt(ball.getX() - 1, ball.getY() + BALL_RADIUS) != null && getElementAt(ball.getX() - 1, ball.getY() + BALL_RADIUS) != background) {// left middle point
 			
 			collider = getElementAt(ball.getX() - 1, ball.getY() + BALL_RADIUS);
 			
