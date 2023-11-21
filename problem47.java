@@ -1,3 +1,6 @@
+//დაწერეთ პრედიკატ მეთოდი რომელსაც გადაეცემა სტრინგი და რომელიც დაადგენს არის თუ
+//არა მოცემული ტექსტი პალინდრომი
+
 import acm.program.ConsoleProgram;
 
 public class problem47 extends ConsoleProgram{
@@ -9,7 +12,7 @@ public class problem47 extends ConsoleProgram{
 
 	private boolean isPalindrom(String text) {
 		for(int i = 0; i < text.length() / 2; i++){
-			if(text.charAt(i) != text.charAt(text.length() - 1)){
+			if(text.charAt(i) != text.charAt(text.length() - 1 - i)){
 				return false;
 			}
 		}
