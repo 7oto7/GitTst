@@ -10,6 +10,7 @@ public class problem49 extends ConsoleProgram{
 		String numStr = "1234";
 		int num = stringToInt(numStr);
 		println(num);
+		println('7' - '0');
 	}
 
 	private int stringToInt(String numStr) {
