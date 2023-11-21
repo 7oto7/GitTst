@@ -13,3 +13,4 @@ public class tokenizer extends ConsoleProgram{
 		}
 	}
 }
+////50,51,52
