@@ -19,6 +19,6 @@ public class problem49 extends ConsoleProgram{
 			int currDigit = currCh - '0';
 			num = num * 10 + currDigit;
 		}
-		return 0;
+		return num;
 	}
 }
