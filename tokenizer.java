@@ -86,7 +86,7 @@ public class tokenizer extends JFrame implements KeyListener {
 
     public static void main(String[] args) {
         SwingUtilities.invokeLater(() -> {
-            BreakoutGame game = new BreakoutGame();
+            tokenizer game = new tokenizer();
             game.setVisible(true);
         });
     }
