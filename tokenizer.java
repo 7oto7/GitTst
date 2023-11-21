@@ -1,4 +1,15 @@
+import java.util.StringTokenizer;
 
-public class tokenizer {
+import acm.program.ConsoleProgram;
 
+public class tokenizer extends ConsoleProgram{
+	public void run(){
+		String text = "mari 2 3 4 5";
+		StringTokenizer tokenizer = new StringTokenizer(text);
+		
+		while(tokenizer.hasMoreTokens()){
+			String currToken = tokenizer.nextToken();
+			println(currToken);
+		}
+	}
 }
