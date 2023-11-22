@@ -1,6 +1,4 @@
 
-
-
 import acm.graphics.*;
 import acm.program.*;
 import acm.util.*;
@@ -29,7 +27,7 @@ public class practiseBreakOut extends GraphicsProgram {
 	private static final int PADDLE_Y_OFFSET = 30;
 
 	/** Number of bricks per row */
-	private  static final int NBRICKS_PER_ROW = 10;
+	private static final int NBRICKS_PER_ROW = 10;
 
 	/** Number of rows of bricks */
 	private static final int NBRICK_ROWS = 10;
@@ -38,7 +36,7 @@ public class practiseBreakOut extends GraphicsProgram {
 	private static final int BRICK_SEP = 4;
 
 	/** Width of a brick */
-	private  static final int BRICK_WIDTH = (WIDTH - (NBRICKS_PER_ROW - 1) * BRICK_SEP) / NBRICKS_PER_ROW;
+	private static final int BRICK_WIDTH = (WIDTH - (NBRICKS_PER_ROW - 1) * BRICK_SEP) / NBRICKS_PER_ROW;
 
 	/** Height of a brick */
 	private static final int BRICK_HEIGHT = 8;
@@ -75,9 +73,9 @@ public class practiseBreakOut extends GraphicsProgram {
 	private int speedCount = 0;
 	private int mouseX;
 	private int difX;
-	private int prevMouseX = 0;	
+	private int prevMouseX = 0;
 	private boolean gameLost = false;
-	
+
 	private GLabel showme;
 	private GLabel showmeMore;
 	private GLabel showmemore;
@@ -134,7 +132,7 @@ public class practiseBreakOut extends GraphicsProgram {
 			} else {
 				vy = -vy;
 			}
-		} 
+		}
 	}
 
 	private void ifColliderIsBrick() {
@@ -149,7 +147,7 @@ public class practiseBreakOut extends GraphicsProgram {
 			if (speedCount % 7 == 0 && speed > 3) {
 				speed = speed - 1;
 			}
-		} else if(collider != rect && collider == fourthLeftSide()){
+		} else if (collider != rect && collider == fourthLeftSide()) {
 			vx = -vx;
 			remove(collider);
 			// bounceClip.play();
@@ -159,8 +157,10 @@ public class practiseBreakOut extends GraphicsProgram {
 			speedCount++;
 			if (speedCount % 7 == 0 && speed > 3) {
 				speed = speed - 1;
-			}			
-		} else if (collider != rect && collider == firstUpperSide()) {// up and down sides
+			}
+		} else if (collider != rect && collider == firstUpperSide()) {// up and
+																		// down
+																		// sides
 			vy = -vy;
 			ball.move(vx, vy);
 			remove(collider);
@@ -172,7 +172,7 @@ public class practiseBreakOut extends GraphicsProgram {
 			if (speedCount % 7 == 0 && speed > 3) {
 				speed = speed - 1;
 			}
-		} else if(collider != rect && collider == thirdDownSide()){
+		} else if (collider != rect && collider == thirdDownSide()) {
 			vy = -vy;
 			ball.move(vx, vy);
 			remove(collider);
@@ -269,8 +269,7 @@ public class practiseBreakOut extends GraphicsProgram {
 							ball.getY() + BALL_RADIUS - BALL_RADIUS * Math.cos(Math.toRadians(i)) + 1);
 					return collider;
 				}
-			} 
-			else {
+			} else {
 				if (getElementAt(ball.getX() + BALL_RADIUS + BALL_RADIUS * Math.sin(Math.toRadians(i)) - 1,
 						ball.getY() + BALL_RADIUS - BALL_RADIUS * Math.cos(Math.toRadians(i)) + 1) != null) {
 					collider = getElementAt(ball.getX() + BALL_RADIUS + BALL_RADIUS * Math.sin(Math.toRadians(i)) - 1,
@@ -317,8 +316,7 @@ public class practiseBreakOut extends GraphicsProgram {
 							ball.getY() + BALL_RADIUS - BALL_RADIUS * Math.cos(Math.toRadians(i)) - 1);
 					return collider;
 				}
-			} 
-			else {
+			} else {
 				if (getElementAt(ball.getX() + BALL_RADIUS + BALL_RADIUS * Math.sin(Math.toRadians(i)) + 1,
 						ball.getY() + BALL_RADIUS - BALL_RADIUS * Math.cos(Math.toRadians(i)) - 1) != null) {
 					collider = getElementAt(ball.getX() + BALL_RADIUS + BALL_RADIUS * Math.sin(Math.toRadians(i)) + 1,
@@ -394,8 +392,7 @@ public class practiseBreakOut extends GraphicsProgram {
 				GLabel click = new GLabel("Click anywhere to start again");
 				click.setFont("Helvetica-20");
 				add(click, 80, 420);
-				
-				
+
 				break;
 			}
 
@@ -440,7 +437,6 @@ public class practiseBreakOut extends GraphicsProgram {
 			remove(rect);
 			add(rect, getWidth() / 2 - PADDLE_WIDTH / 2, getHeight() - PADDLE_Y_OFFSET - PADDLE_HEIGHT);
 
-			
 			vx = 0;
 			vy = 0;
 			gameLost = false;
@@ -470,23 +466,22 @@ public class practiseBreakOut extends GraphicsProgram {
 	public void mouseMoved(MouseEvent e) {
 		if (gameLost == true) {
 			prevMouseX = mouseX;
-		
+
 			mouseX = e.getX();
-			
-			
-			//paddleX = (int)rect.getX();
+
+			// paddleX = (int)rect.getX();
 			difX = mouseX - prevMouseX;
-			if(showme != null && showmeMore != null && showmemore != null){
+			if (showme != null && showmeMore != null && showmemore != null) {
 				remove(showme);
 				remove(showmeMore);
 				remove(showmemore);
 			}
 			showme = new GLabel("( " + prevMouseX + " )");
 			add(showme, 0, getHeight() - showme.getHeight());
-			
+
 			showmeMore = new GLabel("( " + mouseX + " )");
 			add(showmeMore, showmeMore.getWidth(), getHeight() - showme.getHeight());
-			
+
 			showmemore = new GLabel("( " + difX + " )");
 			add(showmemore, showmeMore.getWidth() + 15 + showmemore.getWidth(), getHeight() - showme.getHeight());
 			if (e.getX() <= PADDLE_WIDTH / 2) {
@@ -563,7 +558,7 @@ public class practiseBreakOut extends GraphicsProgram {
 			waitForClick();
 			gameLost = !gameLost;
 		}
-		
+
 		moveBall();
 		waitForClick();
 		everythingAgain();
