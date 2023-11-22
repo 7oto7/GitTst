@@ -158,7 +158,7 @@ public class practiseBreakOut extends GraphicsProgram {
 			int randomNumber = rgen.nextInt(1, 6);
 			if(randomNumber == 1){
 				remove(rect);
-				PADDLE_WIDTH = PADDLE_WIDTH - 20;
+				PADDLE_WIDTH = PADDLE_WIDTH + 20;
 				makePaddle(PADDLE_WIDTH, PADDLE_HEIGHT, mouseX - PADDLE_WIDTH / 2);
 				
 				
