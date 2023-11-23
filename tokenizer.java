@@ -5,6 +5,14 @@ import acm.program.ConsoleProgram;
 public class tokenizer extends ConsoleProgram{
 	//static boolean isLetterOrDigit;
 	public void run(){
+		char chr = 'a';
+		char chrs = 'A';
+		println(chr - chrs);
+		
+		
+		
+		
+		
 //		String text = "mari 2 3 4 5";
 //		StringTokenizer tokenizer = new StringTokenizer(text);
 //		
@@ -12,13 +20,19 @@ public class tokenizer extends ConsoleProgram{
 //			String currToken = tokenizer.nextToken();
 //			println(currToken);
 //		}
-		char chr = ')';
-		if(Character.isLetterOrDigit(chr)){
-			println("is digit");
-		} else {
-			println("is letter");
-		}
-		println((int)chr);
+		
+		
+		
+//		char chr = ')';
+//		if(Character.isLetterOrDigit(chr)){
+//			println("is digit ot leter");
+//		} else {
+//			println("is not digit or letter");
+//		}
+//		println((int)chr);
+		
+		
+		
 		
 		
 	}
