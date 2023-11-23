@@ -6,9 +6,18 @@ public class tokenizer extends ConsoleProgram{
 	//static boolean isLetterOrDigit;
 	public void run(){
 		
-		String str = "Axla mitxarI";
-		str = str.toUpperCase();
-		println(str);
+		String mainString = "Hello, world!";
+        String substring = "world";
+
+        // Using indexOf to find the index of the substring
+        int index = mainString.indexOf(substring);
+
+        // Displaying the result
+        if (index != -1) {
+            System.out.println("Substring '" + substring + "' found at index: " + index);
+        } else {
+            System.out.println("Substring '" + substring + "' not found in the main string.");
+        }
 		
 		
 //		char chr = 'A';
