@@ -14,7 +14,7 @@ public class tokenizer extends ConsoleProgram{
 		String ch = "0";
 		char chr = '0';
 		println(ch);
-		println(chr);
+		println((int )chr);
 	}
 }
 //////50,51,52
