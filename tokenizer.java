@@ -7,7 +7,7 @@ public class tokenizer extends ConsoleProgram{
 	public void run(){
 		char chr = 'a';
 		char chrs = 'A';
-		println(chrs - chr);
+		println(chr - chrs);
 		
 		
 		
