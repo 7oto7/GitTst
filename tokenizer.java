@@ -10,7 +10,7 @@ public class tokenizer extends ConsoleProgram{
         char substring = 'l';
 
         // Using indexOf to find the index of the substring
-        int index = mainString.indexOf(substring, 3);
+        int index = mainString.indexOf(substring, 4);
 
         // Displaying the result
         if (index != -1) {
