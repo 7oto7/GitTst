@@ -7,7 +7,7 @@ public class tokenizer extends ConsoleProgram{
 	public void run(){
 		
 		String mainString = "Hello, world!";
-        String substring = "hello";
+        char substring = 'r';
 
         // Using indexOf to find the index of the substring
         int index = mainString.indexOf(substring);
