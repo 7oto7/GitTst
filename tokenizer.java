@@ -6,9 +6,8 @@ public class tokenizer extends ConsoleProgram{
 	//static boolean isLetterOrDigit;
 	public void run(){
 		char chr = 'a';
-		char chrs = 'A';
-		println(chr - chrs);
-		
+		char chrs = Character.toLowerCase(chr);
+		println(chrs);
 		
 		
 		
