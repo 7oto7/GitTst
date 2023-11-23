@@ -7,7 +7,7 @@ public class tokenizer extends ConsoleProgram{
 	public void run(){
 		
 		String str = "Axla mitxarI";
-		str = str.toLowerCase();
+		str = str.toUpperCase();
 		println(str);
 		
 		
