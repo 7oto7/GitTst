@@ -10,7 +10,7 @@ public class tokenizer extends ConsoleProgram{
 //		println(chrs);
 		
 		for(char ch = 'a'; ch <= 'z'; ch++){
-			println(ch);
+			println((int)ch);
 		}
 		
 		
