@@ -8,6 +8,8 @@ public class tokenizer extends ConsoleProgram{
 		
 		String mainString = "Hello, world!";
         char substring = 'z';
+        String upper = mainString.toUpperCase();
+        println(upper);
 
         // Using indexOf to find the index of the substring
         int index = mainString.indexOf(substring, 4);
