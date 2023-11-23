@@ -7,10 +7,10 @@ public class tokenizer extends ConsoleProgram{
 	public void run(){
 		
 		String mainString = "Hello, world!";
-        char substring = ',';
+        char substring = 'l';
 
         // Using indexOf to find the index of the substring
-        int index = mainString.indexOf(substring);
+        int index = mainString.indexOf(substring, 3);
 
         // Displaying the result
         if (index != -1) {
