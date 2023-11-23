@@ -11,10 +11,8 @@ public class tokenizer extends ConsoleProgram{
 //			String currToken = tokenizer.nextToken();
 //			println(currToken);
 //		}
-		String ch = "0";
 		char chr = '0';
-		println(ch);
-		println((int )chr);
+		println((int)chr);
 	}
 }
 //////50,51,52
