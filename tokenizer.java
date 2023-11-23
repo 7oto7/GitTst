@@ -12,7 +12,9 @@ public class tokenizer extends ConsoleProgram{
 //			println(currToken);
 //		}
 		String ch = "0";
+		char chr = '0';
 		println(ch);
+		println(chr);
 	}
 }
 //////50,51,52
