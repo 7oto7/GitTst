@@ -10,7 +10,8 @@ public class tokenizer extends ConsoleProgram{
 //		println(chrs);
 		
 		for(char ch = 'a'; ch <= 'z'; ch++){
-			println((int)ch);
+			char upper = Character.toUpperCase(ch);
+			println(upper);
 		}
 		
 		
