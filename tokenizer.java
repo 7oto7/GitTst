@@ -14,9 +14,9 @@ public class tokenizer extends ConsoleProgram{
 
         // Displaying the result
         if (index != -1) {
-            System.out.println("Substring '" + substring + "' found at index: " + index);
+            println("Substring '" + substring + "' found at index: " + index);
         } else {
-            System.out.println("Substring '" + substring + "' not found in the main string.");
+            println("Substring '" + substring + "' not found in the main string.");
         }
 		
 		
