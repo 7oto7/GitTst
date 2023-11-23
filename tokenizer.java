@@ -5,14 +5,20 @@ import acm.program.ConsoleProgram;
 public class tokenizer extends ConsoleProgram{
 	//static boolean isLetterOrDigit;
 	public void run(){
+		
+		String str = "Axla mitxarI";
+		str = str.toLowerCase();
+		println(str);
+		
+		
 //		char chr = 'A';
 //		char chrs = Character.toLowerCase(chr);
 //		println(chrs);
 		
-		for(char ch = 'a'; ch <= 'z'; ch++){
-			char upper = Character.toUpperCase(ch);
-			println(upper);
-		}
+//		for(char ch = 'a'; ch <= 'z'; ch++){
+//			char upper = Character.toUpperCase(ch);
+//			println(upper);
+//		}
 		
 		
 		
