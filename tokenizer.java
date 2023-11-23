@@ -5,10 +5,13 @@ import acm.program.ConsoleProgram;
 public class tokenizer extends ConsoleProgram{
 	//static boolean isLetterOrDigit;
 	public void run(){
-		char chr = 'A';
-		char chrs = Character.toLowerCase(chr);
-		println(chrs);
+//		char chr = 'A';
+//		char chrs = Character.toLowerCase(chr);
+//		println(chrs);
 		
+		for(char ch = 'a'; ch <= 'z'; ch++){
+			println(ch);
+		}
 		
 		
 		
