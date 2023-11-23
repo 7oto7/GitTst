@@ -12,7 +12,7 @@ public class tokenizer extends ConsoleProgram{
 //			String currToken = tokenizer.nextToken();
 //			println(currToken);
 //		}
-		char chr = '0';
+		char chr = 'o';
 		if(Character.isLetterOrDigit(chr)){
 			println("is digit");
 		} else {
