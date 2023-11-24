@@ -4,18 +4,21 @@ import acm.graphics.GOval;
 import acm.program.GraphicsProgram;
 import acm.util.RandomGenerator;
 
-
-public class bouncingBallExtends extends GraphicsProgram{
+public class bouncingBallExtends extends GraphicsProgram {
 	private GOval ball;
 	private int vy;
 	private int vx;
 	private RandomGenerator rgen = RandomGenerator.getInstance();
-	
-	public void run(){
+
+	public void run() {
 		addMouseListeners();
 		makeBall();
 		randomSpeed();
-		while(true){
+		moveBall();
+	}
+
+	private void moveBall() {
+		while (true) {
 			ball.move(vx, vy);
 		}
 	}
@@ -23,23 +26,24 @@ public class bouncingBallExtends extends GraphicsProgram{
 	private void randomSpeed() {
 		vx = rgen.nextInt(1, 2);
 		vy = rgen.nextInt(1, 2);
-		if(rgen.nextBoolean()){
+		if (rgen.nextBoolean()) {
 			vx = -vx;
 		}
-		if(rgen.nextBoolean()){
+		if (rgen.nextBoolean()) {
 			vy = -vy;
 		}
-		
+
 	}
 
-	public void mouseClicked(MouseEvent e){
+	public void mouseClicked(MouseEvent e) {
 		remove(ball);
-		add(ball, e.getX() - ball.getWidth() /  2, e.getY() + ball.getHeight());
+		add(ball, e.getX() - ball.getWidth() / 2, e.getY() + ball.getHeight());
 		randomSpeed();
-		
+
 	}
+
 	private GOval makeBall() {
-		GOval ball = new GOval(10, 10);
+		GOval ball = new GOval(20, 20);
 		ball.setFilled(true);
 		add(ball, getWidth() / 2 - ball.getWidth() / 2, getHeight() / 2 - ball.getHeight() / 2);
 		return ball;
