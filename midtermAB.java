@@ -31,7 +31,7 @@ public class midtermAB extends ConsoleProgram {
 	            int first = se.indexOf('|');
 	            int second = se.indexOf('|', first + 1);
 	            
-	            if (se.endsWith("|")) {
+	            if (se.indexOf(second + 1) == -1) {
 	                se = se.substring(0, first);
 	            } else {
 	                se = se.substring(0, first) + se.substring(second + 1); 
