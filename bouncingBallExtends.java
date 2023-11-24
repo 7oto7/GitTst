@@ -43,7 +43,7 @@ public class bouncingBallExtends extends GraphicsProgram {
 	}
 
 	private GOval makeBall() {
-		ball = new GOval(20, 20);
+		ball = new GOval(40, 40);
 		ball.setFilled(true);
 		add(ball, getWidth() / 2 - ball.getWidth() / 2, getHeight() / 2 - ball.getHeight() / 2);
 		return ball;
