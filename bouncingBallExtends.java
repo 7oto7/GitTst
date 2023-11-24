@@ -35,6 +35,9 @@ public class bouncingBallExtends extends GraphicsProgram {
 		if(ball.getX() + 40 > getWidth()){
 			ball.setLocation(getWidth() - 40, ball.getY());
 		}
+		if(ball.getY() + 40 > getHeight()){
+			ball.setLocation(ball.getX(), getHeight() - 40);
+		}
 	}
 
 	private void randomSpeed() {
