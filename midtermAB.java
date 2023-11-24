@@ -36,11 +36,11 @@ public class midtermAB extends ConsoleProgram {
             int first = s.indexOf('|');
             int second = s.indexOf('|', first + 1);
             
-            if (s.endsWith("|")) {
-                s = s.substring(0, first);
-            } else {
+//            if (s.endsWith("|")) {
+//                s = s.substring(0, first);
+//            } else {
                 s = s.substring(0, first) + s.substring(second + 1); // Include the character at 'second'
-            }
+//            }
        // }
         println(s);
 	}
