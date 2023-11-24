@@ -22,16 +22,17 @@ public class midtermAB extends ConsoleProgram {
 	public void run() {
 		String s = "l|*e*et|c**o|*de|";
 		String secondS = s;
-		while (true) {
+		///while (true) {
 			if (s.indexOf('|') != -1) {
 				int first = s.indexOf('|');
 				secondS = s.substring(0, first) + s.substring(first + 1);
 				int second = secondS.indexOf('|');
 				s = s.substring(0, first) + s.substring(second + 1);
-			} else {
-				break;
-			}
-		}
+			} 
+//			else {
+//				break;
+//			}
+		//}
 		println(s);
 	}
 }
