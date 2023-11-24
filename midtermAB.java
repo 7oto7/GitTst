@@ -32,13 +32,13 @@ public class midtermAB extends ConsoleProgram {
 	            int second = se.indexOf('|', first + 1);
 	            
 	            if (se.endsWith("|")) {
-	                s = se.substring(0, first);
+	                se = se.substring(0, first);
 	            } else {
-	                s = se.substring(0, first) + se.substring(second + 1); 
+	                se = se.substring(0, first) + se.substring(second + 1); 
 	            }
 	        }
-	        for(int i = 0; i < s.length(); i++){
-	            if(s.charAt(i) == '*'){
+	        for(int i = 0; i < se.length(); i++){
+	            if(se.charAt(i) == '*'){
 	                count++;
 	            }
 	        }
