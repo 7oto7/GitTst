@@ -21,10 +21,11 @@ import acm.program.ConsoleProgram;
 public class midtermAB extends ConsoleProgram{
 	public void run(){
 		String s = "l|*e*et|c**o|*de|";
+		String secondS = s;
 		int first = s.indexOf('|');
-		s = s.substring(0, first) + s.substring(first + 1);
-		first = s.indexOf('|');
-		s = s.substring(0, first) + s.substring(first + 1);
-		print(s);
+		secondS = s.substring(0, first) + s.substring(first + 1);
+		int second = s.indexOf('|');
+		secondS = s.substring(0, first) + s.substring(second + 1);
+		print(secondS);
 	}
 }
