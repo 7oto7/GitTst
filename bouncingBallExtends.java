@@ -32,6 +32,9 @@ public class bouncingBallExtends extends GraphicsProgram {
 		if (ball.getY() < 0 || ball.getY() + 40 >= getHeight()) { //upper wall, changes vy speed
 			vy = -vy;
 		}
+		if(ball.getX() + 40 > getWidth()){
+			ball.setLocation(getWidth() - 40, ball.getY());
+		}
 	}
 
 	private void randomSpeed() {
