@@ -21,7 +21,7 @@ import acm.program.ConsoleProgram;
 public class midtermAB extends ConsoleProgram {
 	public void run() {
 		char c = 'a';
-		int b = c + 1;
+		char b = (char)(c + 1);
 		println(b);
 	}
 }
