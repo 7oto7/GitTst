@@ -32,7 +32,7 @@ public class midtermAB extends ConsoleProgram {
 //		}
 //		println(s);
 		String s = "l|*e*et|c**o|*de|";
-        while (s.indexOf('|') != -1) {
+       // while (s.indexOf('|') != -1) {
             int first = s.indexOf('|');
             int second = s.indexOf('|', first + 1);
             
@@ -41,7 +41,7 @@ public class midtermAB extends ConsoleProgram {
             } else {
                 s = s.substring(0, first) + s.substring(second + 1); // Include the character at 'second'
             }
-        }
+       // }
         println(s);
 	}
 }
