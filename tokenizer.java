@@ -21,7 +21,7 @@ public class tokenizer extends ConsoleProgram{
 //            println("Substring '" + substring + "' not found in the main string.");
 //        }
 		String str = "mamamia";
-		char cr = str.charAt(7);
+		char cr = str.charAt(6);
 		print(cr);
 		
 		
