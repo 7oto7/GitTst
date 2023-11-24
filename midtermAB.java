@@ -2,7 +2,7 @@ import acm.program.ConsoleProgram;
 
 public class midtermAB extends ConsoleProgram {
 	public void run() {
-		String s = readLine();
+		String s = "abab";
 		int count = countAB2(s);
 		println(count);
 	}
