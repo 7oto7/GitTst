@@ -23,6 +23,8 @@ public class midtermAB extends ConsoleProgram{
 		String s = "l|*e*et|c**o|*de|";
 		int first = s.indexOf('|');
 		s = s.substring(0, first) + s.substring(first + 1);
+		first = s.indexOf('|');
+		s = s.substring(0, first) + s.substring(first + 1);
 		print(s);
 	}
 }
