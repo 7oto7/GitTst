@@ -37,13 +37,13 @@ public class bouncingBallExtends extends GraphicsProgram {
 	}
 
 	public void mousePressed(MouseEvent e) {
-		ball.setLocation(e.getX() - ball.getWidth() / 2, e.getY() + ball.getHeight());
+		ball.setLocation(e.getX() - ball.getWidth() / 2, e.getY() - ball.getHeight());
 		randomSpeed();
 
 	}
 
 	private GOval makeBall() {
-		GOval ball = new GOval(20, 20);
+		ball = new GOval(20, 20);
 		ball.setFilled(true);
 		add(ball, getWidth() / 2 - ball.getWidth() / 2, getHeight() / 2 - ball.getHeight() / 2);
 		return ball;
