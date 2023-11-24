@@ -6,7 +6,7 @@ public class tokenizer extends ConsoleProgram{
 	//static boolean isLetterOrDigit;
 	public void run(){
 		String s = "a";
-		String str = s + 5 ;
+		String str = "b" + 6 ;
         
         println(str);
 		
