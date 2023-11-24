@@ -6,10 +6,16 @@ public class tokenizer extends ConsoleProgram{
 	//static boolean isLetterOrDigit;
 	public void run(){
 		String s = "a";
-		int c = 'b' + 6;
-        char str = (char)c ;
-
-        println(str);
+		String str = "";
+        for(int i = 0; i < s.length(); i++){
+            if(i % 2 == 0){
+                str = str + s.charAt(i);
+            } else {
+                int a = s.charAt(i) - '0';
+                char b = (char) (s.charAt(i - 1) + a);
+                str = str + b;
+            }
+        }
 		
 //		String mainString = "Hello, world!";
 //        char substring = 'z';
