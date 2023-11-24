@@ -20,6 +20,7 @@ public class bouncingBallExtends extends GraphicsProgram {
 	private void moveBall() {
 		while (true) {
 			ball.move(vx, vy);
+			pause(20);
 		}
 	}
 
