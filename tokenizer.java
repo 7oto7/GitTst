@@ -5,6 +5,14 @@ import acm.program.ConsoleProgram;
 public class tokenizer extends ConsoleProgram{
 	//static boolean isLetterOrDigit;
 	public void run(){
+		String s = "23456789";
+		String str = "";
+        for(int i = 0; i < s.length(); i++){
+            if(i % 2 == 0){
+                str = str + s.charAt(i);
+            }
+        }
+        println(str);
 		
 //		String mainString = "Hello, world!";
 //        char substring = 'z';
