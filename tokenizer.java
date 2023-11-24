@@ -7,7 +7,7 @@ public class tokenizer extends ConsoleProgram{
 	public void run(){
 		String s = "a";
 		char str = 'b' ;
-		int c = (int) str;
+		int c = 'b';
         
         println(c);
 		
