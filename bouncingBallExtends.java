@@ -36,7 +36,7 @@ public class bouncingBallExtends extends GraphicsProgram {
 
 	}
 
-	public void mousePressed(MouseEvent e) {
+	public void mouseClicked(MouseEvent e) {
 		ball.setLocation(e.getX() - ball.getWidth() / 2, e.getY() - ball.getHeight() / 2);
 		randomSpeed();
 
