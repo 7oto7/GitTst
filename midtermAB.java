@@ -3,6 +3,7 @@ import acm.program.ConsoleProgram;
 public class midtermAB extends ConsoleProgram {
 	public void run() {
 		String s = "abab";
+		//int count = countAB1(s);
 		int count = countAB2(s);
 		println(count);
 	}
