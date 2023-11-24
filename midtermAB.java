@@ -27,7 +27,7 @@ public class midtermAB extends ConsoleProgram {
 				int first = s.indexOf('|');
 				secondS = s.substring(0, first) + s.substring(first + 1);
 				int second = secondS.indexOf('|');
-				s = s.substring(0, first) + s.substring(second + 1, s.length());
+				s = s.substring(0, first) + s.substring(second + 1);
 			} 
 //			else {
 //				break;
