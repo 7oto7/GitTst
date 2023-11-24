@@ -26,10 +26,10 @@ public class bouncingBallExtends extends GraphicsProgram {
 	}
 
 	private void checkWalls() {
-		if (ball.getX() + 2 * 40 >= getWidth() || ball.getX() < 0) { //right  and left walls,
+		if (ball.getX() + 40 >= getWidth() || ball.getX() < 0) { //right  and left walls,
 			vx = -vx;                                                         //change vx spped
 		}
-		if (ball.getY() < 0 || ball.getY() + 2 * 40 >= getHeight()) { //upper wall, changes vy speed
+		if (ball.getY() < 0 || ball.getY() + 40 >= getHeight()) { //upper wall, changes vy speed
 			vy = -vy;
 		}
 	}
