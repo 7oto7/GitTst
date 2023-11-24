@@ -25,7 +25,6 @@ public class midtermAB extends ConsoleProgram {
 		println(c);
 	}
 	private int countBlead(String s){
-		//String se = s;
 	       int count = 0;
 	        while (s.indexOf('|') != -1) {
 	            int first = s.indexOf('|');
