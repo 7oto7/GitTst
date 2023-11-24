@@ -20,7 +20,7 @@ import acm.program.ConsoleProgram;
 //Explanation: The considered characters are underlined: "yo|uar|e**|b|e***au|tifu|l". There are 5 asterisks considered. Therefore, we return 5.
 public class midtermAB extends ConsoleProgram {
 	public void run() {
-		String s = "l|*e*etc**o*de|";
+		String s = "l|*e*et|c*|*o*de|";
 		int c = countBlead(s);
 		println(c);
 	}
