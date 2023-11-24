@@ -20,31 +20,28 @@ import acm.program.ConsoleProgram;
 //Explanation: The considered characters are underlined: "yo|uar|e**|b|e***au|tifu|l". There are 5 asterisks considered. Therefore, we return 5.
 public class midtermAB extends ConsoleProgram {
 	public void run() {
-//		String s = "l|*e*et|c**o|*de|";
-//		while (s.indexOf('|') != -1) {
-//			int first = s.indexOf('|');
-//			int second = s.indexOf('|', first + 1);
-//			if(s.endsWith("|")){
-//				s = s.substring(0, first);
-//			} else {
-//				s = s.substring(0, first) + s.substring(second + 1);
-//			}
-//		}
-//		println(s);
-
 		String s = "l|*e*et|c**o|*de|";
-
-        while (s.indexOf('|') != -1) {
-            int first = s.indexOf('|');
-            int second = s.indexOf('|', first + 1);
-
-            if (s.endsWith("|")) {
-                s = s.substring(0, first);
-            } else {
-                s = s.substring(0, first) + s.substring(second + 1); // Include the character at 'second'
-            }
-        }
-
-        System.out.println(s);
+		int c = countBlead(s);
+		println(c);
+	}
+	private int countBlead(String s){
+		String se = s;
+	       int count = 0;
+	        while (se.indexOf('|') != -1) {
+	            int first = se.indexOf('|');
+	            int second = se.indexOf('|', first + 1);
+	            
+	            if (se.endsWith("|")) {
+	                s = se.substring(0, first);
+	            } else {
+	                s = se.substring(0, first) + se.substring(second + 1); 
+	            }
+	        }
+	        for(int i = 0; i < s.length(); i++){
+	            if(s.charAt(i) == '*'){
+	                count++;
+	            }
+	        }
+	        return count;
 	}
 }
