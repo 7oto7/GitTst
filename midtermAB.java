@@ -20,28 +20,8 @@ import acm.program.ConsoleProgram;
 //Explanation: The considered characters are underlined: "yo|uar|e**|b|e***au|tifu|l". There are 5 asterisks considered. Therefore, we return 5.
 public class midtermAB extends ConsoleProgram {
 	public void run() {
-		String s = "l|*e*et|c**o|*de|";
-		int c = countBlead(s);
-		println(c);
-	}
-	private int countBlead(String s){
-		String se = s;
-	       int count = 0;
-	        while (se.indexOf('|') != -1) {
-	            int first = se.indexOf('|');
-	            int second = se.indexOf('|', first + 1);
-	            
-	            if (se.indexOf(second + 1) == -1) {
-	                se = se.substring(0, first);
-	            } else {
-	                se = se.substring(0, first) + se.substring(second + 1); 
-	            }
-	        }
-	        for(int i = 0; i < se.length(); i++){
-	            if(se.charAt(i) == '*'){
-	                count++;
-	            }
-	        }
-	        return count;
+		String s = "l|";
+		char cr = s.charAt(3);
+		println(cr);
 	}
 }
