@@ -44,7 +44,7 @@ public class tokenizer extends ConsoleProgram{
 		
 		
 		
-		String text = "mari 2 3 4 5";
+		String text = "mari  2 3 4 5";
 		StringTokenizer tokenizer = new StringTokenizer(text);
 		
 		while(tokenizer.hasMoreTokens()){
