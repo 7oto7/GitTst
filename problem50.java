@@ -7,6 +7,7 @@ public class problem50 extends ConsoleProgram{
 	public void run(){
 		String text = readLine("Enter text: ");
 		int count = countWords(text);
+		println(count);
 	}
 
 	private int countWords(String text) {	
