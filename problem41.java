@@ -17,7 +17,7 @@ public class problem41 extends GraphicsProgram{
 	private void makeBall(int x, int y) {
 		GOval oval = new GOval(20, 20);
 		oval.setFilled(true);
-		oval.setFillColor(rgen.nextColor());
+		oval.setColor(rgen.nextColor());
 		add(oval, x - oval.getWidth() / 2, y - oval.getHeight() / 2);
 	}
 }
