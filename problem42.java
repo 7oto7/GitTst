@@ -26,6 +26,10 @@ public class problem42 extends GraphicsProgram {
         }
 	}
 	
+	@Override 
+	public void mouseMoved(MouseEvent e) {
+		line.setEndPoint(e.getX(), e.getY());
+	}
 //	public void mouseClicked(MouseEvent e) {
 //		line = new GLine(e.getX(), e.getY(), e.getX(), e.getY());
 //		add(line);
