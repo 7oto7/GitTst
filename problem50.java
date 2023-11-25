@@ -12,9 +12,9 @@ public class problem50 extends ConsoleProgram{
 
 	private int countWords(String text) {	
 		int count = 0;
-		StringTokenizer tokenizer = new StringTokenizer(text);
+		StringTokenizer tokenizer = new StringTokenizer(text, " ,.?!:");
 		while(tokenizer.hasMoreTokens()){
-			//String token = tokenizer.nextToken();
+			String token = tokenizer.nextToken();
 			count++;
 
 		}
