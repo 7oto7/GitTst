@@ -21,7 +21,7 @@ public class problem42 extends GraphicsProgram {
 		add(line);
 	}
 
-	public void mouseDragged(MouseEvent e) {
+	public void mouseMoved(MouseEvent e) {
 		line.setEndPoint(e.getX(), e.getY());
 	}
 }
