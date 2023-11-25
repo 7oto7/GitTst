@@ -8,14 +8,14 @@ import acm.program.GraphicsProgram;
 //კლიკით ფიქსირდება მეორე წვეროც.
 public class problem42 extends GraphicsProgram {
 	private GLine line;
-	private boolean firstVertexFixed;
+	private boolean firstVertexFixed = false;
 	public void run() {
 		addMouseListeners();
 
 	}
 
 	public void mouseClicked(MouseEvent e) {
-        if (!firstVertexFixed) {
+        if (firstVertexFixed == false) {
             // First click: fix the first vertex
             line = new GLine(e.getX(), e.getY(), e.getX(), e.getY());
             add(line);
