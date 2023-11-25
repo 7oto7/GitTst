@@ -14,7 +14,7 @@ public class problem42 extends GraphicsProgram {
 
 	}
 
-	public void mousePressed(MouseEvent e) {
+	public void mouseClicked(MouseEvent e) {
         if (!firstVertexFixed) {
             // First click: fix the first vertex
             line = new GLine(e.getX(), e.getY(), e.getX(), e.getY());
