@@ -27,7 +27,7 @@ public class problem42 extends GraphicsProgram {
         }
     }
 
-    public void mouseDragged(MouseEvent e) {
+    public void mouseMoved(MouseEvent e) {
         if (line != null && firstVertexFixed) {
             // While dragging, update the second vertex
             line.setEndPoint(e.getX(), e.getY());
