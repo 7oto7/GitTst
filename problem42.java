@@ -9,7 +9,6 @@ import acm.program.GraphicsProgram;
 public class problem42 extends GraphicsProgram {
 	private GLine line;
 	private int x2;
-	private int y2;
 
 	public void run() {
 		addMouseListeners();
@@ -17,9 +16,13 @@ public class problem42 extends GraphicsProgram {
 	}
 
 	public void mouseClicked(MouseEvent e) {
-		line = new GLine(e.getX(), e.getY(),e.getX(), e.getY());
+		x2++;
+		if(x2 % 2 == 1){
+			line = new GLine(e.getX(), e.getY(),e.getX(), e.getY());
 		line.setStartPoint(e.getX(), e.getY());
 		add(line);
+		}
+		
 	}
 	
 	@Override 
