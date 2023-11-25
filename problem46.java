@@ -10,7 +10,7 @@ public class problem46 extends ConsoleProgram{
 //		println("Frequent symbol is: " + frequentSymbol(text));
 //		char frequentChar = 256;
 		int a = 'b';
-		char c = 5;
+		char c = 98;
 		println(a);
 		println(c);
 		//println(frequentChar);/////gamoitans cxrilis 256-e simbolos////////////
