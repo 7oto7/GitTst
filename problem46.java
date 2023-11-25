@@ -6,14 +6,10 @@ import acm.program.ConsoleProgram;
 public class problem46 extends ConsoleProgram{
 	public void run(){
 
-//		String text = readLine("Enter text: ");
-//		println("Frequent symbol is: " + frequentSymbol(text));
-//		char frequentChar = 256;
-		int a = 'b' - 'a';
-		char c = 98 + 43;
-		println(a);
-		println(c);
-		//println(frequentChar);/////gamoitans cxrilis 256-e simbolos////////////
+		String text = readLine("Enter text: ");
+		println("Frequent symbol is: " + frequentSymbol(text));
+		char frequentChar = 256;
+		println(frequentChar);/////gamoitans cxrilis 256-e simbolos////////////
 	}
 
 	private char frequentSymbol(String text) {
