@@ -26,8 +26,8 @@ public class problem44 extends GraphicsProgram{
 		}
 	}
 	public void mouseClicked(MouseEvent e){
-		x = e.getX() - RADIUS;
-		y = e.getY() - RADIUS;		
+		x = e.getX() - RADIUS / 2;
+		y = e.getY() - RADIUS / 2;		
 		add(circle, x, y);
 
 	}
