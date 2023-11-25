@@ -17,12 +17,11 @@ public class problem42 extends GraphicsProgram {
 
 	public void mouseClicked(MouseEvent e) {
 		x2++;
+		line = new GLine(e.getX(), e.getY(),e.getX(), e.getY());
 		if(x2 % 2 == 1){
-			line = new GLine(e.getX(), e.getY(),e.getX(), e.getY());
-		line.setStartPoint(e.getX(), e.getY());
-		add(line);
+			line.setStartPoint(e.getX(), e.getY());
 		}
-		
+		add(line);
 	}
 	
 	@Override 
