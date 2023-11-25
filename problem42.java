@@ -16,18 +16,16 @@ public class problem42 extends GraphicsProgram {
 	}
 
 	public void mouseClicked(MouseEvent e) {
-		x2++;
-		line = new GLine(e.getX(), e.getY(),e.getX(), e.getY());
-		if(x2 % 2 == 1){
-			line.setStartPoint(e.getX(), e.getY());
-		}
-		add(line);
+		if (line == null) {
+            // Create a new line only if it hasn't been created yet
+            line = new GLine(e.getX(), e.getY(), e.getX(), e.getY());
+            add(line);
+        } else {
+            // Update the endpoint if the line has already been created
+            line.setEndPoint(e.getX(), e.getY());
+        }
 	}
 	
-	@Override 
-	public void mouseMoved(MouseEvent e) {
-		line.setEndPoint(e.getX(), e.getY());
-	}
 //	public void mouseClicked(MouseEvent e) {
 //		line = new GLine(e.getX(), e.getY(), e.getX(), e.getY());
 //		add(line);
