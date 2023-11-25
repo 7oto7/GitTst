@@ -8,20 +8,28 @@ import acm.program.GraphicsProgram;
 //კლიკით ფიქსირდება მეორე წვეროც.
 public class problem42 extends GraphicsProgram {
 	private GLine line;
-	private int x2;
-
+	private boolean firstVertexFixed;
 	public void run() {
 		addMouseListeners();
 
 	}
 
 	public void mousePressed(MouseEvent e) {
-        line = new GLine(e.getX(), e.getY(), e.getX(), e.getY());
-        add(line);
+        if (!firstVertexFixed) {
+            // First click: fix the first vertex
+            line = new GLine(e.getX(), e.getY(), e.getX(), e.getY());
+            add(line);
+            firstVertexFixed = true;
+        } else {
+            // Second click: fix the second vertex
+            line.setEndPoint(e.getX(), e.getY());
+            firstVertexFixed = false; // Reset for the next line segment
+        }
     }
 
     public void mouseDragged(MouseEvent e) {
-        if (line != null) {
+        if (line != null && firstVertexFixed) {
+            // While dragging, update the second vertex
             line.setEndPoint(e.getX(), e.getY());
         }
     }
