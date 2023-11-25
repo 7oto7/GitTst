@@ -12,10 +12,10 @@ public class problem42 extends GraphicsProgram{
 		
 	}
 	public void mouseClicked(MouseEvent e){
-		makeLine();
+		makeLine(e.getX(), e.getY(), e.getX(), e.getY());
 	}
-	private void makeLine() {
-		GLine line = new GLine(5, 5, 10, 10);
+	private void makeLine(int i, int j, int k, int l) {
+		GLine line = new GLine(i, j, k, l);
 		add(line);
 	}
 }
