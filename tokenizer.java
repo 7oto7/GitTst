@@ -5,17 +5,17 @@ import acm.program.ConsoleProgram;
 public class tokenizer extends ConsoleProgram{
 	//static boolean isLetterOrDigit;
 	public void run(){
-		String s = "a";
-		String str = "";
-        for(int i = 0; i < s.length(); i++){
-            if(i % 2 == 0){
-                str = str + s.charAt(i);
-            } else {
-                int a = s.charAt(i) - '0';
-                char b = (char) (s.charAt(i - 1) + a);
-                str = str + b;
-            }
-        }
+//		String s = "a";
+//		String str = "";
+//        for(int i = 0; i < s.length(); i++){
+//            if(i % 2 == 0){
+//                str = str + s.charAt(i);
+//            } else {
+//                int a = s.charAt(i) - '0';
+//                char b = (char) (s.charAt(i - 1) + a);
+//                str = str + b;
+//            }
+//        }
 		
 //		String mainString = "Hello, world!";
 //        char substring = 'z';
@@ -44,13 +44,13 @@ public class tokenizer extends ConsoleProgram{
 		
 		
 		
-//		String text = "mari 2 3 4 5";
-//		StringTokenizer tokenizer = new StringTokenizer(text);
-//		
-//		while(tokenizer.hasMoreTokens()){
-//			String currToken = tokenizer.nextToken();
-//			println(currToken);
-//		}
+		String text = "mari 2 3 4 5";
+		StringTokenizer tokenizer = new StringTokenizer(text);
+		
+		while(tokenizer.hasMoreTokens()){
+			String currToken = tokenizer.nextToken();
+			println(currToken);
+		}
 		
 		
 		
