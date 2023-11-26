@@ -90,19 +90,17 @@ public class tokenizer extends ConsoleProgram{
     }
     private boolean isValid(String token){
         for(int i = 0; i < token.length(); i++){
-            if(token.charAt(i) >= '0' && token.charAt(i) <= '9'){
+        	char currChar = token.charAt(i);
+            if(currChar >= '0' && currChar <= '9'){
                 return false;
-            } 
-            if(token.indexOf('!') != token.length() - 1){
+            } else if(currChar =='!' && i != token.length() - 1){
                 return false;
-            }
-            if(token.indexOf('.') != token.length() - 1){
+            } else if(currChar =='.' && i != token.length() - 1){
                 return false;
-            }
-            if(token.indexOf(',') != token.length() - 1){
+            } else if(currChar ==',' && i != token.length() - 1){
                 return false;
             }
-            if(token.charAt(i) == '-' && (token.indexOf('-') == 0 || token.indexOf('-') == token.length() - 1)){
+            if(currChar == '-' && (token.indexOf('-') == 0 || token.indexOf('-') == token.length() - 1)){
                 return false;
             } else {
                 return true;
