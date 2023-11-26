@@ -5,6 +5,9 @@ import acm.program.ConsoleProgram;
 public class tokenizer extends ConsoleProgram{
 	//static boolean isLetterOrDigit;
 	public void run(){
+		String s = "10#11#12";
+		String str = freqAlphabets(s);
+		println(str);
 //		String s = "a";
 //		String str = "";
 //        for(int i = 0; i < s.length(); i++){
@@ -44,13 +47,13 @@ public class tokenizer extends ConsoleProgram{
 		
 		
 		
-		String text = "mari 2 3 4 5";
-		StringTokenizer tokenizer = new StringTokenizer(text);
-		
-		while(tokenizer.hasMoreTokens()){
-			String currToken = tokenizer.nextToken();
-			println(currToken);
-		}
+//		String text = "mari 2 3 4 5";
+//		StringTokenizer tokenizer = new StringTokenizer(text);
+//		
+//		while(tokenizer.hasMoreTokens()){
+//			String currToken = tokenizer.nextToken();
+//			println(currToken);
+//		}
 		
 		
 		
@@ -67,5 +70,22 @@ public class tokenizer extends ConsoleProgram{
 		
 		
 	}
+	public String freqAlphabets(String s) {
+        String str = "";
+        for(int i = 0; i < s.length(); i++){
+            if(s.charAt(i + 2) == '#'){
+                int a = s.charAt(i) - '0';
+                int b = s.charAt(i + 1) - '0';
+                int c = a * 10 + b;
+                char d = (char)('a' + (c - 1)) ;
+                str = str + d;
+            } else if(s.charAt(i + 2) != '#' && s.charAt(i + 1) != '#'){
+                int a = s.charAt(i) - '0';  
+                char b = (char)('a' + (a - 1));
+                str = str + b;         
+             }
+        }
+        return str;
+    }
 }
 //////50,51,52
