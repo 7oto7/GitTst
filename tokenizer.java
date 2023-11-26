@@ -96,7 +96,7 @@ public class tokenizer extends ConsoleProgram{
 	
 	public String removeTrailingZeros(String num) {
         String str = "";
-        for(int i = num.length(); i > 1; i++){
+        for(int i = num.length(); i > 1; i--){
             String zero = "";
             for(int j = 0; j < i; j++){
                 zero += '0';
