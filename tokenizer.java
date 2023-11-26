@@ -5,8 +5,8 @@ import acm.program.ConsoleProgram;
 public class tokenizer extends ConsoleProgram{
 	//static boolean isLetterOrDigit;
 	public void run(){
-		String s = "10#11#12";
-		String str = freqAlphabets(s);
+		String s = "51230100";
+		String str = removeTrailingZeros(s);
 		println(str);
 		
 		
@@ -74,23 +74,46 @@ public class tokenizer extends ConsoleProgram{
 		
 		
 	}
-	public String freqAlphabets(String s) {
+//	public String freqAlphabets(String s) {
+//        String str = "";
+//        for(int i = 0; i < s.length(); i++){
+//            if(i + 2 < s.length() && s.charAt(i + 2) == '#'){
+//                int a = s.charAt(i) - '0';
+//                int b = s.charAt(i + 1) - '0';
+//                int c = a * 10 + b;
+//                char d = (char)('a' + (c - 1)) ;
+//                i = i + 2;
+//                str = str + d;
+//            } else {
+//                int a = s.charAt(i) - '0';  
+//                char b = (char)('a' + (a - 1));
+//                str = str + b;         
+//             }
+//        }
+//        return str;
+//    }
+//	
+	
+	public String removeTrailingZeros(String num) {
         String str = "";
-        for(int i = 0; i < s.length(); i++){
-            if(i + 2 < s.length() && s.charAt(i + 2) == '#'){
-                int a = s.charAt(i) - '0';
-                int b = s.charAt(i + 1) - '0';
-                int c = a * 10 + b;
-                char d = (char)('a' + (c - 1)) ;
-                i = i + 2;
-                str = str + d;
-            } else {
-                int a = s.charAt(i) - '0';  
-                char b = (char)('a' + (a - 1));
-                str = str + b;         
-             }
+        for(int i = num.length(); i > 1; i++){
+            String zero = "";
+            for(int j = 0; j < i; j++){
+                zero += '0';
+            }
+            if(num.contains(zero)){
+                num = num.replace(zero, "k");
+            }
+        }
+        for(int i = 0; i < num.length(); i++){
+            if(num.charAt(i) != 'k'){
+                str += num.charAt(i);
+            }
         }
         return str;
     }
+	
+	
+	
 }
 //////50,51,52
