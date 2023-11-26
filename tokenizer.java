@@ -91,7 +91,7 @@ public class tokenizer extends ConsoleProgram{
     private boolean isValid(String token){
         for(int i = 0; i < token.length(); i++){
         	char currChar = token.charAt(i);
-            if(currChar == '0' || currChar == '1' || currChar == '2' || currChar == '3' || currChar == '8'){
+            if(currChar >= '0' && currChar <= '9'){
                 return false;
             } else if(currChar =='!' && i != token.length() - 1){
                 return false;
