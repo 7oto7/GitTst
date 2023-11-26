@@ -72,7 +72,7 @@ public class tokenizer extends ConsoleProgram{
 	}
 	public String freqAlphabets(String s) {
         String str = "";
-        for(int i = 0; i < s.length(); i++){
+        for(int i = 0; i < s.length() - 2; i++){
             if(s.charAt(i + 2) == '#'){
                 int a = s.charAt(i) - '0';
                 int b = s.charAt(i + 1) - '0';
