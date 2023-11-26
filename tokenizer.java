@@ -91,7 +91,7 @@ public class tokenizer extends ConsoleProgram{
     private boolean isValid(String token){
         for(int i = 0; i < token.length(); i++){
         	char currChar = token.charAt(i);
-            if(currChar >= '0' && currChar <= '9'){
+            if(currChar == '0' || currChar == '1' || currChar == '2' || currChar == '3'){
                 return false;
             } else if(currChar =='!' && i != token.length() - 1){
                 return false;
@@ -99,12 +99,12 @@ public class tokenizer extends ConsoleProgram{
                 return false;
             } else if(currChar ==',' && i != token.length() - 1){
                 return false;
-            }
-            if(currChar == '-' && (i == 0 || i == token.length() - 1)){
+            } else if(currChar == '-' && (i == 0 || i == token.length() - 1)){
                 return false;
-            } else {
-                return true;
-            }
+            } 
+//            else {
+//                return true;
+//            }
         }
         return true;
     }
