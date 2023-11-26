@@ -70,7 +70,7 @@ public class tokenizer extends ConsoleProgram{
 //		}
 //		println((int)chr);
 		
-		String sentence = "cat and  dog";
+		String sentence = "!this  1-s b8d!";
 		int c = countValidWords(sentence);
 		println(c);
 		
@@ -100,7 +100,7 @@ public class tokenizer extends ConsoleProgram{
             } else if(currChar ==',' && i != token.length() - 1){
                 return false;
             }
-            if(currChar == '-' && (token.indexOf('-') == 0 || token.indexOf('-') == token.length() - 1)){
+            if(currChar == '-' && (i == 0 || i == token.length() - 1)){
                 return false;
             } else {
                 return true;
