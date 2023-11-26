@@ -85,6 +85,7 @@ public class tokenizer extends ConsoleProgram{
 	            String token = tokenizer.nextToken();
 	                if(isValid(token)){
 	                    count++;
+	                    println(token);
 	                }
 	        }
 	        return count;
