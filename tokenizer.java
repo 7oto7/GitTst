@@ -91,7 +91,6 @@ public class tokenizer extends ConsoleProgram{
 	    }
 	    private boolean isValid(String token){
 	        int a = 0;
-	        int b = 0;
 	        if(!countAll(token, '!', ',', '.')){
 	            return false;
 	        }
