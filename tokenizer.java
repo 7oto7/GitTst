@@ -5,9 +5,9 @@ import acm.program.ConsoleProgram;
 public class tokenizer extends ConsoleProgram{
 	//static boolean isLetterOrDigit;
 	public void run(){
-		String s = "6320000060155576064433475194277496015965584784508346180457590630139671509042003";
-		String str = removeTrailingZeros(s);
-		println(str);
+//		String s = "6320000060155576064433475194277496015965584784508346180457590630139671509042003";
+//		String str = removeTrailingZeros(s);
+//		println(str);
 		
 		
 		
@@ -74,6 +74,9 @@ public class tokenizer extends ConsoleProgram{
 		
 		
 	}
+	
+	
+	
 //	public String freqAlphabets(String s) {
 //        String str = "";
 //        for(int i = 0; i < s.length(); i++){
@@ -94,24 +97,24 @@ public class tokenizer extends ConsoleProgram{
 //    }
 //	
 	
-	public String removeTrailingZeros(String num) {
-        String str = "";
-        for(int i = num.length(); i > 1; i--){
-            String zero = "";
-            for(int j = 0; j < i; j++){
-                zero += '0';
-            }
-            if(num.contains(zero)){
-                num = num.replace(zero, "k");
-            }
-        }
-        for(int i = 0; i < num.length(); i++){
-            if(num.charAt(i) != 'k'){
-                str += num.charAt(i);
-            }
-        }
-        return str;
-    }
+//	public String removeTrailingZeros(String num) {
+//        String str = "";
+//        for(int i = num.length(); i > 1; i--){
+//            String zero = "";
+//            for(int j = 0; j < i; j++){
+//                zero += '0';
+//            }
+//            if(num.contains(zero)){
+//                num = num.replace(zero, "k");
+//            }
+//        }
+//        for(int i = 0; i < num.length(); i++){
+//            if(num.charAt(i) != 'k'){
+//                str += num.charAt(i);
+//            }
+//        }
+//        return str;
+//    }
 	
 	
 	
