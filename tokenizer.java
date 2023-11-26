@@ -92,11 +92,14 @@ public class tokenizer extends ConsoleProgram{
         for(int i = 0; i < token.length(); i++){
             if(token.charAt(i) >= '0' && token.charAt(i) <= '9'){
                 return false;
-            } else if(token.indexOf('!') != token.length() - 1){
+            } 
+            if(token.indexOf('!') != token.length() - 1){
                 return false;
-            } else if(token.indexOf('.') != token.length() - 1){
+            }
+            if(token.indexOf('.') != token.length() - 1){
                 return false;
-            } else if(token.indexOf(',') != token.length() - 1){
+            }
+            if(token.indexOf(',') != token.length() - 1){
                 return false;
             }
             if(token.charAt(i) == '-' && (token.indexOf('-') == 0 || token.indexOf('-') == token.length() - 1)){
