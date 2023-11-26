@@ -70,13 +70,43 @@ public class tokenizer extends ConsoleProgram{
 //		}
 //		println((int)chr);
 		
-		
-		
+		String sentence = "cat and  dog";
+		int c = countValidWords(sentence);
+		println(c);
 		
 		
 	}
 	
-	
+	public int countValidWords(String sentence) {
+        int count = 0;
+        StringTokenizer tokenizer = new StringTokenizer(sentence);
+        while(tokenizer.hasMoreTokens()){
+            String token = tokenizer.nextToken();
+                if(isValid(token)){
+                    count++;
+                }
+        }
+        return count;
+    }
+    private boolean isValid(String token){
+        for(int i = 0; i < token.length(); i++){
+            if(token.charAt(i) >= '0' && token.charAt(i) <= '9'){
+                return false;
+            } else if(token.indexOf('!') != token.length() - 1){
+                return false;
+            } else if(token.indexOf('.') != token.length() - 1){
+                return false;
+            } else if(token.indexOf(',') != token.length() - 1){
+                return false;
+            }
+            if(token.charAt(i) == '-' && (token.indexOf('-') == 0 || token.indexOf('-') == token.length() - 1)){
+                return false;
+            } else {
+                return true;
+            }
+        }
+        return true;
+    }
 	
 //	public String freqAlphabets(String s) {
 //        String str = "";
