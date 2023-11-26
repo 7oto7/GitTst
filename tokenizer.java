@@ -8,6 +8,10 @@ public class tokenizer extends ConsoleProgram{
 		String s = "10#11#12";
 		String str = freqAlphabets(s);
 		println(str);
+		
+		
+		
+		
 //		String s = "a";
 //		String str = "";
 //        for(int i = 0; i < s.length(); i++){
