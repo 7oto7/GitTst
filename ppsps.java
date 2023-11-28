@@ -82,7 +82,9 @@ public class ppsps extends GraphicsProgram {
 	public void run() {
 		addMouseListeners();
 
+		double delteTime = 1/60;
 		while (playAgain) {
+			long startTime = System.currentTimeMillis();
 			playAgain = !playAgain;
 			removeAll();
 			setBackground(Color.WHITE);
