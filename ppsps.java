@@ -76,21 +76,21 @@ public class ppsps extends GraphicsProgram {
 	private int prevMouseX = 0;
 	private boolean gameLost = false;
 
+	double deltaTime = 1/60;
 
 	/* Method: run() */
 	/** Runs the Breakout program. */
 	public void run() {
 		addMouseListeners();
 
-		double deltaTime = 1/60;
 		while (playAgain) {
-			long startTime = System.currentTimeMillis();
+			long startTime = 1000*System.currentTimeMillis();
 			playAgain = !playAgain;
 			removeAll();
 			setBackground(Color.WHITE);
 			buildSetup();
 			playGame();
-			deltaTime = System.currentTimeMillis() - startTime;
+			deltaTime = 1000*System.currentTimeMillis() - startTime;
 		}
 	}
 
@@ -356,7 +356,7 @@ public class ppsps extends GraphicsProgram {
 			}
 			if (ballIsStopped == false) {
 				ball.move(vx, vy);
-				pause(speed);
+				pause(speed * deltaTime);
 				checkWalls();
 				getCollidingObject();
 				removeBricks();
