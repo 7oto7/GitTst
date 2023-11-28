@@ -5,8 +5,9 @@ import acm.program.ConsoleProgram;
 
 public class problem51 extends ConsoleProgram {
 	public void run() {
-		String str = readLine("Enter text");
+		String str = readLine("Enter text: ");
 		String changedStr = changeString(str);
+		println(changedStr);
 	}
 
 	private String changeString(String str) {
