@@ -84,13 +84,11 @@ public class ppsps extends GraphicsProgram {
 		addMouseListeners();
 
 		while (playAgain) {
-			long startTime = 1000*System.currentTimeMillis();
 			playAgain = !playAgain;
 			removeAll();
 			setBackground(Color.WHITE);
 			buildSetup();
 			playGame();
-			deltaTime = 1000*System.currentTimeMillis() - startTime;
 		}
 	}
 
@@ -538,10 +536,11 @@ public class ppsps extends GraphicsProgram {
 			gameLost = !gameLost;
 		}
 
+		long startTime = 1000*System.currentTimeMillis();
 		moveBall();
 		waitForClick();
 		everythingAgain();
-
+		deltaTime = 1000*System.currentTimeMillis() - startTime;
 	}
 
 	private void everythingAgain() {
