@@ -14,7 +14,7 @@ public class problem50 extends ConsoleProgram{
 		int count = 0;
 		StringTokenizer tokenizer = new StringTokenizer(text, " ,.?!:");
 		while(tokenizer.hasMoreTokens()){
-			String token = tokenizer.nextToken();
+			tokenizer.nextToken();
 			count++;
 
 		}
