@@ -7,7 +7,7 @@ import acm.program.ConsoleProgram;
 
 public class practiseProblem2 extends ConsoleProgram{
 	public void run(){
-		String str = "a bcAAAA!";
+		String str = "ABCDz,a";
 		Boolean isOrNot = check(str);
 		println(isOrNot);
 	}
