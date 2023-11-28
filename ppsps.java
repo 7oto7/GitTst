@@ -76,7 +76,6 @@ public class ppsps extends GraphicsProgram {
 	private int prevMouseX = 0;
 	private boolean gameLost = false;
 
-	//AudioClip bounceClip = MediaTools.loadAudioClip("bounce.au");
 
 	/* Method: run() */
 	/** Runs the Breakout program. */
@@ -108,7 +107,6 @@ public class ppsps extends GraphicsProgram {
 
 	private void ifColliderIsPaddle() {
 		if (collider == rect) {
-			//bounceClip.play();
 			if (difX >= 0 && vx < 0) {
 				if (vy > 0) {
 					vx = -vx;
@@ -137,7 +135,6 @@ public class ppsps extends GraphicsProgram {
 		if (collider != rect && collider == secondRightSide()) {
 			vx = -vx;
 			remove(collider);
-		    //bounceClip.play();
 			countDifScore();
 			randomThingHappens();
 			count++;
@@ -148,7 +145,6 @@ public class ppsps extends GraphicsProgram {
 		} else if (collider != rect && collider == fourthLeftSide()) {
 			vx = -vx;
 			remove(collider);
-			//bounceClip.play();
 			countDifScore();
 			randomThingHappens();
 			count++;
@@ -162,7 +158,6 @@ public class ppsps extends GraphicsProgram {
 			vy = -vy;
 			ball.move(vx, vy);
 			remove(collider);
-			//bounceClip.play();
 			countDifScore();
 			randomThingHappens();
 			count++;
@@ -174,7 +169,6 @@ public class ppsps extends GraphicsProgram {
 			vy = -vy;
 			ball.move(vx, vy);
 			remove(collider);
-			//bounceClip.play();
 			countDifScore();
 			randomThingHappens();
 			count++;
