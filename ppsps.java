@@ -82,7 +82,7 @@ public class ppsps extends GraphicsProgram {
 	public void run() {
 		addMouseListeners();
 
-		double delteTime = 1/60;
+		double deltaTime = 1/60;
 		while (playAgain) {
 			long startTime = System.currentTimeMillis();
 			playAgain = !playAgain;
@@ -90,6 +90,7 @@ public class ppsps extends GraphicsProgram {
 			setBackground(Color.WHITE);
 			buildSetup();
 			playGame();
+			deltaTime = System.currentTimeMillis() - startTime;
 		}
 	}
 
