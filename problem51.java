@@ -14,7 +14,7 @@ public class problem51 extends ConsoleProgram {
 		String result = " ";
 		for (int i = 0; i < str.length(); i++) {
 			char ch = str.charAt(i);
-			if(str.indexOf(i) == i){
+			if(str.indexOf(ch) == i){
 			result += ch;
 			}
 //			if(!result.contains("" + ch)){    //char is stringad gadaketeba ("" + ch)
