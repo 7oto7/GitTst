@@ -14,12 +14,15 @@ public class problem51 extends ConsoleProgram {
 		String result = " ";
 		for (int i = 0; i < str.length(); i++) {
 			char ch = str.charAt(i);
-			if(str.indexOf(ch) == i){
+			
+			if(str.indexOf(ch) == i){  ////////1/////////
 			result += ch;
 			}
-//			if(!result.contains("" + ch)){    //char is stringad gadaketeba ("" + ch)
+			
+//			if(!result.contains("" + ch)){ /////////2//////////char is stringad gadaketeba ("" + ch)
 //				result += ch;
 //			}
+			
 		}
 		return result;
 	}
