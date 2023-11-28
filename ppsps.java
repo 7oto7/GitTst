@@ -76,7 +76,6 @@ public class ppsps extends GraphicsProgram {
 	private int prevMouseX = 0;
 	private boolean gameLost = false;
 
-	double deltaTime = 1/60;
 
 	/* Method: run() */
 	/** Runs the Breakout program. */
@@ -354,7 +353,7 @@ public class ppsps extends GraphicsProgram {
 			}
 			if (ballIsStopped == false) {
 				ball.move(vx, vy);
-				pause(speed * deltaTime);
+				pause(speed);
 				checkWalls();
 				getCollidingObject();
 				removeBricks();
@@ -536,11 +535,9 @@ public class ppsps extends GraphicsProgram {
 			gameLost = !gameLost;
 		}
 
-		long startTime = 1000*System.currentTimeMillis();
 		moveBall();
 		waitForClick();
 		everythingAgain();
-		deltaTime = 1000*System.currentTimeMillis() - startTime;
 	}
 
 	private void everythingAgain() {
