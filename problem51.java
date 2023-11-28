@@ -12,10 +12,11 @@ public class problem51 extends ConsoleProgram {
 	private String changeString(String str) {
 		String result = " ";
 		for (int i = 0; i < str.length(); i++) {
-			for (int j = i + 1; j < str.length(); j++) {
-				
+			char ch = str.charAt(i);
+			if(!result.contains("" + ch)){
+				result += ch;
 			}
 		}
-		return null;
+		return result;
 	}
 }
