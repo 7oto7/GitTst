@@ -27,3 +27,6 @@ public class problem51 extends ConsoleProgram {
 		return result;
 	}
 }
+
+
+///////43b gaarchiet
