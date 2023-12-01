@@ -14,6 +14,8 @@ import acm.util.RandomGenerator;
 public class midtermOxeriWre extends GraphicsProgram {
 	private int CIRCLE_D = 80;
 	private GOval circle;
+	private int prev;
+	private int curr;
 	RandomGenerator rgen = RandomGenerator.getInstance();
 
 	public void run() {
@@ -31,9 +33,30 @@ public class midtermOxeriWre extends GraphicsProgram {
 		circle.setColor(rgen.nextColor());
 	}
 
-	public void mouseDragged(MouseEvent e){
-		CIRCLE_D += 1;
-		remove(circle);
-		makeCircle();
+	public void mouseDragged(MouseEvent e) {
+		curr = e.getX();
+		if (e.getX() > getWidth() / 2 && curr - prev > 0) {
+			CIRCLE_D += 1;
+			remove(circle);
+			makeCircle();
+		} else if (e.getX() > getWidth() / 2 && curr - prev < 0) {
+			CIRCLE_D -= 1;
+			remove(circle);
+			makeCircle();
+		}
+		if (e.getX() < getWidth() / 2 && curr - prev > 0) {
+			CIRCLE_D -= 1;
+			remove(circle);
+			makeCircle();
+		} else if (e.getX() > getWidth() / 2 && curr - prev < 0) {
+			CIRCLE_D += 1;
+			remove(circle);
+			makeCircle();
+		}
+
+	}
+
+	public void mousePressed(MouseEvent e) {
+		prev = e.getX();
 	}
 }
