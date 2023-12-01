@@ -1,3 +1,4 @@
+import acm.program.ConsoleProgram;
 import acm.program.GraphicsProgram;
 
 //ამოცანა 5. წრეების შეწყვილება (35 ქულა)
@@ -9,8 +10,11 @@ import acm.program.GraphicsProgram;
 //ანუ ამ კლიკებს შორის არ უნდა მოხდეს კლიკი სხვა მესამე წრეზე ან ცარიელ ადგილზე. თამაში მთავრდება როცა ყველა წრე გაქრება დაფიდან.
 //თამაშის დამთავრებისას პროგრამაც უნდა გაჩერდეს და აღარ დახატოს ახალი წრეები.
 //შენიშვნა: წრეების დამატება უნდა მოხდეს ფანჯრის საზღვრებს შიგნით
-public class midtermWreebisShewyvileba extends GraphicsProgram{
+public class midtermWreebisShewyvileba extends ConsoleProgram{
 	public void run(){
-		
+		int b = 8;
+		char a = 'a';
+		char c = (char) (a + b);
+		int d = a + b;
 	}
 }
