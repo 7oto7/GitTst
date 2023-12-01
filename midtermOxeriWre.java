@@ -55,20 +55,20 @@ public class midtermOxeriWre extends GraphicsProgram {
 		}
 		
 		if (e.getX() > getWidth() / 2 && curr - prev < 0) {
-			CIRCLE_D += 1;
+			CIRCLE_D -= 1;
 			remove(circle);
 			makeCircle();
 		} else if (e.getX() > getWidth() / 2 && curr - prev > 0) {
-			CIRCLE_D -= 1;
+			CIRCLE_D += 1;
 			remove(circle);
 			makeCircle();
 		}
 		if (e.getX() < getWidth() / 2 && curr - prev < 0) {
-			CIRCLE_D -= 1;
+			CIRCLE_D += 1;
 			remove(circle);
 			makeCircle();
 		} else if (e.getX() > getWidth() / 2 && curr - prev > 0) {
-			CIRCLE_D += 1;
+			CIRCLE_D -= 1;
 			remove(circle);
 			makeCircle();
 		}
