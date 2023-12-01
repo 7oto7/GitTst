@@ -36,6 +36,6 @@ public class midtermOxeriWre extends GraphicsProgram {
 		System.out.println("111");
 		remove(circle);
 		System.out.println("22222");
-		add(circle);
+		makeCircle();
 	}
 }
