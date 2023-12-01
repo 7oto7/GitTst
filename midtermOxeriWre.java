@@ -37,55 +37,39 @@ public class midtermOxeriWre extends GraphicsProgram {
 		if (e.getX() > 0 && e.getX() < getWidth()) {
 			curr = e.getX();
 			if (e.getX() > getWidth() / 2 && curr - prev > 0) {
-				double a = Math.sqrt((getWidth() / 2 - e.getX()) *(getWidth() / 2 - e.getX()) + (getHeight() / 2 - e.getY()) * (getHeight() / 2 - e.getY()));
-
-				CIRCLE_D += a;
+				CIRCLE_D += 1;
 				remove(circle);
 				makeCircle();
 			} else if (e.getX() > getWidth() / 2 && curr - prev < 0) {
-				double a = Math.sqrt((getWidth() / 2 - e.getX()) *(getWidth() / 2 - e.getX()) + (getHeight() / 2 - e.getY()) * (getHeight() / 2 - e.getY()));
-
-				CIRCLE_D -= a;
+				CIRCLE_D -= 1;
 				remove(circle);
 				makeCircle();
 			}
 			if (e.getX() < getWidth() / 2 && curr - prev > 0) {
-				double a = Math.sqrt((getWidth() / 2 - e.getX()) *(getWidth() / 2 - e.getX()) + (getHeight() / 2 - e.getY()) * (getHeight() / 2 - e.getY()));
-
-				CIRCLE_D -= a;
+				CIRCLE_D -= 1;
 				remove(circle);
 				makeCircle();
 			} else if (e.getX() > getWidth() / 2 && curr - prev < 0) {
-				double a = Math.sqrt((getWidth() / 2 - e.getX()) *(getWidth() / 2 - e.getX()) + (getHeight() / 2 - e.getY()) * (getHeight() / 2 - e.getY()));
-
-				CIRCLE_D += a;
+				CIRCLE_D += 1;
 				remove(circle);
 				makeCircle();
 			}
 
 			if (e.getX() > getWidth() / 2 && curr - prev < 0) {
-				double a = Math.sqrt((getWidth() / 2 - e.getX()) *(getWidth() / 2 - e.getX()) + (getHeight() / 2 - e.getY()) * (getHeight() / 2 - e.getY()));
-
-				CIRCLE_D -= a;
+				CIRCLE_D -= 1;
 				remove(circle);
 				makeCircle();
 			} else if (e.getX() > getWidth() / 2 && curr - prev > 0) {
-				double a = Math.sqrt((getWidth() / 2 - e.getX()) *(getWidth() / 2 - e.getX()) + (getHeight() / 2 - e.getY()) * (getHeight() / 2 - e.getY()));
-
-				CIRCLE_D += a;
+				CIRCLE_D += 1;
 				remove(circle);
 				makeCircle();
 			}
 			if (e.getX() < getWidth() / 2 && curr - prev < 0) {
-				double a = Math.sqrt((getWidth() / 2 - e.getX()) *(getWidth() / 2 - e.getX()) + (getHeight() / 2 - e.getY()) * (getHeight() / 2 - e.getY()));
-
-				CIRCLE_D += a;
+				CIRCLE_D += 1;
 				remove(circle);
 				makeCircle();
 			} else if (e.getX() > getWidth() / 2 && curr - prev > 0) {
-				double a = Math.sqrt((getWidth() / 2 - e.getX()) *(getWidth() / 2 - e.getX()) + (getHeight() / 2 - e.getY()) * (getHeight() / 2 - e.getY()));
-
-				CIRCLE_D -= a;
+				CIRCLE_D -= 1;
 				remove(circle);
 				makeCircle();
 			}
@@ -94,7 +78,6 @@ public class midtermOxeriWre extends GraphicsProgram {
 		}
 
 	}
-
 
 	public void mousePressed(MouseEvent e) {
 		prev = e.getX();
