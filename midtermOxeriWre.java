@@ -37,39 +37,40 @@ public class midtermOxeriWre extends GraphicsProgram {
 		if (e.getX() > 0 && e.getX() < getWidth()) {
 			curr = e.getX();
 			if (e.getX() > getWidth() / 2 && curr - prev > 0) {
-				CIRCLE_D += 1;
+				
+				CIRCLE_D += curr - prev;
 				remove(circle);
 				makeCircle();
 			} else if (e.getX() > getWidth() / 2 && curr - prev < 0) {
-				CIRCLE_D -= 1;
+				CIRCLE_D -= curr - prev;
 				remove(circle);
 				makeCircle();
 			}
 			if (e.getX() < getWidth() / 2 && curr - prev > 0) {
-				CIRCLE_D -= 1;
+				CIRCLE_D -= curr - prev;
 				remove(circle);
 				makeCircle();
 			} else if (e.getX() > getWidth() / 2 && curr - prev < 0) {
-				CIRCLE_D += 1;
+				CIRCLE_D += curr - prev;
 				remove(circle);
 				makeCircle();
 			}
 
 			if (e.getX() > getWidth() / 2 && curr - prev < 0) {
-				CIRCLE_D -= 1;
+				CIRCLE_D -= curr - prev;
 				remove(circle);
 				makeCircle();
 			} else if (e.getX() > getWidth() / 2 && curr - prev > 0) {
-				CIRCLE_D += 1;
+				CIRCLE_D += curr - prev;
 				remove(circle);
 				makeCircle();
 			}
 			if (e.getX() < getWidth() / 2 && curr - prev < 0) {
-				CIRCLE_D += 1;
+				CIRCLE_D += curr - prev;
 				remove(circle);
 				makeCircle();
 			} else if (e.getX() > getWidth() / 2 && curr - prev > 0) {
-				CIRCLE_D -= 1;
+				CIRCLE_D -= curr - prev;
 				remove(circle);
 				makeCircle();
 			}
