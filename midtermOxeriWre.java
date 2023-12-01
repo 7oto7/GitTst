@@ -32,7 +32,7 @@ public class midtermOxeriWre extends GraphicsProgram {
 	}
 
 	public void mouseDragged(MouseEvent e){
-		CIRCLE_D += 1;
+		CIRCLE_D += 5;
 		remove(circle);
 		add(circle);
 	}
