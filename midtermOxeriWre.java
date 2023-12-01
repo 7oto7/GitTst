@@ -1,5 +1,8 @@
+import java.awt.event.MouseEvent;
+
 import acm.graphics.GOval;
 import acm.program.GraphicsProgram;
+import acm.util.RandomGenerator;
 
 //ამოცანა 5. ოხერი წრე (35 ქულა)
 //თქვენი ამოცანაა დაწეროთ გრაფიკული პროგრამა, რომელიც ფანჯრის ცენტრში დახატავს CIRCLE_D დიამეტრის მქონე შავად გაფერადებულ წრეს. 
@@ -11,12 +14,17 @@ import acm.program.GraphicsProgram;
 public class midtermOxeriWre extends GraphicsProgram{
 	private int CIRCLE_D = 80;
 	private GOval circle;
+	RandomGenerator rgen  = RandomGenerator.getInstance();
 	public void run(){
+		addMouseListeners();
 		makeCircle();
 	}
 	private void makeCircle() {
 		circle = new GOval(CIRCLE_D, CIRCLE_D);
 		circle.setFilled(true);
 		add(circle, getWidth() / 2 - CIRCLE_D / 2, getHeight() / 2 - CIRCLE_D / 2);
+	}
+	public void mouseClicked(MouseEvent e){
+		circle.setColor(rgen.nextColor());
 	}
 }
