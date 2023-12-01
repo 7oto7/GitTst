@@ -32,10 +32,8 @@ public class midtermOxeriWre extends GraphicsProgram {
 	}
 
 	public void mouseDragged(MouseEvent e){
-		CIRCLE_D += 5;
-		System.out.println("111");
+		CIRCLE_D += 1;
 		remove(circle);
-		System.out.println("22222");
 		makeCircle();
 	}
 }
