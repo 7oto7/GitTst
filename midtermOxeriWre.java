@@ -53,6 +53,7 @@ public class midtermOxeriWre extends GraphicsProgram {
 			remove(circle);
 			makeCircle();
 		}
+		prev = e.getX();
 
 	}
 
