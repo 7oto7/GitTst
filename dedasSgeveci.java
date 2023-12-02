@@ -26,7 +26,7 @@ public class dedasSgeveci extends GraphicsProgram{
 			obj = ball;
 			for (int i = 0; i < 10; i++) { // Move the ball 10 times
 	            ball.move(0, 5);
-	            pause(200);
+	            pause(20);
 	        }
 		} 
 		
