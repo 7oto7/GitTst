@@ -26,26 +26,15 @@ public class stringSample extends ConsoleProgram{
 
 		    GOval o = new GOval(2, 1); // width, height
 
-		    println(racxa(x, 2, o));
-		    println(racxa(y, x / 2 + x, o));
+		    println(racxa(x));
 
 		  }
 
-		  public int racxa(int x, int y, GOval o) {
-		    String s = "hello world";
+		  public int racxa(int x) {
 
-		    x = varesiRacxa(x / y, x + (int) o.getHeight(), s);
-		    o.scale(2);
-		    y = varesiRacxa(x, y + (int) o.getHeight(), s);
+		    x = 9;
 
-		    return x + y;
+		    return x;
 		  }
 
-		  public int varesiRacxa(double x, int y, String s) {
-		    int z = (int) x + s.charAt(0) - s.charAt(1);
-		    s = s.substring(1);
-
-		    return z + y;
-		  
-	}
 }
