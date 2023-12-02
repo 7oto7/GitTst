@@ -9,9 +9,9 @@ public class dedasSgeveci extends GraphicsProgram{
 	public void run(){
 		makeBall();
 		addMouseListeners();
-		while(true){
-			moveBall();
-		}
+//		while(true){
+//			moveBall();
+//		}
 		
 	}
 	private void moveBall() {
@@ -32,6 +32,10 @@ public class dedasSgeveci extends GraphicsProgram{
 		GOval obj = (GOval)getElementAt(e.getX(), e.getY());
 		if(obj != null){
 			obj = ball;
+			while(true){
+				ball.move(0, 5);
+				pause(200);
+			}
 		} else {
 			vax = false;
 		}
