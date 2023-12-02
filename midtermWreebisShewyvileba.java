@@ -42,6 +42,7 @@ public class midtermWreebisShewyvileba extends GraphicsProgram{
 				drawCircles();
 				pause(DELAY);
 			}
+			pause(10);
 		}
 		
 		
