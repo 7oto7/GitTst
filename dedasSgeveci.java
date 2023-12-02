@@ -4,7 +4,6 @@ import acm.graphics.GOval;
 import acm.program.GraphicsProgram;
 
 public class dedasSgeveci extends GraphicsProgram{
-	private Boolean vax;
 	private GOval ball;
 	public void run(){
 		makeBall();
@@ -12,15 +11,6 @@ public class dedasSgeveci extends GraphicsProgram{
 //		while(true){
 //			moveBall();
 //		}
-		
-	}
-	private void moveBall() {
-		if(ball != null){
-		while(vax){
-			ball.move(0, 50);
-			pause(100);
-		}	
-		}
 		
 	}
 	private void makeBall() {
@@ -33,12 +23,10 @@ public class dedasSgeveci extends GraphicsProgram{
 		if(obj != null){
 			obj = ball;
 			while(true){
-				ball.move(0, 5);
+				obj.move(0, 5);
 				pause(200);
 			}
-		} else {
-			vax = false;
-		}
+		} 
 		
 	}
 }
