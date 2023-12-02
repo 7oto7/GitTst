@@ -25,7 +25,7 @@ public class stringSample extends ConsoleProgram{
 			    GOval o = new GOval(2, 1); // width, height
 
 			    println(racxa(x, 2, o));
-			    println(racxa(y, x / 2 + x, o));
+			   // println(racxa(y, x / 2 + x, o));
 
 			  }
 
@@ -33,10 +33,10 @@ public class stringSample extends ConsoleProgram{
 			    String s = "hello world";
 
 			    x = varesiRacxa(x / y, x + (int) o.getHeight(), s);
-			    //o.scale(2);
-			    y = varesiRacxa(x, y + (int) o.getHeight(), s);
+//			    o.scale(2);
+//			    y = varesiRacxa(x, y + (int) o.getHeight(), s);
 
-			    return x + y;
+			    return x;
 			  }
 
 			  public int varesiRacxa(double x, int y, String s) {
