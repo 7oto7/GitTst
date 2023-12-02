@@ -4,14 +4,18 @@ import acm.graphics.GOval;
 import acm.program.GraphicsProgram;
 
 public class dedasSgeveci extends GraphicsProgram{
+	private Boolean vax;
 	private GOval ball;
 	public void run(){
 		makeBall();
 		addMouseListeners();
+		while(true){
+			moveBall();
+		}
 		
 	}
 	private void moveBall() {
-		while(true){
+		while(vax){
 			ball.move(0, 50);
 			pause(100);
 		}
@@ -25,7 +29,6 @@ public class dedasSgeveci extends GraphicsProgram{
 		GOval obj = (GOval)getElementAt(e.getX(), e.getY());
 		if(obj != null){
 			obj = ball;
-			moveBall();
 		}
 		
 	}
