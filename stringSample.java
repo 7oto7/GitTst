@@ -24,7 +24,9 @@ public class stringSample extends ConsoleProgram{
 
 			    GOval o = new GOval(2, 1); // width, height
 
-			    println(racxa(x, 2, o));
+//			    println(racxa(x, 2, o));
+			    println(12 / 5 + 2.4 / 2 + 2 / 5);
+
 			    println(racxa(y, x / 2 + x, o));
 
 			  }
