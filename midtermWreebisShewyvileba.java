@@ -35,7 +35,7 @@ public class midtermWreebisShewyvileba extends GraphicsProgram{
 		for (int i = 0; i < CIRCLE_NUM; i++) {
 			drawCircles();
 		}
-		circleNum = CIRCLE_NUM;
+		circleNum = 2 * CIRCLE_NUM;
 	}
 		public void run(){
 			while(circleNum != 0){
