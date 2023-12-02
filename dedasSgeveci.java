@@ -24,10 +24,10 @@ public class dedasSgeveci extends GraphicsProgram{
 		GOval obj = (GOval)getElementAt(e.getX(), e.getY());
 		if(obj != null){
 			obj = ball;
-			while(vax){
-				obj.move(0, 5);
-				pause(200);
-			}
+			for (int i = 0; i < 10; i++) { // Move the ball 10 times
+	            ball.move(0, 5);
+	            pause(200);
+	        }
 		} 
 		
 	}
