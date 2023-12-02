@@ -34,7 +34,7 @@ public class stringSample extends ConsoleProgram{
 
 			    x = varesiRacxa(x / y, x + (int) o.getHeight(), s);
 			    o.scale(2);
-			    y = varesiRacxa(x, y + (int) o.getHeight(), s);
+			   // y = varesiRacxa(x, y + (int) o.getHeight(), s);
 
 			    return x + y;
 			  }
