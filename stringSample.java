@@ -24,9 +24,6 @@ public class stringSample extends ConsoleProgram{
 
 			    GOval o = new GOval(2, 1); // width, height
 
-			    o.scale(2);
-			    double a = o.getHeight();
-			    println(a);
 			    println(racxa(x, 2, o));
 			    println(racxa(y, x / 2 + x, o));
 
@@ -44,6 +41,7 @@ public class stringSample extends ConsoleProgram{
 
 			  public int varesiRacxa(double x, int y, String s) {
 			    int z = (int) x + s.charAt(0) - s.charAt(1);
+			    System.out.println("vax");
 			    s = s.substring(1);
 
 			    return z + y;
