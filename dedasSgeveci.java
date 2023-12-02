@@ -29,6 +29,8 @@ public class dedasSgeveci extends GraphicsProgram{
 		GOval obj = (GOval)getElementAt(e.getX(), e.getY());
 		if(obj != null){
 			obj = ball;
+		} else {
+			vax = false;
 		}
 		
 	}
