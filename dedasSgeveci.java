@@ -19,7 +19,7 @@ public class dedasSgeveci extends GraphicsProgram{
 		GOval obj = (GOval)getElementAt(e.getX(), e.getY());
 		if(obj != null){
 			while(true){
-			obj.move(0, 5);
+			obj.move(0, 50);
 			pause(100);
 		}
 		}
