@@ -50,6 +50,7 @@ public class midtermWreebisShewyvileba extends GraphicsProgram{
 			Color color = random.nextColor();
 			drawCircle(color);
 			drawCircle(color);
+			circleNum += 2;
 		}
 		
 		private void drawCircle(Color color){
@@ -66,6 +67,7 @@ public class midtermWreebisShewyvileba extends GraphicsProgram{
 					if(last.getColor() == obj.getColor()) {
 						remove(obj);
 						remove(last);
+						circleNum -= 2;
 					} else {
 						last = obj;
 					}
