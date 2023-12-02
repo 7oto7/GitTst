@@ -44,6 +44,7 @@ public class Midterm2022Session1Grid extends GraphicsProgram {
 
 	public void mouseClicked(MouseEvent e) {
 		GRect obj = (GRect) getElementAt(e.getX(), e.getY());
+		System.out.println("blead");
 		if (obj == null) {
 			return;
 		}
