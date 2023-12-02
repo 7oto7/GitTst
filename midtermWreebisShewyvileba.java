@@ -24,7 +24,7 @@ public class midtermWreebisShewyvileba extends GraphicsProgram{
 //		int d = a + b;
 		private static final int CIRCLE_D = 40;
 		private static final int CIRCLE_NUM = 5;
-		private static final int DELAY = 2000;
+		private static final int DELAY = 3000;
 		
 		private int circleNum;
 		private RandomGenerator random = RandomGenerator.getInstance();
