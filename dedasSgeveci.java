@@ -28,7 +28,7 @@ public class dedasSgeveci extends GraphicsProgram{
 		ball.setFilled(true);
 		add(ball, 100, 100);
 	}
-	public void mouseclicked(MouseEvent e){
+	public void mouseClicked(MouseEvent e){
 		GOval obj = (GOval)getElementAt(e.getX(), e.getY());
 		if(obj != null){
 			obj = ball;
