@@ -5,6 +5,7 @@ import acm.program.GraphicsProgram;
 
 public class dedasSgeveci extends GraphicsProgram{
 	private GOval ball;
+	private Boolean vax = false;
 	public void run(){
 		makeBall();
 		addMouseListeners();
@@ -19,10 +20,11 @@ public class dedasSgeveci extends GraphicsProgram{
 		add(ball, 100, 100);
 	}
 	public void mouseClicked(MouseEvent e){
+		vax = !vax;
 		GOval obj = (GOval)getElementAt(e.getX(), e.getY());
 		if(obj != null){
 			obj = ball;
-			while(true){
+			while(vax){
 				obj.move(0, 5);
 				pause(200);
 			}
