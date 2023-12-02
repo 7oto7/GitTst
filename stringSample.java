@@ -26,15 +26,20 @@ public class stringSample extends ConsoleProgram{
 
 		    GOval o = new GOval(2, 1); // width, height
 
-		    println(racxa(x));
+		    println(racxa(x, y));
 
 		  }
 
-		  public int racxa(int x) {
+		  public int racxa(int x, int y) {
 
-		    x = 9;
+		    x = adddd(y);
 
 		    return x;
 		  }
+
+		private int adddd(int y) {
+			y = 25;
+			return y;
+		}
 
 }
