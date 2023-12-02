@@ -4,7 +4,7 @@ public class midtermAB extends ConsoleProgram {
 	public void run() {
 		String s = "abab";
 		//int count = countAB1(s);
-		int count = countAB2(s);
+		int count = countAB(s);
 		println(count);
 	}
 
@@ -20,17 +20,28 @@ public class midtermAB extends ConsoleProgram {
         return a == b;
     }
     // brute force solution
-    private int countAB2(String s){
+	
+	
+	
+	private int countAB(String s){
         int ans = 0;
+        String used = "";
         for(int i = 0; i < s.length(); i++){
-            for(int j = i + 1; j < s.length(); j++){
+            for(int j = i + 1; j <= s.length(); j++){
                 String s1 = s.substring(i,j);
-                if(check(s1)) ans++;
+                System.out.println(s1);
+                if(!used.contains(' ' + s1 +  ' ')){
+                    System.out.println("z");
+                    if(check(s1))
+                        ans++;
+                    used += ' ' + s1 + ' ';
+                }
             }
         }
 
         return ans;
     }
+ 
 //	private int countAB1(String s) {
 //		int ans = 0;
 //		for (int i = 0; i < s.length(); i++) {
