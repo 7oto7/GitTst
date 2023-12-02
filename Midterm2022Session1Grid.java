@@ -57,7 +57,7 @@ public class Midterm2022Session1Grid extends GraphicsProgram {
 			} else {
 				firstBlack.setFillColor(Color.WHITE);
 				firstBlack = secondBlack;
-				//secondBlack = obj;
+				secondBlack = obj;
 			}
 		} else {
 			obj.setFillColor(Color.WHITE);
