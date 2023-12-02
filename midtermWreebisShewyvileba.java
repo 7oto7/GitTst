@@ -40,9 +40,9 @@ public class midtermWreebisShewyvileba extends GraphicsProgram{
 		public void run(){
 			while(circleNum != 0){
 				drawCircles();
+				circleNum += 2;
 				pause(DELAY);
 			}
-			pause(10);
 		}
 		
 		
@@ -51,7 +51,6 @@ public class midtermWreebisShewyvileba extends GraphicsProgram{
 			Color color = random.nextColor();
 			drawCircle(color);
 			drawCircle(color);
-			circleNum += 2;
 		}
 		
 		private void drawCircle(Color color){
