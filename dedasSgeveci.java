@@ -8,7 +8,7 @@ public class dedasSgeveci extends GraphicsProgram{
 		
 	}
 	private void makeBall() {
-		ball = new GOval(20, 20);
+		ball = new GOval(40, 40);
 		ball.setFilled(true);
 		add(ball, 100, 100);
 	}
