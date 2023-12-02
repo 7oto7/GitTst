@@ -23,13 +23,20 @@ public class midtermWreebisShewyvileba extends GraphicsProgram{
 //		char c = (char) (a + b);
 //		int d = a + b;
 		private static final int CIRCLE_D = 40;
-		private static final int CIRCLE_NUM = 5;
+		private static final int CIRCLE_NUM = 1;
 		private static final int DELAY = 3000;
 		
 		private int circleNum;
 		private RandomGenerator random = RandomGenerator.getInstance();
 		private GObject last;
-		
+
+	public void init() {
+		addMouseListeners();
+		for (int i = 0; i < CIRCLE_NUM; i++) {
+			drawCircles();
+		}
+		circleNum = CIRCLE_NUM;
+	}
 		public void run(){
 			while(circleNum != 0){
 				drawCircles();
@@ -37,13 +44,7 @@ public class midtermWreebisShewyvileba extends GraphicsProgram{
 			}
 		}
 		
-		public void init(){
-			addMouseListeners();
-			for(int i = 0; i < CIRCLE_NUM; i++){
-				drawCircles();
-			}
-			circleNum = CIRCLE_NUM;
-		}
+		
 		
 		private void drawCircles(){
 			Color color = random.nextColor();
