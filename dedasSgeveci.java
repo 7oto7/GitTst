@@ -15,10 +15,13 @@ public class dedasSgeveci extends GraphicsProgram{
 		
 	}
 	private void moveBall() {
+		if(ball != null){
 		while(vax){
 			ball.move(0, 50);
 			pause(100);
+		}	
 		}
+		
 	}
 	private void makeBall() {
 		ball = new GOval(40, 40);
