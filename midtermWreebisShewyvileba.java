@@ -64,7 +64,7 @@ public class midtermWreebisShewyvileba extends GraphicsProgram{
 			GObject obj = getElementAt(e.getX(), e.getY());
 			if(obj != null){
 				if(last != null){
-					if(last.getColor() == obj.getColor()) {
+					if(last.getColor() == obj.getColor() && last != obj) {
 						remove(obj);
 						remove(last);
 						circleNum -= 2;
