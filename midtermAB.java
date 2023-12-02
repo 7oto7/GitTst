@@ -24,7 +24,7 @@ public class midtermAB extends ConsoleProgram {
         int ans = 0;
         for(int i = 0; i < s.length(); i++){
             for(int j = i + 1; j < s.length(); j++){
-                String s1 = s.substring(i,j) + s.charAt(j);
+                String s1 = s.substring(i,j);
                 if(check(s1)) ans++;
             }
         }
