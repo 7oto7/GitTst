@@ -5,7 +5,7 @@ import acm.program.GraphicsProgram;
 
 public class dedasSgeveci extends GraphicsProgram{
 	private GOval ball;
-	private Boolean vax = false;
+	private Boolean vax ;
 	public void run(){
 		makeBall();
 		addMouseListeners();
