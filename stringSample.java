@@ -36,7 +36,7 @@ public class stringSample extends ConsoleProgram{
 			    o.scale(2);
 			    y = varesiRacxa(x, y + (int) o.getHeight(), s);
 
-			    return x ;
+			    return y;
 			  }
 
 			  public int varesiRacxa(double x, int y, String s) {
