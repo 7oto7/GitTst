@@ -1,3 +1,4 @@
+//დაწერეთ პროგრამა რომელიც წაიკითხავს თავის თავს ფაილიდან და დაბეჭდავს კონსოლში
 import java.io.BufferedReader;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
@@ -7,7 +8,7 @@ import acm.program.ConsoleProgram;
 
 public class problem52 extends ConsoleProgram{
 //	private static final String FILENAME = "nonExistant file";
-	private static final String FILENAME = "src/Problem52.java";
+	private static final String FILENAME = "Problem52.java";
 	public void run() {
 		try {
 			BufferedReader reader = new BufferedReader(new FileReader(FILENAME));
