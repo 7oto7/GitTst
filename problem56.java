@@ -24,9 +24,10 @@ public class problem56 extends ConsoleProgram{
 				int b = nums[j];
 				if(b < a){
 					a = b;
+					nums[i] = b;
+					nums[j] = a;
 				}
 			}
-			nums[i] = a;
 		}
 		String str = Arrays.toString(nums);
 //		println(str);
