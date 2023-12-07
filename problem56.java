@@ -11,22 +11,38 @@ public class problem56 extends ConsoleProgram{
 		for(int i = 0; i < n; i++){
 			nums[i] = readInt("Enter numbre: ");
 		}
-		String sorted = sort(nums);
-		println(sorted);
+//		String sorted = sort(nums);
+//		println(sorted);
 		
 	}
-	private String sort(int[] nums){
+	private void sort(int[] nums){
 		for(int i = 0; i < nums.length; i++){
-			int a = nums[i];
-			for(int j = i + 1; j < nums.length; j++){
-				int b = nums[j];
-				if(b < a){
-					a = b;
-				}
-			}
-			nums[i] = a;
+			int j = findMinIndex(nums, i);
+			swap(nums, i, j);
+//			int a = nums[i];
+//			for(int j = i + 1; j < nums.length; j++){
+//				int b = nums[j];
+//				if(b < a){
+//					a = b;
+//				}
+//			}
+//			nums[i] = a;
 		}
-		String str = Arrays.toString(nums);
-		return str;
+//		String str = Arrays.toString(nums);
+//		return str;
+	}
+	private void swap(int[] nums, int i, int j) {
+		int tmp = nums[i]
+				;
+	}
+	
+	private int findMinIndex(int[] nums, int i) {
+		int minIndex = i;
+		for(int j = i; j < nums.length; j++){
+			if(nums[j] < nums[minIndex]){
+				minIndex = j;
+			}
+		}
+		return minIndex;
 	}
 }
