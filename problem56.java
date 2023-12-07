@@ -20,10 +20,11 @@ public class problem56 extends ConsoleProgram{
 //			int j = findMinIndex(nums, i);
 //			swap(nums, i, j);
 			int a = nums[i];
+			int a2 = a;
 			for(int j = i + 1; j < nums.length; j++){
 				int b = nums[j];
-				if(b < a){
-					a = b;
+				if(b < a2){
+					a2 = b;
 					nums[i] = b;
 					nums[j] = a;
 				}
