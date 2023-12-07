@@ -21,9 +21,9 @@ public class problem56 extends ConsoleProgram {
 			int j = findMinIndex(nums, i);
 			swap(nums, i, j);
 
-			String str = Arrays.toString(nums);
 		}
-		println(nums);
+		String str = Arrays.toString(nums);
+		println(str);
 	}
 
 	private void swap(int[] nums, int i, int j) {
