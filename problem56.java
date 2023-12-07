@@ -22,8 +22,8 @@ public class problem56 extends ConsoleProgram {
 			swap(nums, i, j);
 
 			String str = Arrays.toString(nums);
-			println(str);
 		}
+		println(nums);
 	}
 
 	private void swap(int[] nums, int i, int j) {
