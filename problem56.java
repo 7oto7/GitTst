@@ -11,7 +11,7 @@ public class problem56 extends ConsoleProgram{
 		for(int i = 0; i < n; i++){
 			nums[i] = readInt("Enter numbre: ");
 		}
-//		String sorted = sort(nums);
+		sort(nums);
 //		println(sorted);
 		
 	}
@@ -28,12 +28,15 @@ public class problem56 extends ConsoleProgram{
 //			}
 //			nums[i] = a;
 		}
-//		String str = Arrays.toString(nums);
+		String str = Arrays.toString(nums);
+		println(str);
 //		return str;
 	}
 	private void swap(int[] nums, int i, int j) {
-		int tmp = nums[i]
-				;
+		int tmp = nums[i];
+		nums[i] = nums[j];
+		nums[j] = tmp;
+				
 	}
 	
 	private int findMinIndex(int[] nums, int i) {
