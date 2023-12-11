@@ -169,3 +169,287 @@ public class Hangman extends ConsoleProgram {
 
 }
 
+
+
+
+
+
+
+
+
+
+
+
+
+/*
+ * File: HangmanCanvas.java
+ * ------------------------
+ * This file keeps track of the Hangman display.
+ */
+
+import acm.graphics.*;
+
+public class HangmanCanvas extends GCanvas {
+	GLabel lbl;
+	GLabel lbl2;
+	private int chances = 8;
+	private String usedChars = "";
+	/** Resets the display so that only the scaffold appears */
+	public void reset() {
+		/* You fill this in */
+		removeAll();
+		
+
+		drawScaffold();
+
+	}
+
+	private void rightFoot() {
+		GLine ln1 = new GLine(getWidth() / 2 + HIP_WIDTH,
+				getHeight() / 2 - SCAFFOLD_HEIGHT / 2 - 20 + ROPE_LENGTH + 2 * HEAD_RADIUS + BODY_LENGTH + LEG_LENGTH,
+				getWidth() / 2 + HIP_WIDTH + FOOT_LENGTH,
+				getHeight() / 2 - SCAFFOLD_HEIGHT / 2 - 20 + ROPE_LENGTH + 2 * HEAD_RADIUS + BODY_LENGTH + LEG_LENGTH);
+		add(ln1);
+	}
+
+	private void leftFoot() {
+		GLine ln1 = new GLine(getWidth() / 2 - HIP_WIDTH,
+				getHeight() / 2 - SCAFFOLD_HEIGHT / 2 - 20 + ROPE_LENGTH + 2 * HEAD_RADIUS + BODY_LENGTH + LEG_LENGTH,
+				getWidth() / 2 - HIP_WIDTH - FOOT_LENGTH,
+				getHeight() / 2 - SCAFFOLD_HEIGHT / 2 - 20 + ROPE_LENGTH + 2 * HEAD_RADIUS + BODY_LENGTH + LEG_LENGTH);
+		add(ln1);
+	}
+
+	private void rightLeg() {
+		GLine ln1 = new GLine(getWidth() / 2,
+				getHeight() / 2 - SCAFFOLD_HEIGHT / 2 - 20 + ROPE_LENGTH + 2 * HEAD_RADIUS + BODY_LENGTH,
+				getWidth() / 2 + HIP_WIDTH,
+				getHeight() / 2 - SCAFFOLD_HEIGHT / 2 - 20 + ROPE_LENGTH + 2 * HEAD_RADIUS + BODY_LENGTH);
+		add(ln1);
+		GLine ln2 = new GLine(getWidth() / 2 + HIP_WIDTH,
+				getHeight() / 2 - SCAFFOLD_HEIGHT / 2 - 20 + ROPE_LENGTH + 2 * HEAD_RADIUS + BODY_LENGTH,
+				getWidth() / 2 + HIP_WIDTH,
+				getHeight() / 2 - SCAFFOLD_HEIGHT / 2 - 20 + ROPE_LENGTH + 2 * HEAD_RADIUS + BODY_LENGTH + LEG_LENGTH);
+		add(ln2);
+	}
+
+	private void leftLeg() {
+		GLine ln1 = new GLine(getWidth() / 2,
+				getHeight() / 2 - SCAFFOLD_HEIGHT / 2 - 20 + ROPE_LENGTH + 2 * HEAD_RADIUS + BODY_LENGTH,
+				getWidth() / 2 - HIP_WIDTH,
+				getHeight() / 2 - SCAFFOLD_HEIGHT / 2 - 20 + ROPE_LENGTH + 2 * HEAD_RADIUS + BODY_LENGTH);
+		add(ln1);
+		GLine ln2 = new GLine(getWidth() / 2 - HIP_WIDTH,
+				getHeight() / 2 - SCAFFOLD_HEIGHT / 2 - 20 + ROPE_LENGTH + 2 * HEAD_RADIUS + BODY_LENGTH,
+				getWidth() / 2 - HIP_WIDTH,
+				getHeight() / 2 - SCAFFOLD_HEIGHT / 2 - 20 + ROPE_LENGTH + 2 * HEAD_RADIUS + BODY_LENGTH + LEG_LENGTH);
+		add(ln2);
+	}
+
+	private void rightHand() {
+		GLine ln2 = new GLine(getWidth() / 2,
+				getHeight() / 2 - SCAFFOLD_HEIGHT / 2 - 20 + ROPE_LENGTH + 2 * HEAD_RADIUS + ARM_OFFSET_FROM_HEAD,
+				getWidth() / 2 + UPPER_ARM_LENGTH,
+				getHeight() / 2 - SCAFFOLD_HEIGHT / 2 - 20 + ROPE_LENGTH + 2 * HEAD_RADIUS + ARM_OFFSET_FROM_HEAD);
+		add(ln2);
+		GLine ln1 = new GLine(getWidth() / 2 + UPPER_ARM_LENGTH,
+				getHeight() / 2 - SCAFFOLD_HEIGHT / 2 - 20 + ROPE_LENGTH + 2 * HEAD_RADIUS + ARM_OFFSET_FROM_HEAD,
+				getWidth() / 2 + UPPER_ARM_LENGTH, getHeight() / 2 - SCAFFOLD_HEIGHT / 2 - 20 + ROPE_LENGTH
+						+ 2 * HEAD_RADIUS + ARM_OFFSET_FROM_HEAD + LOWER_ARM_LENGTH);
+		add(ln1);
+	}
+
+	private void leftHand() {
+		GLine ln1 = new GLine(getWidth() / 2,
+				getHeight() / 2 - SCAFFOLD_HEIGHT / 2 - 20 + ROPE_LENGTH + 2 * HEAD_RADIUS + ARM_OFFSET_FROM_HEAD,
+				getWidth() / 2 - UPPER_ARM_LENGTH,
+				getHeight() / 2 - SCAFFOLD_HEIGHT / 2 - 20 + ROPE_LENGTH + 2 * HEAD_RADIUS + ARM_OFFSET_FROM_HEAD);
+		add(ln1);
+		GLine ln2 = new GLine(getWidth() / 2 - UPPER_ARM_LENGTH,
+				getHeight() / 2 - SCAFFOLD_HEIGHT / 2 - 20 + ROPE_LENGTH + 2 * HEAD_RADIUS + ARM_OFFSET_FROM_HEAD,
+				getWidth() / 2 - UPPER_ARM_LENGTH, getHeight() / 2 - SCAFFOLD_HEIGHT / 2 - 20 + ROPE_LENGTH
+						+ 2 * HEAD_RADIUS + ARM_OFFSET_FROM_HEAD + LOWER_ARM_LENGTH);
+		add(ln2);
+
+	}
+
+	private void drawBody() {
+		GLine ln = new GLine(getWidth() / 2, getHeight() / 2 - SCAFFOLD_HEIGHT / 2 - 20 + ROPE_LENGTH + 2 * HEAD_RADIUS,
+				getWidth() / 2, getHeight() / 2 - SCAFFOLD_HEIGHT / 2 - 20 + ROPE_LENGTH + 2 * HEAD_RADIUS + BODY_LENGTH);
+		add(ln);
+	}
+
+	private void drawHead() {
+		GOval oval = new GOval(2 * HEAD_RADIUS, 2 * HEAD_RADIUS);
+		add(oval, getWidth() / 2 - HEAD_RADIUS, getHeight() / 2 - SCAFFOLD_HEIGHT / 2 - 20 + ROPE_LENGTH);
+	}
+
+	private void drawScaffold() {
+		GLine scaffold = new GLine(getWidth() / 2 - BEAM_LENGTH, getHeight() / 2 + SCAFFOLD_HEIGHT / 2 - 20,
+				getWidth() / 2 - BEAM_LENGTH, getHeight() / 2 - SCAFFOLD_HEIGHT / 2 - 20);
+		add(scaffold);
+		GLine beam = new GLine(getWidth() / 2 - BEAM_LENGTH, getHeight() / 2 - SCAFFOLD_HEIGHT / 2 - 20, getWidth() / 2,
+				getHeight() / 2 - SCAFFOLD_HEIGHT / 2 - 20);
+		add(beam);
+		GLine rope = new GLine(getWidth() / 2, getHeight() / 2 - SCAFFOLD_HEIGHT / 2 - 20, getWidth() / 2,
+				getHeight() / 2 - SCAFFOLD_HEIGHT / 2 - 20 + ROPE_LENGTH);
+		add(rope);
+	}
+
+	/**
+	 * Updates the word on the screen to correspond to the current state of the
+	 * game. The argument string shows what letters have been guessed so far;
+	 * unguessed letters are indicated by hyphens.
+	 */
+	//this function shows correct symbols which is guessed by user
+	public void displayWord(String word) {
+		/* You fill this in */
+		if(lbl != null){
+			remove(lbl);
+		}
+		lbl = new GLabel(word);
+		lbl.setFont("Helvetica-30");
+		add(lbl, getWidth() / 2 - BEAM_LENGTH, getHeight() / 2 + SCAFFOLD_HEIGHT / 2 - 20  + lbl.getHeight() - 5);
+	}
+
+	/**
+	 * Updates the display to correspond to an incorrect guess by the user.
+	 * Calling this method causes the next body part to appear on the scaffold
+	 * and adds the letter to the list of incorrect guesses that appears at the
+	 * bottom of the window.
+	 */
+	//when chances is reduced, this function shows already used wrong chars
+	public void noteIncorrectGuess(char letter) {
+		chances--;
+		if (chances == 7) {
+			drawHead();
+		}
+		if (chances == 6) {
+			drawBody();
+		}
+		if (chances == 5) {
+			leftHand();
+
+		}
+		if (chances== 4) {
+			rightHand();
+		}
+		if (chances == 3) {
+			leftLeg();
+
+		}
+		if (chances == 2) {
+			rightLeg();
+
+		}
+		if (chances == 1) {
+			leftFoot();
+		}
+		if (chances == 0) {
+			rightFoot();
+
+		}
+		/* You fill this in */
+		letter = Character.toUpperCase(letter);//convert any character to uppercase
+		if(!usedChars.contains("" + letter)){ //if word do not contains entered char
+			char uppersCaseChar = Character.toUpperCase(letter);
+			usedChars += uppersCaseChar;
+		if(lbl2 != null){
+			remove(lbl2);
+		}
+		lbl2 = new GLabel(usedChars);
+		lbl2.setFont("Helvetica-15");
+		add(lbl2, getWidth() / 2 - BEAM_LENGTH, getHeight() / 2 + SCAFFOLD_HEIGHT / 2 - 20 + lbl.getHeight() + 10);
+		}
+		
+		
+	}
+
+	/* Constants for the simple version of the picture (in pixels) */
+	private static final int SCAFFOLD_HEIGHT = 360;
+	private static final int BEAM_LENGTH = 144;
+	private static final int ROPE_LENGTH = 18;
+	private static final int HEAD_RADIUS = 36;
+	private static final int BODY_LENGTH = 144;
+	private static final int ARM_OFFSET_FROM_HEAD = 28;
+	private static final int UPPER_ARM_LENGTH = 72;
+	private static final int LOWER_ARM_LENGTH = 44;
+	private static final int HIP_WIDTH = 36;
+	private static final int LEG_LENGTH = 108;
+	private static final int FOOT_LENGTH = 28;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+* File: HangmanLexicon.java
+* -------------------------
+* This file contains a stub implementation of the HangmanLexicon
+* class that you will reimplement for Part III of the assignment.
+*/
+
+import java.io.BufferedReader;
+import java.io.FileReader;
+import java.io.IOException;
+import java.util.ArrayList;
+
+
+public class HangmanLexicon {
+	private ArrayList<String> list = new ArrayList<String>();
+	public HangmanLexicon() { //reads hangmanLexicon file and keeps it in array list
+		try {
+			BufferedReader rd = new BufferedReader(new FileReader("HangmanLexicon.txt"));
+			while (true) {
+				String line = rd.readLine();
+				if (line == null) {
+					break;
+				}
+				list.add(line);
+			}
+			rd.close();
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+	}
+
+	/** Returns the number of words in the lexicon. */
+	public int getWordCount() {
+		return list.size();
+	}
+
+	/** Returns the word at the specified index. */
+	public String getWord(int index) {
+		return list.get(index);
+	}
+
+}
+
+
+
+
+
+
+
+
+
