@@ -8,7 +8,7 @@ public class problem60 extends ConsoleProgram{
 	//private ArrayList<Integer> reversed;
 	public void run(){
 		while(true){
-			int n = readInt("Enter number");
+			int n = readInt("Enter number: ");
 			if(n == -1){
 				break;
 			}
