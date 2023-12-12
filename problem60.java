@@ -14,7 +14,8 @@ public class problem60 extends ConsoleProgram{
 			}
 			list.add(n);
 		}
-		println(reversedList(list));
+		String reversedString = reversedList(list);
+		println(reversedString);
 	}
 	private String reversedList(ArrayList<Integer> list2) {
 		String reversed = "";
