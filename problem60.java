@@ -20,7 +20,7 @@ public class problem60 extends ConsoleProgram{
 	private String reversedList(ArrayList<Integer> list2) {
 		String reversed = "[]";
 		for(int i = list2.size() - 1; i >= 0; i--){
-			reversed = " " + list2.get(i);
+			reversed = reversed + " " + list2.get(i);
 		}
 		
 		return reversed;
