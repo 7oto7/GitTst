@@ -23,7 +23,7 @@ public class problem60 extends ConsoleProgram{
 		int[] reversed = new int[list2.size()];
 		for(int i = list2.size() - 1; i >= 0; i--){
 //			reversed = reversed + " " + list2.get(i);
-			reversed[list2.size() - i] = list2.get(i);
+			reversed[list2.size() - 1 - i] = list2.get(i);
 		}
 
 		return Arrays.toString(reversed);
