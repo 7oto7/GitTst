@@ -18,7 +18,7 @@ public class problem60 extends ConsoleProgram{
 		println(reversedString);
 	}
 	private String reversedList(ArrayList<Integer> list2) {
-		String reversed = "[]";
+		String reversed = "";
 		for(int i = list2.size() - 1; i >= 0; i--){
 			reversed = reversed + " " + list2.get(i);
 		}
