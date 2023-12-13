@@ -29,7 +29,7 @@ public class problem57 extends ConsoleProgram {
 		
 		return Arrays.equals(counts1, counts2);
 	}
-	
+	 
 	private int[] getCountArray(String s) {
 		int[] counts = new int[26];
 		for(int i = 0; i < s.length(); i++) {
