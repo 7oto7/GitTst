@@ -36,7 +36,7 @@ public class problem56 extends ConsoleProgram {
 	private int findMinIndex(int[] nums, int i) {
 		int minIndex = i;
 		for (int j = i; j < nums.length; j++) {
-			if (nums[j] > nums[minIndex]) {
+			if (nums[j] < nums[minIndex]) {
 				minIndex = j;
 			}
 		}
