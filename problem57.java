@@ -23,9 +23,9 @@ public class problem57 extends ConsoleProgram {
 		int[] counts1 = getCountArray(str1);
 		int[] counts2 = getCountArray(str2);
 		
-		println("counts for debug");
-		println(Arrays.toString(counts1));
-		println(Arrays.toString(counts2));
+//		println("counts for debug");
+//		println(Arrays.toString(counts1));
+//		println(Arrays.toString(counts2));
 		
 		return Arrays.equals(counts1, counts2);
 	}
