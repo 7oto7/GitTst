@@ -18,7 +18,7 @@ public class problem57 extends ConsoleProgram {
 
 	private boolean areAnagrams(String str1, String str2) {
 		if(str1.equals(str2)) {
-			return true;
+			return false;
 		}
 		int[] counts1 = getCountArray(str1);
 		int[] counts2 = getCountArray(str2);
