@@ -13,10 +13,10 @@ public class drawTwoPictures extends GraphicsProgram {
 
     public void run() {
         GImage image1 = new GImage("C:\\Users\\User\\Pictures\\FB_IMG_1702653878964.jpg");
-        GImage image2 = new GImage("C:\\Users\\User\\Downloads\\HD-wallpaper-monica-bellucci-actress-face-woman-beauty.jpg");
+       // GImage image2 = new GImage("C:\\Users\\User\\Downloads\\HD-wallpaper-monica-bellucci-actress-face-woman-beauty.jpg");
 
         impress(image1, 0, 0);
-        impress(image2, image1.getWidth(), 0);
+      //  impress(image2, image1.getWidth(), 0);
     }
 
     private void impress(GImage image, double xOffset, double yOffset) {
