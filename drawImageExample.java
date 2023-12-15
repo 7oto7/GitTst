@@ -13,8 +13,10 @@ public class drawImageExample extends GraphicsProgram {
 
 	public void run() {
 		//GImage image = new GImage("C:\\Users\\User\\Pictures\\download.jpg");
-		GImage image = new GImage("C:\\Users\\User\\Pictures\\HD-wallpaper-monica-bellucci-actress-face-woman-beauty.jpg");
+		//GImage image = new GImage("C:\\Users\\User\\Pictures\\HD-wallpaper-monica-bellucci-actress-face-woman-beauty.jpg");
+		GImage image = new GImage("C:\\Users\\User\\Downloads\\HD-wallpaper-monica-bellucci-actress-face-woman-beauty.jpg");
 		impress(image);
+	
 	}
 
 	private void impress(GImage image) {
