@@ -12,8 +12,8 @@ public class drawTwoPictures extends GraphicsProgram {
     private RandomGenerator rgen = RandomGenerator.getInstance();
 
     public void run() {
-        GImage image1 = new GImage("C:\\Users\\User\\Desktop\\HD-wallpaper-monica-bellucci-actress-face-woman-beauty.jpg");
-        GImage image2 = new GImage("C:\\Users\\User\\Desktop\\FB_IMG_1702653878964.jpg");
+        GImage image1 = new GImage("C:/Users/User/Pictures/HD-wallpaper-monica-bellucci-actress-face-woman-beauty.jpg");
+        GImage image2 = new GImage("C:/Users/User/Pictures/FB_IMG_1702653878964.jpg");
 
         impress(image1, 0, 0);
         impress(image2, image1.getWidth(), 0);
