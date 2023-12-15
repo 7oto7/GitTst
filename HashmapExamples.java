@@ -13,6 +13,7 @@ public class HashmapExamples extends ConsoleProgram{
 		
 		println(hashMap.size());
 		println(hashMap);
+		println(hashMap.toString());
 		
 		for( String x : hashMap.keySet()){
 			println(x + " " + hashMap.get(x));
