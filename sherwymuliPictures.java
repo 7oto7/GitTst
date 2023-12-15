@@ -1,53 +1,41 @@
-import java.awt.Color;
+import java.awt.Graphics2D;
+import java.awt.image.BufferedImage;
+import java.io.File;
+import javax.imageio.ImageIO;
 
-import acm.graphics.GImage;
-import acm.graphics.GObject;
-import acm.graphics.GOval;
-import acm.program.GraphicsProgram;
-import acm.util.RandomGenerator;
+public class sherwymuliPictures {
+    public static void main(String[] args) {
+        try {
+            // Load the images
+            BufferedImage image1 = ImageIO.read(new File("path/to/first/image.jpg"));
+            BufferedImage image2 = ImageIO.read(new File("path/to/second/image.jpg"));
 
-public class sherwymuliPictures extends GraphicsProgram {
-	private static final int NUMBER_OF_PIXELS = 1100000;
-	private static final int OVAL_SIZE = 1;
-	private RandomGenerator rgen = RandomGenerator.getInstance();
+            // Create a new BufferedImage with a width and height that can accommodate both images
+            int combinedWidth = Math.max(image1.getWidth(), image2.getWidth());
+            int combinedHeight = Math.max(image1.getHeight(), image2.getHeight());
+            BufferedImage combinedImage = new BufferedImage(combinedWidth, combinedHeight, BufferedImage.TYPE_INT_ARGB);
 
-	public void run() {
-		// GImage image = new GImage("C:\\Users\\User\\Pictures\\download.jpg");
-		// GImage image = new
-		// GImage("C:\\Users\\User\\Downloads\\HD-wallpaper-monica-bellucci-actress-face-woman-beauty.jpg");
-		GImage image2 = new GImage("C:/Users/User/Pictures/FB_IMG_1702653878964.jpg");
-		GImage image = new GImage("C:/Users/User/Pictures/HD-wallpaper-monica-bellucci-actress-face-woman-beauty.jpg");
-		impress(image, image2);
+            // Get the Graphics object from the combined image
+            Graphics2D g = combinedImage.createGraphics();
 
-	}
+            // Draw the first image at the top-left corner
+            g.drawImage(image1, 0, 0, null);
 
-	private void impress(GImage image, GImage image2) {
-		// TODO Auto-generated method stub
-		int[][] array = image.getPixelArray();
-		int[][] array2 = image2.getPixelArray();
+            // Draw the second image next to the first one
+            g.drawImage(image2, image1.getWidth(), 0, null);
 
-		for (int i = 0; i < NUMBER_OF_PIXELS; i++) {
-			if (rgen.nextBoolean()) {
-				int r = rgen.nextInt(array.length);
-				int c = rgen.nextInt(array[0].length);
-				Color color = new Color(array[r][c]);
-				add(getOval(c, r, color));
+            // Dispose of the Graphics object to free up resources
+            g.dispose();
 
-			} else {
-				int r = rgen.nextInt(array2.length);
-				int c = rgen.nextInt(array2[0].length);
-				Color color = new Color(array2[r][c]);
-				add(getOval(c, r, color));
-			}
+            // Save the merged image to a file
+            File outputFile = new File("path/to/output/mergedImage.jpg");
+            ImageIO.write(combinedImage, "jpg", outputFile);
 
-		}
-	}
+            System.out.println("Images merged successfully.");
 
-	private GObject getOval(int c, int r, Color color) {
-		// TODO Auto-generated method stub
-		GOval o = new GOval(c - OVAL_SIZE / 2, r - OVAL_SIZE / 2, OVAL_SIZE, OVAL_SIZE);
-		o.setFilled(true);
-		o.setColor(color);
-		return o;
-	}
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
 }
+
