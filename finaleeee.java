@@ -18,6 +18,7 @@ public class finaleeee extends GraphicsProgram {
 		//impress(image);
 		//impress(image2);
 		GLabel lb = new GLabel("Buy premium to unlock this picture");
+		add(lb);
 	}
 
 	private void impress(GImage image) {
