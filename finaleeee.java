@@ -15,10 +15,10 @@ public class finaleeee extends GraphicsProgram {
 	public void run() {
 		GImage image = new GImage("C:/Users/User/Pictures/adfbdae9847655fbcddc6538efd7da35.png");
 		GImage image2 = new GImage("C:/Users/User/Pictures/Screenshot 2023-12-15 204546.png");
-		//impress(image);
-		//impress(image2);
+		impress(image);
+		impress(image2);
 		GLabel lb = new GLabel("Buy premium to unlock this picture");
-		add(lb, 100, 300);
+		add(lb, 100, 250);
 	}
 
 	private void impress(GImage image) {
