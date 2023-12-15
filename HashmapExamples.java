@@ -8,10 +8,11 @@ public class HashmapExamples extends ConsoleProgram{
 		HashMap <String, Integer> hashMap = new HashMap <String, Integer>();
 		ArrayList <Integer> arrayList = new ArrayList <Integer>();
 		
-		hashMap.put("ABC", 3000);
 		hashMap.put("ABC", 2000);
+		hashMap.put("ABC", 3000);
 		
 		println(hashMap.size());
+		println(hashMap);
 		
 		for( String x : hashMap.keySet()){
 			println(x + " " + hashMap.get(x));
