@@ -10,5 +10,19 @@ public class problem61 extends ConsoleProgram{
 		for(int i = 0; i < n; i++){
 			array[i] = readInt();
 		}
+		
+		Boolean found = false;
+		for(int i  = 0; i < n; i++){
+			for(int j = i + 1; j < n; j++){
+				if(array[j] == m - array[i]){
+					found = true;
+					println(i + " " + j);
+					break;
+				}
+			}
+		}
+		if(!found){
+			println("NOT FOUND!!!");
+		}
 	}
 }
