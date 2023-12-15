@@ -7,7 +7,7 @@ import acm.program.GraphicsProgram;
 import acm.util.RandomGenerator;
 
 public class drawImageExample extends GraphicsProgram {
-	private static final int NUMBER_OF_PIXELS = 500;
+	private static final int NUMBER_OF_PIXELS = 5000;
 	private static final int OVAL_SIZE = 10;
 	private RandomGenerator rgen = RandomGenerator.getInstance();
 
