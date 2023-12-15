@@ -8,7 +8,14 @@ public class HashmapExamples extends ConsoleProgram{
 		HashMap <String, Integer> hashMap = new HashMap <String, Integer>();
 		ArrayList <Integer> arrayList = new ArrayList <Integer>();
 		
-		hashMap.put("ABC", 2000);
+		if(!hashMap.containsKey("ABC")){
+			hashMap.put("ABC", 2000);
+		}
+		hashMap.putIfAbsent("ABC", 3000);
+		
+		hashMap.getOrDefault(key, 7); //null is nacvlad abrunebs default mnishvnelobas (7)
+		hashMap.get(key);
+		
 		hashMap.put("ABC", 3000);
 		
 		println(hashMap.size());
