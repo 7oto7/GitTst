@@ -15,8 +15,8 @@ public class drawImageExample extends GraphicsProgram {
 		//GImage image = new GImage("C:\\Users\\User\\Pictures\\download.jpg");
 		//GImage image = new GImage("C:\\Users\\User\\Downloads\\HD-wallpaper-monica-bellucci-actress-face-woman-beauty.jpg");
 		//GImage image = new GImage("C:\\Users\\User\\Pictures\\FB_IMG_1702653878964.jpg");
-		//GImage image = new GImage("C:/Users/User/Pictures/a5bc8d853003468dd2b8828153973f45.jpg");
-		GImage image = new GImage("C:/Users/User/Pictures/adfbdae9847655fbcddc6538efd7da35.png");
+		GImage image = new GImage("C:/Users/User/Pictures/a5bc8d853003468dd2b8828153973f45.jpg");
+		//GImage image = new GImage("C:/Users/User/Pictures/adfbdae9847655fbcddc6538efd7da35.png");
 		impress(image);
 	
 	}
