@@ -21,7 +21,8 @@ public class drawImageExample extends GraphicsProgram {
 		    //madison bear
 		//GImage image = new GImage("C:/Users/User/Pictures/a5bc8d853003468dd2b8828153973f45.jpg");
 		    //just someone
-		GImage image = new GImage("C:/Users/User/Pictures/adfbdae9847655fbcddc6538efd7da35.png");
+		//GImage image = new GImage("C:/Users/User/Pictures/adfbdae9847655fbcddc6538efd7da35.png");
+		GImage image = new GImage("C:/Users/User/Pictures/three-naked-girls.jpg");
 		impress(image);
 	
 	}
