@@ -12,5 +12,9 @@ public class HashmapExamples extends ConsoleProgram{
 		hashMap.put("ABC", 2000);
 		
 		println(hashMap.size());
+		
+		for( String x : hashMap.keySet()){
+			println(x + " " + hashMap.get(x));
+		}
 	}
 }
