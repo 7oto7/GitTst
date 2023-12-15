@@ -12,24 +12,34 @@ public class sherwymuliPictures extends GraphicsProgram {
 	private RandomGenerator rgen = RandomGenerator.getInstance();
 
 	public void run() {
-		//GImage image = new GImage("C:\\Users\\User\\Pictures\\download.jpg");
-		//GImage image = new GImage("C:\\Users\\User\\Downloads\\HD-wallpaper-monica-bellucci-actress-face-woman-beauty.jpg");
-		GImage image = new GImage("C:\\Users\\User\\Pictures\\FB_IMG_1702653878964.jpg");
-		//GImage image = new GImage("C:/Users/User/Pictures/a5bc8d853003468dd2b8828153973f45.jpg");
-		impress(image);
-	
+		// GImage image = new GImage("C:\\Users\\User\\Pictures\\download.jpg");
+		// GImage image = new
+		// GImage("C:\\Users\\User\\Downloads\\HD-wallpaper-monica-bellucci-actress-face-woman-beauty.jpg");
+		GImage image2 = new GImage("C:\\Users\\User\\Pictures\\FB_IMG_1702653878964.jpg");
+		GImage image = new GImage("C:/Users/User/Pictures/a5bc8d853003468dd2b8828153973f45.jpg");
+		impress(image, image2);
+
 	}
 
-	private void impress(GImage image) {
+	private void impress(GImage image, GImage image2) {
 		// TODO Auto-generated method stub
 		int[][] array = image.getPixelArray();
+		int[][] array2 = image2.getPixelArray();
 
 		for (int i = 0; i < NUMBER_OF_PIXELS; i++) {
-			int r = rgen.nextInt(array.length);
-			int c = rgen.nextInt(array[0].length);
-			
-			Color color = new Color(array[r][c]);
-			add(getOval(c, r, color));
+			if (rgen.nextBoolean()) {
+				int r = rgen.nextInt(array.length);
+				int c = rgen.nextInt(array[0].length);
+				Color color = new Color(array[r][c]);
+				add(getOval(c, r, color));
+
+			} else {
+				int r = rgen.nextInt(array2.length);
+				int c = rgen.nextInt(array2[0].length);
+				Color color = new Color(array2[r][c]);
+				add(getOval(c, r, color));
+			}
+
 		}
 	}
 
