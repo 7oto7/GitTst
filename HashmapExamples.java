@@ -38,7 +38,7 @@ public class HashmapExamples extends ConsoleProgram {
 		arrayList.add(100);
 		arrayList.add(1022);
 		
-		
+		println(hashMap2.toString());
 		
 		
 		
