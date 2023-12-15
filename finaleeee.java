@@ -18,7 +18,8 @@ public class finaleeee extends GraphicsProgram {
 		impress(image);
 		impress(image2);
 		GLabel lb = new GLabel("Buy premium to unlock this picture");
-		add(lb, 100, 250);
+		lb.setFont("Helvetica-40");
+		add(lb, 150, 350);
 	}
 
 	private void impress(GImage image) {
