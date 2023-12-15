@@ -1,6 +1,7 @@
 import java.awt.Color;
 
 import acm.graphics.GImage;
+import acm.graphics.GLabel;
 import acm.graphics.GObject;
 import acm.graphics.GOval;
 import acm.program.GraphicsProgram;
@@ -16,7 +17,7 @@ public class finaleeee extends GraphicsProgram {
 		GImage image2 = new GImage("C:/Users/User/Pictures/Screenshot 2023-12-15 204546.png");
 		//impress(image);
 		//impress(image2);
-		println("Buy premium to unlock this picture");
+		GLabel lb = new GLabel("Buy premium to unlock this picture");
 	}
 
 	private void impress(GImage image) {
