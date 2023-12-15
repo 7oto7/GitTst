@@ -8,7 +8,7 @@ import acm.program.GraphicsProgram;
 import acm.util.RandomGenerator;
 
 public class finaleeee extends GraphicsProgram {
-	private static final int NUMBER_OF_PIXELS = 10000;
+	private static final int NUMBER_OF_PIXELS = 600000;
 	private static final int OVAL_SIZE = 1;
 	private RandomGenerator rgen = RandomGenerator.getInstance();
 
@@ -19,6 +19,7 @@ public class finaleeee extends GraphicsProgram {
 		impress(image2);
 		GLabel lb = new GLabel("Buy premium to unlock this picture");
 		lb.setFont("Helvetica-20");
+		lb.setColor(Color.WHITE);
 		add(lb, 150, 350);
 	}
 
