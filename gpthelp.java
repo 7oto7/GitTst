@@ -39,7 +39,7 @@ public class gpthelp extends JFrame {
     @Override
     public void paint(Graphics g) {
         super.paint(g);
-        drawCircleWithPoints(g, 0, 360, 0.5);
+        drawCircleWithPoints(g, 0, 360, 1);
     }
 
     public static void main(String[] args) {
