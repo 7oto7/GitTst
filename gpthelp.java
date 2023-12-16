@@ -17,7 +17,7 @@ public class gpthelp extends JFrame {
         setResizable(false);
     }
 
-    private void drawCircleWithPoints(Graphics g, int startAngle, int endAngle, int increment) {
+    private void drawCircleWithPoints(Graphics g, int startAngle, int endAngle, double increment) {
         Graphics2D g2d = (Graphics2D) g;
         g2d.setColor(Color.BLACK);
 
@@ -39,7 +39,7 @@ public class gpthelp extends JFrame {
     @Override
     public void paint(Graphics g) {
         super.paint(g);
-        drawCircleWithPoints(g, 0, 360, 1);
+        drawCircleWithPoints(g, 0, 360, 0.5);
     }
 
     public static void main(String[] args) {
