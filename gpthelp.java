@@ -5,8 +5,8 @@ import java.awt.geom.Ellipse2D;
 
 public class gpthelp extends JFrame {
 
-    private static final int WIDTH = 1000;
-    private static final int HEIGHT = 1000;
+    private static final int WIDTH = 1100;
+    private static final int HEIGHT = 1100;
     private static final int BALL_RADIUS = 500;
 
     public gpthelp() {
