@@ -13,7 +13,7 @@ import java.util.StringTokenizer;
 import acm.program.ConsoleProgram;
 
 public class problem53 extends ConsoleProgram{
-	private static final String FILENAME = "statistics.txt";
+	private static final String FILENAME = "statistics";
 	public void run() {
 		try {
 			BufferedReader reader = new BufferedReader(new FileReader(FILENAME));
