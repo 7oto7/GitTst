@@ -1,3 +1,4 @@
+
 //53. დაწერეთ პროგრამა რომელიც ფაილიდან წაიკითხავს ტექტს და 
 //დათვლის შემდეგ
 //სტატისტიკებს: სიმბოლოების რაოდენობა(alphanumeric), სიტყვების რაოდენობა
@@ -12,13 +13,14 @@ import java.util.StringTokenizer;
 
 import acm.program.ConsoleProgram;
 
-public class problem53 extends ConsoleProgram{
+public class problem53 extends ConsoleProgram {
 	private static final String FILENAME = "statistics";
+
 	public void run() {
 		try {
 			BufferedReader reader = new BufferedReader(new FileReader(FILENAME));
 			String text = "";
-			while(true) {
+			while (true) {
 				String line = reader.readLine();
 				if (line == null) {
 					break;
@@ -26,12 +28,13 @@ public class problem53 extends ConsoleProgram{
 				text += line + "\n";
 			}
 			reader.close();
-			countStatistics(text);
+			println(text);
+			//countStatistics(text);
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
 	}
-	
+
 	private void countStatistics(String text) {
 		int symbolCount = 0;
 		int wordCount = 0;
@@ -39,31 +42,31 @@ public class problem53 extends ConsoleProgram{
 		int questionCount = 0;
 		int exclamationCount = 0;
 		int sentenceCount = 0;
-		
+
 		StringTokenizer tokenizer = new StringTokenizer(text, " ?!.\n", true);
-		
-		while(tokenizer.hasMoreTokens()) {
+
+		while (tokenizer.hasMoreTokens()) {
 			String token = tokenizer.nextToken();
-			if(token.equals(".")) {
+			if (token.equals(".")) {
 				dotCount += 1;
 				sentenceCount += 1;
-			}else if(token.equals("!")) {
+			} else if (token.equals("!")) {
 				exclamationCount += 1;
 				sentenceCount += 1;
-			}else if(token.equals("?")) {
+			} else if (token.equals("?")) {
 				questionCount += 1;
 				sentenceCount += 1;
-			}else if(!token.equals(" ") && !token.equals("\n")) {
+			} else if (!token.equals(" ") && !token.equals("\n")) {
 				wordCount += 1;
 				symbolCount += token.length();
 			}
 		}
-				
+
 		println("symbolCount " + symbolCount);
 		println("wordCount " + wordCount);
 		println("dotCount " + dotCount);
 		println("questionCount " + questionCount);
 		println("exclamationCount " + exclamationCount);
-		println("sentenceCount " + sentenceCount);		
+		println("sentenceCount " + sentenceCount);
 	}
 }
