@@ -47,7 +47,7 @@ public class problem53 extends ConsoleProgram {
 
 		while (tokenizer.hasMoreTokens()) {
 			String token = tokenizer.nextToken();
-			print(token);
+			println(token);
 			if (token.equals(".")) {
 				dotCount += 1;
 				sentenceCount += 1;
