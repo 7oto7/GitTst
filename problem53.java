@@ -1,4 +1,3 @@
-
 //53. დაწერეთ პროგრამა რომელიც ფაილიდან წაიკითხავს ტექტს და 
 //დათვლის შემდეგ
 //სტატისტიკებს: სიმბოლოების რაოდენობა(alphanumeric), სიტყვების რაოდენობა
@@ -25,11 +24,10 @@ public class problem53 extends ConsoleProgram {
 				if (line == null) {
 					break;
 				}
-				text += line;
+				text += line + "\n";
 			}
 			reader.close();
-			println(text);
-			//countStatistics(text);
+			countStatistics(text);
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
