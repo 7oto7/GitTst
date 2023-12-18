@@ -13,13 +13,13 @@ public class drawImageExample extends GraphicsProgram {
 
 	public void run() {
 		    //mona liza
-		//GImage image = new GImage("C:\\Users\\User\\Pictures\\download.jpg"); 
+		GImage image = new GImage("C:\\Users\\User\\Pictures\\download.jpg"); 
 		    //monika beluchi
 		//GImage image = new GImage("C:\\Users\\User\\Pictures\\HD-wallpaper-monica-bellucci-actress-face-woman-beauty.jpg");
 		    //popovi dd
 		//GImage image = new GImage("C:\\Users\\User\\Pictures\\FB_IMG_1702653878964.jpg");
 		    //madison bear
-		GImage image = new GImage("C:/Users/User/Pictures/a5bc8d853003468dd2b8828153973f45.jpg");
+		//GImage image = new GImage("C:/Users/User/Pictures/a5bc8d853003468dd2b8828153973f45.jpg");
 		    //just someone
 		//GImage image = new GImage("C:/Users/User/Pictures/adfbdae9847655fbcddc6538efd7da35.png");
 		impress(image);
