@@ -12,7 +12,7 @@ import acm.program.ConsoleProgram;
 public class problem57 extends ConsoleProgram {
 	public void run() {
 		String str1 = "mariam";
-		String str2 = "mariam";
+		String str2 = "mairam";
 		println(areAnagrams(str1, str2));
 	}
 
