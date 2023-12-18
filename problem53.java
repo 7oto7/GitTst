@@ -25,7 +25,7 @@ public class problem53 extends ConsoleProgram {
 				if (line == null) {
 					break;
 				}
-				text += line + "\n";
+				text += line;
 			}
 			reader.close();
 			println(text);
