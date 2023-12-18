@@ -27,6 +27,7 @@ public class problem53 extends ConsoleProgram {
 				text += line + "\n";
 			}
 			reader.close();
+			println(text);
 			countStatistics(text);
 		} catch (IOException e) {
 			e.printStackTrace();
