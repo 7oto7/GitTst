@@ -11,8 +11,8 @@ import acm.program.ConsoleProgram;
 
 public class problem57 extends ConsoleProgram {
 	public void run() {
-		String str1 = "mariam";
-		String str2 = "mairam";
+		String str1 = "mariamm";
+		String str2 = "maimram";
 		println(areAnagrams(str1, str2));
 	}
 
