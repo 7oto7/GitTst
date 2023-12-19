@@ -32,6 +32,6 @@ public class problem60 extends ConsoleProgram{
 		}
 
 		//return Arrays.toString(reversed);
-		return Arrays.toString(matrix);
+		return Arrays.deepToString(matrix); //deep is gareshe daabrunebs misamartebs
 	}
 }
