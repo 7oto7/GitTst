@@ -5,7 +5,12 @@ import acm.program.ConsoleProgram;
 //კონსოლიდან შეგვყავს რიცხვები მანამ სანამ არ შეიყვანთ -1-ს, დაბეჭდეთ შეყვანილი
 //რიცხვები შებრუნებული მიმდევრობით.
 public class problem60 extends ConsoleProgram{
-	private ArrayList<Integer> list = new ArrayList<Integer>() ;
+	private ArrayList<Integer> list = new ArrayList<Integer>();
+	private Integer[][] matrix = {
+			{1, 2, 3},
+            {4, 5, 6},
+            {7, 8, 9}
+	};
 	//private ArrayList<Integer> reversed = new ArrayList<Integer>();
 	public void run(){
 		while(true){
@@ -26,6 +31,7 @@ public class problem60 extends ConsoleProgram{
 			reversed[list2.size() - 1 - i] = list2.get(i);
 		}
 
-		return Arrays.toString(reversed);
+		//return Arrays.toString(reversed);
+		return Arrays.deepToString(matrix);
 	}
 }
