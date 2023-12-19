@@ -32,6 +32,6 @@ public class problem60 extends ConsoleProgram{
 		}
 
 		//return Arrays.toString(reversed);
-		return Arrays.deepToString(matrix);
+		return Arrays.toString(matrix);
 	}
 }
