@@ -11,7 +11,7 @@ import acm.program.ConsoleProgram;
 
 public class problem63 extends ConsoleProgram{
 	private static final String SENTINEL = "";
-	//ArrayList<String> currFriends = new ArrayList<>();
+	ArrayList<String> currFriends = new ArrayList<>();
 
 	public void run() {
 		Map<String, ArrayList<String>> friendLists = 
@@ -29,7 +29,7 @@ public class problem63 extends ConsoleProgram{
 				friendLists.put(person, new ArrayList<String>());
 			}
 			
-			ArrayList<String> currFriends = friendLists.get(person);
+			currFriends = friendLists.get(person);
 			currFriends.add(friend); // TODO add check for duplicates
 			
 			// we don't need to call put again
