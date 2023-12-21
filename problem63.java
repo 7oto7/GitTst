@@ -11,6 +11,8 @@ import acm.program.ConsoleProgram;
 
 public class problem63 extends ConsoleProgram{
 	private static final String SENTINEL = "";
+	//ArrayList<String> currFriends = new ArrayList<>();
+
 	public void run() {
 		Map<String, ArrayList<String>> friendLists = 
 				new HashMap<String, ArrayList<String>> ();
