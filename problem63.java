@@ -30,6 +30,8 @@ public class problem63 extends ConsoleProgram{
 			ArrayList<String> currFriends = new ArrayList<>(friendLists.get(person));
 			System.out.println("vaaa");
 			currFriends.add(friend); // TODO add check for duplicates
+			println(friendLists);
+
 			
 			// we don't need to call put again
 //			friendLists.put(person, currFriends);
@@ -37,7 +39,7 @@ public class problem63 extends ConsoleProgram{
 		}
 		
 	
-		println(friendLists);
+//		println(friendLists);
 		
 		int maxFriends = 0;
 		String popularPerson = null;
