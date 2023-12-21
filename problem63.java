@@ -27,7 +27,7 @@ public class problem63 extends ConsoleProgram{
 				friendLists.put(person, new ArrayList<String>());
 			}
 			System.out.println("shevidaaaa natoshiii");
-			ArrayList<String> currFriends = new ArrayList<>(friendLists.get(person));
+			ArrayList<String> currFriends = friendLists.get(person);
 			System.out.println("vaaa");
 			currFriends.add(friend); // TODO add check for duplicates
 			println(currFriends);
