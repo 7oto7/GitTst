@@ -40,7 +40,7 @@ public class problem63 extends ConsoleProgram{
 		}
 		
 	
-//		println(friendLists);
+		println(friendLists);
 		
 		int maxFriends = 0;
 		String popularPerson = null;
