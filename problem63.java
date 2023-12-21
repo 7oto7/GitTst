@@ -26,12 +26,8 @@ public class problem63 extends ConsoleProgram{
 			if(!friendLists.containsKey(person)) {
 				friendLists.put(person, new ArrayList<String>());
 			}
-			System.out.println("shevidaaaa natoshiii");
-			ArrayList<String> currFriends = new ArrayList<>(friendLists.get(person));
-			System.out.println("vaaa");
+			ArrayList<String> currFriends = friendLists.get(person);
 			currFriends.add(friend); // TODO add check for duplicates
-			println(currFriends);
-			println(friendLists);
 
 			
 			// we don't need to call put again
