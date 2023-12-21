@@ -30,6 +30,7 @@ public class problem63 extends ConsoleProgram{
 			ArrayList<String> currFriends = new ArrayList<>(friendLists.get(person));
 			System.out.println("vaaa");
 			currFriends.add(friend); // TODO add check for duplicates
+			println(currFriends);
 			println(friendLists);
 
 			
