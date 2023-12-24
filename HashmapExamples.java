@@ -39,7 +39,7 @@ public class HashmapExamples extends ConsoleProgram {
 		arrayList.add(1022);
 		hashMap2.put("AB", arrayList);
 		arrayList.add(45);
-		arrayList.add(45);
+		arrayList.add(50);
 		println(hashMap2.toString());
 		
 		
