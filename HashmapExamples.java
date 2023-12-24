@@ -31,6 +31,7 @@ public class HashmapExamples extends ConsoleProgram {
 		
 	
 		
+		@SuppressWarnings("rawtypes")
 		HashMap<String, ArrayList> hashMap2 = new HashMap <String, ArrayList>();
 		hashMap2.put("ABC", arrayList);
 		
