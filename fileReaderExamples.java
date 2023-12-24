@@ -18,7 +18,7 @@ public class fileReaderExamples extends ConsoleProgram{
 			 while(true){
 				 String line = rd.readLine();
 				 if(line == null) break;
-				 println("Copyong line: [" + line + "]");
+				 println("Copying line: [" + line + "]");
 				 wr.println(line);
 			 }
 			 
