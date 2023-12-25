@@ -13,9 +13,9 @@ public class drawImageExample extends GraphicsProgram {
 
 	public void run() {
 		    //mona liza
-		//GImage image = new GImage("C:\\Users\\User\\Pictures\\download.jpg"); 
+		GImage image = new GImage("C:\\Users\\User\\Pictures\\download.jpg"); 
 		    //monika beluchi
-		GImage image = new GImage("C:\\Users\\User\\Pictures\\HD-wallpaper-monica-bellucci-actress-face-woman-beauty.jpg");
+		//GImage image = new GImage("C:\\Users\\User\\Pictures\\HD-wallpaper-monica-bellucci-actress-face-woman-beauty.jpg");
 		    //popovi dd
 		//GImage image = new GImage("C:\\Users\\User\\Pictures\\FB_IMG_1702653878964.jpg");
 		    //madison bear
