@@ -7,7 +7,7 @@ import acm.util.RandomGenerator;
 import java.awt.Color;
 
 public class drawTwoPictures extends GraphicsProgram {
-    private static final int NUMBER_OF_PIXELS = 100000;
+    private static final int NUMBER_OF_PIXELS = 1000000;
     private static final int OVAL_SIZE = 1;
     private RandomGenerator rgen = RandomGenerator.getInstance();
 
