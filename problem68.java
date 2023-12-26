@@ -22,5 +22,10 @@ public class problem68 extends GraphicsProgram{
 	@override
 	public void actionPerformed(ActionEvent e){
 		println("here");
+		if(e.getSource() == textField){
+			String text = textField.getText();
+			println(text);
+			textField.setText("");
+		}
 	}
 }
