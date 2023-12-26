@@ -9,7 +9,7 @@ public class problem68 extends GraphicsProgram{
 	private JTextField textField;
 	
 	public void init(){
-		textField = new JTextField(80);
+		textField = new JTextField(20);
 		add(textField, SOUTH);
 		
 		textField.addActionListener(this);
