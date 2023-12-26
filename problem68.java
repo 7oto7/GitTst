@@ -9,8 +9,10 @@ public class problem68 extends GraphicsProgram{
 	private JTextField textField;
 	
 	public void init(){
-		textField = new JTextField(20);
+		textField = new JTextField(40);
 		add(textField, SOUTH);
+		
+		textField.addActionListener(this);
 	}
 	
 	public void run(){
@@ -19,6 +21,6 @@ public class problem68 extends GraphicsProgram{
 	
 	@override
 	public void actionPerformed(ActionEvent e){
-		
+		println("here");
 	}
 }
