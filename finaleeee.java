@@ -26,13 +26,14 @@ public class finaleeee extends GraphicsProgram {
 	private void impress(GImage image) {
 		// TODO Auto-generated method stub
 		int[][] array = image.getPixelArray();
+		GImage copy = new GImage(array);
 
 		for (int i = 0; i < NUMBER_OF_PIXELS; i++) {
 			int r = rgen.nextInt(array.length);
 			int c = rgen.nextInt(array[0].length);
 			
 			Color color = new Color(array[r][c]);
-			add(getOval(c, r, color));
+			//add(getOval(c, r, color));
 		}
 	}
 
