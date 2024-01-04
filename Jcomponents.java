@@ -8,7 +8,7 @@ import acm.program.ConsoleProgram;
 public class Jcomponents extends ConsoleProgram{
 	private JTextField field;
 
-	public void run(){
+	public void init(){
 		field = new JTextField(20);
 //		field.setText("pepi gcem");
 		add(field, SOUTH);
