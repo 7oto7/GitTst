@@ -27,7 +27,7 @@ public class ReversedMap extends ConsoleProgram{
 				owners = new ArrayList<String>();
 			}
 			owners.add(name);
-			//newMap.put(pet, owners);
+			newMap.put(pet, owners);
 		}
 		return newMap;
 	}
