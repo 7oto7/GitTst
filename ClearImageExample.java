@@ -1,4 +1,3 @@
-
 import java.awt.image.BufferedImage;
 import java.awt.image.ConvolveOp;
 import java.awt.image.Kernel;
@@ -18,9 +17,10 @@ public class ClearImageExample {
             BufferedImage sharpenedImage = op.filter(image, null);
 
             // Save the processed image
-            ImageIO.write(sharpenedImage, "png", new File("C:/Users/User/Pictures/ClearedImage.png"));
+            File outputFile = new File("C:/Users/User/Pictures/ClearedImage.png");
+            ImageIO.write(sharpenedImage, "png", outputFile);
 
-            System.out.println("Image processing completed.");
+            System.out.println("Image processing completed. Processed image saved to: " + outputFile.getAbsolutePath());
 
         } catch (Exception e) {
             e.printStackTrace();
