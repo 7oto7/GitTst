@@ -23,7 +23,7 @@ public class problem60 extends ConsoleProgram{
 		String reversedString = reversedList(list);
 		println(reversedString);
 		
-		println(Arrays.deepToString(matrix)); //deep is gareshe daabrunebs misamartebs
+		println(Arrays.toString(matrix)); //deep is gareshe daabrunebs misamartebs
 	}
 	private String reversedList(ArrayList<Integer> list2) {
 //		String reversedString = "";
