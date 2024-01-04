@@ -22,16 +22,17 @@ public class problem60 extends ConsoleProgram{
 		}
 		String reversedString = reversedList(list);
 		println(reversedString);
+		
+		println(Arrays.deepToString(matrix)); //deep is gareshe daabrunebs misamartebs
 	}
 	private String reversedList(ArrayList<Integer> list2) {
-//		String reversed = "";
+//		String reversedString = "";
 		int[] reversed = new int[list2.size()];
 		for(int i = list2.size() - 1; i >= 0; i--){
-//			reversed = reversed + " " + list2.get(i);
+//			reversedString = reversed + " " + list2.get(i);
 			reversed[list2.size() - 1 - i] = list2.get(i);
 		}
 
-		//return Arrays.toString(reversed);
-		return Arrays.deepToString(matrix); //deep is gareshe daabrunebs misamartebs
+		return Arrays.toString(reversed);
 	}
 }
