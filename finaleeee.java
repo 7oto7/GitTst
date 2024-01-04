@@ -15,9 +15,8 @@ public class finaleeee extends GraphicsProgram {
 	public void run() {
 		GImage image = new GImage("C:/Users/User/Pictures/adfbdae9847655fbcddc6538efd7da35.png");
 		GImage image2 = new GImage("C:/Users/User/Pictures/Screenshot 2023-12-15 204546.png");
-		add(image);
-		//impress(image);
-		//impress(image2);
+		impress(image);
+		impress(image2);
 		GLabel lb = new GLabel("Buy premium to unlock this picture");
 		lb.setFont("Helvetica-20");
 		lb.setColor(Color.WHITE);
@@ -27,14 +26,14 @@ public class finaleeee extends GraphicsProgram {
 	private void impress(GImage image) {
 		// TODO Auto-generated method stub
 		int[][] array = image.getPixelArray();
-		GImage copy = new GImage(array);
+		//GImage copy = new GImage(array);  qmnis pixelebis surats
 		add(copy);
 		for (int i = 0; i < NUMBER_OF_PIXELS; i++) {
 			int r = rgen.nextInt(array.length);
 			int c = rgen.nextInt(array[0].length);
 			
 			Color color = new Color(array[r][c]);
-			//add(getOval(c, r, color));
+			add(getOval(c, r, color));
 		}
 	}
 
