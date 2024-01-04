@@ -1,3 +1,4 @@
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -11,6 +12,13 @@ public class ReversedMap extends ConsoleProgram{
 		pets.put("vaxo", "dog");
 		pets.put("bidzo", "zebra");
 		println(pets);
-		println(pets.toString());
+		println(pets.toString()); //same as upper one
+		
+		Map<String, ArrayList<String>> reversedMap = ReversedHashMap(pets);
+	}
+
+	private Map<String, ArrayList<String>> ReversedHashMap(Map<String, String> pets) {
+		
+		return null;
 	}
 }
