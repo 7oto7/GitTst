@@ -4,8 +4,9 @@ import javax.swing.JButton;
 import javax.swing.JTextField;
 
 import acm.program.ConsoleProgram;
+import acm.program.Program;
 
-public class Jcomponents extends ConsoleProgram{
+public class Jcomponents extends Program{
 	private JTextField field;
 
 	public void run(){
@@ -20,7 +21,6 @@ public class Jcomponents extends ConsoleProgram{
 	}
 	public void actionPerformed(ActionEvent e) {
 		// You fill this in //
-		System.out.println(e.getActionCommand());
 		println(field.getText());
 	}
 }
