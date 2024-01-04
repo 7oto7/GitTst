@@ -4,9 +4,8 @@ import javax.swing.JButton;
 import javax.swing.JTextField;
 
 import acm.program.ConsoleProgram;
-import acm.program.Program;
 
-public class Jcomponents extends Program{
+public class Jcomponents extends ConsoleProgram{
 	private JTextField field;
 
 	public void run(){
