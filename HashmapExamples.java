@@ -17,7 +17,7 @@ public class HashmapExamples extends ConsoleProgram {
 										// mnishvnelobas (7)
 		//hashMap.get(key);
 
-		hashMap.put("ABC", 3000);
+		//hashMap.put("ABC", 3000);
 
 		println(hashMap.size());
 		println(hashMap);
