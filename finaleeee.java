@@ -15,12 +15,12 @@ public class finaleeee extends GraphicsProgram {
 	public void run() {
 		GImage image = new GImage("C:/Users/User/Pictures/adfbdae9847655fbcddc6538efd7da35.png");
 		GImage image2 = new GImage("C:/Users/User/Pictures/Screenshot 2023-12-15 204546.png");
-		//impress(image);
-		impress(image2);
+		impress(image);
+		//impress(image2);
 		GLabel lb = new GLabel("Buy premium to unlock this picture");
 		lb.setFont("Helvetica-20");
 		lb.setColor(Color.WHITE);
-	//	add(lb, 150, 350);
+		add(lb, 150, 350);
 	}
 
 	private void impress(GImage image) {
