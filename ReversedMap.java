@@ -8,7 +8,7 @@ public class ReversedMap extends ConsoleProgram{
 	public void run(){
 		Map<String, String> pets = new HashMap<String, String>();
 		pets.put("nika", "dog");
-		pets.put("nika", "cat");
+		pets.put("ana", "cat");
 		pets.put("vaxo", "dog");
 		pets.put("bidzo", "zebra");
 		println(pets);
@@ -27,7 +27,7 @@ public class ReversedMap extends ConsoleProgram{
 				owners = new ArrayList<String>();
 			}
 			owners.add(name);
-			newMap.put(pet, owners);
+			//newMap.put(pet, owners);
 		}
 		return newMap;
 	}
