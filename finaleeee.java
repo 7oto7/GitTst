@@ -27,7 +27,7 @@ public class finaleeee extends GraphicsProgram {
 		// TODO Auto-generated method stub
 		int[][] array = image.getPixelArray();
 		//GImage copy = new GImage(array);  qmnis pixelebis surats
-		add(copy);
+		//add(copy);
 		for (int i = 0; i < NUMBER_OF_PIXELS; i++) {
 			int r = rgen.nextInt(array.length);
 			int c = rgen.nextInt(array[0].length);
