@@ -11,5 +11,6 @@ public class ReversedMap extends ConsoleProgram{
 		pets.put("vaxo", "dog");
 		pets.put("bidzo", "zebra");
 		println(pets);
+		println(pets.toString());
 	}
 }
