@@ -15,10 +15,20 @@ public class ReversedMap extends ConsoleProgram{
 		println(pets.toString()); //same as upper one
 		
 		Map<String, ArrayList<String>> reversedMap = ReversedHashMap(pets);
+		println(reversedMap);
 	}
 
 	private Map<String, ArrayList<String>> ReversedHashMap(Map<String, String> pets) {
-		
-		return null;
+		Map<String, ArrayList<String>> newMap = new HashMap<String, ArrayList<String>>();
+		for(String name : pets.keySet()){
+			String pet = pets.get(name);
+			ArrayList<String> owners = newMap.get(pet);
+			if(owners == null){
+				owners = new ArrayList<String>();
+			}
+			owners.add(name);
+			newMap.put(pet, owners);
+		}
+		return newMap;
 	}
 }
